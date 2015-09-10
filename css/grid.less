@@ -1,0 +1,78 @@
+@body-width: @page-width - @page-margin-inside - @page-margin-outside;
+@body-height: @page-height - @page-margin-top - @page-margin-bottom;
+
+@col-width: (@body-width - ((@col-number - 1) * @col-gutter)) / @col-number;
+@row-height: (@body-height - ((@row-number - 1) * @row-gutter)) / @row-number;
+
+@col-gutter-width: @col-width + @col-gutter;
+@row-gutter-height: @row-height + @row-gutter;
+
+
+/* x classes */
+.create-x-classes(@i:0) when(@i < @col-number) {
+    .x@{i}{
+       left: (@i * @col-width) + (@i * @col-gutter);
+    }
+    .create-x-classes(@i + 1);
+}
+.create-x-classes();
+
+/* y classes */
+.create-y-classes(@i:0) when(@i < @row-number) {
+    .y@{i}{
+       top: (@i * @row-height) + (@i * @row-gutter);
+    }
+    .create-y-classes(@i + 1);
+}
+.create-y-classes();
+
+/* width classes */
+.create-w-classes(@i:1) when(@i <= @col-number) {
+    .w@{i}{
+       width: (@col-width * @i) + (@col-gutter * (@i - 1));
+    }
+    .create-w-classes(@i + 1);
+}
+.create-w-classes();
+
+/* height classes */
+.create-h-classes(@i:1) when(@i <= @row-number) {
+    .h@{i}{
+       height: (@row-height * @i) + (@row-gutter * (@i - 1));
+    }
+    .create-h-classes(@i + 1);
+}
+.create-h-classes();
+
+
+.grid .body {
+    background-attachment: local;
+    background-size: @col-gutter-width @row-gutter-height, 
+                     @col-gutter-width @row-gutter-height, 
+                     @col-gutter-width @row-gutter-height, 
+                     @col-gutter-width @row-gutter-height;
+    background-position: -1px -1px, 
+                         -1px -1px, 
+                         -(@col-gutter + 0) -(@row-gutter + 0), 
+                         -(@col-gutter + 0) -(@row-gutter + 0);
+    background-image: -webkit-linear-gradient(top, @grid-color 1px, transparent 1px),
+                      -webkit-linear-gradient(left, @grid-color 1px, transparent 1px),
+                      -webkit-linear-gradient(top, @grid-color 1px, transparent 1px),
+                      -webkit-linear-gradient(left, @grid-color 1px, transparent 1px);
+    background-image:    -moz-linear-gradient(top, @grid-color 1px, transparent 1px),
+                         -moz-linear-gradient(left, @grid-color 1px, transparent 1px),
+                         -moz-linear-gradient(top, @grid-color 1px, transparent 1px),
+                         -moz-linear-gradient(left, @grid-color 1px, transparent 1px);
+    background-image:     -ms-linear-gradient(top, @grid-color 1px, transparent 1px),
+                          -ms-linear-gradient(left, @grid-color 1px, transparent 1px),
+                          -ms-linear-gradient(top, @grid-color 1px, transparent 1px),
+                          -ms-linear-gradient(left, @grid-color 1px, transparent 1px);
+    background-image:      -o-linear-gradient(top, @grid-color 1px, transparent 1px),
+                           -o-linear-gradient(left, @grid-color 1px, transparent 1px),
+                           -o-linear-gradient(top, @grid-color 1px, transparent 1px),
+                           -o-linear-gradient(left, @grid-color 1px, transparent 1px);
+    background-image: linear-gradient(to bottom, @grid-color 1px, transparent 1px),
+                      linear-gradient(to right, @grid-color 1px, transparent 1px),
+                      linear-gradient(to bottom, @grid-color 1px, transparent 1px),
+                      linear-gradient(to right, @grid-color 1px, transparent 1px);
+}

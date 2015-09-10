@@ -1,0 +1,147 @@
+/*
+ * Typographie
+ * ===========
+ */
+
+.page { text-rendering: optimizeLegibility; }
+
+
+/* 
+ * Styles génériques
+ * -----------------
+ */
+
+/*body {
+    font-family: "Century Schoolbook", serif;
+    font-size: 9pt;
+    line-height: 12pt;
+}*/
+
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-break-inside: avoid-region;
+    -webkit-break-inside: avoid-region;
+}
+
+
+p { margin: 0; }
+
+p + p { text-indent: 6pt; }
+
+em { font-style: italic; }
+
+
+.exergue {
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 6pt * 3;
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+figure {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+figure img{
+    max-width:50%;
+    text-align:center;
+}
+
+figcaption {
+    font-family: "Erbar condensed";
+    font-size: 8pt;
+    line-height: 6pt * 1.5; 
+
+} 
+
+footnote {
+    font-family: "Erbar condensed";
+    font-size: 8pt;
+    line-height: 6pt * 1.5; 
+}
+
+/* 
+ * Styles enquêtes
+ * -----------------
+ */
+
+
+.enquete h1 {
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 54pt;
+    line-height: 6pt * 9; 
+    text-transform: uppercase;
+}
+.enquete h2 {
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 15pt;
+    line-height: 6pt * 3; 
+    text-transform: uppercase;
+    margin-top: 12pt;
+}
+
+.enquete .chapeau {
+    font-family: "Bagnard";
+    font-size: 15pt;
+    line-height: 6pt * 3;
+    -webkit-region-break-after: always;
+}
+
+/* 
+ * Styles interview
+ * -----------------
+ */
+
+.interview b {
+    font-family: "Century Schoolbook";
+    font-style: italic;
+}
+
+.interview h1 {
+    font-family: "Century Schoolbook";
+    font-size: 45pt;
+    line-height: 6pt * 6; 
+}
+
+.interview .chapeau {
+    font-family: "Century Schoolbook";
+    font-size: 14pt;
+    line-height: 6pt * 3;
+    -webkit-region-break-after: always;
+}
+
+
+/* 
+ * Styles rubriques
+ * -----------------
+ */
+
+.rubrique h1 { 
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Bagnard";
+    font-size: 44pt;
+    line-height: 6pt * 7;
+    font-weight: normal;
+}
+
+.rubrique h2 {
+    float: left;
+
+    margin: 0 6pt 0 0;
+
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 9.4pt;
+    line-height: 6pt * 2;
+    text-transform: uppercase;
+}

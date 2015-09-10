@@ -1,0 +1,113 @@
+/**
+ * Macro-structure
+ * ===============
+ */
+
+.body,
+.footer {
+    position: absolute;
+
+
+    /*.display(flex);*/
+    /*.justify-content(space-between);*/
+}
+
+
+
+/**
+ * Zone de composition principale
+ * ------------------------------
+ */
+
+.body {
+    top: @page-margin-top;
+    bottom: @page-margin-bottom;
+}
+
+/* TODO: move into grid.less? */
+.bloc { position: absolute; }
+.debug .header,
+.debug .footer,
+.debug .body,
+.debug .bloc { outline: 1px solid purple; }
+
+/**
+ * Pieds de page
+ * -------------
+ */
+
+.footer { 
+    bottom: @page-margin-bottom; 
+
+    /*.flex-direction(row-reverse);*/
+
+    font-family: "Alfphabet-IV", sans-serif;
+    font-size: 6pt;
+    text-transform: uppercase;
+}
+
+.footer:after { 
+    display: block;
+    content: " ";
+    /*.flex(1); */
+}
+.footer:before { 
+    display: block;
+    content: " ";
+    /*.flex(1); */
+}
+
+/*.footer__title { .flex(10); }*/
+
+/*.footer__page-number { .flex(1); }*/
+
+
+/* .footer__title:before { content: "Le jour où la Belgique a buggé"; } */
+
+.header {
+    font-family: "Belgika8th", sans-serif;
+    font-size: 9pt;
+    text-align: left;
+    width: 50%;
+    height: 21pt;
+    text-transform: uppercase;
+}
+
+.header:before {
+    content:"Enquête - numérique";
+} 
+
+/**
+ * Miroir
+ * -------
+ */
+
+/**
+ * Placement en miroir des éléments en fonction de si ils se trouvent sur une
+ * page paire ou une page impaire, en utilisant le pseudo-sélecteur `nth-child`
+ */
+
+.paper:nth-child(odd) .body,
+.paper:nth-child(odd) .footer {
+    right: @page-margin-outside;
+    left: @page-margin-inside;
+}
+
+.paper:nth-child(even) .body,
+.paper:nth-child(even) .footer {
+    left: @page-margin-outside;
+    right: @page-margin-inside;
+}
+
+/*.paper:nth-child(odd) .footer { .flex-direction(row); }*/
+
+.paper:nth-child(odd) .footer:before { margin-right: @col-gutter; }
+.paper:nth-child(odd) .footer:after { margin-left: @col-gutter; }
+.paper:nth-child(even) .footer:after { margin-right: @col-gutter; }
+.paper:nth-child(even) .footer:before { margin-left: @col-gutter; }
+
+.paper:nth-child(odd) .footer__title { margin-right: @col-gutter; }
+.paper:nth-child(even) .footer__title { text-align: right; }
+
+.paper:nth-child(even) .footer__page-number { margin-right: @col-gutter; }
+.paper:nth-child(odd) .footer__page-number { text-align: right; }

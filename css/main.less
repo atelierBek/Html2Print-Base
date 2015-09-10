@@ -1,0 +1,112 @@
+/**
+ * The less CSS is splitted accross different files for a better organisation.
+ *
+ * This is the main less css file that defines custom values and requires all
+ * the the neccessary dependencies.
+ */
+
+
+
+/**
+ * THE CODE BELOW IS REQUIRED TO MAKE HTML2PRINT WORK.
+ */
+
+
+
+/**
+ * Defines and loads the rules that set the geometry of the page and its
+ * representation on screen. This is the core of html2print.
+ *
+ * Customize the variables to your needs.
+ */
+
+/* the geometry of the page */
+@page-width: 482pt;
+@page-height: 652pt;
+
+/* the size of the crop marks */
+@crop-size: 20pt;
+
+/* the size of bleed */
+@bleed: 14pt;
+
+/* loads the core less file */
+@import "html2print.less";
+
+
+/**
+ * THE CODE BELOW IS NOT REQUIRED TO MAKE HTML2PRINT WORK, ALTHOUGH IT PROVES
+ * USEFUL IN MANY SITUATIONS.
+ * 
+ * YOU ARE ENCOURAGED TO CUSTOMIZE IT TO YOU NEEDS.
+ */
+
+
+
+/**
+ * Defines and generate helper css rules to absolutly position elements on a
+ * grid. 
+ *
+ * Customize the variables to your needs.
+ */
+
+@col-number: 9;
+@col-gutter: 6pt;
+
+@row-number: 9;
+@row-gutter: 6pt;
+
+@grid-color: rgba(0, 255, 255, 0.5);
+
+/* Loads the rules for using grids */
+@import "grid.less";
+
+
+
+/**
+ * Loads the rules to outline the main blocs
+ */
+
+@import "debug.less";
+
+
+
+/**
+ * Loads a few less helpers
+ */
+
+@import "mixins.less";
+
+
+
+/**
+ * Defines and loads the rules that set the base layout of the document
+ * (header, body, footer)
+ *
+ * Customize the variables to your needs.
+ */
+
+// FIXME: make a case for single page layouts
+@page-margin-inside: 20mm;
+@page-margin-outside: 10mm;
+@page-margin-top: 10mm;
+@page-margin-bottom: 15mm;
+
+/* Header & footer variables */
+@header-height: 10mm;
+@header-text: "Running title";
+@footer-height: 10mm;
+@footer-text: counter(page-counter);
+
+@import "layout.less";
+
+
+/**
+ * Loads your own styles.
+ *
+ * Customize the file/path to you needs.
+ */
+
+@import "../vendors/normalize.css/normalize.css";
+@import "../vendors/normalize-opentype.css/normalize-opentype.css";
+@import "styles.less";

@@ -1,0 +1,23 @@
+{
+  "name": "osp.work.medor.maquette",
+  "version": "0.0.0",
+  "authors": [
+    "Alexandre Leray <alexandre@stdin.fr>"
+  ],
+  "description": "Maquette de Médor, en HTML/CSS",
+  "license": "AGPLV3",
+  "homepage": "https://medor.coop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "less": "~2.5.1",
+    "normalize.css": "~3.0.3",
+    "normalize-opentype.css": "~0.2.4"
+  }
+}

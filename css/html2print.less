@@ -1,0 +1,195 @@
+/**
+ * Computation
+ */
+
+
+/* computes the edge size of the paper, which is the sum of the bleed and the
+ * crop sizes */
+@edge: @crop-size + @bleed; 
+
+/* Computes the size of the paper sheet */
+@paper-width: @page-width + ( @edge * 2 );
+@paper-height: @page-height + ( @edge * 2 );
+
+/**
+ * DEFINITION OF THE PAPER SHEET
+ */
+
+/** 
+ * The @page CSS at-rule is used to define some properties of printed
+ * documents. We make it the size of the elements with the .paper class and
+ * remove any margins so they don't add up with margins specifed in elements
+ * with the .page class (or it's children, like .header, .body and .footer)
+ */
+@page {
+    size: @paper-width @paper-height; 
+    margin: 0;
+}
+
+
+/**
+ * CANVAS
+ */
+
+@media all {
+    body { 
+        margin: 0;
+
+        /* Activate opentype features and kernings */
+        -webkit-font-feature-settings: "liga", "dlig", "clig", "kern";
+        text-rendering: optimizeLegibility;
+    }
+
+    .paper {
+        width: @paper-width; 
+        height: @paper-height;
+        box-sizing: border-box;
+
+        /* defines a named counter and increments it every page, so we can use
+         * it to compute the page number */
+        counter-increment: page-counter;
+
+        /* makes sure that pages aren't cut because of pootential unprecise unit
+         * conversion at printing time */
+        page-break-inside: avoid;
+        page-break-after: always;
+
+        /* clips the content if it goes out of the page, so it doesn't increase
+         * the format */
+        overflow: hidden;
+
+        /* Crop marks */
+        padding: @edge;
+        position: relative;
+    }
+
+    .paper .crops {
+        width: @paper-width; 
+        height: @paper-height;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+    .paper .crops div {
+        border-style: solid;
+        border-color: black;
+        border-width: 0;
+        width: @edge;
+        height: @edge;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .paper .crops div span {
+        width: @bleed;
+        height: @bleed;
+        background-color: white;
+        position: absolute;
+    }
+    .paper .crops .crop-top-left {
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        top: 0;
+        left: 0;
+    }
+    .paper .crops .crop-top-left span { right: -1px; bottom: -1px;}
+    .paper .crops .crop-top-right {
+        border-left-width: 1px;
+        border-bottom-width: 1px;
+        top: 0;
+        right: 0;
+    }
+    .paper .crops .crop-top-right span { left: -1px; bottom: -1px;}
+    .paper .crops .crop-bottom-right {
+        border-left-width: 1px;
+        border-top-width: 1px;
+        right: 0;
+        bottom: 0;
+    }
+    .paper .crops .crop-bottom-right span { left: -1px; top: -1px;}
+    .paper .crops .crop-bottom-left {
+        border-right-width: 1px;
+        border-top-width: 1px;
+        left: 0;
+        bottom: 0;
+    }
+    .paper .crops .crop-bottom-left span { right: -1px; top: -1px;}
+
+    .page {
+        /* defines the page size */
+        width: @page-width;
+        height: @page-height;
+
+        /* allows for absolutely positioned elements as settings the position
+         * property to relative as the side effect of making this elements
+         * top-left corner the reference point */
+        position: relative;
+    }
+
+    // TODO: changer le format du papier en spread pour pouvoir imprimer en planche
+    .spread .paper { float: left; }
+    .spread .paper:nth-child(odd) { margin-left: -@edge; }
+    .spread .paper:nth-child(even) { margin-right: -@edge; }
+    .spread .paper:first-child { margin-left: @page-width; }
+}
+
+@media screen {
+    /* defines the background color of the workspace */
+    /* UI */
+    body { background-color: #F0F0F0; }
+
+    #pages {
+        width: @paper-width; 
+        height: @paper-height;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* FIXME: allows for printing spreads as well */
+    .spread #pages {
+        width: @paper-width * 2; 
+        height: @paper-height * 2;
+    }
+    .paper {
+        /* centrer la page à l'écran */
+        /* UI */
+        background-color: white;
+        /* UI */
+        margin-top: 1em;
+        /* UI */
+        margin-bottom: 1em;
+    }
+    /* UI */
+    .normal .page { outline: 1px dotted lightsalmon; }
+    /* UI */
+    .preview .paper { background: none; }
+    /* UI */
+    .preview .page {
+        outline: 1px solid lightgray;
+        background-color: white;
+    }
+}
+
+
+@media print {
+    html { width: @paper-width; }
+    body {
+        /* Allows for background colors printing */
+        background-color: white;
+        -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+    }
+}
+
+/**
+ * Helpers
+ */
+
+.region-break {
+    /* Apply this class to an element to put it on a new region.
+     * Hint: 
+     * You can also use an empty <div class="page-break"></div> 
+     * if you want to put manual page breaks without attaching it to an HTML element
+     */
+    -webkit-region-break-before: always;
+}
