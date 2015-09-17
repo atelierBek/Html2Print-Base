@@ -3,6 +3,7 @@ import requests
 import json
 import codecs
 import shutil
+import settings
 
 #try:
     #shutil.rmtree('articles')
@@ -19,16 +20,16 @@ def indent(lines, amount, ch=' '):
 if not os.path.isdir("articles"):
     os.mkdir('articles')
 
-hostname = 'http://localhost:8000'
+hostname = 'https://medor.coop'
 path = "/fr/publish/api/article-membership/?issue__id=1"
 url = hostname + path
 
 
-r = requests.get(url)
+request = requests.get(url, auth=(settings.USER, settings.PASS))
 
 src = {}
 
-for membership in r.json():
+for membership in request.json():
     order = membership['order']
     slug = membership['article']['slug']
     url = membership['article']['url']
