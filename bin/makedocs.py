@@ -24,8 +24,21 @@ hostname = 'https://medor.coop'
 path = "/fr/publish/api/article-membership/?issue__id=1"
 url = hostname + path
 
+login_url = 'https://medor.coop/fr/admin/login/'
+client = requests.session()
+# Retrieve the CSRF token first
+client.get(login_url)  # sets cookie
+csrftoken = client.cookies['csrftoken']
+login_data = dict(username=settings.USER, password=settings.PASS, csrfmiddlewaretoken=csrftoken, next='/')
+resp = client.post(login_url, data=login_data, headers=dict(Referer=login_url))
 
-request = requests.get(url, auth=(settings.USER, settings.PASS))
+if resp.status_code != 200:
+    print("It didn't work")
+    import sys
+    sys.exit()
+
+
+request = client.get(url)
 
 src = {}
 
@@ -39,16 +52,16 @@ for membership in request.json():
     src[name] = 'articles/%s/article.html' % name
 
     # Gets the template
-    r = requests.get(hostname + "/fr/publish/%s.tpl" % membership['id'])
+    request = client.get(hostname + "/fr/publish/%s.tpl" % membership['id'])
     f = codecs.open("articles/%s/article.html" % name, "w", "utf-8")
-    f.write(r.text)
+    f.write(request.text)
     f.close()
 
     # Gets the css
     os.mkdir('articles/%s/css' % name)
-    r = requests.get(hostname + "/fr/publish/%s.css" % membership['id'])
+    request = client.get(hostname + "/fr/publish/%s.css" % membership['id'])
     f = codecs.open("articles/%s/css/generated.css" % name, "w", "utf-8")
-    f.write(r.text)
+    f.write(request.text)
     f.close()
 
     # Creates the style file
