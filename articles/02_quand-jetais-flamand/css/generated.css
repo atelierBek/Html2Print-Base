@@ -1,0 +1,22 @@
+#flow-quand-jetais-flamand {
+    -webkit-flow-into: flow-quand-jetais-flamand;
+            flow-into: flow-quand-jetais-flamand;
+}
+
+.flow-quand-jetais-flamand {
+    -webkit-flow-from: flow-quand-jetais-flamand;
+        flow-from: flow-quand-jetais-flamand;
+}
+
+/* reset folio */
+body { counter-reset: folio 11 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "enquete — Quand j&#39;étais Flamand"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

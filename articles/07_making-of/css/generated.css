@@ -1,0 +1,22 @@
+#flow-making-of {
+    -webkit-flow-into: flow-making-of;
+            flow-into: flow-making-of;
+}
+
+.flow-making-of {
+    -webkit-flow-from: flow-making-of;
+        flow-from: flow-making-of;
+}
+
+/* reset folio */
+body { counter-reset: folio 53 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "making-of — Making-of"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

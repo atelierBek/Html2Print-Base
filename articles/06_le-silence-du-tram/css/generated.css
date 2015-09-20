@@ -1,0 +1,22 @@
+#flow-le-silence-du-tram {
+    -webkit-flow-into: flow-le-silence-du-tram;
+            flow-into: flow-le-silence-du-tram;
+}
+
+.flow-le-silence-du-tram {
+    -webkit-flow-from: flow-le-silence-du-tram;
+        flow-from: flow-le-silence-du-tram;
+}
+
+/* reset folio */
+body { counter-reset: folio 51 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "rubrique — Le silence du tram"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

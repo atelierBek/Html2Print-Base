@@ -1,0 +1,22 @@
+#flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
+    -webkit-flow-into: flow-verviers-epicentre-de-la-prochaine-revolution-musicale;
+            flow-into: flow-verviers-epicentre-de-la-prochaine-revolution-musicale;
+}
+
+.flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
+    -webkit-flow-from: flow-verviers-epicentre-de-la-prochaine-revolution-musicale;
+        flow-from: flow-verviers-epicentre-de-la-prochaine-revolution-musicale;
+}
+
+/* reset folio */
+body { counter-reset: folio 56 - 1; }
+True
+
+/*footer,*/
+/*header content*/
+.header:before { content: "rubrique Fulguro-Point : le point sur les fulgurances du pays de la culture tranquille — Verviers, épicentre de la prochaine révolution musicale ?"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+
