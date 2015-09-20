@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en" class="preview grid">
+<head>
+    <meta charset="utf-8">
+    <title>Gares</title>
+
+    <link rel="stylesheet" href="build/css/main.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        .body {
+            outline: 1px solid cyan;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+                background-color: darkgrey;
+        }
+
+        .bloc {
+            font-size: 7pt;
+            background-color: rgba(255, 0, 0, 0.25);
+        }
+
+        .bloc.focus {
+            background-color: rgba(255, 0, 0, 0.75);
+        }
+
+        .bloc::before {
+            content: attr(class);
+        }
+    </style>
+</head>
+<body>
+    <!-- PAGES -->
+    <div id="pages">
+        <div class="paper">
+            <div class="page">
+                <div class="body">
+                    <div class="bloc x1 y1 w1 h1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <button class="btn-add">+</button>
+        <button class="btn-remove">-</button>
+
+
+        <button data-prefix="w" data-increment="+1">increase width</button>
+        <button data-prefix="w" data-increment="-1">decrease width</button>
+        <button data-prefix="h" data-increment="+1">increase height</button>
+        <button data-prefix="h" data-increment="-1">decrease height</button>
+
+        <div style="text-align: center;">
+            <div>
+                <button data-prefix="y" data-increment="-1">▲</button>
+            </div>
+            <div>
+                <button data-prefix="x" data-increment="-1">◀</button>
+                <button data-prefix="x" data-increment="+1">▶</button>
+            </div>
+            <div>
+                <button data-prefix="y" data-increment="+1">▼</button>
+            </div>
+        </div>
+
+        <button class="btn-get-code">Get code</button>
+        <textarea></textarea>
+    </div>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    var selected;
+
+    function getClass(prefix) {
+        var classes = selected.classList;
+        for (var i = 0, j = 9; i<=j; i++) {
+            var cls = prefix + i;
+            if (classes.contains(cls)) {
+                return i;
+            };
+        }
+
+        return null;
+    }
+
+    $(".body" ).on( "click", ".bloc", function() {
+        selected && $(selected).removeClass('focus');
+        selected = this;
+        $(selected).addClass('focus');
+    });
+
+    $('.btn-get-code').on('click', function() {
+        var clone = $('.body').clone();
+        clone.find('.bloc').removeClass('focus');
+        $('textarea').text(clone.html());
+    });
+
+    $('.btn-add').on('click', function() {
+        selected && $(selected).removeClass('focus');
+        var bloc = $('<div>').attr('class', 'bloc x1 y1 w1 h1 focus')
+        selected = bloc.get(0);
+        $('.body').append(bloc);
+    });
+
+    $('.btn-remove').on('click', function() {
+        selected && $(selected).remove();
+        selected = undefined;
+    });
+
+    $('[data-prefix]').on('click', function() {
+        var prefix = this.dataset.prefix;
+        var increment = parseInt(this.dataset.increment);
+        var level = getClass(prefix);
+        var current = prefix + level;
+        var next = prefix + (level + increment);
+
+        $(selected).removeClass(current).addClass(next);
+    });
+    </script>
+</body>
+</html>
