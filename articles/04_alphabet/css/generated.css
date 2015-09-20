@@ -1,0 +1,22 @@
+#flow-alphabet {
+    -webkit-flow-into: flow-alphabet;
+            flow-into: flow-alphabet;
+}
+
+.flow-alphabet {
+    -webkit-flow-from: flow-alphabet;
+        flow-from: flow-alphabet;
+}
+
+/* reset folio */
+body { counter-reset: folio 37 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "rubrique — Alphabet"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

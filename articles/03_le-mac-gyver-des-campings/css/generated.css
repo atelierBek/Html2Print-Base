@@ -1,0 +1,22 @@
+#flow-le-mac-gyver-des-campings {
+    -webkit-flow-into: flow-le-mac-gyver-des-campings;
+            flow-into: flow-le-mac-gyver-des-campings;
+}
+
+.flow-le-mac-gyver-des-campings {
+    -webkit-flow-from: flow-le-mac-gyver-des-campings;
+        flow-from: flow-le-mac-gyver-des-campings;
+}
+
+/* reset folio */
+body { counter-reset: folio 29 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "portrait — Le Mac Gyver des Campings"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

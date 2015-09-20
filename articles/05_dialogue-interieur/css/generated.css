@@ -1,0 +1,22 @@
+#flow-dialogue-interieur {
+    -webkit-flow-into: flow-dialogue-interieur;
+            flow-into: flow-dialogue-interieur;
+}
+
+.flow-dialogue-interieur {
+    -webkit-flow-from: flow-dialogue-interieur;
+        flow-from: flow-dialogue-interieur;
+}
+
+/* reset folio */
+body { counter-reset: folio 39 - 1; }
+False
+
+/*footer,*/
+/*header content*/
+.header:before { content: "bd — Dialogue intérieur"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

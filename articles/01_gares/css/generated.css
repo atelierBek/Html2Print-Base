@@ -1,0 +1,22 @@
+#flow-gares {
+    -webkit-flow-into: flow-gares;
+            flow-into: flow-gares;
+}
+
+.flow-gares {
+    -webkit-flow-from: flow-gares;
+        flow-from: flow-gares;
+}
+
+/* reset folio */
+body { counter-reset: folio  - 1; }
+
+
+/*footer,*/
+/*header content*/
+.header:before { content: "enquete — Gares"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+

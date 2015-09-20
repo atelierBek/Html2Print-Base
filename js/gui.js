@@ -55,8 +55,11 @@
             doc.querySelector('body').scrollTop = offsetTop;
         });
 
+        $('#reload')[0].addEventListener("click", function(event) {
+            $("#viewport")[0].contentWindow.location.reload();
+        });
+
         $('#print')[0].addEventListener("click", function(event) {
-            console.log('click');
             $("#viewport")[0].contentWindow.print();
         });
     }, false);
