@@ -11,11 +11,12 @@
  * -----------------
  */
 
-body {
+
+/*body {
     font-family: "Century Schoolbook", serif;
     font-size: 9pt;
     line-height: 12pt;
-}
+}*/
 
 
 h1,
@@ -28,7 +29,11 @@ h3 {
 }
 
 
-p { margin: 0; }
+p { margin: 0; 
+    font-family: "Century Schoolbook";
+    font-size: 9pt;
+    line-height: 12pt;
+}
 
 p + p { text-indent: 6pt; }
 
@@ -83,17 +88,16 @@ footnote {
     font-size: 54pt;
     line-height: 6pt * 9; 
     text-transform: uppercase;
+	border-top: 10px double black !important;
 }
-h2 {
+.enquete h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
     font-size: 15pt;
     line-height: 6pt * 3; 
     text-transform: uppercase;
-    margin-top: 12pt;
+    padding-top: 6pt * 1;
 
-	border-top: solid 1px black !important;
-	color:red !important;
 }
 
 .enquete .chapeau {
@@ -136,9 +140,11 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
     font-family: "Bagnard";
-    font-size: 44pt;
+    font-size: 35pt;
     line-height: 6pt * 7;
     font-weight: normal;
+    padding-top: 6pt * 1;
+	border-top: 10px double black !important;
 }
 
 .rubrique h2 {
@@ -151,6 +157,7 @@ h2 {
     font-size: 9.4pt;
     line-height: 6pt * 2;
     text-transform: uppercase;
+    padding-top: 6pt * 1;
 }
 
 /* 
@@ -177,11 +184,43 @@ h2 {
     font-size: 9.4pt;
     line-height: 6pt * 2;
     text-transform: uppercase;
+    padding-top: 6pt * 1;
 }
 
 .bd .chapeau {
     font-family: "Century Schoolbook";
     font-size: 14pt;
+    line-height: 6pt * 3;
+    -webkit-region-break-after: always;
+}
+
+/* 
+ * Styles portraits
+ * -----------------
+ */
+
+
+.portrait h1 {
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 54pt;
+    line-height: 6pt * 9; 
+    text-transform: uppercase;
+	border-top: 10px double black !important;
+}
+.portrait h2 {
+    font-family: "Erbar condensed" !important;
+    font-weight: bold;
+    font-size: 15pt;
+    line-height: 6pt * 3; 
+    text-transform: uppercase;
+    padding-top: 6pt * 1;
+
+}
+
+.portrait .chapeau {
+    font-family: "Bagnard";
+    font-size: 15pt;
     line-height: 6pt * 3;
     -webkit-region-break-after: always;
 }
