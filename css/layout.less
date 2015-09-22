@@ -4,7 +4,8 @@
  */
 
 .body,
-.footer { position: absolute; }
+.body:before,
+.body:after { position: absolute; }
 
 
 /**
@@ -29,24 +30,21 @@
  * -------------
  */
 
-.header,
-.footer { 
-    bottom: @page-margin-bottom; 
+.body:before,
+.body:after { 
+    display: block;
     font-family: "Belgika8th", sans-serif;
     font-size: 6pt;
+    line-height: @line-height;
     letter-spacing: 0.25pt;
-    text-align: center;
 }
 
-.header:before,
-.footer:before,
-.footer:after {
-    display: block;
-}
+.body:before,
+.body:after { bottom: @line-height * -2; }
 
-.header:before { content: "Type d'article — Titre de l'article"; } 
-.footer:before { content: "Médor n°1 —  printemps 2015"; }
-.footer:after  { content: counter(page-counter); }
+/*.header:before { content: "Type d'article — Titre de l'article"; } */
+/*.footer:before { content: "Médor n°1 —  printemps 2015"; }*/
+.body:after  { content: counter(page-counter); }
 
 
 /**
@@ -59,25 +57,44 @@
  * page paire ou une page impaire, en utilisant le pseudo-sélecteur `nth-child`
  */
 
-.paper:nth-child(odd) .body,
-.paper:nth-child(odd) .footer {
+.paper:nth-child(odd) .body {
     right: @page-margin-outside;
     left: @page-margin-inside;
 }
 
-.paper:nth-child(even) .body,
-.paper:nth-child(even) .footer {
+.paper:nth-child(even) .body {
     left: @page-margin-outside;
     right: @page-margin-inside;
 }
 
-.paper:nth-child(odd) .footer:before { margin-right: @col-gutter; }
-.paper:nth-child(odd) .footer:after { margin-left: @col-gutter; }
-.paper:nth-child(even) .footer:after { margin-right: @col-gutter; }
-.paper:nth-child(even) .footer:before { margin-left: @col-gutter; }
+.paper:nth-child(odd) .body:before { 
+    .x1(); 
+    .w6(); 
+    text-align: left;
+}
+.paper:nth-child(even) .body:before { 
+    .x2(); 
+    .w7(); 
+    text-align: right;
+}
+.paper:nth-child(odd) .body:after { 
+    .x7(); 
+    .w1();
+    text-align: right;
+}
+.paper:nth-child(even) .body:after { 
+    .x1(); 
+    .w1();
+    text-align: left;
+}
 
-.paper:nth-child(odd) .footer__title { margin-right: @col-gutter; }
-.paper:nth-child(even) .footer__title { text-align: right; }
+/*.paper:nth-child(odd) .footer:before { margin-right: @col-gutter; }*/
+/*.paper:nth-child(odd) .footer:after { margin-left: @col-gutter; }*/
+/*.paper:nth-child(even) .footer:after { margin-right: @col-gutter; }*/
+/*.paper:nth-child(even) .footer:before { margin-left: @col-gutter; }*/
 
-.paper:nth-child(even) .footer__page-number { margin-right: @col-gutter; }
-.paper:nth-child(odd) .footer__page-number { text-align: right; }
+/*.paper:nth-child(odd) .footer__title { margin-right: @col-gutter; }*/
+/*.paper:nth-child(even) .footer__title { text-align: right; }*/
+
+/*.paper:nth-child(even) .footer__page-number { margin-right: @col-gutter; }*/
+/*.paper:nth-child(odd) .footer__page-number { text-align: right; }*/
