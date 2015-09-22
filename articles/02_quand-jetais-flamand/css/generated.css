@@ -9,14 +9,8 @@
 }
 
 /* reset folio */
-body { counter-reset: folio 11 - 1; }
-False
+body { counter-reset: page-counter 11 - 1; }
 
 /*footer,*/
 /*header content*/
-.header:before { content: "enquete — Quand j&#39;étais Flamand"; }
-.footer:before { content: "Médor #1"; }
-
-
-
-
+.header:before { content: "Enquête — Quand j՚étais Flamand"; }
