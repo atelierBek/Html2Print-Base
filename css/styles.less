@@ -32,7 +32,7 @@ h3 {
 p { margin: 0; 
     font-family: "Century Schoolbook";
     font-size: 9pt;
-    line-height: 12pt;
+    line-height: @line-height;
 }
 
 p + p { text-indent: 6pt; }
@@ -43,10 +43,10 @@ em { font-style: italic; }
 .exergue {
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: 20pt;
-    line-height: 6pt * 3;
-    margin-top: 6pt;
-    margin-bottom: 6pt;
+    font-size: 21pt;
+    line-height: @line-height * 2;
+    margin-top: @line-height / 2;
+    margin-bottom: @line-height / 2;
 }
 
 .auteur{
@@ -54,8 +54,8 @@ em { font-style: italic; }
 }
 
 figure {
-    margin-top: 6pt;
-    margin-bottom: 6pt;
+    margin-top:  @line-height / 2;
+    margin-bottom:  @line-height / 2;
 }
 
 figure img{
@@ -66,15 +66,16 @@ figure img{
 figcaption {
     font-family: "Erbar condensed";
     font-size: 8pt;
-    line-height: 6pt * 1.5; 
+    line-height: @line-height * 1.5; 
 
 } 
 
 footnote {
     font-family: "Erbar condensed";
     font-size: 8pt;
-    line-height: 6pt * 1.5; 
+    line-height:  (@line-height / 2) * 1.5; 
 }
+
 
 /* 
  * Styles enquêtes
@@ -85,25 +86,27 @@ footnote {
 .enquete h1 {
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: 54pt;
-    line-height: 6pt * 9; 
+    font-size: 40pt;
+    line-height:  (@line-height / 2) * 7; 
     text-transform: uppercase;
-	border-top: 10px double black !important;
+	border-top: 5px solid black !important;
+	border-bottom: 5px solid black !important;
+	padding:10px 0px;
 }
 .enquete h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
-    font-size: 15pt;
-    line-height: 6pt * 3; 
+    font-size: 12pt;
+    line-height:  @line-height; 
     text-transform: uppercase;
-    padding-top: 6pt * 1;
+    margin-top:  @line-height;
 
 }
 
 .enquete .chapeau {
     font-family: "Bagnard";
     font-size: 15pt;
-    line-height: 6pt * 3;
+    line-height:  (@line-height / 2) * 3;
     -webkit-region-break-after: always;
 }
 
@@ -120,13 +123,13 @@ footnote {
 .interview h1 {
     font-family: "Century Schoolbook";
     font-size: 45pt;
-    line-height: 6pt * 6; 
+    line-height:  @line-height * 3; 
 }
 
 .interview .chapeau {
     font-family: "Century Schoolbook";
     font-size: 14pt;
-    line-height: 6pt * 3;
+    line-height:  (@line-height / 2) * 3;
     -webkit-region-break-after: always;
 }
 
@@ -212,15 +215,15 @@ footnote {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
     font-size: 15pt;
-    line-height: 6pt * 3; 
+    line-height:  (@line-height / 2) * 3; 
     text-transform: uppercase;
-    padding-top: 6pt * 1;
+    padding-top:  @line-height / 2;
 
 }
 
 .portrait .chapeau {
     font-family: "Bagnard";
     font-size: 15pt;
-    line-height: 6pt * 3;
+    line-height:  (@line-height / 2) * 3;
     -webkit-region-break-after: always;
 }
