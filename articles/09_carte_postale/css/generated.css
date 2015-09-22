@@ -1,0 +1,22 @@
+#flow-carte-postale {
+    -webkit-flow-into: flow-carte-postale;
+            flow-into: flow-carte-postale;
+}
+
+.flow-carte-postale {
+    -webkit-flow-from: flow-carte-postale;
+        flow-from: flow-carte-postale;
+}
+
+/* reset folio */
+body { counter-reset: folio  - 1; }
+
+
+/*footer,*/
+/*header content*/
+.header:before { content: "enquete — carte-postale"; }
+.footer:before { content: "Médor #1"; }
+
+
+
+
