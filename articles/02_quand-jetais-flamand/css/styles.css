@@ -1,22 +1,28 @@
 /* Styles for 02_quand-jetais-flamand */
 
-img{
-	position:relative;
-	float:left;
-	z-index:1 !important;
-	width:100%;
-	height:auto;
+#flow-quand-jetais-flamand header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
+
+img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .enquete h1{
-	paddind:5px 0px;
-}
-
-.chapeau{
-	margin-top:100px;
+    padding: 5px 0px;
 }
 
 .exergue p + p {
-	margin-top: 0pt;
-    margin-bottom: 0pt;
+    margin-top: 0;
+    margin-bottom: 0;
 }
