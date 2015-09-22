@@ -26,3 +26,14 @@ img {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+blockquote {
+    -webkit-region-break-inside: avoid;
+    margin: 0;
+}
+
+blockquote > footer {
+    font-size: 1rem;
+    line-height: @line-height;
+    text-align: right;
+}

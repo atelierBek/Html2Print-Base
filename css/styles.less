@@ -12,11 +12,11 @@
  */
 
 
-/*body {
+article {
     font-family: "Century Schoolbook", serif;
     font-size: 9pt;
-    line-height: 12pt;
-}*/
+    line-height: @line-height;
+}
 
 
 h1,
@@ -29,13 +29,8 @@ h3 {
 }
 
 
-p { margin: 0; 
-    font-family: "Century Schoolbook";
-    font-size: 9pt;
-    line-height: @line-height;
-}
-
-p + p { text-indent: 6pt; }
+p { margin: 0; }
+p + p { text-indent: @line-height; }
 
 em { font-style: italic; }
 
@@ -67,14 +62,20 @@ figcaption {
     font-family: "Erbar condensed";
     font-size: 8pt;
     line-height: @line-height * 1.5; 
-
 } 
 
-footnote {
+.footnote {
     font-family: "Erbar condensed";
     font-size: 8pt;
     line-height:  (@line-height / 2) * 1.5; 
 }
+.footnote > hr { display: none; }
+.footnot-ref > a { 
+    color: inherit; 
+    text-decoration: none; 
+}
+.footnote-backref { display: none; }
+
 
 
 /* 
