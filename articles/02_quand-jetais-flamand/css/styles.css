@@ -37,3 +37,13 @@ blockquote > footer {
     line-height: @line-height;
     text-align: right;
 }
+
+blockquote {
+  quotes: "«" "»" "“" "”";
+}
+blockquote > p:first-of-type::before {
+    content: open-quote;
+}
+blockquote > p:last-of-type::before {
+    content: close-quote;
+}
