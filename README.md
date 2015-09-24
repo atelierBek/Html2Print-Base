@@ -24,3 +24,15 @@ for example
 "flow-quand-jetais-flamand" from the generated.css will replace the class "recipient" in the body level
 
 
+
+-----
+
+html to md to md to html
+
+export you .doc in html
+then
+$ html2text article.html > article.md
+add makers to your article.md
+markdown_py -x extra article.md >| article.html
+
+
