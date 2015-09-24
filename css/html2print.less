@@ -128,9 +128,14 @@
 
     // TODO: changer le format du papier en spread pour pouvoir imprimer en planche
     .spread .paper { float: left; }
-    .spread .paper:nth-child(odd) { margin-left: -@edge; }
-    .spread .paper:nth-child(even) { margin-right: -@edge; }
-    .spread .paper:first-child { margin-left: @page-width; }
+
+    .spread:not(.facing) .paper:nth-child(odd) { margin-left: -@edge; }
+    .spread:not(.facing) .paper:nth-child(even) { margin-right: -@edge; }
+    .spread:not(.facing) .paper:first-child { margin-left: @page-width; }
+
+    .spread.facing .paper:nth-child(even) { margin-right: initial; margin-left: -@edge; }
+    .spread.facing .paper:nth-child(odd) { margin-left: initial; margin-right: -@edge; }
+    .spread.facing .paper:first-child { margin-left: 0; }
 }
 
 @media screen {
