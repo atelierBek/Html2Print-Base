@@ -57,44 +57,39 @@
  * page paire ou une page impaire, en utilisant le pseudo-sélecteur `nth-child`
  */
 
-.paper:nth-child(odd) .body {
+html:not(.facing) .paper:nth-child(odd) .body,
+html.facing .paper:nth-child(even) .body { 
     right: @page-margin-outside;
     left: @page-margin-inside;
 }
 
-.paper:nth-child(even) .body {
+html:not(.facing) .paper:nth-child(even) .body,
+html.facing .paper:nth-child(odd) .body { 
     left: @page-margin-outside;
     right: @page-margin-inside;
 }
 
-.paper:nth-child(odd) .body:before { 
+html:not(.facing) .paper:nth-child(odd) .body:before,
+html.facing .paper:nth-child(even) .body:before { 
     .x1(); 
     .w6(); 
-    text-align: left;
+    text-align: center;
 }
-.paper:nth-child(even) .body:before { 
+html:not(.facing) .paper:nth-child(even) .body:before,
+html.facing .paper:nth-child(odd) .body:before { 
     .x2(); 
-    .w7(); 
-    text-align: right;
+    .w6(); 
+    text-align: center;
 }
-.paper:nth-child(odd) .body:after { 
+html:not(.facing) .paper:nth-child(odd) .body:after,
+html.facing .paper:nth-child(even) .body:after { 
     .x7(); 
     .w1();
     text-align: right;
 }
-.paper:nth-child(even) .body:after { 
+html:not(.facing) .paper:nth-child(even) .body:after,
+html.facing .paper:nth-child(odd) .body:after { 
     .x1(); 
     .w1();
     text-align: left;
 }
-
-/*.paper:nth-child(odd) .footer:before { margin-right: @col-gutter; }*/
-/*.paper:nth-child(odd) .footer:after { margin-left: @col-gutter; }*/
-/*.paper:nth-child(even) .footer:after { margin-right: @col-gutter; }*/
-/*.paper:nth-child(even) .footer:before { margin-left: @col-gutter; }*/
-
-/*.paper:nth-child(odd) .footer__title { margin-right: @col-gutter; }*/
-/*.paper:nth-child(even) .footer__title { text-align: right; }*/
-
-/*.paper:nth-child(even) .footer__page-number { margin-right: @col-gutter; }*/
-/*.paper:nth-child(odd) .footer__page-number { text-align: right; }*/
