@@ -29,6 +29,7 @@ img {
 
 blockquote {
     -webkit-region-break-inside: avoid;
+                   break-inside: avoid;
     margin: 0;
 }
 
