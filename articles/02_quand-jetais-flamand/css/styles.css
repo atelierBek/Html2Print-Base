@@ -45,7 +45,16 @@ p + p::first-letter {
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: 40pt;
-    line-height:  (@line-height / 2) * 7; 
+    line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-	
+
+
+blockquote {
+  quotes: "«" "»" "“" "”";
+}
+blockquote > p:first-of-type::before {
+    content: open-quote;
+}
+blockquote > p:last-of-type::before {
+    content: close-quote;
 }
