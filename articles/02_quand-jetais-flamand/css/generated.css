@@ -14,4 +14,4 @@ body { counter-reset: page-counter 11 - 1; }
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Enquête — Quand j՚étais Flamand"; }
-.paper:nth-child(even) .body:before { content: "Médor n°1 —  printemps 2015"; }
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  décembre-janvier-février 2015"; }

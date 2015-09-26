@@ -9,14 +9,12 @@
 }
 
 /* reset folio */
-body { counter-reset: folio 29 - 1; }
-False
+body { counter-reset: page-counter 11 - 1; }
 
 /*footer,*/
 /*header content*/
-.header:before { content: "portrait — Le Mac Gyver des Campings"; }
-.footer:before { content: "Médor #1"; }
-
+.paper:nth-child(odd) .body:before { content: "Portrait — Bac + 10 à l’école de la vie"; }
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  printemps 2015"; }
 
 
 
