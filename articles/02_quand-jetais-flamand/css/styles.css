@@ -37,3 +37,15 @@ blockquote > footer {
     line-height: @line-height;
     text-align: right;
 }
+p + p {
+text-indent: 0px;
+}
+p + p::first-letter {
+	padding-top:30px !important;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 40pt;
+    line-height:  (@line-height / 2) * 7; 
+    text-transform: uppercase;
+	
+}

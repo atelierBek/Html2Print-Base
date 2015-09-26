@@ -9,14 +9,13 @@
 }
 
 /* reset folio */
-body { counter-reset: folio 56 - 1; }
-True
+body { counter-reset: page-counter 56 - 1; }
+/*body { counter-reset: folio 56 - 1; }*/
+
 
 /*footer,*/
 /*header content*/
-.header:before { content: "rubrique Fulguro-Point : le point sur les fulgurances du pays de la culture tranquille — Verviers, épicentre de la prochaine révolution musicale ?"; }
-.footer:before { content: "Médor #1"; }
-
-
+.paper:nth-child(odd) .body:before { content: "Rubrique Fulguro-Point — Verviers, épicentre de la prochaine révolution musicale ?"; }
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  décembre-janvier-février 2015"; }
 
 

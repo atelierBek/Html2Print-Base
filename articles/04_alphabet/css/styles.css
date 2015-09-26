@@ -1,1 +1,39 @@
 /* Styles for 04_alphabet */
+
+#flow-alphabet header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
+
+img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.enquete h1{
+    padding: 5px 0px;
+}
+
+.exergue p + p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote {
+    -webkit-region-break-inside: avoid;
+    margin: 0;
+}
+
+blockquote > footer {
+    font-size: 1rem;
+    line-height: @line-height;
+    text-align: right;
+}
