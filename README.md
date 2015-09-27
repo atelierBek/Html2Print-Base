@@ -1,56 +1,101 @@
-sudo apt-get install npm
-sudo npm -global install bower
-bower install
+Quick start
+===========
 
-- - -
+Pre-requisites
+--------------
 
-$ virtualenv --no-site-packages venv
-$ source venv/bin/activate
-(venv)$ pip install -r requirements.txt
-(venv)$ cp bin/settings.example.py bin/settings.py
-(venv)$ vim bin/settings.py
+Clone and enter the repository
 
-/* if you need to reload/update the articles html files, you'll have to erase your local artile folder before launching the makedocs.py → you should make a backup of you article folder if you did work in it before the following command
-$ rm -fr articles js/src.js */
+    git clone git@git.constantvzw.org:medor.numero1.git
+    cd medor.numero1
 
-(venv)$ python bin/makedocs.py
-(venv)$ python2 -m SimpleHTTPServer
+Make sure you have all the system-wide dependencies
 
+    sudo apt-get update
+    sudo apt-get install python-virtualenv
+    sudo apt-get install npm
+    sudo npm -global install bower
 
-once you have your article folder and your server runing don't forget to copy paste the good flow for each article
-from generated.css to article.html 
-for example
+Install the js and css dependencies (it will create a "vendors" directory)
 
-"flow-quand-jetais-flamand" from the generated.css will replace the class "recipient" in the body level
+    bower install
 
+Install the python dependencies
 
+    virtualenv --no-site-packages venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
------
+Copy the exemple settings file and set the credentials for medor.coop. They will
+be used to fetch the articles from the plateform
 
-html to md to md to html
+    cp bin/settings.example.py bin/settings.py
+    nano bin/settings.py
 
-export you .doc in html
-then
-$ html2text text-article.html > text-article.md
-add makers to your article.md
-markdown_py -x extra text-article.md >| text-article.html
+Pull the stories in the stories directory
 
-copy paste it at the bottom of the of the articles/article.html in between and in the django (?)
-    <div id="stories">
-        <article id="flow-article" class="type of article like enquete or rubrique...">
-			    <header>
-					<h1>titre article</h1>
-					<p class="authors">auteur</p>
-			    </header>
-			here! rest-of-the-text-article.html
-        </article>
-    </div>
+    make stories
 
-in the gabary, on the first page, in the body the first bloc should be for the h1 (header) and therefore have the class="flow-title"
-ex
-   <div class="body">
-       <div class="bloc x1 y0 w8 h3 flow-title"></div>
-       <div class="bloc x1 y5 w8 h5 flow-quand-jetais-flamand"></div>
-   </div>
+Generate the table of contents for HTML2print to work
+
+    make js/src.js
 
 
+Using HTML2print
+----------------
+
+Starts the serveur
+
+    python2 -m SimpleHTTPServer
+
+Visit the URL:
+
+    http://localhost:8000
+
+Using the layout generator
+--------------------------
+
+Starts the serveur if it isn't running already
+
+    python2 -m SimpleHTTPServer
+
+Visit the URL:
+
+    http://localhost:8000/grid.html
+
+
+keeping everything up-to-date
+=============================
+
+Updating the stories
+--------------------
+
+Enter the virtualenv if it is not yet the case
+
+    source venv/bin/activate
+
+Pull the stories in the stories directory
+
+    make stories
+
+Updating the table of contents
+------------------------------
+
+Enter the virtualenv if it is not yet the case
+
+    source venv/bin/activate
+
+Generate the table of contents for HTML2print to work
+
+    make js/src.js
+
+
+Cookbook
+========
+
+Converting from HTML to .docx
+-----------------------------
+
+    pandoc -f html -t docx -o destination.docx source.html
+
+Adapt it to your needs if you need to work with other formats
