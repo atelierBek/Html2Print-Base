@@ -74,7 +74,7 @@ def pull_stories(where="stories"):
         walker = html5lib.getTreeWalker("dom")
 
         stream = walker(dom)
-        stream = hyphenate.Filter(stream, left=3)
+        stream = hyphenate.Filter(stream, left=2, right=2)
 
         s = html5lib.serializer.HTMLSerializer(omit_optional_tags=False)
 
