@@ -1,6 +1,7 @@
 vendors
 bin/settings.py
 venv
+stories
 
 
 ## Python ignores

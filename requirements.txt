@@ -1,1 +1,2 @@
 requests==2.7.0
+git+git://github.com/aleray/html5lib_typogrify.git

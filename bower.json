@@ -18,6 +18,7 @@
   "dependencies": {
     "less": "~2.5.1",
     "normalize.css": "~3.0.3",
-    "normalize-opentype.css": "~0.2.4"
+    "normalize-opentype.css": "~0.2.4",
+    "css-regions-polyfill": "https://github.com/FremyCompany/css-regions-polyfill.git"
   }
 }
