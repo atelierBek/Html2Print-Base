@@ -66,8 +66,9 @@ blockquote {
 blockquote > footer {*/
     font-size: 1rem;
     text-align: left;
-    margin:  @line-height*3 ;
-    margin-left: 0px;
+    margin: @line-height 0 0 0 !important;
+
+
 
 }
 
