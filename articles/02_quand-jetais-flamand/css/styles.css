@@ -50,6 +50,11 @@
 
 /* end of FLOWS */
 
+/*div.x1.flow-quand-jetais-flamand {
+border-right: 1px solid black;
+padding-right: 3px;
+}*/
+
 
 img {
     display: block;
@@ -67,9 +72,7 @@ blockquote > footer {*/
     font-size: 1rem;
     text-align: left;
     margin: @line-height 0 0 0 !important;
-
-
-
+    color: #b14542;
 }
 
 

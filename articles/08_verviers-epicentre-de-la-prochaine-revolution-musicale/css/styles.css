@@ -1,5 +1,7 @@
 /* Styles for 08_verviers-epicentre-de-la-prochaine-revolution-musicale */
 
+/*FLOWS*/
+
 #flow-verviers-epicentre-de-la-prochaine-revolution-musicale header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -9,6 +11,13 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+/*end of FLOWS*/
+
+div.x0.flow-verviers-epicentre-de-la-prochaine-revolution-musicale,  div.x3.flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
+border-right: 2px solid black;
+padding-right: 3px;
+}
+
 
 img {
     display: block;
@@ -16,7 +25,13 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+
 }
+figure.x6.y0{
+border-bottom: 2px solid black;
+/*padding: 6px 3px;
+height: 30%;*/
+  }
 
 .enquete h1{
     padding: 5px 0px;
