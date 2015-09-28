@@ -107,3 +107,7 @@ margin-bottom: 13px;
 img[src="img/SuskeVanAken_2.JPG"] {
   object-fit: contain;
 }
+
+img[src="img/family_tree.jpg"] {
+  object-fit: cover;
+}
