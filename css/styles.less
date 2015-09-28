@@ -38,10 +38,15 @@ em { font-style: italic; }
 .exergue {
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: 21pt;
+    font-size: 18pt;
     line-height: @line-height * 1.5;
-    margin-top: @line-height / 2;
-    margin-bottom: @line-height / 2;
+    /*margin-top: @line-height / 2;
+    margin-bottom: @line-height / 2;*/
+
+}
+.exergue p + p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .auteur{
@@ -104,7 +109,7 @@ figcaption {
     //padding-bottom:  @line-height / 3;
 }
 .enquete h2:first-letter {
-	padding-top: 16px;
+	padding-top: 15px;
     padding-right: 3px;
     padding-bottom: 3px;
     float: left;
@@ -136,6 +141,21 @@ figcaption {
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
 }
+.enquete h3 {
+    font-family: "Erbar condensed" !important;
+    //font-family: "Belgika8th";
+    //font-family: "Bagnard";
+    font-weight:normal; ;
+  //  font-size: 13pt;
+    //font-size: 8pt;
+    font-size: 12pt;
+
+    line-height:  @line-height;
+  text-transform: uppercase;
+    margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
+}
+
 .enquete .authors {
     font-family: "Belgika8th";
     font-weight: normal;
@@ -153,6 +173,16 @@ figcaption {
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
+}
+
+.enquete .footnotes{
+    font-family: "Erbar condensed";
+    font-weight: normal;
+    font-style: normal;
+    margin:0px 0px 0px 4px;
+    font-size: 8pt;
+    line-height:  @line-height  ;
+
 }
 
 /*

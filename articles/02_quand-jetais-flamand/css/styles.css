@@ -1,5 +1,7 @@
 /* Styles for 02_quand-jetais-flamand */
 
+/* FLOWS */
+
 #flow-quand-jetais-flamand header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -10,6 +12,45 @@
         flow-from: flow-title;
 }
 
+#flow-quand-jetais-flamand .footnotes #fn1 {
+    -webkit-flow-into: flow-footnotes1;
+            flow-into: flow-footnotes1;
+}
+.flow-footnotes1 {
+    -webkit-flow-from: flow-footnotes1;
+        flow-from: flow-footnotes1;
+}
+
+#flow-quand-jetais-flamand .footnotes #fn2 {
+    -webkit-flow-into: flow-footnotes2;
+            flow-into: flow-footnotes2;
+}
+.flow-footnotes2 {
+    -webkit-flow-from: flow-footnotes2;
+        flow-from: flow-footnotes2;
+}
+
+#flow-quand-jetais-flamand .footnotes #fn3 {
+    -webkit-flow-into: flow-footnotes3;
+            flow-into: flow-footnotes3;
+}
+.flow-footnotes3 {
+    -webkit-flow-from: flow-footnotes3;
+        flow-from: flow-footnotes3;
+}
+
+#flow-quand-jetais-flamand .footnotes #fn4 {
+    -webkit-flow-into: flow-footnotes4;
+            flow-into: flow-footnotes4;
+}
+.flow-footnotes4 {
+    -webkit-flow-from: flow-footnotes4;
+        flow-from: flow-footnotes4;
+}
+
+/* end of FLOWS */
+
+
 img {
     display: block;
     position: absolute;
@@ -18,44 +59,44 @@ img {
     width: 100%;
 }
 
-
-
-.exergue p + p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 blockquote {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
-    margin: 0;
-
-}
-
-blockquote > footer {
+/*}
+blockquote > footer {*/
     font-size: 1rem;
-    line-height: @line-height;
-    text-align: right;
-}
-blockquote p + p{
-    float: left;
-    display: inline;
-}
-p + p {
-text-indent: 0px;
+    text-align: left;
+    margin:  @line-height*3 ;
+    margin-left: 0px;
 }
 
 
-blockquote {
+/*blockquote {
   quotes: "«" "»" "“" "”";
 }
 blockquote > p:first-of-type::before {
     content: open-quote;
+}*/
+blockquote > p:first-of-type {
+    /*content: close-quote;*/
+    font-family: "Erbar condensed" !important;
+    font-weight: bold !important;
+    font-style: normal;
+    font-size: 18pt !important;
+
 }
-blockquote > p:last-of-type::before {
-    content: close-quote;
+blockquote > p:last-of-type {
+    /*content: close-quote;*/
+    font-family: "Belgika8th";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 8pt;
+
 }
 
+p + p {
+text-indent: 0px;
+}
 
 .contexte {
 margin-bottom: 13px;
