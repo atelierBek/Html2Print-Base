@@ -57,7 +57,11 @@ blockquote > p:last-of-type::before {
 }
 
 
-.contexte{
+.contexte {
 margin-bottom: 13px;
 
+}
+
+img[src="img/SuskeVanAken_2.JPG"] {
+  object-fit: contain;
 }
