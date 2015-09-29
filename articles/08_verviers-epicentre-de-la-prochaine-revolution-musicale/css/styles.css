@@ -14,8 +14,8 @@
 /*end of FLOWS*/
 
 div.x0.flow-verviers-epicentre-de-la-prochaine-revolution-musicale,  div.x3.flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
-border-right: 2px solid black;
-padding-right: 3px;
+border-right:  2px solid black;
+padding-right: 5px;
 }
 
 
@@ -25,13 +25,20 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    margin: 0 !important;
 
 }
 figure.x6.y0{
 border-bottom: 2px solid black;
+margin: 0
+
 /*padding: 6px 3px;
 height: 30%;*/
   }
+
+figure  img {
+    width: 100%;
+}
 
 .enquete h1{
     padding: 5px 0px;
