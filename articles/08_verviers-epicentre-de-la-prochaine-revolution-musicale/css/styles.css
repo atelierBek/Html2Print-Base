@@ -6,15 +6,23 @@
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
 }
-
 .flow-title {
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+
+#flow-verviers-epicentre-de-la-prochaine-revolution-musicale .footnotes {
+    -webkit-flow-into: flow-footnotes;
+            flow-into: flow-footnotes;
+}
+.flow-footnotes {
+    -webkit-flow-from: flow-footnotes;
+        flow-from: flow-footnotes;
+}
 /*end of FLOWS*/
 
 div.x0.flow-verviers-epicentre-de-la-prochaine-revolution-musicale,  div.x3.flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
-border-right:  2px solid black;
+border-right:  1px solid black;
 padding-right: 5px;
 }
 
@@ -28,7 +36,7 @@ img {
     margin: 0 !important;
 
 }
-figure.x6.y0{
+figure/*.x6.y0*/{
 border-bottom: 2px solid black;
 margin: 0
 
@@ -59,3 +67,15 @@ blockquote > footer {
     line-height: @line-height;
     text-align: right;
 }
+.rubrique .footnotes > li{
+    font-family: "Erbar condensed";
+    font-weight: normal;
+    font-style: normal;
+    margin:0px 0px 0px 0px;
+    font-size: 8pt;
+    line-height:  @line-height  ;
+    }
+.rubrique .footnotes > li > a{
+        color: black;
+        text-decoration: none;
+        }

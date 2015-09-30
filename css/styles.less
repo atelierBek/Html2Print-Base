@@ -27,6 +27,11 @@ h3 {
     -webkit-break-inside: avoid-region;
             break-inside: avoid-region;
 }
+h2:first-of-type{
+  top:0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  }
 
 
 p { margin: 0; }
@@ -35,7 +40,7 @@ p + p { text-indent: @line-height; }
 em { font-style: italic; }
 
 
-.exergue {
+/*.exergue {
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: 18pt;
@@ -49,12 +54,12 @@ em { font-style: italic; }
     /*margin-top: @line-height / 2;
     margin-bottom: @line-height / 2;*/
 
-}
+/*}
 .exergue p + p {
     margin-top: 0;
     margin-bottom: 0;
 
-}
+}*/
 
 .auteur{
 
@@ -62,17 +67,23 @@ em { font-style: italic; }
 
 figure {
     margin:  @line-height / 2 0;
+    position: relative;
 }
 
 figure img{
     //max-width:50%;
     text-align:center;
+    display: block;
 }
 
 figcaption {
     font-family: "Erbar condensed";
     font-size: 8pt;
     line-height: @line-height * 1.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
 }
 
 .footnote {
@@ -105,6 +116,9 @@ figcaption {
 	//border-bottom: 5px solid black !important;
 	padding-top:10px;
 }
+.enquete h2:first-of-type{
+  margin-top:  @line-height;
+  }
 .enquete h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
@@ -115,7 +129,7 @@ figcaption {
     //padding-bottom:  @line-height / 3;
 }
 .enquete h2:first-letter {
-	padding-top: 15px;
+	padding-top: @line-height;
     padding-right: 3px;
     padding-bottom: 3px;
     float: left;
@@ -131,7 +145,6 @@ figcaption {
   margin-top: 0;
   margin-bottom: 0px;
   font-weight: bold;
-  float: left;
   display: inline;
   //border-bottom: 5px solid black !important;
 
@@ -190,6 +203,57 @@ figcaption {
     line-height:  @line-height  ;
 
 }
+.enquete blockquote {
+    -webkit-region-break-inside: avoid;
+                   break-inside: avoid;
+    font-size: 1rem;
+    text-align: left;
+    margin: @line-height 0 0 0 !important;
+    color: #b14542;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+    line-height: @line-height * 1.5;
+    border-top: 3px solid #b14542;
+    border-bottom: 3px solid #b14542;
+    padding:  @line-height/2 ;
+    background-color: #fffd73;
+    margin: @line-height 0 0 0 !important;
+
+}
+
+
+/*blockquote {
+  quotes: "«" "»" "“" "”";
+}
+blockquote > p:first-of-type::before {
+    content: open-quote;
+}*/
+.enquete blockquote p + p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+.enquete blockquote > p:first-of-type {
+    /*content: close-quote;*/
+    font-family: "Erbar condensed" !important;
+    font-weight: bold !important;
+    font-style: normal;
+    font-size: 18pt !important;
+
+}
+.enquete blockquote > p:last-of-type {
+    /*content: close-quote;*/
+    font-family: "Belgika8th";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 8pt;
+
+}
+.enquete blockquote:first-of-type{
+      margin: 0px !important;
+}
+
 
 /*
  * Styles interview
@@ -315,60 +379,101 @@ figcaption {
  * Styles bd
  * -----------------
  */
+.bd{
+    font-family: "Erbar condensed";
+    font-size: 9.5pt;
 
+}
 .bd h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-family: "Bagnard";
-    font-size: 44pt;
+    font-size: 37pt;
     line-height: (@line-height / 2) * 7;
     font-weight: normal;
 }
 
 .bd h2 {
+    font-family: "Erbar condensed" !important;
+    font-weight: bold;
+    font-size: 12pt;
+    line-height: @line-height ;
+    text-transform: uppercase;
+    margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
+}
+.bd h2:first-letter {
+    line-height: @line-height *2 ;
+    padding-right: 3px;
+    //padding-bottom: 1px;
     float: left;
-
-    margin: 0 6pt 0 0;
-
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: 9.4pt;
-    line-height: @line-height;
+    font-size: 30pt;
+  //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-    padding-top: 6pt * 1;
 }
 
+.bd header > h2{
+  font-size: 12pt;
+  margin-top:  (@line-height / 2) * 7;
+  line-height: (@line-height / 2) * 3;
+  margin-bottom: 0px;
+  font-weight: bold;
+  display: inline;
+  //border-bottom: 5px solid black !important;
+
+}
+.bd header > h2:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}
 .bd .chapeau {
     font-family: "Century Schoolbook";
-    font-size: 14pt;
+    font-size: 17pt;
     line-height: (@line-height / 2) * 3;
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
 }
-
+.bd .authors, .bd .auteur{
+  font-family: "Belgika8th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+}
 /*
  * Styles portraits
  * -----------------
  */
-
+.portrait{
+  font-size: 12.5pt;
+  line-height:  (@line-height * 4) / 3  ;
+}
 
 .portrait h1 {
-    font-family: "Erbar condensed";
+  font-family: "Bagnard";
     font-weight: bold;
-    font-size: 54pt;
-    line-height: (@line-height / 2) * 9;
-    text-transform: uppercase;
-	border-top: 10px double black !important;
+    font-size: 45pt;
+    line-height: (@line-height / 2) * 8;
+    //text-transform: uppercase;
+	//border-top: 10px double black !important;
 }
 .portrait h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
     font-size: 15pt;
-    line-height:  (@line-height / 2) * 3;
+    line-height:  @line-height ;
     text-transform: uppercase;
-    padding-top:  @line-height / 2;
-
+    padding-top:  @line-height;
+    text-align: center;
 }
 
 .portrait .chapeau {
@@ -378,4 +483,67 @@ figcaption {
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
+}
+p.authors::after{
+  //content: "***" ;
+  content: "⁂" ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: block;
+  margin-top: @line-height * 2;
+
+}
+.portrait .authors{
+  font-family: "Belgika8th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+}
+.portrait h2 + p:first-letter {
+	padding-top:  (@line-height * 4) / 3  ;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    float: left;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 56pt;
+    text-transform: uppercase;
+}
+
+.portrait header > h2{
+  font-size: 15pt;
+  margin-top: @line-height/2  !important;
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: left;
+  //display: inline;
+  //border-bottom: 5px solid black !important;
+
+}
+.portrait header > h2 + p:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 15pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}
+.portrait h3 {
+    font-family: "Erbar condensed" !important;
+    //font-family: "Belgika8th";
+    //font-family: "Bagnard";
+    font-weight:normal; ;
+  //  font-size: 13pt;
+    //font-size: 8pt;
+    font-size: 12pt;
+
+    line-height:  @line-height;
+  text-transform: uppercase;
+    margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
 }
