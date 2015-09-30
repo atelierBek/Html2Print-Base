@@ -468,7 +468,7 @@ blockquote > p:first-of-type::before {
 }
 .portrait h2 {
     font-family: "Erbar condensed" !important;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 15pt;
     line-height:  @line-height ;
     text-transform: uppercase;
@@ -484,7 +484,21 @@ blockquote > p:first-of-type::before {
             region-break-after: always;
                    break-after: always;
 }
-p.authors::after{
+.portrait h2::before{
+  //content: "***" ;
+  content: "⁂" ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: block;
+  margin-bottom: @line-height ;
+  margin-top: @line-height ;
+
+
+}
+
+.portrait p.authors::after{
   //content: "***" ;
   content: "⁂" ;
   text-align: center;
@@ -520,6 +534,16 @@ p.authors::after{
   text-align: left;
   //display: inline;
   //border-bottom: 5px solid black !important;
+
+}
+.portrait header > h2::before{
+  //content: "***" ;
+  content: " " ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: none;
 
 }
 .portrait header > h2 + p:first-letter {
