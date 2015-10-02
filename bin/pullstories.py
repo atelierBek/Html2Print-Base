@@ -28,7 +28,8 @@ import requests
 import codecs
 import settings
 import html5lib
-from html5lib_typogrify.french.filters import hyphenate
+from html5lib.filters import whitespace
+from html5lib_typogrify.french.filters import hyphenate, medor
 
 
 
@@ -70,10 +71,15 @@ def pull_stories(where="stories"):
 
         output = request.text
 
-        dom = html5lib.parseFragment(output, treebuilder="dom")
-        walker = html5lib.getTreeWalker("dom")
+        # Using etree is important here because it /can't/ have adjacent text
+        # nodes in its data model (thanks html5lib folks for the tip).
+        # See <https://github.com/html5lib/html5lib-python/issues/208>
+        dom = html5lib.parseFragment(output, treebuilder="etree")
+        walker = html5lib.getTreeWalker("etree")
 
         stream = walker(dom)
+        stream = whitespace.Filter(stream)
+        stream = medor.Filter(stream)
         stream = hyphenate.Filter(stream, left=2, right=2)
 
         s = html5lib.serializer.HTMLSerializer(omit_optional_tags=False)
