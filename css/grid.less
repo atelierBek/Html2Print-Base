@@ -46,33 +46,41 @@
 
 
 .grid .body {
+    outline: 1px solid @grid-color;
     background-attachment: local;
-    background-size: @col-gutter-width @row-gutter-height, 
-                     @col-gutter-width @row-gutter-height, 
-                     @col-gutter-width @row-gutter-height, 
-                     @col-gutter-width @row-gutter-height;
+    background-size: 100% @row-gutter-height, 
+                     @col-gutter-width 100%, 
+                     100% @row-gutter-height, 
+                     @col-gutter-width 100%,
+                     100% 12pt;
     background-position: -1px -1px, 
                          -1px -1px, 
                          -(@col-gutter + 0) -(@row-gutter + 0), 
-                         -(@col-gutter + 0) -(@row-gutter + 0);
+                         -(@col-gutter + 0) -(@row-gutter + 0),
+                         0 -1px;
     background-image: -webkit-linear-gradient(top, @grid-color 1px, transparent 1px),
                       -webkit-linear-gradient(left, @grid-color 1px, transparent 1px),
                       -webkit-linear-gradient(top, @grid-color 1px, transparent 1px),
-                      -webkit-linear-gradient(left, @grid-color 1px, transparent 1px);
+                      -webkit-linear-gradient(left, @grid-color 1px, transparent 1px),
+                      -webkit-linear-gradient(top, @baseline-grid-color 1px, transparent 1px);
     background-image:    -moz-linear-gradient(top, @grid-color 1px, transparent 1px),
                          -moz-linear-gradient(left, @grid-color 1px, transparent 1px),
                          -moz-linear-gradient(top, @grid-color 1px, transparent 1px),
-                         -moz-linear-gradient(left, @grid-color 1px, transparent 1px);
+                         -moz-linear-gradient(left, @grid-color 1px, transparent 1px),
+                         -moz-linear-gradient(top, @baseline-grid-color 1px, transparent 1px);
     background-image:     -ms-linear-gradient(top, @grid-color 1px, transparent 1px),
                           -ms-linear-gradient(left, @grid-color 1px, transparent 1px),
                           -ms-linear-gradient(top, @grid-color 1px, transparent 1px),
-                          -ms-linear-gradient(left, @grid-color 1px, transparent 1px);
+                          -ms-linear-gradient(left, @grid-color 1px, transparent 1px),
+                          -ms-linear-gradient(top, @baseline-grid-color 1px, transparent 1px);
     background-image:      -o-linear-gradient(top, @grid-color 1px, transparent 1px),
                            -o-linear-gradient(left, @grid-color 1px, transparent 1px),
                            -o-linear-gradient(top, @grid-color 1px, transparent 1px),
-                           -o-linear-gradient(left, @grid-color 1px, transparent 1px);
+                           -o-linear-gradient(left, @grid-color 1px, transparent 1px),
+                           -o-linear-gradient(top, @baseline-grid-color 1px, transparent 1px);
     background-image: linear-gradient(to bottom, @grid-color 1px, transparent 1px),
                       linear-gradient(to right, @grid-color 1px, transparent 1px),
                       linear-gradient(to bottom, @grid-color 1px, transparent 1px),
-                      linear-gradient(to right, @grid-color 1px, transparent 1px);
+                      linear-gradient(to right, @grid-color 1px, transparent 1px),
+                      linear-gradient(to bottom, @baseline-grid-color 1px, transparent 1px);
 }

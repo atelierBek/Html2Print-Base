@@ -50,6 +50,11 @@
 
 /* end of FLOWS */
 
+/*div.x1.flow-quand-jetais-flamand {
+border-right: 1px solid black;
+padding-right: 3px;
+}*/
+
 
 img {
     display: block;
@@ -59,42 +64,6 @@ img {
     width: 100%;
 }
 
-blockquote {
-    -webkit-region-break-inside: avoid;
-                   break-inside: avoid;
-/*}
-blockquote > footer {*/
-    font-size: 1rem;
-    text-align: left;
-    margin: @line-height 0 0 0 !important;
-
-
-
-}
-
-
-/*blockquote {
-  quotes: "«" "»" "“" "”";
-}
-blockquote > p:first-of-type::before {
-    content: open-quote;
-}*/
-blockquote > p:first-of-type {
-    /*content: close-quote;*/
-    font-family: "Erbar condensed" !important;
-    font-weight: bold !important;
-    font-style: normal;
-    font-size: 18pt !important;
-
-}
-blockquote > p:last-of-type {
-    /*content: close-quote;*/
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-
-}
 
 p + p {
 text-indent: 0px;
