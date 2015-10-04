@@ -16,10 +16,8 @@ Make sure you have all the system-wide dependencies
     sudo apt-get install libffi-dev
     sudo apt-get install python-virtualenv
     sudo apt-get install npm
+    sudo apt-get install nodejs-legacy
     sudo npm -global install bower
-
-    sudo apt-get install libffi-dev
-    pip install pyopenssl ndg-httpsclient pyasn1
 
 
 Install the js and css dependencies (it will create a "vendors" directory)
@@ -31,7 +29,6 @@ Install the python dependencies
     virtualenv --no-site-packages venv
     source venv/bin/activate
     pip install -r requirements.txt
-    pip install pyopenssl ndg-httpsclient pyasn1
 
 Copy the exemple settings file and set the credentials for medor.coop. They will
 be used to fetch the articles from the plateform
