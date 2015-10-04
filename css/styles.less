@@ -28,9 +28,9 @@ h3 {
             break-inside: avoid-region;
 }
 h2:first-of-type{
-  top:0 !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  top:0 ;
+  margin-top: 0 ;
+  padding-top: 0 ;
   }
 
 
@@ -116,18 +116,24 @@ figcaption {
 	//border-bottom: 5px solid black !important;
 	padding-top:10px;
 }
-.enquete h2:first-of-type{
-  margin-top:  @line-height;
-  }
+
 .enquete h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
     font-size: 12pt;
     line-height:  @line-height;
     text-transform: uppercase;
-    margin-top:  @line-height;
+  //  margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
+.enquete blockquote + h2{
+  //margin-top:  (@line-height/6) * 2 !important;
+  margin-top:  @line-height !important;
+
+  }
+  .enquete p + h2{
+    margin-top: @line-height !important;
+    }
 .enquete h2:first-letter {
 	padding-top: @line-height;
     padding-right: 3px;
@@ -208,7 +214,7 @@ figcaption {
                    break-inside: avoid;
     font-size: 1rem;
     text-align: left;
-    margin: @line-height 0 0 0 !important;
+    margin: @line-height  0 0 0 !important;
     color: #b14542;
     font-family: "Erbar condensed";
     font-weight: bold;
@@ -216,9 +222,8 @@ figcaption {
     line-height: @line-height * 1.5;
     border-top: 3px solid #b14542;
     border-bottom: 3px solid #b14542;
-    padding:  @line-height/2 ;
+    padding:  (@line-height/3)* 2 ;
     background-color: #fffd73;
-    margin: @line-height 0 0 0 !important;
 
 }
 
