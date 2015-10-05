@@ -45,6 +45,33 @@
 .create-h-classes();
 
 
+.create-grid-classes(@prop: left, @class-name: x, @max-size: 100, @i: 0, @offset: 0, @odd: true) when (@offset <= @max-size) {
+    .@{class-name}@{i} {
+       @{prop}: @offset;
+    };
+
+    & when (@odd) {
+        .create-grid-classes(@prop, @class-name, @max-size, @i + 1, @offset + @col-width, false) 
+    };
+
+    & when not (@odd) {
+        .create-grid-classes(@prop, @class-name, @max-size, @i + 1, @offset + @col-gutter, true)
+    };
+}
+
+.paper:nth-child(odd) .l-1 { left: -( @page-margin-inside + 0mm); }
+.paper:nth-child(even) .l-1 { left: -( @page-margin-outside + 0mm); }
+.create-grid-classes(left, l, @body-width);
+.paper:nth-child(odd) .r-1 { right: -( @page-margin-outside + 0mm); }
+.paper:nth-child(even) .r-1 { right: -( @page-margin-inside + 0mm); }
+.create-grid-classes(right, r, @body-width);
+
+.t-1 { top: -( @page-margin-top + 0mm); }
+.create-grid-classes(top, t, @body-height);
+.b-1 { bottom: -( @page-margin-bottom + 0mm); }
+.create-grid-classes(bottom, b, @body-height);
+
+
 .grid .body {
     outline: 1px solid @grid-color;
     background-attachment: local;
