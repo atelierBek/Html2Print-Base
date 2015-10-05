@@ -1,0 +1,18 @@
+#flow-le-monstre-en-moi {
+    -webkit-flow-into: flow-le-monstre-en-moi;
+            flow-into: flow-le-monstre-en-moi;
+}
+
+.flow-le-monstre-en-moi {
+    -webkit-flow-from: flow-le-monstre-en-moi;
+        flow-from: flow-le-monstre-en-moi;
+}
+
+/* reset folio */
+body { counter-reset: folio  - 1; }
+
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "Traduction Néerlandais — Le monstre en moi qui grandit"; }
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  printemps 2015"; }
