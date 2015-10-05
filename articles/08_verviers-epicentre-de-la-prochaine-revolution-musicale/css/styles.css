@@ -1,8 +1,8 @@
-/* Styles for 08_verviers-epicentre-de-la-prochaine-revolution-musicale */
+/* Styles for 08_herrmutt-lobby */
 
 /*FLOWS*/
 
-#flow-verviers-epicentre-de-la-prochaine-revolution-musicale header {
+#flow-herrmutt-lobby header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
 }
@@ -11,7 +11,7 @@
         flow-from: flow-title;
 }
 
-#flow-verviers-epicentre-de-la-prochaine-revolution-musicale .footnotes {
+#flow-herrmutt-lobby .footnotes {
     -webkit-flow-into: flow-footnotes;
             flow-into: flow-footnotes;
 }
@@ -21,7 +21,7 @@
 }
 /*end of FLOWS*/
 
-div.x0.flow-verviers-epicentre-de-la-prochaine-revolution-musicale,  div.x3.flow-verviers-epicentre-de-la-prochaine-revolution-musicale {
+div.x0.flow-herrmutt-lobby,  div.x3.flow-herrmutt-lobby {
 border-right:  1px solid black;
 padding-right: 5px;
 }
