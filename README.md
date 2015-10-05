@@ -100,6 +100,18 @@ Generate the table of contents for HTML2print to work
 Cookbook
 ========
 
+Convertir les textes pour un premier coulage (avant l'étape de corrections)
+--------------------------------------------------------------------------
+
+1_ convertir le docx en html
+pandoc -f docx -t html origin.docx > result.html
+2_ convertir cet html en markdown
+html2text article.html > article.md 
+3_convertir le markdown en html
+markdown_py -x extra article.md >| article.html
+4_ importer cet html dans l'administration Django
+
+
 Converting from HTML to .docx
 -----------------------------
 
