@@ -9,13 +9,10 @@
 }
 
 /* reset folio */
-body { counter-reset: page-counter 11 - 1; }
+body { counter-reset: folio  - 1; }
+
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Rubrique — Le silence du tram"; }
-.paper:nth-child(even) .body:before { content: "Médor n°1 —  automne-hiver 2015"; }
-
-
-
-
+.paper:nth-child(odd) .body:before { content: "Le silence du tram"; }
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  printemps 2015"; }
