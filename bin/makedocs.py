@@ -85,15 +85,9 @@ def main():
         # Gets the css
         os.mkdir('articles_new/%s/css' % name)
         request = client.get(hostname + "/fr/publish/%s.css" % membership['id'])
-        f = codecs.open("articles_new/%s/css/generated.css" % name, "w", "utf-8")
+        f = codecs.open("articles_new/%s/css/styles.less" % name, "w", "utf-8")
         f.write(request.text)
         f.close()
-
-        # Creates the style file
-        f = codecs.open("articles_new/%s/css/styles.css" % name, "w", "utf-8")
-        f.write("/* Styles for %s */" % name)
-        f.close()
-
 
 if __name__ == '__main__':
     import argparse
