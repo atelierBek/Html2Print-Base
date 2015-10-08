@@ -31,7 +31,7 @@
  */
 
 .body:before,
-.body:after { 
+.body:after {
     display: block;
     font-family: "Belgika8th", sans-serif;
     font-size: 6pt;
@@ -58,38 +58,38 @@
  */
 
 html:not(.facing) .paper:nth-child(odd) .body,
-html.facing .paper:nth-child(even) .body { 
+html.facing .paper:nth-child(even) .body {
     right: @page-margin-outside;
     left: @page-margin-inside;
 }
 
 html:not(.facing) .paper:nth-child(even) .body,
-html.facing .paper:nth-child(odd) .body { 
+html.facing .paper:nth-child(odd) .body {
     left: @page-margin-outside;
     right: @page-margin-inside;
 }
 
 html:not(.facing) .paper:nth-child(odd) .body:before,
-html.facing .paper:nth-child(even) .body:before { 
-    .x1(); 
-    .w6(); 
-    text-align: center;
+html.facing .paper:nth-child(even) .body:before {
+    .x5();
+    .w4();
+  //text-align: center;
 }
 html:not(.facing) .paper:nth-child(even) .body:before,
-html.facing .paper:nth-child(odd) .body:before { 
-    .x2(); 
-    .w6(); 
-    text-align: center;
+html.facing .paper:nth-child(odd) .body:before {
+    .x5();
+    .w4();
+    //text-align: center;
 }
 html:not(.facing) .paper:nth-child(odd) .body:after,
-html.facing .paper:nth-child(even) .body:after { 
-    .x7(); 
+html.facing .paper:nth-child(even) .body:after {
+    .x1();
     .w1();
-    text-align: right;
+    text-align: left;
 }
 html:not(.facing) .paper:nth-child(even) .body:after,
-html.facing .paper:nth-child(odd) .body:after { 
-    .x1(); 
+html.facing .paper:nth-child(odd) .body:after {
+    .x1();
     .w1();
     text-align: left;
 }
