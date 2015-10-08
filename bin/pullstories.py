@@ -64,7 +64,7 @@ def pull_stories(where="stories"):
 
         print("Pulling %s" % slug)
 
-        name = '%02d_%s' % (order, slug)
+        name = slug
 
         # Gets the story
         request = client.get(hostname + "/fr/publish/%s.html" % membership['id'])
