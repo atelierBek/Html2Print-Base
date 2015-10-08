@@ -37,7 +37,7 @@ img {
 
 }
 figure/*.x6.y0*/{
-border-bottom: 2px solid black;
+/*border-bottom: 2px solid black;*/
 margin: 0
 
 /*padding: 6px 3px;
@@ -46,8 +46,34 @@ height: 30%;*/
 
 figure  img {
     width: 100%;
+    position: relative;
 }
+figcaption{
+  -ms-transform: rotate(-90deg); /* IE 9 */
+    -ms-transform-origin: left top 0; /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+transform-origin: left top 0;
+position: relative;
+margin-left: 97%;
 
+  /*
+  writing-mode: vertical-lr;
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  transform: rotate(-90deg);
+  white-space:nowrap;
+  display:block;
+  /*bottom:0;
+  bottom:0;
+  right:0;
+  width:20px;
+  height:20px;
+  margin-left: 184px;*/
+}
 .enquete h1{
     padding: 5px 0px;
 }

@@ -81,3 +81,16 @@ img[src="img/SuskeVanAken_2.JPG"] {
 img[src="img/family_tree.jpg"] {
   object-fit: cover;
 }
+h2{
+  /*border-top: 3px solid black !important;*/
+  text-align: center;
+  margin-bottom:  @line-height !important;
+
+}
+h2 + p{
+  margin-top:  @line-height !important;
+
+}
+h3{
+  text-align: center;
+}

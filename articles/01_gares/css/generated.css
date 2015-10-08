@@ -15,8 +15,4 @@ body { counter-reset: folio  - 1; }
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Enquête — Détournement de gares"; }
-.paper:nth-child(even) .body:before { content: "Médor n°1 —  printemps 2015"; }
-
-
-
-
+.paper:nth-child(even) .body:before { content: "Médor n°1 —  décembre-janvier-février 2015"; }
