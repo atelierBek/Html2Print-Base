@@ -118,12 +118,14 @@ figcaption {
 
 
 .enquete h1 {
+    padding-top:-  @line-height / 2;
+    padding-bottom: - @line-height / 2;
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: 40pt;
     line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-	border-top: 5px solid black !important;
+	  border-top: 5px solid black !important;
 	//border-bottom: 5px solid black !important;
 	padding-top:10px;
 }
@@ -334,17 +336,20 @@ blockquote > p:first-of-type::before {
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
-.rubrique h2:first-letter {
-	padding-top: 15px;
+
+//Style lettrine pour les rubriques.
+
+/*.rubrique h2:first-letter {
+	  padding-top: 15px;
     padding-right: 3px;
     padding-bottom: 3px;
     float: left;
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: 45pt;
-  //  line-height:  (@line-height / 2) * 7;
+//  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 
 .rubrique header > h2{
   font-size: 18pt;
