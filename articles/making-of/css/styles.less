@@ -1,0 +1,17 @@
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
+
+/* reset folio */
+body { counter-reset: folio 129 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "making-of — Making-of"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }

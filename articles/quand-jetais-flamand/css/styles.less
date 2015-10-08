@@ -1,0 +1,103 @@
+/*GENERATED*/
+
+/* Styles for 02_quand-jetais-flamand */
+
+/* FLOWS */
+
+#flow-main header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
+
+#flow-main .footnotes #fn1 {
+    -webkit-flow-into: flow-footnotes1;
+            flow-into: flow-footnotes1;
+}
+.flow-footnotes1 {
+    -webkit-flow-from: flow-footnotes1;
+        flow-from: flow-footnotes1;
+}
+
+#flow-main .footnotes #fn2 {
+    -webkit-flow-into: flow-footnotes2;
+            flow-into: flow-footnotes2;
+}
+.flow-footnotes2 {
+    -webkit-flow-from: flow-footnotes2;
+        flow-from: flow-footnotes2;
+}
+
+#flow-main .footnotes #fn3 {
+    -webkit-flow-into: flow-footnotes3;
+            flow-into: flow-footnotes3;
+}
+.flow-footnotes3 {
+    -webkit-flow-from: flow-footnotes3;
+        flow-from: flow-footnotes3;
+}
+
+#flow-main .footnotes #fn4 {
+    -webkit-flow-into: flow-footnotes4;
+            flow-into: flow-footnotes4;
+}
+.flow-footnotes4 {
+    -webkit-flow-from: flow-footnotes4;
+        flow-from: flow-footnotes4;
+}
+
+/* end of FLOWS */
+
+/*div.x1.flow-main {
+border-right: 1px solid black;
+padding-right: 3px;
+}*/
+
+
+img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+p + p {
+text-indent: 0px;
+}
+
+.contexte {
+margin-bottom: 13px;
+
+}
+
+img[src="img/SuskeVanAken_2.JPG"] {
+  object-fit: contain;
+}
+
+img[src="img/family_tree.jpg"] {
+  object-fit: cover;
+}
+
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
+
+/* reset folio */
+body { counter-reset: folio 23 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "enquete — Quand j’étais Flamand"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
