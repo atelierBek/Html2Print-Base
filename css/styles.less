@@ -79,22 +79,30 @@ sup {
 figure {
     margin:  @line-height / 2 0;
     position: relative;
+    margin: 0
 }
 
 figure img{
     //max-width:50%;
     text-align:center;
     display: block;
+    position: relative;
+
 }
 
 figcaption {
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -ms-transform: rotate(-90deg); /* IE 9 */
+  transform: rotate(-90deg);
+    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+    -ms-transform-origin: left top 0; /* IE 9 */
+    transform-origin: left bottom 0;
+    position: relative;
+    margin-left: 97%;
     font-family: "Erbar condensed";
     font-size: 8pt;
-    line-height: @line-height * 1.5;
-    position: absolute;
-    //bottom: 0;
-    //left: 0;
-    //right: 0
+    //line-height: @line-height * 1.5;
+
 }
 
 .footnote {
