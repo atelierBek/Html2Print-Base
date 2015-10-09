@@ -9,6 +9,32 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+@back-color: #000000;
+
+.bloc p {
+  text-align: justify;
+}
+ body {
+   color: @back-color;
+
+ }
+
+h2 {
+  margin: 0px;
+}
+
+
+.cadre_black{
+  background:@back-color;
+  position: absolute;
+  margin: 0px;
+}
+
+.cadre_white{
+  background:white;
+  position: absolute;
+  margin: 0px;
+}
 
 img {
     display: block;
@@ -17,15 +43,16 @@ img {
     left: 0;
     width: 100%;
 }
-
-.enquete h1{
-    padding: 5px 0px;
+.chapeau{
+  text-align: justify;
 }
 
 .exergue p + p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+
 
 blockquote {
     -webkit-region-break-inside: avoid;
