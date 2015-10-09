@@ -1,3 +1,12 @@
+/* reset folio */
+body { counter-reset: folio 106 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "rubrique — Quand Adolf (re)vient gâcher la fête"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+/* flows */
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -7,11 +16,12 @@
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
+#flow-main header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
 
-/* reset folio */
-body { counter-reset: folio 106 - 1; }
-
-/*footer,*/
-/*header content*/
-.paper:nth-child(odd) .body:before { content: "rubrique — Quand Adolf (re)vient gâcher la fête"; }
-.paper:nth-child(even) .body:before { content: "Médor #1"; }
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}

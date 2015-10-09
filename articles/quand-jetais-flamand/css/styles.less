@@ -1,8 +1,25 @@
+/* Styles for 02_quand-jetais-flamand */
 /*GENERATED*/
 
-/* Styles for 02_quand-jetais-flamand */
+/* reset folio */
+body { counter-reset: folio 23 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "enquête — Quand j’étais Flamand"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
+
 
 /* FLOWS */
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
 
 #flow-main header {
     -webkit-flow-into: flow-title;
@@ -14,7 +31,7 @@
         flow-from: flow-title;
 }
 
-#flow-main .footnotes #fn1 {
+#flow-main .footnotes li:nth-child(1) {
     -webkit-flow-into: flow-footnotes1;
             flow-into: flow-footnotes1;
 }
@@ -23,7 +40,7 @@
         flow-from: flow-footnotes1;
 }
 
-#flow-main .footnotes #fn2 {
+#flow-main .footnotes li:nth-child(2) {
     -webkit-flow-into: flow-footnotes2;
             flow-into: flow-footnotes2;
 }
@@ -32,7 +49,7 @@
         flow-from: flow-footnotes2;
 }
 
-#flow-main .footnotes #fn3 {
+#flow-main .footnotes li:nth-child(3) {
     -webkit-flow-into: flow-footnotes3;
             flow-into: flow-footnotes3;
 }
@@ -41,7 +58,7 @@
         flow-from: flow-footnotes3;
 }
 
-#flow-main .footnotes #fn4 {
+#flow-main .footnotes li:nth-child(4) {
     -webkit-flow-into: flow-footnotes4;
             flow-into: flow-footnotes4;
 }
@@ -51,12 +68,6 @@
 }
 
 /* end of FLOWS */
-
-/*div.x1.flow-main {
-border-right: 1px solid black;
-padding-right: 3px;
-}*/
-
 
 img {
     display: block;
@@ -68,36 +79,17 @@ img {
 
 
 p + p {
-text-indent: 0px;
+    text-indent: 0;
 }
 
 .contexte {
-margin-bottom: 13px;
-
+    margin-bottom: 13px;
 }
 
 img[src="img/SuskeVanAken_2.JPG"] {
-  object-fit: contain;
+    object-fit: contain;
 }
 
 img[src="img/family_tree.jpg"] {
-  object-fit: cover;
+    object-fit: cover;
 }
-
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
-
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-
-/* reset folio */
-body { counter-reset: folio 23 - 1; }
-
-/*footer,*/
-/*header content*/
-.paper:nth-child(odd) .body:before { content: "enquete — Quand j’étais Flamand"; }
-.paper:nth-child(even) .body:before { content: "Médor #1"; }

@@ -170,7 +170,7 @@ figcaption {
   //border-bottom: 5px solid black !important;
 
 }
-.enquete header > h2:first-letter {
+/*.enquete header > h2:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -180,7 +180,7 @@ figcaption {
     font-size: 18pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .enquete h3 {
     font-family: "Erbar condensed" !important;
     //font-family: "Belgika8th";
@@ -195,7 +195,7 @@ figcaption {
     //padding-bottom:  @line-height / 3;
 }
 
-.enquete .authors {
+.enquete .authors, .enquete .authors::first-letter {
     font-family: "Belgika8th";
     font-weight: normal;
     font-style: normal;
@@ -203,6 +203,8 @@ figcaption {
     font-size: 8pt;
   //  display: inline;
     //float: left;
+    padding:0;
+
 }
 
 .enquete .chapeau {
@@ -310,7 +312,7 @@ blockquote > p:first-of-type::before {
     margin-bottom: 0;
     font-family: "Erbar condensed";
     font-size: 35pt;
-    line-height:(@line-height / 2) * 5 ;
+    line-height:(@line-height / 4) *12 ;
     font-weight: bold;
     padding-top: 6pt * 1;
 	border-top: 10px double black !important;
@@ -362,7 +364,7 @@ blockquote > p:first-of-type::before {
   //border-bottom: 5px solid black !important;
 
 }
-.rubrique header > h2:first-letter {
+/*.rubrique header > h2:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -372,7 +374,7 @@ blockquote > p:first-of-type::before {
     font-size: 18pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .rubrique h3 {
     font-family: "Erbar condensed" !important;
     //font-family: "Belgika8th";
@@ -387,7 +389,7 @@ blockquote > p:first-of-type::before {
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
-.rubrique .authors {
+.rubrique .authors, .rubrique .authors::first-letter {
     font-family: "Belgika8th";
     font-weight: normal;
     font-style: normal;
@@ -395,6 +397,8 @@ blockquote > p:first-of-type::before {
     font-size: 8pt;
     //display: inline;
     //float: left;
+    padding:0;
+
 }
 
 /*
@@ -424,7 +428,7 @@ blockquote > p:first-of-type::before {
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
-.bd h2:first-letter {
+/*.bd h2:first-letter {
     line-height: @line-height *2 ;
     padding-right: 3px;
     //padding-bottom: 1px;
@@ -434,7 +438,7 @@ blockquote > p:first-of-type::before {
     font-size: 30pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 
 .bd header > h2{
   font-size: 12pt;
@@ -446,7 +450,7 @@ blockquote > p:first-of-type::before {
   //border-bottom: 5px solid black !important;
 
 }
-.bd header > h2:first-letter {
+/*.bd header > h2:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -456,7 +460,7 @@ blockquote > p:first-of-type::before {
     font-size: 18pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .bd .chapeau {
     font-family: "Century Schoolbook";
     font-size: 17pt;
@@ -465,11 +469,13 @@ blockquote > p:first-of-type::before {
             region-break-after: always;
                    break-after: always;
 }
-.bd .authors, .bd .auteur{
+.bd .authors, .bd .auteur, .bd .authors::first-letter{
   font-family: "Belgika8th";
   font-weight: normal;
   font-style: normal;
   font-size: 8pt;
+  padding:0;
+
 }
 /*
  * Styles portraits
@@ -531,11 +537,12 @@ blockquote > p:first-of-type::before {
   margin-top: @line-height * 2;
 
 }
-.portrait .authors{
+.portrait .authors, .portrait .authors::first-letter{
   font-family: "Belgika8th";
   font-weight: normal;
   font-style: normal;
   font-size: 8pt;
+  padding:0;
 }
 .portrait h2 + p:first-letter {
 	padding-top:  (@line-height * 4) / 3  ;
@@ -568,7 +575,7 @@ blockquote > p:first-of-type::before {
   display: none;
 
 }
-.portrait header > h2 + p:first-letter {
+/*.portrait header > h2 + p:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -578,7 +585,7 @@ blockquote > p:first-of-type::before {
     font-size: 15pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .portrait h3 {
     font-family: "Erbar condensed" !important;
     //font-family: "Belgika8th";

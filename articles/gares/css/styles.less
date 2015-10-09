@@ -10,11 +10,20 @@
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
+#flow-main header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
 
 /* reset folio */
 body { counter-reset: folio 8 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "enquete — SNCB : quand l’intégrité déraille"; }
+.paper:nth-child(odd) .body:before { content: "enquête — SNCB : quand l’intégrité déraille"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }

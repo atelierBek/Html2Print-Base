@@ -1,6 +1,22 @@
 /* Styles for 08_herrmutt-lobby */
+/* reset folio */
+body { counter-reset: folio 119 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd)  .body:before { content: "rubrique — À Verviers, elle germe, elle germe, la prochaine révolution musicale"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 /*FLOWS*/
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
 
 #flow-main header {
     -webkit-flow-into: flow-title;
@@ -8,7 +24,7 @@
 }
 .flow-title {
     -webkit-flow-from: flow-title;
-        flow-from: flow-title;
+            flow-from: flow-title;
 }
 
 #flow-main .footnotes {
@@ -17,13 +33,14 @@
 }
 .flow-footnotes {
     -webkit-flow-from: flow-footnotes;
-        flow-from: flow-footnotes;
+            flow-from: flow-footnotes;
 }
 /*end of FLOWS*/
 
-div.x0.flow-herrmutt-lobby,  div.x3.flow-herrmutt-lobby {
-border-right:  1px solid black;
-padding-right: 5px;
+div.x0.flow-herrmutt-lobby,  
+div.x3.flow-herrmutt-lobby {
+    border-right:  1px solid black;
+    padding-right: 5px;
 }
 
 
@@ -36,47 +53,25 @@ img {
     margin: 0 !important;
 
 }
-figure/*.x6.y0*/{
-/*border-bottom: 2px solid black;*/
-margin: 0
 
-/*padding: 6px 3px;
-height: 30%;*/
-  }
-
+figure { margin: 0 }
 figure  img {
     width: 100%;
     position: relative;
 }
-figcaption{
-  -ms-transform: rotate(-90deg); /* IE 9 */
-    -ms-transform-origin: left top 0; /* IE 9 */
+
+figcaption {
     -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+    -ms-transform: rotate(-90deg); /* IE 9 */
   transform: rotate(-90deg);
+    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+    -ms-transform-origin: left top 0; /* IE 9 */
 transform-origin: left top 0;
 position: relative;
 margin-left: 97%;
+}
 
-  /*
-  writing-mode: vertical-lr;
-  -webkit-transform:rotate(-90deg);
-  -moz-transform:rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform:rotate(-90deg);
-  transform: rotate(-90deg);
-  white-space:nowrap;
-  display:block;
-  /*bottom:0;
-  bottom:0;
-  right:0;
-  width:20px;
-  height:20px;
-  margin-left: 184px;*/
-}
-.enquete h1{
-    padding: 5px 0px;
-}
+.enquete h1 { padding: 5px 0; }
 
 .exergue p + p {
     margin-top: 0;
@@ -90,38 +85,16 @@ blockquote {
 
 blockquote > footer {
     font-size: 1rem;
-    //line-height: @line-height;
     text-align: right;
 }
 .rubrique .footnotes > li{
     font-family: "Erbar condensed";
     font-weight: normal;
     font-style: normal;
-    margin:0px 0px 0px 0px;
+    margin: 0;
     font-size: 8pt;
-    //line-height:  @line-height  ;
-    }
-.rubrique .footnotes > li > a{
-        color: black;
-        text-decoration: none;
-        }
-
-
-
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
 }
-
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
+.rubrique .footnotes > li > a {
+    color: black;
+    text-decoration: none;
 }
-
-/* reset folio */
-body { counter-reset: folio 119 - 1; }
-
-/*footer,*/
-/*header content*/
-.paper:nth-child(odd) .body:before { content: "rubrique — À Verviers, elle germe, elle germe, la prochaine révolution musicale"; }
-.paper:nth-child(even) .body:before { content: "Médor #1"; }
