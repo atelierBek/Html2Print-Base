@@ -1,3 +1,21 @@
+/* reset folio */
+body { counter-reset: folio 82 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd)  .body:before { content: "enquete — En &lt;em&gt;stoem’&lt;/em&gt;, la Stib fiche nos trajets pendant six mois"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+            flow-from: flow-main;
+}
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -16,8 +34,8 @@ img {
     width: 100%;
 }
 
-.enquete h1{
-    padding: 5px 0px;
+.enquete h1 {
+    padding: 5px 0;
 }
 
 .exergue p + p {
@@ -32,30 +50,9 @@ blockquote {
 
 blockquote > footer {
     font-size: 1rem;
-    //line-height: @line-height;
     text-align: right;
 }
 
 .chapeau {
-  margin-top: 3pt;
+    margin-top: 3pt;
 }
-
-
-
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
-
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-
-/* reset folio */
-body { counter-reset: folio 82 - 1; }
-
-/*footer,*/
-/*header content*/
-.header:before { content: "enquete — En &lt;em&gt;stoem’&lt;/em&gt;, la Stib fiche nos trajets pendant six mois"; }
-.footer:before { content: "Médor #1"; }
