@@ -22,20 +22,13 @@ article {
 h1,
 h2,
 h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
     -webkit-break-inside: avoid-region;
             break-inside: avoid-region;
 }
-h2:first-of-type{
-  top:0 ;
-  margin-top: 0 ;
-  padding-top: 0 ;
-  }
-
 
 p { margin: 0; }
-p + p { text-indent: @line-height; }
 
 em { font-style: italic; }
 
@@ -47,7 +40,7 @@ a {
 sup {
     font-size: 6pt;
     vertical-align: top;
-    line-height: inherit;
+    line-height: 0;
 }
 
 
@@ -72,16 +65,12 @@ sup {
 
 }*/
 
-.auteur{
-
-}
-
 figure {
     margin:  @line-height / 2 0;
     position: relative;
 }
 
-figure img{
+figure img {
     //max-width:50%;
     text-align:center;
     display: block;
@@ -92,9 +81,6 @@ figcaption {
     font-size: 8pt;
     line-height: @line-height * 1.5;
     position: absolute;
-    //bottom: 0;
-    //left: 0;
-    //right: 0
 }
 
 .footnote {
@@ -117,160 +103,129 @@ figcaption {
  */
 
 
-.enquete h1 {
-    padding-top:-  @line-height / 2;
-    padding-bottom: - @line-height / 2;
+.enquete header h1,
+.enquete header h2 {
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: 40pt;
-    line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-	  border-top: 5px solid black !important;
-	//border-bottom: 5px solid black !important;
-	padding-top:10px;
 }
 
-.enquete h2 {
+.enquete > header h1 {
+    margin-top: @line-height * 5;
+
+    font-size: 40pt;
+    line-height:  @line-height * 4;
+}
+
+.enquete > header h2 {
+    margin-top: @line-height;
+
+    font-size: 18pt;
+    line-height:  @line-height * 1;
+}
+
+.enquete > header .authors {
+    margin-top: @line-height;
+
+    font-family: "Belgika8th";
+    font-size: 8pt;
+    line-height: @line-height * 7;
+}
+
+.enquete > p + p { text-indent: 9pt * 2; }
+
+.enquete > p + h2 {
+    margin-top: @line-height;
+    margin-bottom: @line-height;
+}
+
+.enquete > h2 {
     font-family: "Erbar condensed" !important;
-    font-weight: bold;
-    font-size: 12.5pt;
+    font-weight: normal; ;
+    font-size: 15pt;
     line-height:  @line-height;
     text-transform: uppercase;
-  //  margin-top:  @line-height;
-    //padding-bottom:  @line-height / 3;
+    margin-bottom: @line-height;
 }
-.enquete blockquote + h2{
-  //margin-top:  (@line-height/6) * 2 !important;
-  margin-top:  @line-height !important;
 
-  }
-  .enquete p + h2{
-    margin-top: @line-height !important;
-    margin-bottom: @line-height !important;
-
-    }
-.enquete h2 + p:first-letter {
-	padding-top: @line-height;
+.enquete > h2 + p:first-letter {
+    padding-top: @line-height;
     padding-right: 3px;
     padding-bottom: 2px;
     float: left;
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: 43pt;
-  //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
 }
 
-.enquete header > h2{
-  font-size: 18pt;
-  margin-top: 0;
-  margin-bottom: 0px;
-  font-weight: bold;
-  display: inline;
-  //border-bottom: 5px solid black !important;
-
-}
-.enquete header > h2:first-letter {
-	padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    float: none;
-    font-family: "Erbar condensed";
-    font-weight: bold;
-    font-size: 18pt;
-  //  line-height:  (@line-height / 2) * 7;
-    text-transform: uppercase;
-}
-.enquete h3 {
+.enquete > h3 {
     font-family: "Erbar condensed" !important;
-    //font-family: "Belgika8th";
-    //font-family: "Bagnard";
-    font-weight:normal; ;
-  //  font-size: 13pt;
-    //font-size: 8pt;
+    font-weight: normal; ;
     font-size: 10.5pt;
     line-height:  @line-height;
-  text-transform: uppercase;
+    text-transform: uppercase;
     margin-top:  @line-height;
-    //padding-bottom:  @line-height / 3;
 }
 
-.enquete .authors {
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    //margin:4px 0px 0px 4px;
-    font-size: 8pt;
-  //  display: inline;
-    //float: left;
-}
-
-.enquete .chapeau {
-    font-family: "Bagnard";
-    font-size: 15pt;
-    line-height:  (@line-height / 2) * 3;
+.enquete > .chapeau {
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
+
+    font-family: "Bagnard";
+    font-size: 15pt;
+    line-height:  (@line-height / 2) * 3;
 }
 
-.enquete .footnotes{
+.enquete > .footnotes {
     font-family: "Erbar condensed";
-    font-weight: normal;
-    font-style: normal;
-    margin:0px 0px 0px 0px;
+    margin: 0;
     font-size: 8pt;
-    line-height:  @line-height  ;
+    line-height: (@line-height / 8) * 7;
 
 }
-.enquete blockquote {
+
+// hides the numbers in the HTML since it is redundant with the css numbered bullets.
+.enquete > .footnotes a[name^="sdfootnote"] { display: none; }
+.enquete > .footnotes li { text-indent: -0.25em; }
+
+.enquete > blockquote {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
-    font-size: 1rem;
-    text-align: left;
-    margin: @line-height  0 0 0 !important;
-    color: #b14542;
+
     font-family: "Erbar condensed";
-    font-weight: bold;
     font-size: 18pt;
+    font-weight: bold;
     line-height: @line-height * 1.5;
-    border-top: 3px solid #b14542;
-    border-bottom: 3px solid #b14542;
-    padding:  (@line-height/3)* 2 ;
-    background-color: #fffd73;
-
+    text-align: left;
 }
 
-
-/*blockquote {
-  quotes: "«" "»" "“" "”";
+.enquete > blockquote + h2 {
+    margin-top:  @line-height;
 }
-blockquote > p:first-of-type::before {
-    content: open-quote;
-}*/
-.enquete blockquote p + p {
+
+.enquete > blockquote p + p {
     margin-top: 0;
     margin-bottom: 0;
 
 }
-.enquete blockquote > p:first-of-type {
-    /*content: close-quote;*/
-    font-family: "Erbar condensed" !important;
-    font-weight: bold !important;
-    font-style: normal;
-    font-size: 18pt !important;
 
+.enquete > blockquote p:first-of-type {
+    font-family: "Erbar condensed" !important;
+    font-weight: bold;
+    font-style: normal;
 }
-.enquete blockquote > p:last-of-type {
-    /*content: close-quote;*/
+
+.enquete > blockquote p:last-of-type {
     font-family: "Belgika8th";
     font-weight: normal;
     font-style: normal;
     font-size: 8pt;
-
 }
-.enquete blockquote:first-of-type{
-      margin: 0px !important;
+
+.enquete > blockquote:first-of-type{
+      margin: 0;
 }
 
 
@@ -592,4 +547,20 @@ blockquote > p:first-of-type::before {
   text-transform: uppercase;
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
+}
+
+
+/**
+ * À classer
+ */
+
+.rubrique-title {
+    font-family: "Erbar condensed";
+    text-transform: uppercase;
+    display: inline-block;
+    outline: 2pt solid black;
+    padding:  @line-height / 2;
+    letter-spacing: 3pt;
+    background-color: red;
+    color: white;
 }

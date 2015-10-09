@@ -61,59 +61,40 @@
         /* Crop marks */
         padding: @edge;
         position: relative;
-    }
 
-    .paper .crops {
-        width: @paper-width; 
-        height: @paper-height;
-        position: absolute;
-        top: 0;
-        left: 0;
-
+        /* Crop marks */
+        background-image:
+            -webkit-linear-gradient(90deg, black 0, black 100%),
+            -webkit-linear-gradient(0deg, black 0, black 100%),
+            -webkit-linear-gradient(90deg, black 0, black 100%),
+            -webkit-linear-gradient(0deg, black 0, black 100%),
+            -webkit-linear-gradient(90deg, black 0, black 100%),
+            -webkit-linear-gradient(0deg, black 0, black 100%),
+            -webkit-linear-gradient(90deg, black 0, black 100%),
+            -webkit-linear-gradient(0deg, black 0, black 100%)
+        ;
+        background-size: 
+            @crop-size 1px,
+            1px @crop-size,
+            @crop-size 1px,
+            1px @crop-size,
+            @crop-size 1px,
+            1px @crop-size,
+            @crop-size 1px,
+            1px @crop-size
+        ;
+        background-position:
+            left @edge,
+            @edge top,
+            right @edge,
+            (@paper-width - @edge) top,
+            right (@paper-height - @edge),
+            (@paper-width - @edge) bottom,
+            left (@paper-height - @edge),
+            @edge bottom
+        ;
+        background-repeat: no-repeat;
     }
-    .paper .crops div {
-        border-style: solid;
-        border-color: black;
-        border-width: 0;
-        width: @edge;
-        height: @edge;
-        position: absolute;
-        box-sizing: border-box;
-    }
-    .paper .crops div span {
-        width: @bleed;
-        height: @bleed;
-        background-color: white;
-        position: absolute;
-    }
-    .paper .crops .crop-top-left {
-        border-right-width: 1px;
-        border-bottom-width: 1px;
-        top: 0;
-        left: 0;
-    }
-    .paper .crops .crop-top-left span { right: -1px; bottom: -1px;}
-    .paper .crops .crop-top-right {
-        border-left-width: 1px;
-        border-bottom-width: 1px;
-        top: 0;
-        right: 0;
-    }
-    .paper .crops .crop-top-right span { left: -1px; bottom: -1px;}
-    .paper .crops .crop-bottom-right {
-        border-left-width: 1px;
-        border-top-width: 1px;
-        right: 0;
-        bottom: 0;
-    }
-    .paper .crops .crop-bottom-right span { left: -1px; top: -1px;}
-    .paper .crops .crop-bottom-left {
-        border-right-width: 1px;
-        border-top-width: 1px;
-        left: 0;
-        bottom: 0;
-    }
-    .paper .crops .crop-bottom-left span { right: -1px; top: -1px;}
 
     .page {
         /* defines the page size */
@@ -123,7 +104,8 @@
         /* allows for absolutely positioned elements as settings the position
          * property to relative as the side effect of making this elements
          * top-left corner the reference point */
-        position: relative;
+        /*position: relative;*/
+        position: absolute; // FIXME: test it for printing issues
     }
 
     // TODO: changer le format du papier en spread pour pouvoir imprimer en planche
