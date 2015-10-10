@@ -104,6 +104,10 @@ figcaption {
     line-height: @line-height * 7;
 }
 
+.enquete p {
+    /*vertical-align: top;*/
+}
+
 .enquete > p + p { text-indent: 9pt * 2; }
 
 .enquete > p + h2 {
@@ -120,6 +124,7 @@ figcaption {
     margin-bottom: @line-height;
 }
 
+.enquete >  .chapeau + blockquote + h2 + p,
 .enquete >  .chapeau + h2 + p,
 .enquete >  .chapeau + p {
     .w5;
@@ -260,7 +265,7 @@ figcaption {
     font-size: inherit;
     font-weight: normal;
     line-height:  inherit;
-    margin-left: @col-gutter-width / 2;
+    margin-bottom: @line-height;
 }
 
 .interview > p + h2 { margin-top: @line-height * 2; }
@@ -272,8 +277,11 @@ figcaption {
 .interview > h2 > abbr:first-child,
 .interview > p > abbr:first-child {
     font-family: "Erbar condensed";
-    position: absolute;
-    top: -12pt;
+    font-weight: bold;
+    padding-right: @line-height;
+    padding-bottom: @line-height;
+    float: left;
+    color: blue;
 }
 
 .interview .chapeau {
