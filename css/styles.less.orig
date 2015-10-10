@@ -11,11 +11,13 @@
  * -----------------
  */
 
+
 article {
     font-family: "Century Schoolbook", serif;
     font-size: 9pt;
     line-height: @line-height;
 }
+
 
 h1,
 h2,
@@ -37,36 +39,62 @@ a {
 
 sup {
     font-size: 6pt;
-    line-height: 0;
     vertical-align: top;
+    line-height: 0;
 }
 
+
+/*.exergue {
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+    line-height: @line-height * 1.5;
+    border-top: 2px solid #b14542;
+    border-bottom: 2px solid #b14542;
+    padding:  @line-height/2 ;
+    background-color: #fffd73;
+    margin: @line-height 0 0 0 !important;
+    //padding-left: 0px;
+    /*margin-top: @line-height / 2;
+    margin-bottom: @line-height / 2;*/
+
+/*}
+.exergue p + p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+}*/
+
 figure {
+    margin:  @line-height / 2 0;
     position: relative;
-    margin: 0
 }
 
 figure img {
+    //max-width:50%;
+    text-align:center;
     display: block;
-    position: relative;
-
-    text-align: center;
 }
 
 figcaption {
-    position: relative;
-    margin-left: 97%;
-
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-        -ms-transform: rotate(-90deg); /* IE 9 */
-            transform: rotate(-90deg);
-    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
-        -ms-transform-origin: left top 0; /* IE 9 */
-            transform-origin: left bottom 0;
-
     font-family: "Erbar condensed";
     font-size: 8pt;
+    line-height: @line-height * 1.5;
+    position: absolute;
 }
+
+.footnote {
+    font-family: "Erbar condensed";
+    font-size: 8pt;
+    line-height:  (@line-height / 2) * 1.5;
+}
+.footnotes > hr { display: none; }
+.footnot-ref > a {
+    color: inherit;
+    text-decoration: none;
+}
+.footnote-backref { display: none; }
+
 
 
 /*
@@ -74,8 +102,9 @@ figcaption {
  * -----------------
  */
 
-.enquete > header h1,
-.enquete > header h2 {
+
+.enquete header h1,
+.enquete header h2 {
     font-family: "Erbar condensed";
     font-weight: bold;
     text-transform: uppercase;
@@ -119,16 +148,6 @@ figcaption {
     margin-bottom: @line-height;
 }
 
-.enquete > h2 + p {
-    .w5;
-    float: right;
-    margin-bottom: @line-height;
-}
-
-.enquete > h2 + p + p {
-    text-indent: 0;
-}
-
 .enquete > h2 + p:first-letter {
     padding-top: @line-height;
     padding-right: 3px;
@@ -140,7 +159,31 @@ figcaption {
     text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .enquete > h3 {
+=======
+.enquete header > h2{
+  font-size: 18pt;
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-weight: bold;
+  display: inline;
+  //border-bottom: 5px solid black !important;
+
+}
+/*.enquete header > h2:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
+.enquete h3 {
+>>>>>>> master
     font-family: "Erbar condensed" !important;
     font-weight: normal; ;
     font-size: 10.5pt;
@@ -149,24 +192,28 @@ figcaption {
     margin-top:  @line-height;
 }
 
+<<<<<<< HEAD
 .enquete > .chapeau {
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
+=======
+.enquete .authors, .enquete .authors::first-letter {
+    font-family: "Belgika8th";
+    font-weight: normal;
+    font-style: normal;
+    //margin:4px 0px 0px 4px;
+    font-size: 8pt;
+  //  display: inline;
+    //float: left;
+    padding:0;
+
+}
+>>>>>>> master
 
     font-family: "Bagnard";
     font-size: 15pt;
     line-height:  (@line-height / 2) * 3;
-}
-
-.enquete > header .authors,
-.enquete > header .authors::first-letter {
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-    padding: 0;
-
 }
 
 .enquete > .footnotes {
@@ -174,6 +221,7 @@ figcaption {
     margin: 0;
     font-size: 8pt;
     line-height: (@line-height / 8) * 7;
+
 }
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
@@ -224,54 +272,15 @@ figcaption {
  * -----------------
  */
 
-.interview > header h1,
-.interview > header h2 {
-    font-family: "Erbar condensed";
-    font-weight: bold;
-    text-transform: uppercase;
+.interview b {
+    font-family: "Century Schoolbook";
+    font-style: italic;
 }
 
-.interview > header h1 {
-    margin-top: @line-height * 5;
-
-    font-size: 40pt;
-    line-height:  @line-height * 4;
-}
-
-.interview > header h2 {
-    margin-top: @line-height;
-
-    font-size: 18pt;
-    line-height:  @line-height * 1;
-}
-
-.interview > header .authors {
-    margin-top: @line-height;
-
-    font-family: "Belgika8th";
-    font-size: 8pt;
-    line-height: @line-height * 7;
-}
-
-/* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
-.interview > h2 {
-    font-size: inherit;
-    font-weight: normal;
-    line-height:  inherit;
-    margin-left: @col-gutter-width / 2;
-}
-
-.interview > p + h2 { margin-top: @line-height * 2; }
-.interview > p + p { text-indent: 9pt * 2; }
-
-.interview > h2,
-.interview > p { position: relative; }
-
-.interview > h2 > abbr:first-child,
-.interview > p > abbr:first-child {
-    font-family: "Erbar condensed";
-    position: absolute;
-    top: -12pt;
+.interview h1 {
+    font-family: "Century Schoolbook";
+    font-size: 45pt;
+    line-height:  @line-height * 3;
 }
 
 .interview .chapeau {
@@ -297,9 +306,21 @@ figcaption {
     line-height:(@line-height / 4) *12 ;
     font-weight: bold;
     padding-top: 6pt * 1;
-    border-top: 10px double black !important;
+	border-top: 10px double black !important;
 }
 
+/*.rubrique h2 {
+    float: left;
+
+    margin: 0 6pt 0 0;
+
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 9.4pt;
+    line-height:@line-height ;
+    text-transform: uppercase;
+    padding-top: 6pt * 1;
+}*/
 .rubrique h2 {
     font-family: "Erbar condensed" !important;
     font-weight: bold;
@@ -307,48 +328,79 @@ figcaption {
     line-height:  @line-height;
     text-transform: uppercase;
     margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
 }
 
 //Style lettrine pour les rubriques.
 
-.rubrique > header > h2{
+/*.rubrique h2:first-letter {
+	  padding-top: 15px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    float: left;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 45pt;
+//  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
+
+.rubrique header > h2{
   font-size: 18pt;
   margin-top: 0;
   margin-bottom: 0px;
   font-weight: bold;
   float: left;
   display: inline;
+  //border-bottom: 5px solid black !important;
+
 }
+/*.rubrique header > h2:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
+.rubrique h3 {
+    font-family: "Erbar condensed" !important;
+    //font-family: "Belgika8th";
+    //font-family: "Bagnard";
+    font-weight:normal; ;
+  //  font-size: 13pt;
+    //font-size: 8pt;
+    font-size: 12pt;
 
-.rubrique > header > .authors {
-    padding: 0;
-
+    line-height:  @line-height;
+  text-transform: uppercase;
+    margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
+}
+.rubrique .authors, .rubrique .authors::first-letter {
     font-family: "Belgika8th";
     font-weight: normal;
     font-style: normal;
+    //margin:4px 0px 0px 4px;
     font-size: 8pt;
+    //display: inline;
+    //float: left;
+    padding:0;
 
-}
-
-.rubrique > h3 {
-    margin-top:  @line-height;
-
-    font-family: "Erbar condensed" !important;
-    font-weight: normal; ;
-    font-size: 12pt;
-    line-height:  @line-height;
-    text-transform: uppercase;
 }
 
 /*
  * Styles bd
  * -----------------
  */
-.bd {
+.bd{
     font-family: "Erbar condensed";
     font-size: 9.5pt;
-}
 
+}
 .bd h1 {
     margin-top: 0;
     margin-bottom: 0;
@@ -365,7 +417,19 @@ figcaption {
     line-height: @line-height ;
     text-transform: uppercase;
     margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
 }
+/*.bd h2:first-letter {
+    line-height: @line-height *2 ;
+    padding-right: 3px;
+    //padding-bottom: 1px;
+    float: left;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 30pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
 
 .bd header > h2{
   font-size: 12pt;
@@ -374,8 +438,20 @@ figcaption {
   margin-bottom: 0px;
   font-weight: bold;
   display: inline;
+  //border-bottom: 5px solid black !important;
 
 }
+/*.bd header > h2:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 18pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
 .bd .chapeau {
     font-family: "Century Schoolbook";
     font-size: 17pt;
@@ -406,6 +482,8 @@ figcaption {
     font-weight: bold;
     font-size: 45pt;
     line-height: (@line-height / 2) * 8;
+    //text-transform: uppercase;
+	//border-top: 10px double black !important;
 }
 .portrait h2 {
     font-family: "Erbar condensed" !important;
@@ -426,62 +504,91 @@ figcaption {
                    break-after: always;
 }
 .portrait h2::before{
-    display: none;
-
-    margin-bottom: @line-height ;
-    margin-top: @line-height ;
-
-    content: "⁂" ;
-
-    font-family: "Bagnard", serif;
-    font-size: 15pt;
-    text-align: center;
+  //content: "***" ;
+  content: "⁂" ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: block;
+  margin-bottom: @line-height ;
+  margin-top: @line-height ;
+  display: none;
 }
 
 .portrait p.authors::after{
-    display: block;
+  //content: "***" ;
+  content: "⁂" ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: block;
+  margin-top: @line-height * 2;
 
-    margin-top: @line-height * 2;
-
-    content: "⁂" ;
-
-    font-family: "Bagnard", serif;
-    font-size: 15pt;
-    text-align: center;
 }
-
-.portrait .authors {
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-    padding: 0;
+.portrait .authors, .portrait .authors::first-letter{
+  font-family: "Belgika8th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+  padding:0;
 }
+/*.portrait h2 + p:first-letter {
+	padding-top:  (@line-height * 4) / 3  ;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    float: left;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 56pt;
+    text-transform: uppercase;
+}*/
 
 .portrait header > h2{
-    font-size: 11.5pt;
-    margin-bottom: 0px;
-    font-weight: bold;
-    text-align: left;
-}
+  font-size: 11.5pt;
+  //margin-top: @line-height/2  !important;
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: left;
+  //display: inline;
+  //border-bottom: 5px solid black !important;
 
+}
 .portrait header > h2::before{
-    display: none;
+  //content: "***" ;
+  content: " " ;
+  text-align: center;
+  font-size: 15pt;
+  //position: absolute;
+  font-family: "Bagnard", serif;
+  display: none;
 
-    content: " " ;
-
-    font-size: 15pt;
-    font-family: "Bagnard", serif;
-    text-align: center;
 }
-
+/*.portrait header > h2 + p:first-letter {
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    float: none;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: 15pt;
+  //  line-height:  (@line-height / 2) * 7;
+    text-transform: uppercase;
+}*/
 .portrait h3 {
     font-family: "Erbar condensed" !important;
-    font-weight: normal;
+    //font-family: "Belgika8th";
+    //font-family: "Bagnard";
+    font-weight:normal; ;
+  //  font-size: 13pt;
+    //font-size: 8pt;
     font-size: 12pt;
+
     line-height:  @line-height;
-    text-transform: uppercase;
+  text-transform: uppercase;
     margin-top:  @line-height;
+    //padding-bottom:  @line-height / 3;
 }
 
 
