@@ -188,6 +188,16 @@ figcaption {
     line-height:  (@line-height / 2) * 3;
 }
 
+.enquete .authors,
+.enquete .authors::first-letter {
+    font-family: "Belgika8th";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 8pt;
+    padding:0;
+
+}
+
 .enquete > .footnotes {
     font-family: "Erbar condensed";
     margin: 0;
@@ -327,7 +337,7 @@ figcaption {
   //border-bottom: 5px solid black !important;
 
 }
-.rubrique header > h2:first-letter {
+/*.rubrique header > h2:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -337,7 +347,7 @@ figcaption {
     font-size: 18pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .rubrique h3 {
     font-family: "Erbar condensed" !important;
     //font-family: "Belgika8th";
@@ -352,7 +362,7 @@ figcaption {
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
-.rubrique .authors {
+.rubrique .authors, .rubrique .authors::first-letter {
     font-family: "Belgika8th";
     font-weight: normal;
     font-style: normal;
@@ -360,6 +370,8 @@ figcaption {
     font-size: 8pt;
     //display: inline;
     //float: left;
+    padding:0;
+
 }
 
 /*
@@ -389,7 +401,7 @@ figcaption {
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
-.bd h2:first-letter {
+/*.bd h2:first-letter {
     line-height: @line-height *2 ;
     padding-right: 3px;
     //padding-bottom: 1px;
@@ -399,7 +411,7 @@ figcaption {
     font-size: 30pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 
 .bd header > h2{
   font-size: 12pt;
@@ -411,7 +423,7 @@ figcaption {
   //border-bottom: 5px solid black !important;
 
 }
-.bd header > h2:first-letter {
+/*.bd header > h2:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -421,7 +433,7 @@ figcaption {
     font-size: 18pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .bd .chapeau {
     font-family: "Century Schoolbook";
     font-size: 17pt;
@@ -430,19 +442,21 @@ figcaption {
             region-break-after: always;
                    break-after: always;
 }
-.bd .authors, .bd .auteur{
+.bd .authors, .bd .auteur, .bd .authors::first-letter{
   font-family: "Belgika8th";
   font-weight: normal;
   font-style: normal;
   font-size: 8pt;
+  padding:0;
+
 }
 /*
  * Styles portraits
  * -----------------
  */
 .portrait{
-  font-size: 12.5pt;
-  line-height:  (@line-height * 4) / 3  ;
+  font-size: 11pt;
+  line-height:  (@line-height * 4) / 3.2  ;
 }
 
 .portrait h1 {
@@ -456,7 +470,7 @@ figcaption {
 .portrait h2 {
     font-family: "Erbar condensed" !important;
     font-weight: normal;
-    font-size: 15pt;
+    font-size: 11pt;
     line-height:  @line-height ;
     text-transform: uppercase;
     padding-top:  @line-height;
@@ -481,8 +495,7 @@ figcaption {
   display: block;
   margin-bottom: @line-height ;
   margin-top: @line-height ;
-
-
+  display: none;
 }
 
 .portrait p.authors::after{
@@ -496,13 +509,14 @@ figcaption {
   margin-top: @line-height * 2;
 
 }
-.portrait .authors{
+.portrait .authors, .portrait .authors::first-letter{
   font-family: "Belgika8th";
   font-weight: normal;
   font-style: normal;
   font-size: 8pt;
+  padding:0;
 }
-.portrait h2 + p:first-letter {
+/*.portrait h2 + p:first-letter {
 	padding-top:  (@line-height * 4) / 3  ;
     padding-right: 3px;
     padding-bottom: 3px;
@@ -511,11 +525,11 @@ figcaption {
     font-weight: bold;
     font-size: 56pt;
     text-transform: uppercase;
-}
+}*/
 
 .portrait header > h2{
-  font-size: 15pt;
-  margin-top: @line-height/2  !important;
+  font-size: 11.5pt;
+  //margin-top: @line-height/2  !important;
   margin-bottom: 0px;
   font-weight: bold;
   text-align: left;
@@ -533,7 +547,7 @@ figcaption {
   display: none;
 
 }
-.portrait header > h2 + p:first-letter {
+/*.portrait header > h2 + p:first-letter {
 	padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -543,7 +557,7 @@ figcaption {
     font-size: 15pt;
   //  line-height:  (@line-height / 2) * 7;
     text-transform: uppercase;
-}
+}*/
 .portrait h3 {
     font-family: "Erbar condensed" !important;
     //font-family: "Belgika8th";
@@ -554,7 +568,7 @@ figcaption {
     font-size: 12pt;
 
     line-height:  @line-height;
-  text-transform: uppercase;
+    text-transform: uppercase;
     margin-top:  @line-height;
     //padding-bottom:  @line-height / 3;
 }
