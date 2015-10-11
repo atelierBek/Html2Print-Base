@@ -98,10 +98,11 @@ figcaption {
 
 .enquete > header .authors {
     margin-top: @line-height;
+    margin-bottom: @line-height * 2;
 
     font-family: "Belgika8th";
     font-size: 8pt;
-    line-height: @line-height * 4;
+    line-height: @line-height;
 }
 
 .enquete > p + p { text-indent: 9pt * 2; }
@@ -153,13 +154,10 @@ figcaption {
 }
 
 .enquete > .chapeau {
-    -webkit-region-break-after: always;
-            region-break-after: always;
-                   break-after: always;
-
     font-family: "Bagnard";
     font-size: 12pt;
     line-height:  (@line-height / 2) * 3;
+    margin-bottom: @line-height * 2;
 }
 
 .enquete > header .authors,
