@@ -1,3 +1,6 @@
+@import "/css/main.less";
+
+
 /* Styles for 02_quand-jetais-flamand */
 /*GENERATED*/
 
@@ -11,61 +14,23 @@ body { counter-reset: folio 23 - 1; }
 
 
 /* FLOWS */
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main .footnotes li:nth-child(1) { .flow-into(flow-fn1); }
+.flow-fn1 { .flow-from(flow-fn1); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+#flow-main .footnotes li:nth-child(2) { .flow-into(flow-fn2); }
+.flow-fn2 { .flow-from(flow-fn2); }
 
-#flow-main .footnotes li:nth-child(1) {
-    -webkit-flow-into: flow-footnotes1;
-            flow-into: flow-footnotes1;
-}
-.flow-footnotes1 {
-    -webkit-flow-from: flow-footnotes1;
-        flow-from: flow-footnotes1;
-}
+#flow-main .footnotes li:nth-child(3) { .flow-into(flow-fn3); }
+.flow-fn3 { .flow-from(flow-fn3); }
 
-#flow-main .footnotes li:nth-child(2) {
-    -webkit-flow-into: flow-footnotes2;
-            flow-into: flow-footnotes2;
-}
-.flow-footnotes2 {
-    -webkit-flow-from: flow-footnotes2;
-        flow-from: flow-footnotes2;
-}
-
-#flow-main .footnotes li:nth-child(3) {
-    -webkit-flow-into: flow-footnotes3;
-            flow-into: flow-footnotes3;
-}
-.flow-footnotes3 {
-    -webkit-flow-from: flow-footnotes3;
-        flow-from: flow-footnotes3;
-}
-
-#flow-main .footnotes li:nth-child(4) {
-    -webkit-flow-into: flow-footnotes4;
-            flow-into: flow-footnotes4;
-}
-.flow-footnotes4 {
-    -webkit-flow-from: flow-footnotes4;
-        flow-from: flow-footnotes4;
-}
+#flow-main .footnotes li:nth-child(4) { .flow-into(flow-fn4); }
+.flow-fn4 { .flow-from(flow-fn4); }
 
 /* end of FLOWS */
 
@@ -77,10 +42,11 @@ img {
     width: 100%;
 }
 
-
-p + p {
-    text-indent: 0;
+#page-1 img {
+    height: 100%;
+    object-fit: cover;
 }
+
 
 .contexte {
     margin-bottom: 13px;
@@ -92,4 +58,21 @@ img[src="img/SuskeVanAken_2.JPG"] {
 
 img[src="img/family_tree.jpg"] {
     object-fit: cover;
+}
+
+article > header {
+    text-align: center;
+}
+
+article > blockquote:nth-of-type(1) {
+    .w5;
+    float: right;
+    padding-bottom: @line-height * 2;
+}
+
+article > blockquote:nth-of-type(1) p:last-child:before,
+article > blockquote:nth-of-type(2) p:last-child:before,
+article > blockquote:nth-of-type(3) p:last-child:before,
+article > blockquote:nth-of-type(4) p:last-child:before {
+    content: "— ";
 }

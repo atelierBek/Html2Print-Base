@@ -1,5 +1,7 @@
 /* Styles for bac-plus-10 */
 
+@import "/css/main.less";
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -23,18 +25,30 @@ h2 {
   margin: 0px;
 }
 
+h2::before {
+  margin-bottom: @line-height ;
+    margin-top: @line-height ;
+    content: "" ;
+    font-family: "Medor", serif;
+    font-size: 15pt;
+    display:block;
+    text-align: center;
+    .w8;
+}
 
-.cadre_black{
+/*.cadre_black{
   background:@back-color;
   position: absolute;
   margin: 0px;
+z-index: 0;
 }
 
 .cadre_white{
   background:white;
   position: absolute;
   margin: 0px;
-}
+  z-index: 0;
+}*/
 
 img {
     display: block;
@@ -64,6 +78,8 @@ blockquote > footer {
     //line-height: @line-height;
     text-align: right;
 }
+
+
 /*GENERATED */
 #flow-main {
     -webkit-flow-into: flow-main;

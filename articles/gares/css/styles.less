@@ -1,3 +1,4 @@
+@import "/css/main.less";
 
 /*GENERATED */
 
@@ -20,6 +21,16 @@
         flow-from: flow-title;
 }
 
+#flow-main aside {
+    -webkit-flow-into: flow-encadre;
+            flow-into: flow-encadre;
+}
+
+.flow-encadre {
+    -webkit-flow-from: flow-encadre;
+        flow-from: flow-encadre;
+}
+
 /* reset folio */
 body { counter-reset: folio 8 - 1; }
 
@@ -27,3 +38,33 @@ body { counter-reset: folio 8 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "enquête — SNCB : quand l’intégrité déraille"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+/*specific styles*/
+
+
+ div.flow-encadre h2{
+   font-family: 'Alfphabet-Condensed' !important;
+   margin-bottom: @line-height /2;
+   line-height: (@line-height /2 ) * 3;
+   font-size: 16.5pt;
+//margin-bottom: 6pt;
+//line-height: 18pt;
+
+ }
+ aside {
+
+ }
+
+ div.flow-encadre {
+   background-color: #e1f17a;
+   border-right: solid 3px black;
+   padding-left: 24pt;
+   padding-right: 37pt;
+   padding-top: 24pt;
+   margin-right: 5pt;
+ }
+ div.border-double{
+   border-right: solid 3px black;
+   margin-right: 10pt;
+
+ }
