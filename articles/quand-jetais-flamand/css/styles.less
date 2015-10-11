@@ -17,8 +17,8 @@ body { counter-reset: folio 23 - 1; }
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
-#flow-main header { .flow-into(flow-title); }
-.flow-title { .flow-from(flow-title); }
+/*#flow-main header { .flow-into(flow-title); }*/
+/*.flow-title { .flow-from(flow-title); }*/
 
 #flow-main .footnotes li:nth-child(1) { .flow-into(flow-fn1); }
 .flow-fn1 { .flow-from(flow-fn1); }
@@ -34,31 +34,28 @@ body { counter-reset: folio 23 - 1; }
 
 /* end of FLOWS */
 
-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-#page-1 img {
-    height: 100%;
-    object-fit: cover;
-}
-
-
 .contexte {
     margin-bottom: 13px;
 }
 
-img[src="img/SuskeVanAken_2.JPG"] {
-    object-fit: contain;
-}
-
-img[src="img/family_tree.jpg"] {
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
+
+img[src="img/SuskeVanAken_2.JPG"] {
+    display: none;
+    /*object-position: 0 293px;*/
+}
+
+/*img[src="img/SuskeVanAken_2.JPG"]:nth-of-type(2) {*/
+    /*object-position: 0 293px;*/
+/*}*/
+
+/*img[src="img/family_tree.jpg"] {*/
+/*}*/
 
 article > header {
     text-align: center;
