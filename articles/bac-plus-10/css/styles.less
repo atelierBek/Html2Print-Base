@@ -1,5 +1,7 @@
 /* Styles for bac-plus-10 */
 
+@import "/css/main.less";
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -23,6 +25,16 @@ h2 {
   margin: 0px;
 }
 
+h2::before {
+  margin-bottom: @line-height ;
+    margin-top: @line-height ;
+    content: "" ;
+    font-family: "Medor", serif;
+    font-size: 15pt;
+    display:block;
+    text-align: center;
+    .w8;
+}
 
 /*.cadre_black{
   background:@back-color;
@@ -67,9 +79,6 @@ blockquote > footer {
     text-align: right;
 }
 
-.symbols{
-  font-family: "Medor", sans;
-  }
 
 /*GENERATED */
 #flow-main {

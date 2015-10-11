@@ -418,7 +418,7 @@ figcaption {
     line-height: (@line-height / 2) * 8;
 }
 .portrait h2 {
-    font-family: "Erbar condensed" !important;
+    font-family: "Erbar condensed";
     font-weight: normal;
     font-size: 11pt;
     line-height:  @line-height ;
@@ -435,30 +435,8 @@ figcaption {
             region-break-after: always;
                    break-after: always;
 }
-.portrait h2::before{
-    display: none;
 
-    margin-bottom: @line-height ;
-    margin-top: @line-height ;
 
-    content: "⁂" ;
-
-    font-family: "Bagnard", serif;
-    font-size: 15pt;
-    text-align: center;
-}
-
-.portrait p.authors::after{
-    display: block;
-
-    margin-top: @line-height * 2;
-
-    content: "⁂" ;
-
-    font-family: "Bagnard", serif;
-    font-size: 15pt;
-    text-align: center;
-}
 
 .portrait .authors {
     font-family: "Belgika8th";
@@ -475,15 +453,6 @@ figcaption {
     text-align: left;
 }
 
-.portrait header > h2::before{
-    display: none;
-
-    content: " " ;
-
-    font-size: 15pt;
-    font-family: "Bagnard", serif;
-    text-align: center;
-}
 
 .portrait h3 {
     font-family: "Erbar condensed" !important;
