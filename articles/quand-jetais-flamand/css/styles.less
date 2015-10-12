@@ -20,11 +20,9 @@ body { counter-reset: folio 23 - 1; }
 /*#flow-main header { .flow-into(flow-title); }*/
 /*.flow-title { .flow-from(flow-title); }*/
 
-#flow-main .footnotes li:nth-child(1) { .flow-into(flow-fn1); }
-.flow-fn1 { .flow-from(flow-fn1); }
-
-#flow-main .footnotes li:nth-child(2) { .flow-into(flow-fn2); }
-.flow-fn2 { .flow-from(flow-fn2); }
+#flow-main .footnotes li:nth-child(1),
+#flow-main .footnotes li:nth-child(2) { .flow-into(flow-fn1-2); }
+.flow-fn1-2 { .flow-from(flow-fn1-2); }
 
 #flow-main .footnotes li:nth-child(3) { .flow-into(flow-fn3); }
 .flow-fn3 { .flow-from(flow-fn3); }
@@ -41,13 +39,48 @@ body { counter-reset: folio 23 - 1; }
 img {
     display: block;
     height: 100%;
+    /*width: 100%;*/
+    /*object-fit: cover;*/
+}
+
+[src="img/1C-left-low.jpg"] {
+    overflow: hidden;
+}
+[src="img/1C-right-low.jpg"] {
+    overflow: hidden;
+}
+[src="img/accident-low.png"] {
+    overflow: hidden;
+}
+
+[src="img/Dampremy3.jpg"] {
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 img[src="img/SuskeVanAken_2.JPG"] {
     display: none;
     /*object-position: 0 293px;*/
+}
+
+/*[src="img/arbre-genealogique-test.svg"]:nth-of-type(1) {*/
+.foo {
+    /*width: 200%;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*[src="img/arbre-genealogique-test.svg"]:nth-of-type(2) {*/
+.bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+[src="img/LettreHenri.png"] {
+    object-fit: contain;
 }
 
 /*img[src="img/SuskeVanAken_2.JPG"]:nth-of-type(2) {*/
