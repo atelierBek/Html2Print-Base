@@ -20,7 +20,7 @@ body { counter-reset: folio 111 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "traduction — Le monstre en moi qui grandit"; }
+.paper:nth-child(odd) .body:before { content: "moment flamand — Le monstre en moi qui ne cesse de grandir"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 /*figure,
@@ -34,7 +34,7 @@ figure img {
   font-style: normal;
   line-height: @line-height * 3.5 !important;
   margin-top: 0 !important;
-  text-align: center;
+  text-align: right !important;
 }
 .traduction-nl .authors{
   line-height: @line-height !important;
@@ -42,6 +42,13 @@ figure img {
 }
 .traduction-nl h2{
 text-align: center;
+font-style: italic;
+margin-bottom: 0 !important;
+margin-top: @line-height * 1.5  !important;
+margin-bottom: @line-height * 0.5 !important;
+font-size: 11pt;
+padding: 0 @line-height;
+
 }
 .traduction-nl .chapeau{
   font-family: 'Century Schoolbook' !important;
@@ -49,7 +56,8 @@ text-align: center;
   font-size: 15pt !important;
 }
 .intro-medor {
-  font-family: 'Alfphabet-Condensed' !important;
+  font-family: 'Bagnard' !important;
+  margin-bottom: @line-height * 2;
 }
 img{
   width: 100%;
@@ -71,7 +79,21 @@ img{
     margin-left: -497pt;
 }
 
+p > strong {
+    font-family: "Bagnard";
+    font-size: 9pt;
+    font-weight: normal;
+    line-height: @line-height;
+    text-transform: uppercase;
 
+}
+abbr{
+  display: none;
+
+}
+.rubrique-title {
+    font-family: "Alfphabet-Condensed" !important;
+}
 
 /*h2:nth-of-type(1) + p,*/
 /*h2:nth-of-type(4) + p {*/
@@ -89,12 +111,3 @@ img{
     /*padding-bottom: @line-height * 2;*/
 
 /*}*/
-
-p > strong {
-    font-family: "Bagnard";
-    font-size: 9pt;
-    font-weight: normal;
-    line-height: @line-height;
-    text-transform: uppercase;
-
-}
