@@ -6,11 +6,14 @@
 #flow-main header { .flow-into(flow-title); }
 .flow-title { .flow-from(flow-title); }
 
-#flow-main figure:nth-of-type(2) { .flow-into(flow-fig1); }
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
-#flow-main figure:nth-of-type(1) { .flow-into(flow-fig2); }
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
 
 /* reset folio */
 body { counter-reset: folio 111 - 1; }
@@ -20,11 +23,55 @@ body { counter-reset: folio 111 - 1; }
 .paper:nth-child(odd) .body:before { content: "traduction — Le monstre en moi qui grandit"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-figure,
+/*figure,
 figure img {
     width: 100%;
     height: 100%;
+}*/
+.traduction-nl h1{
+  font-family: 'Bagnard' !important;
+  font-weight: normal;
+  font-style: normal;
+  line-height: @line-height * 3.5 !important;
+  margin-top: 0 !important;
+  text-align: center;
 }
+.traduction-nl .authors{
+  line-height: @line-height !important;
+  text-align: center;
+}
+.traduction-nl h2{
+text-align: center;
+}
+.traduction-nl .chapeau{
+  font-family: 'Century Schoolbook' !important;
+  line-height: @line-height * 1.5;
+  font-size: 15pt !important;
+}
+.intro-medor {
+  font-family: 'Alfphabet-Condensed' !important;
+}
+img{
+  width: 100%;
+  height: auto;
+  //object-fit: cover;
+}
+.flow-fig1 figure {
+  width: 85%;
+  height: auto;
+
+}
+
+ .flow-fig2 figure,  .flow-fig3 figure {
+   width: 273%;
+   height: auto;
+
+ }
+.img-right figure{
+    margin-left: -497pt;
+}
+
+
 
 /*h2:nth-of-type(1) + p,*/
 /*h2:nth-of-type(4) + p {*/
@@ -44,8 +91,11 @@ figure img {
 /*}*/
 
 p > strong {
-    font-family: "Erbar condensed";
-    font-size: 18pt;
-    font-weight: bold;
-    line-height: @line-height * 1.5;
+    font-family: "Bagnard";
+    font-size: 9pt;
+    font-weight: normal;
+    line-height: @line-height;
+    text-transform: uppercase;
+
+
 }
