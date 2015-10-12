@@ -40,8 +40,19 @@ body { counter-reset: folio 8 - 1; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 /*specific styles*/
-
-
+img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+h1{
+  margin-top: 0 !important;
+  line-height: @line-height * 3.5 !important;
+}
+ .authors {
+   margin-top: 0 !important;
+   line-height: @line-height !important;
+ }
  div.flow-encadre h2{
    font-family: 'Alfphabet-Condensed' !important;
    margin-bottom: @line-height /2;
@@ -49,9 +60,6 @@ body { counter-reset: folio 8 - 1; }
    font-size: 16.5pt;
 //margin-bottom: 6pt;
 //line-height: 18pt;
-
- }
- aside {
 
  }
 
@@ -68,3 +76,24 @@ body { counter-reset: folio 8 - 1; }
    margin-right: 10pt;
 
  }
+
+ .enquete >  .chapeau + p {
+     .w5;
+     float: right;
+     margin-bottom: @line-height;
+ }
+ #img4, #img4-right {
+      height: auto;
+      width: 200%;
+  }
+#img4-right {
+     margin-left: -481pt;
+ }
+
+ #img3, #img3-right {
+     width: 157%;
+      height: auto;
+  }
+  #img3-right > img  {
+       margin-left: -481pt;
+   }
