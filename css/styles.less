@@ -83,15 +83,16 @@ figcaption {
 }
 
 .enquete > header h1 {
-    margin-top: @line-height * 2;
+    margin-top: @line-height * 1;
+    display: inline-block;
 
-    /*font-size:  @line-height * 3;*/
     font-size:  @line-height * 5;
-    line-height:  @line-height * 4.5;
+    line-height:  @line-height * 4;
 }
 
 .enquete > header h2 {
-    margin-top: @line-height;
+    margin-top: @line-height / 2;
+    margin-bottom: @line-height / 2;
 
     font-size: 18pt;
     line-height:  @line-height * 2;
@@ -120,6 +121,13 @@ figcaption {
     line-height:  @line-height;
     text-transform: uppercase;
     margin-bottom: @line-height;
+}
+
+.enquete > h2,
+.enquete > h3 {
+    -webkit-region-break-after: avoid;
+            region-break-after: avoid;
+                   break-after: avoid-region;
 }
 
 /*.enquete >  .chapeau + blockquote + h2 + p,*/
@@ -191,10 +199,11 @@ figcaption {
                    break-inside: avoid;
 
     font-family: "Erbar condensed";
-    font-size: 18pt;
+    font-size: 12pt;
     font-weight: bold;
-    line-height: @line-height * 1.5;
+    /*line-height: @line-height * 1.5;*/
     text-align: left;
+    padding-left: @col-gutter-width / 2;
 }
 
 .enquete > blockquote + h2 {
@@ -207,17 +216,13 @@ figcaption {
 
 }
 
-.enquete > blockquote p:first-of-type {
-    font-family: "Erbar condensed" !important;
-    font-weight: bold;
-    font-style: normal;
-}
+
 
 .enquete > blockquote p:last-of-type {
-    font-family: "Belgika8th";
+    /*font-family: "Belgika8th";*/
     font-weight: normal;
     font-style: normal;
-    font-size: 8pt;
+    /*font-size: 8pt;*/
 }
 
 .enquete > blockquote:first-of-type{
