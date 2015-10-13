@@ -3,13 +3,19 @@
 @import "/css/main.less";
 
 
-@colorportrait: #b14542;
 
-.paper{
-  color:@colorportrait;
+.glyph{
+  font-family: 'Medor';
 }
 
+.paper {
+  color:#2a85a4
+}
 
+.portrait p  {
+  display: inline-block;
+  float: left;
+}
 
 html.facing .paper:nth-child(even) .cadre{
   background: url('../img/gaba-g.svg') no-repeat;
@@ -31,44 +37,36 @@ html.facing .paper:nth-child(odd) .cadre{
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
-@back-color: black;
 
 .bloc p {
   text-align: justify;
+  display: inline-block;
+}
+
+.end p {
+  display: inline-block;
+  font-size: 10px;
+  text-align: left;
+  line-height: (@line-height * 4) / 4.5;
+
 }
  body {
-   color: @back-color;
-
  }
 
 h2 {
   margin: 0px;
+  display: inline-block;
 }
 
-h2::before {
-  margin-bottom: @line-height ;
-    margin-top: @line-height ;
-    content: "" ;
+/*h2::before {
+    //content: " " ;
     font-family: "Medor", serif;
     font-size: 15pt;
+    color:#2a85a4;
     display:block;
-    text-align: center;
-    .w8;
-}
-
-/*.cadre_black{
-  background:@back-color;
-  position: absolute;
-  margin: 0px;
-z-index: 0;
-}
-
-.cadre_white{
-  background:white;
-  position: absolute;
-  margin: 0px;
-  z-index: 0;
-}*/
+    //text-align: center;
+    display: inline-block;
+  }*/
 
 img {
     display: block;
@@ -77,6 +75,7 @@ img {
     left: 0;
     width: 100%;
 }
+
 .chapeau{
   text-align: justify;
 }
@@ -85,8 +84,6 @@ img {
     margin-top: 0;
     margin-bottom: 0;
 }
-
-
 
 blockquote {
     -webkit-region-break-inside: avoid;
@@ -99,25 +96,25 @@ blockquote > footer {
     text-align: right;
 }
 
-
 /*GENERATED */
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
 }
-
 .flow-main {
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
+
+/*#flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
+#flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }*/
 
 /* reset folio */
 body { counter-reset: folio 74 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "portrait — Bac + 10 à l’école de la vie";
- }
+.paper:nth-child(odd) .body:before { content: "portrait — Bac + 10 à l’école de la vie"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 .body:before {
