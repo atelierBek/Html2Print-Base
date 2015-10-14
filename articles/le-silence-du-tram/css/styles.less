@@ -1,71 +1,39 @@
+@import "/css/main.less";
+
 /* reset folio */
 body { counter-reset: folio 82 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd)  .body:before { content: "enquête — En &lt;em&gt;stoem’&lt;/em&gt;, la Stib fiche nos trajets pendant six mois"; }
+.paper:nth-child(odd)  .body:before { content: "enquête — Le silence du tram"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-            flow-from: flow-main;
-}
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
 
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
+#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
+.flow-fig4 { .flow-from(flow-fig4); }
+#flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
+.flow-fig5 { .flow-from(flow-fig5); }
+#flow-main figure:nth-of-type(5) figcaption { .flow-into(flow-fig5-caption); }
+.flow-fig5-caption { .flow-from(flow-fig5-caption); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
-
-img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+figure,
+figure img {
     width: 100%;
+    height: 100%;
 }
 
-.enquete h1 {
-    padding: 5px 0;
-}
-
-.exergue p + p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-blockquote {
-    -webkit-region-break-inside: avoid;
-    margin: 0;
-}
-
-blockquote > footer {
-    font-size: 1rem;
-    text-align: right;
-}
-
-.chapeau {
- margin-top: 24pt;
-    font-size: 12.5pt !important;
-    line-height:  16pt !important;
-}
-.chapeau + p {
-  margin-top: 24pt;
-
-}
-figure:nth-of-type(2) > figcaption {
-  margin-left: 97% !important;
-  margin-top: 97%;
-
-
-
+figure img {
+    display: block;
+    object-fit: contain;
 }
