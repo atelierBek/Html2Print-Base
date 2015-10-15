@@ -55,15 +55,15 @@ figure img {
 
 figcaption {
 
-    position: relative;
-    margin-left: 97%;
+    /*position: relative;*/
+    /*margin-left: 97%;*/
 
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-        -ms-transform: rotate(-90deg); /* IE 9 */
-            transform: rotate(-90deg);
-    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
-        -ms-transform-origin: left top 0; /* IE 9 */
-            transform-origin: left bottom 0;
+    /*-webkit-transform: rotate(-90deg); [> Chrome, Safari, Opera <]*/
+        /*-ms-transform: rotate(-90deg); [> IE 9 <]*/
+            /*transform: rotate(-90deg);*/
+    /*-webkit-transform-origin: left top 0; [> Chrome, Safari, Opera <]*/
+        /*-ms-transform-origin: left top 0; [> IE 9 <]*/
+            /*transform-origin: left bottom 0;*/
 
     font-family: "Erbar condensed";
     font-size: 8pt;
@@ -77,24 +77,25 @@ figcaption {
 
 .enquete > header h1,
 .enquete > header h2 {
-    font-family: "Erbar condensed";
+    font-family: "Erbarre";
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .enquete > header h1 {
-    margin-top: @line-height * 2;
+    margin-top: @line-height * 1;
+    display: inline-block;
 
-    /*font-size:  @line-height * 3;*/
-    font-size:  @line-height * 3.4;
-    line-height:  @line-height * 3;
+    font-size:  @line-height * 5;
+    line-height:  @line-height * 4;
 }
 
 .enquete > header h2 {
-    margin-top: @line-height;
+    margin-top: @line-height / 2;
+    margin-bottom: @line-height / 2;
 
     font-size: 18pt;
-    line-height:  @line-height * 1.5;
+    line-height:  @line-height * 2;
 }
 
 .enquete > header .authors {
@@ -114,12 +115,19 @@ figcaption {
 }
 
 .enquete > h2 {
-    font-family: "Erbar condensed" !important;
+    font-family: "Erbarre" !important;
     font-weight: normal; ;
     font-size: 15pt;
     line-height:  @line-height;
     text-transform: uppercase;
     margin-bottom: @line-height;
+}
+
+.enquete > h2,
+.enquete > h3 {
+    -webkit-region-break-after: avoid;
+            region-break-after: avoid;
+                   break-after: avoid-region;
 }
 
 /*.enquete >  .chapeau + blockquote + h2 + p,*/
@@ -139,7 +147,7 @@ figcaption {
     padding-right: 3px;
     padding-bottom: 2px;
     float: left;
-    font-family: "Erbar condensed";
+    font-family: "Erbarre";
     font-weight: bold;
     font-size: 43pt;
     text-transform: uppercase;
@@ -190,11 +198,12 @@ figcaption {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
 
-    font-family: "Erbar condensed";
-    font-size: 18pt;
+    font-family: "Erbarre";
+    font-size: 12pt;
     font-weight: bold;
-    line-height: @line-height * 1.5;
+    /*line-height: @line-height * 1.5;*/
     text-align: left;
+    padding-left: @col-gutter-width / 2;
 }
 
 .enquete > blockquote + h2 {
@@ -207,17 +216,13 @@ figcaption {
 
 }
 
-.enquete > blockquote p:first-of-type {
-    font-family: "Erbar condensed" !important;
-    font-weight: bold;
-    font-style: normal;
-}
+
 
 .enquete > blockquote p:last-of-type {
-    font-family: "Belgika8th";
+    /*font-family: "Belgika8th";*/
     font-weight: normal;
     font-style: normal;
-    font-size: 8pt;
+    /*font-size: 8pt;*/
 }
 
 .enquete > blockquote:first-of-type{
@@ -232,7 +237,7 @@ figcaption {
 
 .interview > header h1,
 .interview > header h2 {
-    font-family: "Erbar condensed";
+    font-family: "Erbarre, Erbar condensed";
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -275,7 +280,7 @@ figcaption {
 
 .interview > h2 > abbr:first-child,
 .interview > p > abbr:first-child {
-    font-family: "Erbar condensed";
+    font-family: "Erbarre, Erbar condensed";
     font-weight: bold;
     padding-right: @line-height;
     padding-bottom: @line-height;
@@ -284,12 +289,21 @@ figcaption {
 }
 
 .interview .chapeau {
-    font-family: "Century Schoolbook";
-    font-size: 14pt;
-    line-height:  (@line-height / 2) * 3;
-    -webkit-region-break-after: always;
-            region-break-after: always;
-                   break-after: always;
+    /*font-family: "Century Schoolbook";*/
+    /*font-size: 14pt;*/
+    /*line-height:  (@line-height / 2) * 3;*/
+    /*-webkit-region-break-after: always;*/
+            /*region-break-after: always;*/
+                   /*break-after: always;*/
+/*}*/
+/*.enquete > .chapeau {*/
+    color: #39914F;
+    font-family: "Bagnard";
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: @line-height * 2;
 }
 
 
@@ -301,7 +315,7 @@ figcaption {
 .rubrique h1 {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "Erbar condensed";
+    font-family: "Erbarre, Erbar condensed";
     font-size: 35pt;
     line-height:(@line-height / 4) *12 ;
     font-weight: bold;
@@ -310,7 +324,7 @@ figcaption {
 }
 
 .rubrique h2 {
-    font-family: "Erbar condensed" !important;
+    font-family: "Erbarre, Erbar condensed" !important;
     font-weight: bold;
     font-size: 12pt;
     line-height:  @line-height;
@@ -368,7 +382,7 @@ figcaption {
 }
 
 .bd h2 {
-    font-family: "Erbar condensed" !important;
+    font-family: "Erbarre, Erbar condensed" !important;
     font-weight: bold;
     font-size: 12pt;
     line-height: @line-height ;
@@ -468,7 +482,8 @@ figcaption {
  */
 
 .rubrique-title {
-    font-family: "Erbar condensed";
+    /*font-family: "Alfphabet-Condensed";*/
+    font-family: "Erbarre, Erbar condensed";
     font-size: 8pt;
     font-weight: bold;
     text-transform: uppercase;
@@ -478,12 +493,10 @@ figcaption {
     margin-top: 0;
     margin-bottom: @line-height / 3;
     letter-spacing: 3pt;
-    /*background-color: #39914F;*/
-    background-color: #f93134;
+    background-color: #39914F;
     color: white;
 }
 .rubrique-subtitle {
     font-family: "Alfphabet-Condensed";
     //text-transform: uppercase;
-
 }
