@@ -2,8 +2,6 @@
 
 @import "/css/main.less";
 
-
-
 .glyph{
   font-family: 'Medor';
 }
@@ -13,8 +11,6 @@
 }
 
 .portrait p  {
-  display: inline-block;
-  float: left;
 }
 
 html.facing .paper:nth-child(even) .cadre{
@@ -38,13 +34,11 @@ html.facing .paper:nth-child(odd) .cadre{
         flow-from: flow-title;
 }
 
-.bloc p {
+.body > p {
   text-align: justify;
-  display: inline-block;
 }
 
 .end p {
-  display: inline-block;
   font-size: 10px;
   text-align: left;
   line-height: (@line-height * 4) / 4.5;
@@ -54,18 +48,61 @@ html.facing .paper:nth-child(odd) .cadre{
  }
 
 h2 {
-  margin: 0px;
+  margin-top:@line-height;
 }
 
-/*h2::before {
-    //content: " " ;
-    font-family: "Medor", serif;
-    font-size: 15pt;
-    color:#2a85a4;
-    display:block;
-    //text-align: center;
-    display: inline-block;
-  }*/
+.portrait aside{
+  -webkit-flow-into: aside;
+  flow-into: aside;
+  //border: solid 3px #2a85a4;
+  font-family: 'Erbar condensed';
+  font-weight: normal;
+  font-size: 8pt;
+  color: white;
+  line-height: @line-height;
+
+
+  p:first-of-type{
+    display:none;
+  }
+
+  h1{
+    font-family: 'Erbar condensed';
+    font-weight: bold;
+    font-size:12pt
+
+  }
+
+}
+
+.aside{
+  -webkit-flow-from: aside;
+  flow-from: aside;
+  margin-top: @line-height;
+  text-align: left;
+  background:#2a85a4;
+}
+
+/*ol > li:nth-of-type(1){
+  -webkit-flow-into: ftn-1;
+  flow-into: ftn-1;
+}
+#ftn-1{
+  -webkit-flow-from: ftn-1;
+  flow-from: ftn-1;
+}
+ol > li:nth-of-type(2){
+  -webkit-flow-into: ftn-2;
+  flow-into: ftn-2;
+}
+#ftn-2{
+  -webkit-flow-from: ftn-2;
+  flow-from: ftn-2;
+}*/
+
+.portrait .rubrique-title{
+  background: #2a85a4;
+}
 
 img {
     display: block;
