@@ -5,7 +5,7 @@
 
 /* computes the edge size of the paper, which is the sum of the bleed and the
  * crop sizes */
-@edge: @crop-size + @bleed; 
+@edge: @crop-size + @bleed;
 
 /* Computes the size of the paper sheet */
 @paper-width: @page-width + ( @edge * 2 );
@@ -15,14 +15,14 @@
  * DEFINITION OF THE PAPER SHEET
  */
 
-/** 
+/**
  * The @page CSS at-rule is used to define some properties of printed
  * documents. We make it the size of the elements with the .paper class and
  * remove any margins so they don't add up with margins specifed in elements
  * with the .page class (or it's children, like .header, .body and .footer)
  */
 @page {
-    size: @paper-width @paper-height; 
+    size: @paper-width @paper-height+4pt; 
     margin: 0;
 }
 
@@ -32,7 +32,7 @@
  */
 
 @media all {
-    body { 
+    body {
         margin: 0;
 
         /* Activate opentype features and kernings */
@@ -41,7 +41,7 @@
     }
 
     .paper {
-        width: @paper-width; 
+        width: @paper-width;
         height: @paper-height;
         box-sizing: border-box;
 
@@ -73,7 +73,7 @@
             -webkit-linear-gradient(90deg, black 0, black 100%),
             -webkit-linear-gradient(0deg, black 0, black 100%)
         ;
-        background-size: 
+        background-size:
             @crop-size 1px,
             1px @crop-size,
             @crop-size 1px,
@@ -126,7 +126,7 @@
     body { background-color: #F0F0F0; }
 
     #pages {
-        width: @paper-width; 
+        width: @paper-width;
         height: @paper-height;
 
         margin-left: auto;
@@ -134,7 +134,7 @@
     }
     /* FIXME: allows for printing spreads as well */
     .spread #pages {
-        width: @paper-width * 2; 
+        width: @paper-width * 2;
         height: @paper-height * 2;
     }
     .paper {
@@ -174,8 +174,8 @@
 
 .region-break {
     /* Apply this class to an element to put it on a new region.
-     * Hint: 
-     * You can also use an empty <div class="page-break"></div> 
+     * Hint:
+     * You can also use an empty <div class="page-break"></div>
      * if you want to put manual page breaks without attaching it to an HTML element
      */
     -webkit-region-break-before: always;
