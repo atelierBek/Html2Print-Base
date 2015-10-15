@@ -23,61 +23,66 @@ body { counter-reset: folio 111 - 1; }
 .paper:nth-child(odd) .body:before { content: "moment flamand — Le monstre en moi qui ne cesse de grandir"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-/*figure,
-figure img {
-    width: 100%;
-    height: 100%;
-}*/
-.traduction-nl h1{
-  font-family: 'Bagnard' !important;
-  font-weight: normal;
-  font-style: normal;
-  line-height: @line-height * 3.5 !important;
-  margin-top: 0 !important;
-  text-align: right !important;
-}
-.traduction-nl .authors{
-  line-height: @line-height !important;
-  text-align: center;
-}
-.traduction-nl h2{
-text-align: center;
-font-style: italic;
-margin-bottom: 0 !important;
-margin-top: @line-height * 1.5  !important;
-margin-bottom: @line-height * 0.5 !important;
-font-size: 11pt;
-padding: 0 @line-height;
 
+.traduction-nl > header > h1 {
+    font-family: 'Bagnard' !important;
+    font-weight: normal;
+    font-style: normal;
+    line-height: @line-height * 3.5 !important;
+    margin-top: 0 !important;
+    text-align: right !important;
 }
-.traduction-nl .chapeau{
-  font-family: 'Century Schoolbook' !important;
-  line-height: @line-height * 1.5;
-  font-size: 15pt !important;
+
+.traduction-nl .authors {
+    line-height: @line-height !important;
+    text-align: center;
 }
+
+.traduction-nl .question {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 0 !important;
+    margin-top: @line-height * 1.5  !important;
+    margin-bottom: @line-height * 0.5 !important;
+    font-size: 11pt;
+    padding: 0 @line-height;
+    -webkit-break-inside: avoid-region;
+            break-inside: avoid-region;
+}
+
+.question + p {
+    text-indent: 0 !important;
+}
+
+.traduction-nl .chapeau {
+    /*font-family: 'Century Schoolbook' !important;*/
+    /*line-height: @line-height * 1.5;*/
+    /*font-size: 15pt !important;*/
+    color: inherit;
+}
+
 .intro-medor {
-  font-family: 'Bagnard' !important;
-  margin-bottom: @line-height * 2;
+    font-family: 'Bagnard' !important;
+    margin-bottom: @line-height * 2;
 }
-img{
-  width: 100%;
-  height: auto;
-  //object-fit: cover;
+
+img {
+    width: 100%;
+    height: auto;
 }
+
 .flow-fig1 figure {
-  width: 85%;
-  height: auto;
-
+    width: 85%;
+    height: auto;
 }
 
- .flow-fig2 figure,  .flow-fig3 figure {
-   width: 273%;
-   height: auto;
-
- }
-.img-right figure{
-    margin-left: -497pt;
+.flow-fig2 figure,
+.flow-fig3 figure {
+    width: 273%;
+    height: auto;
 }
+
+.img-right figure { margin-left: -497pt; }
 
 p > strong {
     font-family: "Bagnard";
@@ -85,29 +90,6 @@ p > strong {
     font-weight: normal;
     line-height: @line-height;
     text-transform: uppercase;
-
-}
-abbr{
-  display: none;
-
-}
-.rubrique-title {
-    font-family: "Alfphabet-Condensed" !important;
 }
 
-/*h2:nth-of-type(1) + p,*/
-/*h2:nth-of-type(4) + p {*/
-    /*-webkit-region-break-inside: avoid;*/
-                   /*break-inside: avoid;*/
-
-    /*font-family: "Erbar condensed";*/
-    /*font-size: 18pt;*/
-    /*font-weight: bold;*/
-    /*line-height: @line-height * 1.5;*/
-    /*text-align: left;*/
-
-    /*.w5;*/
-    /*float: right;*/
-    /*padding-bottom: @line-height * 2;*/
-
-/*}*/
+abbr { display: none; }
