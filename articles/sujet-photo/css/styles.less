@@ -1,21 +1,17 @@
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+@import "/css/main.less";
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+/*#flow-main header {*/
+    /*-webkit-flow-into: flow-title;*/
+            /*flow-into: flow-title;*/
+/*}*/
+
+/*.flow-title {*/
+    /*-webkit-flow-from: flow-title;*/
+        /*flow-from: flow-title;*/
+/*}*/
 /* reset folio */
 body { counter-reset: folio 43 - 1; }
 
