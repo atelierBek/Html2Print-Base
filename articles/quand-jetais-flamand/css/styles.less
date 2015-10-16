@@ -14,12 +14,6 @@ body { counter-reset: folio 23 - 1; }
 
 
 /* FLOWS */
-#flow-main { .flow-into(flow-main); }
-.flow-main { .flow-from(flow-main); }
-
-/*#flow-main header { .flow-into(flow-title); }*/
-/*.flow-title { .flow-from(flow-title); }*/
-
 #flow-main .footnotes li:nth-child(1),
 #flow-main .footnotes li:nth-child(2) { .flow-into(flow-fn1-2); }
 .flow-fn1-2 { .flow-from(flow-fn1-2); }
@@ -30,34 +24,77 @@ body { counter-reset: folio 23 - 1; }
 #flow-main .footnotes li:nth-child(4) { .flow-into(flow-fn4); }
 .flow-fn4 { .flow-from(flow-fn4); }
 
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
+
+#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
+.flow-fig4 { .flow-from(flow-fig4); }
+
+#flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
+.flow-fig5 { .flow-from(flow-fig5); }
+
+#flow-main figure:nth-of-type(6) { .flow-into(flow-fig6); }
+.flow-fig6 { .flow-from(flow-fig6); }
+
+#flow-main figure:nth-of-type(7) { .flow-into(flow-fig7); }
+.flow-fig7 { .flow-from(flow-fig7); }
+
+#flow-main figure:nth-of-type(8) { .flow-into(flow-fig8); }
+.flow-fig8 { .flow-from(flow-fig8); }
+
+#flow-main figure:nth-of-type(9) { .flow-into(flow-fig9); }
+.flow-fig9 { .flow-from(flow-fig9); }
+
+#flow-main figure:nth-of-type(10) { .flow-into(flow-fig10); }
+.flow-fig10 { .flow-from(flow-fig10); }
+
+#flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
+.flow-fig11 { .flow-from(flow-fig11); }
+
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
+
+
 /* end of FLOWS */
 
 .contexte {
     margin-bottom: 13px;
 }
 
+figure {
+    height: 100%;
+    width: 100%;
+}
+
 img {
     display: block;
     height: 100%;
-    /*width: 100%;*/
-    /*object-fit: cover;*/
-}
-
-[src="img/1C-left-low.jpg"] {
-    overflow: hidden;
-}
-[src="img/1C-right-low.jpg"] {
-    overflow: hidden;
-}
-[src="img/accident-low.png"] {
-    overflow: hidden;
-}
-
-[src="img/Dampremy3.jpg"] {
-    height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
+
+/*[src="img/1C-left-low.jpg"] {*/
+    /*overflow: hidden;*/
+/*}*/
+/*[src="img/1C-right-low.jpg"] {*/
+    /*overflow: hidden;*/
+/*}*/
+/*[src="img/accident-low.png"] {*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*[src="img/Dampremy3.jpg"] {*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*object-fit: contain;*/
+/*}*/
 
 img[src="img/SuskeVanAken_2.JPG"] {
     /*display: none;*/
@@ -73,15 +110,15 @@ img[src="img/SuskeVanAken_2.JPG"] {
 }
 
 /*[src="img/arbre-genealogique-test.svg"]:nth-of-type(2) {*/
-.bar {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+/*.bar {*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+/*}*/
 
-[src="img/LettreHenri.png"] {
-    object-fit: contain;
-}
+/*[src="img/LettreHenri.png"] {*/
+    /*object-fit: contain;*/
+/*}*/
 
 /*img[src="img/SuskeVanAken_2.JPG"]:nth-of-type(2) {*/
     /*object-position: 0 293px;*/
