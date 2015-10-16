@@ -47,9 +47,16 @@ h1{
   text-align: right ;
 }
 
-.traduction-nl .authors{
+.traduction-nl .authors, strong{
   line-height: @line-height !important;
   text-align: right;
+}
+strong{
+  font-family: "Belgika5th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+  display: inline;
 }
 .question {
 //text-align: center;
@@ -64,20 +71,14 @@ margin-bottom: 0 ;
  display: inline;
   margin-top: @line-height * 2 !important;
   padding-top: @line-height;
-  margin-top:  @line-height;
-
-
-.traduction-nl .question {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 0 !important;
-    margin-top: @line-height * 1.5  !important;
-    margin-bottom: @line-height * 0.5 !important;
-    font-size: 11pt;
-    padding: 0 @line-height;
-    -webkit-break-inside: avoid-region;
-            break-inside: avoid-region;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0 !important;
+  padding: 0 @line-height;
+  -webkit-break-inside: avoid-region;
+          break-inside: avoid-region;
 }
+
 .question::before{
 content: "→ ";
 }
@@ -98,18 +99,8 @@ content: "→ ";
                  break-after: always-region;
                  color: black;
 
-
-.traduction-nl .chapeau {
-    /*font-family: 'Century Schoolbook' !important;*/
-    /*line-height: @line-height * 1.5;*/
-    /*font-size: 15pt !important;*/
-    color: inherit;
 }
 
-.intro-medor {
-    font-family: 'Bagnard' !important;
-    margin-bottom: @line-height * 2;
-}
 
 img {
     width: 100%;
@@ -126,8 +117,14 @@ img {
     width: 273%;
     height: auto;
 }
-
-blockquote {
+.flow-fig3 figure {
+margin-left: -662px;
+}
+sup {
+  top: 0.3em;
+  color: red;
+}
+blockquote,  #page-8 div.flow-encadre aside h2 {
   //text-align: center;
   margin-left: 0;
   margin-right: 0;
@@ -164,55 +161,59 @@ dt{
 
 }
 aside h1{
-  //font-family: 'Bagnard' ;
-  font-weight: normal !important;
+  font-weight: normal ;
   font-style: normal;
   line-height: @line-height *1.5  !important;
   margin-top: 0 !important;
   text-align: left;
 }
-#page-3 aside h1{
-  text-transform: uppercase;
-  text-align: left;
 
-
-}
-
-div.flow-encadre > h1{
-  font-family: 'Bagnard' ;
-  margin-bottom: @line-height /2;
-  margin-top: 0px;
-  line-height: @line-height;
-  font-size: 15pt;
-  font-weight: normal;
-  text-transform: uppercase;
-//margin-bottom: 6pt;
-//line-height: 18pt;
-
-}
 div.flow-encadre aside {
   font-family: 'Erbar condensed' ;
   font-size: 10pt;
   padding-left: 24pt !important;
+ }
 
+   #page-3 aside h1{
+     text-transform: uppercase;
+     text-align: left;
    }
-  #page-7 div.flow-encadre aside p {
 
-
-
-      }
+   div.flow-encadre > h1{
+     font-family: 'Bagnard' ;
+     margin-bottom: @line-height /2;
+     margin-top: 0px;
+     line-height: @line-height;
+     font-size: 15pt;
+     font-weight: normal;
+   }
       #page-7 div.flow-encadre aside h1, #page-8 div.flow-encadre aside h1  {
         margin-left: @line-height / 3;
-        font-family: 'Erbar condensed' ;
-        font-size: 10pt;
+        font-family: 'Erbar condensed'!important ;
+        font-weight: bold !important;
+        font-size: 13pt;
         display: inline;
         text-transform: uppercase;
         padding-left: 0;
-        text-align: left;
-
-
+        text-align: center  !important;
+        line-height: @line-height / 1.5 !important ;
           }
-#page-3 div.flow-encadre {
+    #page-7 aside h1{
+      margin-bottom:@line-height * 2 !important ;
+      padding-bottom:@line-height * 2 !important ;
+
+    }
+  #page-7 aside p, #page-8  aside p  {
+  //  font-family: 'Erbar condensed' !important;
+    //font-size: 12pt;
+  }
+  #page-7 aside em, #page-8  aside em  {
+    font-size: 9pt;
+
+  }
+
+
+#page-3 div.flow-encadre, #page-7 div.flow-encadre, #page-8 div.flow-encadre {
   background-color: #e1f17a;
   border-right: solid 2px black;
   padding-left: 24pt;
@@ -264,6 +265,3 @@ div.flow-encadre aside:last-of-type{
     /*.w5;*/
     /*float: right;*/
     /*padding-bottom: @line-height * 2;*/
-
-
-abbr { display: none; }

@@ -1,5 +1,7 @@
 /* Styles for 08_herrmutt-lobby */
 /* reset folio */
+@import "/css/main.less";
+
 body { counter-reset: folio 119 - 1; }
 
 /*footer,*/
@@ -27,6 +29,18 @@ body { counter-reset: folio 119 - 1; }
             flow-from: flow-title;
 }
 
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
+
+#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
+.flow-fig4 { .flow-from(flow-fig4); }
+
 #flow-main .footnotes {
     -webkit-flow-into: flow-footnotes;
             flow-into: flow-footnotes;
@@ -37,13 +51,38 @@ body { counter-reset: folio 119 - 1; }
 }
 /*end of FLOWS*/
 
-div.x0.flow-herrmutt-lobby,
-div.x3.flow-herrmutt-lobby {
+div.x0.flow-main,
+div.x3.flow-main {
     border-right:  1px solid black;
     padding-right: 5px;
 }
 
 
+.flow-fig1 figure {
+    //width: 85%;
+    height: auto;
+}
+
+.flow-fig3 figure, .flow-fig4 figure {
+  //  width: 247%;
+  width:196%;
+    height: auto;
+    margin-left: -108pt;
+//    margin-left: -192pt;
+  //  opacity:  0.3;
+
+}
+.flow-fig1 img {
+  border:2px solid yellow !important;
+}
+#page-1 .y4 , #page-1 .y8   {
+  //background-color: white;
+}
+p{
+  font-family: "Bagnard";
+  font-size: 9pt;
+  //color: white;
+}
 img {
     //display: block;
     position: absolute;
@@ -52,12 +91,23 @@ img {
     width: 100%;
     margin: 0 !important;
 
+
 }
 
-figure { margin: 0 }
-figure  img {
-    width: 100%;
-    position: relative;
+#page-1 h1{
+font-family: "Alfphabet-Condensed" !important;
+font-size: 24pt !important;
+line-height: @line-height *2 !important;
+font-weight: normal;
+//text-transform: uppercase;
+}
+.rubrique h2{
+font-family: "Alfphabet-Condensed" !important;
+font-size: 17pt !important;
+font-weight: normal;
+line-height: @line-height * 1.5;
+
+
 }
 
 figcaption {
@@ -98,4 +148,27 @@ blockquote > footer {
 .rubrique .footnotes > li > a {
     color: black;
     text-decoration: none;
+}
+.rubrique-title {
+background-color: yellow;
+color: black;
+}
+ul {
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  transform: rotate(-90deg);
+  -webkit-transform-origin: left bottom 0; /* Chrome, Safari, Opera */
+  -ms-transform-origin: left bottom 0; /* IE 9 */
+  transform-origin: left bottom 0;
+  position: relative;
+  margin-left: 133pt;
+  margin-top: 140pt;
+  width:100%;
+  list-style-type: none;
+    font-family: "Erbar condensed";
+    line-height: @line-height;
+}
+
+h2:last-of-type{
+  display: none;
 }
