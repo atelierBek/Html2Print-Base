@@ -66,6 +66,17 @@ margin-bottom: 0 ;
   padding-top: @line-height;
   margin-top:  @line-height;
 
+
+.traduction-nl .question {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 0 !important;
+    margin-top: @line-height * 1.5  !important;
+    margin-bottom: @line-height * 0.5 !important;
+    font-size: 11pt;
+    padding: 0 @line-height;
+    -webkit-break-inside: avoid-region;
+            break-inside: avoid-region;
 }
 .question::before{
 content: "→ ";
@@ -86,29 +97,34 @@ content: "→ ";
           region-break-after: always;
                  break-after: always-region;
                  color: black;
+
+
+.traduction-nl .chapeau {
+    /*font-family: 'Century Schoolbook' !important;*/
+    /*line-height: @line-height * 1.5;*/
+    /*font-size: 15pt !important;*/
+    color: inherit;
 }
+
 .intro-medor {
-  font-family: 'Bagnard' !important;
-  margin-bottom: @line-height * 2;
+    font-family: 'Bagnard' !important;
+    margin-bottom: @line-height * 2;
 }
-img{
-  width: 100%;
-  height: auto;
-  //object-fit: cover;
+
+img {
+    width: 100%;
+    height: auto;
 }
+
 .flow-fig1 figure {
-  width: 85%;
-  height: auto;
-
+    width: 85%;
+    height: auto;
 }
 
- .flow-fig2 figure,  .flow-fig3 figure {
-   width: 273%;
-   height: auto;
-
- }
-.img-right figure{
-    margin-left: -497pt;
+.flow-fig2 figure,
+.flow-fig3 figure {
+    width: 273%;
+    height: auto;
 }
 
 blockquote {
@@ -249,4 +265,5 @@ div.flow-encadre aside:last-of-type{
     /*float: right;*/
     /*padding-bottom: @line-height * 2;*/
 
-/*}*/
+
+abbr { display: none; }

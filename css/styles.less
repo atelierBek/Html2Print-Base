@@ -315,7 +315,7 @@ figcaption {
 .rubrique h1 {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "Erbarre, Erbar condensed";
+    font-family: "Erbarre", "Erbar condensed";
     font-size: 35pt;
     line-height:(@line-height / 4) *12 ;
     font-weight: bold;
@@ -324,7 +324,7 @@ figcaption {
 }
 
 .rubrique h2 {
-    font-family: "Erbarre, Erbar condensed" !important;
+    font-family: "Erbarre", "Erbar condensed" !important;
     font-weight: bold;
     font-size: 12pt;
     line-height:  @line-height;
@@ -363,6 +363,9 @@ figcaption {
     text-transform: uppercase;
 }
 
+
+
+
 /*
  * Styles bd
  * -----------------
@@ -382,7 +385,7 @@ figcaption {
 }
 
 .bd h2 {
-    font-family: "Erbarre, Erbar condensed" !important;
+    font-family: "Erbarre", "Erbar condensed" !important;
     font-weight: bold;
     font-size: 12pt;
     line-height: @line-height ;
@@ -424,33 +427,32 @@ figcaption {
   line-height:  (@line-height * 4) / 3.2  ;
 }
 
-.portrait h1 {
-  font-family: "Bagnard";
+.portrait > header > h1 {
+  font-family: "career";
     font-weight: normal;
-    text-align: center;
-    font-size: 35pt;
-    line-height: (@line-height / 2) * 8;
-}
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 60pt;
+    color:white;
+    line-height: @line-height*5.5;
+  }
 .portrait h2 {
     font-family: "Erbar condensed";
     font-weight: normal;
     font-size: 11pt;
-    text-align: center;
-    line-height:  @line-height ;
+    line-height:  @line-height;
     text-transform: uppercase;
-    padding-top:  @line-height;
 }
 
 .portrait .chapeau {
-    font-family: "Bagnard";
+    font-family: "Erbar condensed";
     font-size: 15pt;
+    text-align: left;
     line-height:  (@line-height / 2) * 3;
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
 }
-
-
 
 .portrait .authors {
     font-family: "Belgika8th";
@@ -458,13 +460,12 @@ figcaption {
     font-style: normal;
     font-size: 8pt;
     padding: 0;
+    color: white
 }
-
 .portrait header > h2{
     font-size: 11.5pt;
-    margin-bottom: 0px;
+    color:white;
     font-weight: bold;
-    text-align: left;
 }
 
 
@@ -477,6 +478,17 @@ figcaption {
     margin-top:  @line-height;
 }
 
+.portrait > .footnotes {
+    font-family: "Erbar condensed";
+    margin: 0;
+    font-size: 8pt;
+    line-height: (@line-height / 8) * 7;
+}
+
+// hides the numbers in the HTML since it is redundant with the css numbered bullets.
+//.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
+//.portrait > .footnotes li { text-indent: -0.25em; }
+
 
 /**
  * À classer
@@ -484,12 +496,14 @@ figcaption {
 
 .rubrique-title {
     /*font-family: "Alfphabet-Condensed";*/
-    font-family: "Erbarre, Erbar condensed";
+    font-family: "Erbarre", "Erbar condensed";
     font-size: 8pt;
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
-    padding:  @line-height / 3;
+    padding-left:  @line-height / 4;
+    padding-right:  @line-height / 4;
+    padding-top:  @line-height / 5;
     line-height: @line-height;
     margin-top: 0;
     margin-bottom: @line-height / 3;
