@@ -6,6 +6,16 @@
 #flow-main header { .flow-into(flow-title); }
 .flow-title { .flow-from(flow-title); }
 
+#flow-main aside {
+    -webkit-flow-into: flow-encadre;
+            flow-into: flow-encadre;
+}
+
+.flow-encadre {
+    -webkit-flow-from: flow-encadre;
+        flow-from: flow-encadre;
+}
+
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
@@ -23,20 +33,39 @@ body { counter-reset: folio 111 - 1; }
 .paper:nth-child(odd) .body:before { content: "moment flamand — Le monstre en moi qui ne cesse de grandir"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-
-.traduction-nl > header > h1 {
-    font-family: 'Bagnard' !important;
-    font-weight: normal;
-    font-style: normal;
-    line-height: @line-height * 3.5 !important;
-    margin-top: 0 !important;
-    text-align: right !important;
+/*figure,
+figure img {
+    width: 100%;
+    height: 100%;
+}*/
+h1{
+  font-family: 'Bagnard' !important ;
+  font-weight: normal !important;
+  font-style: normal;
+  line-height: @line-height * 3.5 !important;
+  margin-top: 0 !important;
+  text-align: right ;
 }
 
-.traduction-nl .authors {
-    line-height: @line-height !important;
-    text-align: center;
+.traduction-nl .authors{
+  line-height: @line-height !important;
+  text-align: right;
 }
+.question {
+//text-align: center;
+font-style: italic ;
+font-size: 9pt;
+margin-bottom: 0 ;
+//text-decoration: underline;
+//margin-bottom: @line-height * 0.5 !important;
+//font-size: 14pt;
+//padding: 0 @line-height;
+ text-indent: @line-height * 2 !important;
+ display: inline;
+  margin-top: @line-height * 2 !important;
+  padding-top: @line-height;
+  margin-top:  @line-height;
+
 
 .traduction-nl .question {
     text-align: center;
@@ -49,10 +78,26 @@ body { counter-reset: folio 111 - 1; }
     -webkit-break-inside: avoid-region;
             break-inside: avoid-region;
 }
-
-.question + p {
-    text-indent: 0 !important;
+.question::before{
+content: "→ ";
 }
+.question + p:first-of-type em:first-of-type {
+  //text-indent: 0pt !important;
+  color: red;
+}
+.traduction-nl .chapeau, .chapeau > em{
+  font-family: 'Century Schoolbook' !important;
+  line-height: @line-height * 1.5;
+  font-size: 15pt !important;
+  display: inline;
+  padding: 0 !important;
+}
+.traduction-nl .chapeau{
+ -webkit-region-break-after: always;
+          region-break-after: always;
+                 break-after: always-region;
+                 color: black;
+
 
 .traduction-nl .chapeau {
     /*font-family: 'Century Schoolbook' !important;*/
@@ -82,14 +127,143 @@ img {
     height: auto;
 }
 
-.img-right figure { margin-left: -497pt; }
+blockquote {
+  //text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: (@line-height/4) * 3;
+  margin-top: (@line-height /4)*3;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16.5pt;
+  padding-left: @line-height;
+  padding-right: 0;
+    display: block;
+    line-height: @line-height * 1.5 !important;
+    text-indent: 0px !important;
 
-p > strong {
-    font-family: "Bagnard";
-    font-size: 9pt;
-    font-weight: normal;
-    line-height: @line-height;
-    text-transform: uppercase;
 }
+abbr{
+  display: none;
+
+}
+.rubrique-title {
+    font-family: "Alfphabet-Condensed" !important;
+}
+dd{
+  display: inline;
+  margin-left: 0;
+
+}
+dt{
+  margin-left: @line-height / 3;
+  font-family: 'Erbarre' ;
+  font-size: 10pt;
+  display: inline;
+  text-transform: uppercase;
+
+}
+aside h1{
+  //font-family: 'Bagnard' ;
+  font-weight: normal !important;
+  font-style: normal;
+  line-height: @line-height *1.5  !important;
+  margin-top: 0 !important;
+  text-align: left;
+}
+#page-3 aside h1{
+  text-transform: uppercase;
+  text-align: left;
+
+
+}
+
+div.flow-encadre > h1{
+  font-family: 'Bagnard' ;
+  margin-bottom: @line-height /2;
+  margin-top: 0px;
+  line-height: @line-height;
+  font-size: 15pt;
+  font-weight: normal;
+  text-transform: uppercase;
+//margin-bottom: 6pt;
+//line-height: 18pt;
+
+}
+div.flow-encadre aside {
+  font-family: 'Erbar condensed' ;
+  font-size: 10pt;
+  padding-left: 24pt !important;
+
+   }
+  #page-7 div.flow-encadre aside p {
+
+
+
+      }
+      #page-7 div.flow-encadre aside h1, #page-8 div.flow-encadre aside h1  {
+        margin-left: @line-height / 3;
+        font-family: 'Erbar condensed' ;
+        font-size: 10pt;
+        display: inline;
+        text-transform: uppercase;
+        padding-left: 0;
+        text-align: left;
+
+
+          }
+#page-3 div.flow-encadre {
+  background-color: #e1f17a;
+  border-right: solid 2px black;
+  padding-left: 24pt;
+  padding-right: 37pt;
+  padding-top: 24pt;
+  margin-right: 5pt;
+}
+ div.flow-encadre {
+  background-color: #e1f17a;
+  border-right: solid 2px black;
+  padding-left: 12pt;
+  padding-right: 12pt;
+  padding-top: 24pt;
+  margin-right: 5pt;
+}
+div.border-double{
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid 2px black;
+  border-top: solid 2px black;
+
+  margin-right: 11pt;
+
+}
+div.flow-encadre aside:first-of-type{
+  -webkit-region-break-after: always;
+           region-break-after: always;
+                  break-after: always-region;
+
+}
+div.flow-encadre aside:last-of-type{
+  -webkit-region-break-before: always;
+           region-break-before: always;
+                  break-before: always-region;
+
+}
+
+/*h2:nth-of-type(1) + p,*/
+/*h2:nth-of-type(4) + p {*/
+    /*-webkit-region-break-inside: avoid;*/
+                   /*break-inside: avoid;*/
+
+    /*font-family: "Erbar condensed";*/
+    /*font-size: 18pt;*/
+    /*font-weight: bold;*/
+    /*line-height: @line-height * 1.5;*/
+    /*text-align: left;*/
+
+    /*.w5;*/
+    /*float: right;*/
+    /*padding-bottom: @line-height * 2;*/
+
 
 abbr { display: none; }
