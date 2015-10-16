@@ -60,24 +60,24 @@
 }
 
 html:not(.facing) .paper:nth-child(odd) .l-1,
-html.facing .paper:nth-child(even) .l-1 { left: -( @page-margin-inside + 0mm); }
+html.facing .paper:nth-child(even) .l-1 { left: -( @page-margin-inside + 14pt); }
 
 html:not(.facing) .paper:nth-child(even) .l-1,
-html.facing .paper:nth-child(odd) .l-1 { left: -( @page-margin-outside + 0mm); }
+html.facing .paper:nth-child(odd) .l-1 { left: -( @page-margin-outside + 14pt); }
 
 .create-grid-classes(left, l, @body-width);
 
 html:not(.facing) .paper:nth-child(odd) .r-1,
-html.facing .paper:nth-child(even) .r-1 { right: -( @page-margin-outside + 0mm); }
+html.facing .paper:nth-child(even) .r-1 { right: -( @page-margin-outside + 14pt); }
 
 html:not(.facing) .paper:nth-child(even) .r-1,
-html.facing .paper:nth-child(odd) .r-1 { right: -( @page-margin-inside + 0mm); }
+html.facing .paper:nth-child(odd) .r-1 { right: -( @page-margin-inside + 14pt); }
 
 .create-grid-classes(right, r, @body-width);
 
-.t-1 { top: -( @page-margin-top + 0mm); }
+.t-1 { top: -( @page-margin-top + 14pt); }
 .create-grid-classes(top, t, @body-height);
-.b-1 { bottom: -( @page-margin-bottom + 0mm); }
+.b-1 { bottom: -( @page-margin-bottom + 14pt); }
 .create-grid-classes(bottom, b, @body-height);
 
 
