@@ -314,7 +314,7 @@ figcaption {
 
 .enqueteke > p:not(.chapeau) + p { text-indent: @line-height; }
 
-.enqueteke > p:last-of-type:after { 
+.enqueteke > p:last-of-type:after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
@@ -494,7 +494,7 @@ figcaption {
     line-height:(@line-height / 4) *12 ;
     font-weight: bold;
     padding-top: 6pt * 1;
-  //  border-top: 10px double black !important;
+    border-top: 10px double black !important;
 }
 
 .rubrique h2 {
@@ -659,8 +659,14 @@ figcaption {
     line-height: (@line-height / 8) * 7;
 }
 
+/*
+ * Styles photo
+ * -----------------
+ */
+.photo > h1{
+  
+}
+
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 //.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
 //.portrait > .footnotes li { text-indent: -0.25em; }
-
-
