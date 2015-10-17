@@ -58,29 +58,30 @@ div.x3.flow-main {
 }
 
 
-.flow-fig1 figure {
-    //width: 85%;
+.flow-fig1 figure, .fig1 figure {
+    //width: 107%;
     height: auto;
+  //  margin-left: -25pt;
+  margin-top: -15pt;
 }
 
-.flow-fig3 figure, .flow-fig4 figure {
+.flow-fig3 figure, .flow-fig4 figure, .fig3 figure {
   //  width: 247%;
   width:196%;
     height: auto;
-    margin-left: -108pt;
+  margin-left: -108pt;
 //    margin-left: -192pt;
-  //  opacity:  0.3;
+  //opacity:  0.3;
 
 }
-.flow-fig1 img {
+.flow-fig1 img, .fig1 img  {
   border:2px solid yellow !important;
 }
-#page-1 .y4 , #page-1 .y8   {
-  //background-color: white;
-}
+
 p{
   font-family: "Bagnard";
-  font-size: 9pt;
+  font-size: 8.5pt;
+  letter-spacing: -0.5pt;
   //color: white;
 }
 img {
@@ -94,20 +95,28 @@ img {
 
 }
 
-#page-1 h1{
+.chapeau{
+font-size: 12.5pt;
 font-family: "Alfphabet-Condensed" !important;
-font-size: 24pt !important;
-line-height: @line-height *2 !important;
+font-weight: normal;
+margin-bottom: @line-height * 2;
+}
+
+.rubrique h1{
+font-family: "Alfphabet-Condensed" !important;
+font-size: 33pt !important;
+line-height: @line-height *2.5 !important;
 font-weight: normal;
 //text-transform: uppercase;
 }
 .rubrique h2{
 font-family: "Alfphabet-Condensed" !important;
-font-size: 17pt !important;
+font-size: 12.5pt !important;
 font-weight: normal;
-line-height: @line-height * 1.5;
-
-
+line-height: @line-height * 1;
+text-transform: initial;
+margin-bottom:@line-height /2;
+margin-top: @line-height/2;
 }
 
 figcaption {
@@ -171,4 +180,31 @@ ul {
 
 h2:last-of-type{
   display: none;
+}
+h2:nth-of-type(3){
+//margin-top: 0px !important;
+}
+
+p > em{
+  font-family: 'Century Schoolbook' !important;
+  font-style: italic !important;
+}
+strong{
+  font-family: "Belgika8th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+  display: inline;
+}
+strong::after{
+  content: ' M';
+  font-family: 'Medor';
+  color:yellow;
+}
+.authors{
+  display: none;
+}
+#page-1 .y2 {
+  margin-top: @line-height ;
+  margin-bottom: -12pt;
 }

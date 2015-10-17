@@ -31,6 +31,28 @@
         flow-from: flow-encadre;
 }
 
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
+
+#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
+.flow-fig4 { .flow-from(flow-fig4); }
+
+#flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
+.flow-fig5 { .flow-from(flow-fig5); }
+
+#flow-main figure:nth-of-type(6) { .flow-into(flow-fig6); }
+.flow-fig6 { .flow-from(flow-fig6); }
+
+#flow-main figure:nth-of-type(7) { .flow-into(flow-fig7); }
+.flow-fig7 { .flow-from(flow-fig7); }
+
+
 /* reset folio */
 body { counter-reset: folio 8 - 1; }
 
@@ -85,7 +107,44 @@ h1{
      .w5;
      float: right;
      margin-bottom: @line-height;
+
  }
+.enquete .chapeau{
+  -webkit-region-break-after: always;
+           region-break-after: always;
+                  break-after: always-region;
+                  color: white;
+ }
+
+
+ img {
+     width: 100%;
+     height: auto;
+ }
+
+ .flow-fig1 figure,  .flow-fig2 figure  {
+     width: 200%;
+     height: auto;
+ }
+.flow-fig2 figure{
+  margin-left: -481pt;
+}
+.flow-fig3 figure{
+  margin-left: -21pt;
+  margin-top: -29pt;
+  width: 108%;
+
+}
+.flow-fig4 figure,  .flow-fig5 figure  {
+    width: 147%;
+    height: auto;
+    margin-top: -33pt;
+    margin-left: 6pt;
+}
+.flow-fig5 figure{
+ margin-left: -481pt;
+}
+
  #img4, #img4-right {
       height: auto;
       width: 200%;
