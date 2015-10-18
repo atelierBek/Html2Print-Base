@@ -14,16 +14,6 @@ body { counter-reset: folio 23 - 1; }
 
 
 /* FLOWS */
-#flow-main .footnotes li:nth-child(1),
-#flow-main .footnotes li:nth-child(2) { .flow-into(flow-fn1-2); }
-.flow-fn1-2 { .flow-from(flow-fn1-2); }
-
-#flow-main .footnotes li:nth-child(3) { .flow-into(flow-fn3); }
-.flow-fn3 { .flow-from(flow-fn3); }
-
-#flow-main .footnotes li:nth-child(4) { .flow-into(flow-fn4); }
-.flow-fn4 { .flow-from(flow-fn4); }
-
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
@@ -57,10 +47,29 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
 .flow-fig11 { .flow-from(flow-fig11); }
 
+#flow-main aside.exergue:nth-of-type(1) { .flow-into(flow-ex1); }
+.flow-ex1 { .flow-from(flow-ex1); }
+
+#flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-ex2); }
+.flow-ex2 { .flow-from(flow-ex2); }
+
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
+#flow-main figure figcaption {
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+    height: @col-width;
+    width: (@row-height * 3) + (@row-gutter * (3 - 1));
+}
 
+#flow-main figure:nth-of-type(2) img { object-fit: contain; }
+#flow-main figure:nth-of-type(2) figcaption {
+    position: relative;
+    top: (@row-height * 5) + (@row-gutter * (5 - 1)) + @row-gutter;
+    width: (@row-height * 5) + (@row-gutter * (5 - 1)) ;
+    text-align: right;
+}
 
 /* end of FLOWS */
 
@@ -73,6 +82,15 @@ figure {
     width: 100%;
 }
 
+figcaption {
+    /*font-family: inherit;*/
+    font-family: 'Univers else';
+    font-size: 7pt;
+    line-height: 12pt;
+    color: @color-A1;
+    /*font-style: italic;*/
+}
+
 img {
     display: block;
     height: 100%;
@@ -80,62 +98,9 @@ img {
     object-fit: cover;
 }
 
-/*[src="img/1C-left-low.jpg"] {*/
-    /*overflow: hidden;*/
-/*}*/
-/*[src="img/1C-right-low.jpg"] {*/
-    /*overflow: hidden;*/
-/*}*/
-/*[src="img/accident-low.png"] {*/
-    /*overflow: hidden;*/
-/*}*/
-
-/*[src="img/Dampremy3.jpg"] {*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-    /*object-fit: contain;*/
-/*}*/
-
-img[src="img/SuskeVanAken_2.JPG"] {
-    /*display: none;*/
-    /*object-position: 0 293px;*/
-}
-
-/*[src="img/arbre-genealogique-test.svg"]:nth-of-type(1) {*/
-.foo {
-    /*width: 200%;*/
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/*[src="img/arbre-genealogique-test.svg"]:nth-of-type(2) {*/
-/*.bar {*/
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 0;*/
-/*}*/
-
-/*[src="img/LettreHenri.png"] {*/
-    /*object-fit: contain;*/
-/*}*/
-
-/*img[src="img/SuskeVanAken_2.JPG"]:nth-of-type(2) {*/
-    /*object-position: 0 293px;*/
-/*}*/
-
-/*img[src="img/family_tree.jpg"] {*/
-/*}*/
-
 article > header {
-    /*text-align: center;*/
+    color: white;
 }
-
-/*article > blockquote:nth-of-type(1) {*/
-    /*.w5;*/
-    /*float: right;*/
-    /*padding-bottom: @line-height * 2;*/
-/*}*/
 
 article > blockquote:nth-of-type(1) p:last-child:before,
 article > blockquote:nth-of-type(2) p:last-child:before,
@@ -154,4 +119,29 @@ article > blockquote:nth-of-type(4) p:last-child:before {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+h2 { display: none; }
+
+.enquete >  .chapeau + blockquote + h2 + p,
+.enquete >  .chapeau + h2 + p,
+.enquete >  .chapeau + p {
+    .w5;
+    float: right;
+    margin-bottom: @line-height;
+}
+
+.inline-fn {
+    .w2;
+    display: block;
+    float: left;
+    /*color: @color-A1;*/
+    margin-top: @line-height;
+    margin-bottom: @line-height;
+    /*margin-left: -1 * @col-gutter-width;*/
+    margin-right: 9pt;
+    font-family: "Univers else";
+    font-weight: 200;
+    font-size: 7pt;
+    line-height: 9pt;
 }
