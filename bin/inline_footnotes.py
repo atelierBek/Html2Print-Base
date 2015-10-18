@@ -31,6 +31,7 @@ import lxml.etree as etree
 import html5lib
 from cssselect import GenericTranslator, SelectorError
 import re
+from copy import deepcopy
 
 
 def valid_xml_char_ordinal(c):
@@ -44,16 +45,43 @@ def valid_xml_char_ordinal(c):
         )
 
 
+import re, htmlentitydefs
+
+##
+# Removes HTML or XML character references and entities from a text string.
+#
+# @param text The HTML (or XML) source text.
+# @return The plain text, as a Unicode string, if necessary.
+
+def unescape(text):
+    def fixup(m):
+        text = m.group(0)
+        if text[:2] == "&#":
+            # character reference
+            try:
+                if text[:3] == "&#x":
+                    return unichr(int(text[3:-1], 16))
+                else:
+                    return unichr(int(text[2:-1]))
+            except ValueError:
+                pass
+        else:
+            # named entity
+            try:
+                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+            except KeyError:
+                pass
+        return text # leave as is
+    return re.sub("&#?\w+;", fixup, text)
+
+
 def inline_footnotes(html):
     html = ''.join(c for c in html if valid_xml_char_ordinal(c))
 
-    #tree = lxml.html.fragment_fromstring(html, create_parent=True)
-
     parser = html5lib.html5parser.HTMLParser(tree=html5lib.getTreeBuilder("lxml"), namespaceHTMLElements=False)
     fragments = parser.parseFragment(html)
-    #fragments = html5lib.parseFragment(html, treebuilder="lxml", container='div')
 
-    tree = etree.Element("root")
+    tree = etree.Element("div")
     for f in fragments:
         tree.append(f)
 
@@ -62,28 +90,23 @@ def inline_footnotes(html):
     for elt in tree.xpath(expression):
         target = elt.attrib['name']
         new_expr = GenericTranslator().css_to_xpath('a[href="#%s"]' % target)
-        fn = tree.xpath(new_expr)[0]
-        parent = fn.getparent()
-        parent.tag = "span"
-        parent.attrib['class'] = "inline-fn"
-        elt.addnext(parent)
+        try:
+            fn = tree.xpath(new_expr)[0]
+            parent = fn.getparent()
+            parent.tag = "span"
+            parent.attrib['class'] = "inline-fn"
+            elt.addnext(parent)
+        except IndexError:
+            print("*** Could not get the corresponding footnote""")
 
     expression = GenericTranslator().css_to_xpath('ol[class="footnotes"]')
     for elt in tree.xpath(expression):
         elt.getparent().remove(elt)
 
-    fragments = [i for i in list(tree)]
-    import ipdb; ipdb.set_trace()
+    fragments = [x for x in list(tree)]
+    output = u'\n'.join(lxml.html.tostring(x, pretty_print=True) for x in fragments)
 
-    walker = html5lib.getTreeWalker("lxml")
-    stream = walker(fragments)
-
-    s = html5lib.serializer.HTMLSerializer(omit_optional_tags=True, quote_attr_values=True)
-
-    output = s.render(stream)
-    #output = ""
-
-    return output
+    return unescape(output)
 
 
 
