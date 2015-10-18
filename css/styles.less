@@ -474,22 +474,31 @@ figcaption {
 
 .rubrique h1 {
     margin-top: 0;
-    margin-bottom: 0;
-    font-family: "Erbarre", "Erbar condensed";
-    font-size: 35pt;
-    line-height:(@line-height / 4) *12 ;
-    font-weight: bold;
+    margin-bottom: @line-height;
+    font-family: "Career";
+    font-size: 42pt !important;
+    line-height: 32pt !important;
+    font-weight: normal;
+    letter-spacing: -1pt;
     padding-top: 6pt * 1;
-  //  border-top: 10px double black !important;
+    text-align: center;
+    text-shadow:
+    3px 3px 0 white,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+   -1px  1px 0 white,
+    1px  1px 0 white;
 }
 
 .rubrique h2 {
-    font-family: "Erbarre", "Erbar condensed" !important;
-    font-weight: bold;
-    font-size: 12pt;
+    font-family: "Career";
+    font-weight: normal;
+    font-size: 11pt;
     line-height:  @line-height;
-    text-transform: uppercase;
     margin-top:  @line-height;
+    margin-bottom: 0;;
 }
 
 //Style lettrine pour les rubriques.
@@ -498,7 +507,7 @@ figcaption {
   font-size: 18pt;
   margin-top: 0;
   margin-bottom: 0px;
-  font-weight: bold;
+  font-weight: normal;
   float: left;
   display: inline;
 }
@@ -514,6 +523,27 @@ figcaption {
     line-height:  @line-height;
     text-transform: uppercase;
 }
+
+.rubrique > .chapeau {
+    font-family: 'Univers else';
+    font-weight: normal;
+    margin-bottom: @line-height * 1;
+}
+
+.rubrique > p {
+  font-family: "Univers else";
+  font-weight: 200;
+  font-size: 9pt;
+  letter-spacing: -0.1pt;
+}
+
+.filet {
+    border-left:  0.75pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
+}
+
+
+
 
 
 
@@ -682,7 +712,7 @@ figcaption {
     /*font-family: "Erbar condensed";*/
 /*}*/
 .inline-fn {
-    .w1;
+    width: (@col-width * 1.5);
     display: block;
     float: left;
     /*color: @color-A1;*/
