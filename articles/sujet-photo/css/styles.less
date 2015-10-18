@@ -11,24 +11,41 @@ figure{
 }
 
 
-.legende_photo p{
-  font-family: 'UniversElse';
-  font-weight: 100;
+.legende_photo > p {
+  font-family: 'Univers else';
+  font-weight: 200;
   font-style: normal;
   font-size: 7pt;
   line-height: @line-height/1.4;
-  margin-bottom:@line-height/1.4;
-
+  display: inline;
 }
 
-.legende_photo h2{
-  font-family: "Belgika8th";
-  font-weight: normal;
+.legende_photo > h2 {
+  font-family: 'Univers else';
+  font-weight: bold;
   font-style: normal;
   font-size: 7pt;
+  text-transform: uppercase;
+  display: inline;
+  line-height: @line-height/1.4;
+
+
 }
 .legende_photo { .flow-into(flow-text-photo); }
 .flow-text-photo{ .flow-from(flow-text-photo); }
+
+
+.legende_photo  .break {
+  -webkit-region-break-after: always;
+          region-break-after: always;
+                 break-after: always;
+}
+
+.s_titre {
+  font-size: 7pt;
+  font-family: 'Belgika8th';
+  line-height: @line-height*1.1
+}
 
 /*#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
