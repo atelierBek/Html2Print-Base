@@ -114,8 +114,9 @@ figcaption {
 .enquete > header h1 {
     margin-top: @line-height * .5;
 
-    font-size:  @line-height * 5;
-    line-height:  @line-height * 4;
+    font-size:  @line-height * 6;
+    line-height:  @line-height * 5;
+    -webkit-text-stroke: 1pt @color-A2;
 }
 
 .enquete > header h2 {
@@ -150,12 +151,12 @@ figcaption {
     margin-bottom: @line-height;
 }
 
-.enquete > h2,
-.enquete > h3 {
-    -webkit-region-break-after: avoid;
-            region-break-after: avoid;
-                   break-after: avoid-region;
-}
+// .enquete > h2,
+// .enquete > h3 {
+//     -webkit-region-break-after: avoid;
+//             region-break-after: avoid;
+//                    break-after: avoid-region;
+// }
 
 /*.enquete >  .chapeau + blockquote + h2 + p,*/
 /*.enquete >  .chapeau + h2 + p,*/
@@ -213,46 +214,43 @@ figcaption {
 .enquete > .footnotes {
     font-family: "Erbar condensed";
     margin: 0;
-    font-size: 8pt;
-    line-height: (@line-height / 8) * 7;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
 }
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 .enquete > .footnotes a[name^="sdfootnote"] { display: none; }
 .enquete > .footnotes li { text-indent: -0.25em; }
 
-.enquete > blockquote {
+.enquete > aside.exergue > blockquote {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
 
-    font-family: "Erbarre";
-    font-size: 12pt;
+    font-family: "Erbar condensed";
+    font-size: 18pt;
     font-weight: bold;
-    /*line-height: @line-height * 1.5;*/
-    text-align: left;
-    padding-left: @col-gutter-width / 2;
+    line-height: @line-height * 1.5;
 }
 
-.enquete > blockquote + h2 {
+.enquete > aside.exergue > blockquote + h2 {
     margin-top:  @line-height;
 }
 
-.enquete > blockquote p + p {
-    margin-top: 0;
-    margin-bottom: 0;
-
+.enquete > aside.exergue > blockquote p + p {
+    margin: 0;
 }
 
-
-
-.enquete > blockquote p:last-of-type {
-    /*font-family: "Belgika8th";*/
-    font-weight: normal;
+.enquete > aside.exergue > blockquote em {
     font-style: normal;
-    /*font-size: 8pt;*/
 }
 
-.enquete > blockquote:first-of-type{
+/*.enquete > aside.exergue > blockquote p:last-of-type {*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+    /*font-size: 12pt;*/
+/*}*/
+
+.enquete > aside.exergue > blockquote:first-of-type{
       margin: 0;
 }
 
@@ -296,6 +294,7 @@ figcaption {
 }
 
 .enqueteke > header > .authors {
+    display: none;
     margin-bottom: @line-height * 1;
 
     font-family: "Erbar condensed";
@@ -430,13 +429,7 @@ figcaption {
     line-height:  @line-height * 1;
 }
 
-.interview > header .authors {
-    margin-top: @line-height;
-
-    font-family: "Belgika8th";
-    font-size: 8pt;
-    line-height: @line-height * 7;
-}
+.interview > header .authors { display: none; }
 
 /* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
 .interview > h2 {
@@ -463,14 +456,7 @@ figcaption {
 }
 
 .interview .chapeau {
-    /*font-family: "Century Schoolbook";*/
-    /*font-size: 14pt;*/
-    /*line-height:  (@line-height / 2) * 3;*/
-    /*-webkit-region-break-after: always;*/
-            /*region-break-after: always;*/
-                   /*break-after: always;*/
-/*}*/
-/*.enquete > .chapeau {*/
+
     color: #39914F;
     font-family: "Bagnard";
     font-size: 10pt;
@@ -517,15 +503,7 @@ figcaption {
   display: inline;
 }
 
-.rubrique > header > .authors {
-    padding: 0;
-
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-
-}
+.rubrique > header > .authors { display: none; }
 
 .rubrique > h3 {
     margin-top:  @line-height;
@@ -566,6 +544,8 @@ figcaption {
     text-transform: uppercase;
     margin-top:  @line-height;
 }
+
+.bd > header > .author { display: none; }
 
 .bd header > h2{
   font-size: 12pt;
@@ -618,6 +598,8 @@ figcaption {
     text-transform: uppercase;
 }
 
+.portrait > header > .author { display: none; }
+
 .portrait .chapeau {
     font-family: "Erbar condensed";
     font-size: 15pt;
@@ -628,20 +610,11 @@ figcaption {
                    break-after: always;
 }
 
-.portrait .authors {
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-    padding: 0;
-    color: white
-}
-.portrait header > h2{
+.portrait header > h2 {
     font-size: 11.5pt;
-    color:white;
+    color: white;
     font-weight: bold;
 }
-
 
 .portrait h3 {
     font-family: "Erbar condensed" !important;
@@ -662,6 +635,7 @@ figcaption {
  * Styles photo
  * -----------------
  */
+
 .photo header > h1{
   font-family: "Erbar condensed";
   text-transform: uppercase;
@@ -698,3 +672,38 @@ figcaption {
 /* hides the numbers in the HTML since it is redundant with the css numbered bullets.
 .portrait > .footnotes a[name^="sdfootnote"] { display: none; }
 .portrait > .footnotes li { text-indent: -0.25em; }*/
+
+
+// hides the numbers in the HTML since it is redundant with the css numbered bullets.
+//.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
+//.portrait > .footnotes li { text-indent: -0.25em; }
+
+
+/*.inline-fn {*/
+    /*.w1;*/
+    /*display: block;*/
+    /*float: left;*/
+    /*[>color: @color-A1;<]*/
+    /*margin-top: @line-height;*/
+    /*margin-bottom: @line-height;*/
+    /*margin-right: 9pt;*/
+    /*font-family: "Erbar condensed";*/
+/*}*/
+.inline-fn {
+    .w1;
+    display: block;
+    float: left;
+    /*color: @color-A1;*/
+    margin-top: @line-height;
+    margin-bottom: @line-height;
+    /*margin-left: -1 * @col-gutter-width;*/
+    margin-right: 9pt;
+    font-family: "Univers else";
+    font-weight: 200;
+    font-size: 7pt;
+    line-height: 9pt;
+}
+
+.inline-fn a[name]{
+    font-weight: bold;
+}

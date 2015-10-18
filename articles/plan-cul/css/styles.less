@@ -1,3 +1,6 @@
+@import "/css/main.less";
+
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -7,15 +10,18 @@
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+// #flow-main header {
+//     -webkit-flow-into: flow-title;
+//             flow-into: flow-title;
+// }
+//
+// .flow-title {
+//     -webkit-flow-from: flow-title;
+//         flow-from: flow-title;
+// }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
 /* reset folio */
 body { counter-reset: folio 21 - 1; }
 
@@ -23,3 +29,157 @@ body { counter-reset: folio 21 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "rubrique — Plan cul"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+div.x0.flow-main,
+div.x3.flow-main {
+    border-right:  1px solid black;
+    padding-right: 5px;
+}
+
+
+.flow-fig1 figure, .fig1 figure {
+    width: 176%;
+    height: auto;
+  //  margin-left: -25pt;
+}
+.flow-fig2 figure, .fig2 figure {
+  width: 138%;
+    height: auto;
+  margin-left: -354pt;
+}
+.flow-fig1 img, .fig1 img , .flow-fig2 img, .fig2 img  {
+  border:2px solid yellow !important;
+}
+
+p{
+  font-family: "Bagnard";
+  font-size: 9pt;
+  letter-spacing: -0.5pt;
+  //color: white;
+}
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+
+
+}
+
+.chapeau{
+font-size: 12pt;
+font-family: 'Univers else';
+//font-family: 'urw-grotesk-t';
+//font-family: "Alfphabet-Condensed" !important;
+font-weight: normal;
+margin-bottom: @line-height * 2;
+}
+
+.rubrique h1{
+font-family: "Alfphabet-Condensed" !important;
+font-size: 33pt !important;
+line-height: @line-height *2.5 !important;
+font-weight: normal;
+//text-transform: uppercase;
+}
+.rubrique h2, .rubrique h3{
+font-family: "Alfphabet-Condensed" !important;
+font-size: 12pt !important;
+font-weight: normal;
+line-height: @line-height * 1;
+text-transform: initial;
+margin-bottom:@line-height /2;
+margin-top: @line-height/2;
+}
+
+figcaption {
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+    -ms-transform-origin: left top 0; /* IE 9 */
+    transform-origin: left top 0;
+    position: relative;
+    margin-left: 100%;
+    width:100%;
+}
+
+.enquete h1 { padding: 5px 0; }
+
+.exergue p + p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote {
+    -webkit-region-break-inside: avoid;
+    margin: 0;
+}
+
+blockquote > footer {
+    font-size: 1rem;
+    text-align: right;
+}
+.rubrique .footnotes > li{
+    font-family: "Erbar condensed";
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    font-size: 8pt;
+}
+.rubrique .footnotes > li > a {
+    color: black;
+    text-decoration: none;
+}
+.rubrique-title {
+background-color: yellow;
+color: black;
+}
+ul {
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  transform: rotate(-90deg);
+  -webkit-transform-origin: left bottom 0; /* Chrome, Safari, Opera */
+  -ms-transform-origin: left bottom 0; /* IE 9 */
+  transform-origin: left bottom 0;
+  position: relative;
+  margin-left: 133pt;
+  margin-top: 140pt;
+  width:100%;
+  list-style-type: none;
+    font-family: "Erbar condensed";
+    line-height: @line-height;
+}
+
+h2:last-of-type{
+  display: none;
+}
+h2:nth-of-type(3){
+//margin-top: 0px !important;
+}
+
+p > em{
+  font-family: 'Century Schoolbook' !important;
+  font-style: italic !important;
+}
+strong{
+  font-family: "Belgika8th";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 8pt;
+  display: inline;
+}
+strong::after{
+  content: ' M';
+  font-family: 'Medor';
+  color:yellow;
+}
+.authors{
+  display: none;
+}
+#page-1 .y1 {
+  margin-top: 12pt;
+}
