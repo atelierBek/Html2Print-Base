@@ -313,7 +313,7 @@ figcaption {
 
 .enqueteke > p:not(.chapeau) + p { text-indent: @line-height; }
 
-.enqueteke > p:last-of-type:after { 
+.enqueteke > p:last-of-type:after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
@@ -638,6 +638,43 @@ figcaption {
     font-size: 8pt;
     line-height: (@line-height / 8) * 7;
 }
+
+/*
+ * Styles photo
+ * -----------------
+ */
+.photo header > h1{
+  font-family: "Erbar condensed";
+  text-transform: uppercase;
+  font-size: 60pt;
+  line-height: @line-height*5.5;
+  text-align: center;
+}
+.photo h2 {
+  margin-top: @line-height;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-family: 'Belgika5th';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.photo > p {
+    font-family:'Quicksand';
+    font-weight: normal;
+    letter-spacing: -0.05em;
+    font-size: 9pt;
+    line-height: @line-height*0.95;
+    em {
+        font-size: 9.5pt;
+        font-family: "Century Schoolbook";
+    }
+}
+.photo > h1{
+
+}
+
+
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 //.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
