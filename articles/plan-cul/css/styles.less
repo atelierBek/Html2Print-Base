@@ -16,36 +16,14 @@
 // }
 //
 // .flow-title {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //     -webkit-flow-from: flow-title;
 //         flow-from: flow-title;
 // }
 
+
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
+
 /* reset folio */
 body { counter-reset: folio 21 - 1; }
 
@@ -55,17 +33,9 @@ body { counter-reset: folio 21 - 1; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 
-div.x0.flow-main,
-div.x3.flow-main {
-    border-right:  1px solid black;
-    padding-right: 5px;
-}
-
-
 .flow-fig1 figure, .fig1 figure {
     width: 176%;
     height: auto;
-  //  margin-left: -25pt;
 }
 .flow-fig2 figure, .fig2 figure {
   width: 138%;
@@ -76,14 +46,7 @@ div.x3.flow-main {
   border:2px solid yellow !important;
 }
 
-p{
-  font-family: "Bagnard";
-  font-size: 9pt;
-  letter-spacing: -0.5pt;
-  //color: white;
-}
 img {
-    //display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -91,32 +54,6 @@ img {
     margin: 0 !important;
 
 
-}
-
-.chapeau{
-font-size: 12pt;
-font-family: 'Univers else';
-//font-family: 'urw-grotesk-t';
-//font-family: "Alfphabet-Condensed" !important;
-font-weight: normal;
-margin-bottom: @line-height * 2;
-}
-
-.rubrique h1{
-font-family: "Alfphabet-Condensed" !important;
-font-size: 33pt !important;
-line-height: @line-height *2.5 !important;
-font-weight: normal;
-//text-transform: uppercase;
-}
-.rubrique h2, .rubrique h3{
-font-family: "Alfphabet-Condensed" !important;
-font-size: 12pt !important;
-font-weight: normal;
-line-height: @line-height * 1;
-text-transform: initial;
-margin-bottom:@line-height /2;
-margin-top: @line-height/2;
 }
 
 figcaption {

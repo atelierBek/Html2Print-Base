@@ -3,3 +3,5 @@ git+git://github.com/aleray/html5lib_typogrify.git
 pyopenssl
 ndg-httpsclient
 pyasn1
+cssselect
+lxml
