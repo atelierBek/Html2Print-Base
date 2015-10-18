@@ -658,7 +658,6 @@ figcaption {
     font-size: 8pt;
     line-height: (@line-height / 8) * 7;
 }
-
 /*
  * Styles photo
  * -----------------
@@ -678,10 +677,10 @@ figcaption {
   font-weight: normal;
   font-style: normal;
 }
-
 .photo > p {
-  font-family:'Quicksand';
-  font-weight: normal;
+  font-family: 'UniversElse';
+  font-weight: 100;
+  font-style: normal;
   letter-spacing: -0.05em;
   font-size: 9pt;
   line-height: @line-height*0.95;
@@ -689,12 +688,13 @@ figcaption {
     font-size: 9.5pt;
     font-family: "Century Schoolbook";
   }
-.photo > h1{
-
 }
 
-
-
-// hides the numbers in the HTML since it is redundant with the css numbered bullets.
-//.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
-//.portrait > .footnotes li { text-indent: -0.25em; }
+.photo .break {
+  -webkit-region-break-before: region;
+          region-break-before: region;
+                 break-before: region;
+}
+/* hides the numbers in the HTML since it is redundant with the css numbered bullets.
+.portrait > .footnotes a[name^="sdfootnote"] { display: none; }
+.portrait > .footnotes li { text-indent: -0.25em; }*/
