@@ -80,22 +80,29 @@ figcaption {
     /*font-family: "Alfphabet-Condensed";*/
     font-family: "Erbarre", "Erbar condensed";
     font-size: 8pt;
-    font-weight: bold;
+    //font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
+     padding-left:  @line-height / 4;
+     padding-right:  @line-height / 4;
+     padding-top:  @line-height / 5;
+    line-height: @line-height;
+    margin-top: 0;
+    //margin-bottom: @line-height / 3;
+    //letter-spacing: 3pt;
+    //background-color: #39914F;
+  //  color: white;
+  //text-decoration: underline;
+  border-bottom: 2pt solid #39914F;
+}
+.rubrique-subtitle {
+//  font-family: "Erbarre", "Erbar condensed";
+  font-family: "Alfphabet-Condensed";
+    //text-transform: uppercase;
     padding-left:  @line-height / 4;
     padding-right:  @line-height / 4;
     padding-top:  @line-height / 5;
-    line-height: @line-height;
-    margin-top: 0;
-    margin-bottom: @line-height / 3;
-    letter-spacing: 3pt;
-    background-color: #39914F;
-    color: white;
-}
-.rubrique-subtitle {
-    font-family: "Alfphabet-Condensed";
-    //text-transform: uppercase;
+    margin-bottom: 20pt;
 }
 
 
@@ -486,7 +493,7 @@ figcaption {
     3px 3px 0 white,
     /* Simulated effect for Firefox and Opera
        and nice enhancement for WebKit */
-   -1px -1px 0 white,  
+   -1px -1px 0 white,
     1px -1px 0 white,
    -1px  1px 0 white,
     1px  1px 0 white;
@@ -542,7 +549,10 @@ figcaption {
     padding-left: 4.5pt + (0.75 / 2);
 }
 
-
+.rubrique .inline-fn{
+  font-weight: bold;
+  color: #39914F;
+}
 
 
 

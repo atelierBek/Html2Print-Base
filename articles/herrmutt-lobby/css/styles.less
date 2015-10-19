@@ -51,11 +51,7 @@ body { counter-reset: folio 119 - 1; }
 }
 /*end of FLOWS*/
 
-div.x0.flow-main,
-div.x3.flow-main {
-    border-right:  1px solid black;
-    padding-right: 5px;
-}
+
 
 
 .flow-fig1 figure, .fig1 figure {
@@ -95,29 +91,24 @@ img {
 
 }
 
-.chapeau{
-font-size: 12.5pt;
-font-family: "Alfphabet-Condensed" !important;
-font-weight: normal;
-margin-bottom: @line-height * 2;
-}
 
-.rubrique h1{
-font-family: "Alfphabet-Condensed" !important;
-font-size: 33pt !important;
-line-height: @line-height *2.5 !important;
-font-weight: normal;
-//text-transform: uppercase;
-}
-.rubrique h2, .rubrique > h3{
-font-family: "Alfphabet-Condensed" !important;
-font-size: 12.5pt !important;
-font-weight: normal;
-line-height: @line-height * 1;
-text-transform: initial;
-margin-bottom:@line-height /2;
-margin-top: @line-height/2;
-}
+
+// .rubrique h1{
+// font-family: "Alfphabet-Condensed" !important;
+// font-size: 33pt !important;
+// line-height: @line-height *2.5 !important;
+// font-weight: normal;
+// //text-transform: uppercase;
+// }
+// .rubrique h2, .rubrique > h3{
+// font-family: "Alfphabet-Condensed" !important;
+// font-size: 12.5pt !important;
+// font-weight: normal;
+// line-height: @line-height * 1;
+// text-transform: initial;
+// margin-bottom:@line-height /2;
+// margin-top: @line-height/2;
+// }
 
 figcaption {
     -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
@@ -158,9 +149,8 @@ blockquote > footer {
     color: black;
     text-decoration: none;
 }
-.rubrique-title {
-background-color: yellow;
-color: black;
+.rubrique-title,  .rubrique-subtitle{
+color: white;
 }
 ul {
   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
@@ -190,9 +180,7 @@ p > em{
   font-style: italic !important;
 }
 strong{
-  font-family: "Belgika8th";
-  font-weight: normal;
-  font-style: normal;
+
   font-size: 8pt;
   display: inline;
 }

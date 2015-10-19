@@ -10,15 +10,15 @@
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
-// #flow-main header {
-//     -webkit-flow-into: flow-title;
-//             flow-into: flow-title;
-// }
-//
-// .flow-title {
-//     -webkit-flow-from: flow-title;
-//         flow-from: flow-title;
-// }
+#flow-main header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
 
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
@@ -29,7 +29,7 @@ body { counter-reset: folio 21 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "rubrique — Plan cul"; }
+.paper:nth-child(odd) .body:before { content: "rubrique — Le sexe de Médor"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 
@@ -43,7 +43,7 @@ body { counter-reset: folio 21 - 1; }
   margin-left: -354pt;
 }
 .flow-fig1 img, .fig1 img , .flow-fig2 img, .fig2 img  {
-  border:2px solid yellow !important;
+  //border:2px solid yellow !important;
 }
 
 img {
@@ -68,7 +68,10 @@ figcaption {
     width:100%;
 }
 
-.enquete h1 { padding: 5px 0; }
+.rubrique h1 {
+  padding: 5px 0;
+  margin-top: 20pt !important;
+ }
 
 .exergue p + p {
     margin-top: 0;
@@ -96,7 +99,7 @@ blockquote > footer {
     text-decoration: none;
 }
 .rubrique-title {
-background-color: yellow;
+//background-color: yellow;
 color: black;
 }
 ul {
