@@ -1,3 +1,5 @@
+@import "/css/main.less";
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -17,9 +19,50 @@
         flow-from: flow-title;
 }
 /* reset folio */
-body { counter-reset: folio 41 - 1; }
+body { counter-reset: folio 41 - 1;
+// color: #39914f;
+color: black;
+
+}
+
+.rubrique h1 {
+  // padding: 5px 0;
+  text-shadow: 0 0 0 ;
+  color: #fffe35;
+}
 
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "rubrique — Enquêteke"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.fig1 figure{
+width: 200%;
+opacity: 0.4;
+margin-left: -328pt;
+margin-top: -50pt;
+}
+.fig2 figure, .fig3 figure{
+border: 1pt solid #fffe35;
+background-color: #fffe35;
+}
+
+
+.chapeau{
+    -webkit-region-break-after: always;
+             region-break-after: always;
+                    break-after: always-region;
+}
+// #page-1 .y5 .flow-main {
+//   margin-top: @line-height 5;
+// }
