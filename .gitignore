@@ -3,6 +3,7 @@ bin/settings.py
 venv
 stories
 stories2
+*~
 
 
 ## Python ignores
