@@ -42,23 +42,34 @@ body { counter-reset: folio 8 - 1; }
 .paper:nth-child(odd) .body:before { content: "enquête — SNCB : quand l’intégrité déraille"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-
-/*specific styles*/
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.enquete > header h1 {
+    color: white;
+    -webkit-text-stroke: 1pt black;
 }
 
-h1 {
-    margin-top: 0 !important;
-    line-height: @line-height * 3.5 !important;
-} 
+/*specific styles*/
+.enquete > .chapeau {
+    -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always-region;
+    /*color: white;*/
+}
+
+.enquete > .chapeau + p {
+     .w5;
+     float: right;
+     margin-bottom: @line-height;
+}
 
 .authors {
     margin-top: 0 !important;
     line-height: @line-height !important;
 }
+
+aside h1 {
+    margin-top: 0 !important;
+    line-height: @line-height * 3.5 !important;
+} 
 
 div.flow-encadre h2 {
     font-family: 'Bagnard' !important;
@@ -86,26 +97,28 @@ div.border-double {
     margin-right: 11pt;
 }
 
-.enquete > .chapeau + p {
-     .w5;
-     float: right;
-     margin-bottom: @line-height;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.enquete .chapeau {
-    -webkit-region-break-after: always;
-            region-break-after: always;
-                   break-after: always-region;
-    color: white;
+figure:nth-of-type(1), 
+figure:nth-of-type(2) { 
+     width: 100%;
+     height: 100%;
 }
 
-.flow-fig1 figure, 
-.flow-fig2 figure  {
-     width: 200%;
-     height: auto;
+figure:nth-of-type(1), 
+figure:nth-of-type(2) { 
+     width: 100%;
+     height: 100%;
 }
 
-.flow-fig2 figure { margin-left: -481pt; }
+figure:nth-of-type(1) img, 
+figure:nth-of-type(2) img { width: 200%; }
+
+figure:nth-of-type(2) { margin-left: -481pt; }
 
 .flow-fig3 figure{
     margin-left: -21pt;
