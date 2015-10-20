@@ -29,7 +29,7 @@ import codecs
 import settings
 import html5lib
 from html5lib.filters import whitespace
-from html5lib_typogrify.french.filters import hyphenate, medor
+from html5lib_typogrify.french.filters import hyphenate, medor, figures
 
 
 
@@ -80,6 +80,7 @@ def pull_stories(where="stories"):
         stream = walker(dom)
         stream = whitespace.Filter(stream)
         stream = medor.Filter(stream)
+        stream = figures.Filter(stream)
         stream = hyphenate.Filter(stream, left=2, right=2)
 
         s = html5lib.serializer.HTMLSerializer(omit_optional_tags=False)
