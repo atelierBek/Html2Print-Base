@@ -1,3 +1,65 @@
+@import "/css/main.less";
+@color-aside: #330066;
+
+.trans(@rotate, @skew){
+  -ms-transform: skewY(@skew) rotate(@rotate);
+  -webkit-transform: skewY(@skew) rotate(@rotate);
+  transform: skewY(@skew) rotate(@rotate);
+  -webkit-transform-origin: top left;
+  transform-origin: top right;
+}
+
+aside.exergue:nth-of-type(1) {.flow-into(flow-cit1);}
+
+.flow-cit1 { .flow-from(flow-cit1);
+  padding: -10pt;
+  width: 100pt;
+  float: left;
+  height:50pt;
+  display: inline;
+  margin-left: -30pt;
+  padding: @line-height/2;
+  .trans(0deg, -15deg);
+}
+
+
+aside.exergue:nth-of-type(2) {
+.flow-into(flow-cit2);
+
+}
+.flow-cit2 { .flow-from(flow-cit2);
+  width: 70pt;
+  height:@line-height*13;
+  float: left;
+  display: inline;
+  .trans(10deg, 0deg);
+  //display: none;
+}
+
+
+aside.exergue:nth-of-type(3) {
+.flow-into(flow-cit3);
+
+}
+.flow-cit3 { .flow-from(flow-cit3);
+  .trans(110deg, 20deg);
+  width: 130pt;
+  margin-top:50pt;
+  float: left;
+  display: inline;
+  margin-left: 50pt;
+  height: @line-height/10;
+
+}
+
+aside.exergue:nth-of-type(4) {
+.flow-into(flow-cit4);
+
+}
+.flow-cit4 { .flow-from(flow-cit4);
+width: 200pt;
+}
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -16,6 +78,29 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+
+aside.exergue > blockquote {
+    font-family: "Erbar condensed";
+    font-size: 14pt;
+    font-weight: normal;
+    line-height: 16pt;
+    text-align: center;
+    background: white;
+    color:@color-aside;
+    margin: 0px;
+    padding: 0px;
+}
+aside.exergue > blockquote + h2 {
+}
+
+aside.exergue > blockquote p + p {
+}
+aside.exergue > blockquote em {
+}
+
+
+
+
 /* reset folio */
 body { counter-reset: folio 121 - 1; }
 
