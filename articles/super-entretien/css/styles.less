@@ -1,3 +1,5 @@
+@import "/css/main.less";
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -24,3 +26,44 @@ body { counter-reset: folio 84 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "entretien — Super entretien"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+abbr{
+font-family: 'Erbar condensed';
+font-weight: 200;
+padding: 8pt 8pt 8pt 0pt;
+font-size: 8pt;
+//color:gold;
+text-decoration: underline;
+
+}
+p {
+font-family: 'Univers else';
+text-indent: @line-height;
+//  font-family: 'Century Schoolbook';
+//  font-weight: bold;
+
+}
+p + p {
+//  text-indent: @line-height;
+}
+.question{
+//  font-family: 'Erbarre';
+font-family: 'Univers else';
+font-weight: bold;
+//  font-family: 'Century Schoolbook';
+//font-style: italic;
+//font-size: 10pt;
+margin-top: @line-height;
+  //text-decoration: underline;
+}
+h1{
+//  font-family: 'Univers else';
+text-transform: uppercase;
+//  font-family: 'Century Schoolbook';
+  font-family: 'Alfphabet-Condensed';
+
+  //font-style: italic;
+  font-weight: normal;
+font-size: 30pt;
+}

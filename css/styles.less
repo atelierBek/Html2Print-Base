@@ -104,7 +104,25 @@ figcaption {
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
+strong::before{
+  content: ' M ';
+  font-family: 'Medor';
+ font-weight: normal;
+}
+strong{
+  display: inline;
 
+}
+
+
+// no hyphens there
+// https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+.exergue,
+.chapeau {
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+            hyphens: none;
+}
 
 /*
  * Styles enquêtes
@@ -173,9 +191,7 @@ figcaption {
     /*margin-bottom: @line-height;*/
 /*}*/
 
-.enquete > h2 + p + p {
-    text-indent: 0;
-}
+.enquete > h2:first-of-type + p + p { text-indent: 0; }
 
 .enquete > h2 + p:first-letter {
     padding-top: @line-height;

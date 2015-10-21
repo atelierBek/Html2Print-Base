@@ -1,5 +1,7 @@
 /* Styles for dialogue-interieur */
 
+@import "/css/main.less";
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -9,6 +11,9 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
 
 img {
     display: block;
@@ -20,6 +25,12 @@ img {
 
 .enquete h1{
     padding: 5px 0px;
+}
+
+.chapeau{
+  -webkit-region-break-after: always;
+          region-break-after: always;
+                 break-after: always-region;
 }
 
 .exergue p + p {

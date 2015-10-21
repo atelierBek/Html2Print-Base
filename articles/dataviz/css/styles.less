@@ -1,3 +1,5 @@
+@import "/css/main.less";
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -24,5 +26,41 @@ body { counter-reset: folio 125 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "rubrique — Dataviz"; }
+.paper:nth-child(odd) .body:before { content: "Datavizz"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+
+
+}
+.fig4  figure{
+//margin-left: -200pt;
+width: 206%;
+margin-left: -205pt;
+margin-top: -50pt;
+
+
+}
+.fig3  figure{
+width: 248%;
+margin-top: -50pt;
+
+}
+h2:nth-of-type(4){
+    -webkit-region-break-before: always;
+             region-break-before: always;
+                    break-before: always-region;
+}
+
+// .chapeau {
+//   -webkit-region-break-after: always;
+//            region-break-after: always;
+//                   break-after: always-region;
+// }

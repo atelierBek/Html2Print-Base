@@ -2,34 +2,11 @@
 
 /*GENERATED */
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
-
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
-
-#flow-main aside {
-    -webkit-flow-into: flow-encadre;
-            flow-into: flow-encadre;
-}
-
-.flow-encadre {
-    -webkit-flow-from: flow-encadre;
-        flow-from: flow-encadre;
-}
+#flow-main aside:nth-of-type(1) { .flow-into(flow-encadre); }
+.flow-encadre { .flow-from(flow-encadre); }
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
@@ -52,6 +29,10 @@
 #flow-main figure:nth-of-type(7) { .flow-into(flow-fig7); }
 .flow-fig7 { .flow-from(flow-fig7); }
 
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
+
 
 /* reset folio */
 body { counter-reset: folio 8 - 1; }
@@ -61,102 +42,105 @@ body { counter-reset: folio 8 - 1; }
 .paper:nth-child(odd) .body:before { content: "enquête — SNCB : quand l’intégrité déraille"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
+.enquete > header h1 {
+    color: white;
+    -webkit-text-stroke: 1pt black;
+}
+
 /*specific styles*/
-img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.enquete > .chapeau {
+    -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always-region;
+    /*color: white;*/
 }
-h1{
-  margin-top: 0 !important;
-  line-height: @line-height * 3.5 !important;
-}
- .authors {
-   margin-top: 0 !important;
-   line-height: @line-height !important;
- }
- div.flow-encadre h2{
-   font-family: 'Bagnard' !important;
-   margin-bottom: @line-height /2;
-   line-height: (@line-height /2 ) * 3;
-   font-size: 15pt;
-//margin-bottom: 6pt;
-//line-height: 18pt;
 
- }
- div.flow-encadre p {
-   font-family: 'Erbar condensed' !important;
-   font-size: 11pt;
-
-    }
- div.flow-encadre {
-   background-color: #e1f17a;
-   border-right: solid 2px black;
-   padding-left: 24pt;
-   padding-right: 37pt;
-   padding-top: 24pt;
-   margin-right: 5pt;
- }
- div.border-double{
-   border-right: solid 2px black;
-   margin-right: 11pt;
-
- }
-
- .enquete >  .chapeau + p {
+.enquete > .chapeau + p {
      .w5;
      float: right;
      margin-bottom: @line-height;
+}
 
- }
-.enquete .chapeau{
-  -webkit-region-break-after: always;
-           region-break-after: always;
-                  break-after: always-region;
-                  color: white;
- }
+.authors {
+    margin-top: 0 !important;
+    line-height: @line-height !important;
+}
 
+aside {
+    font-family: 'Univers else';
+    font-weight: 200;
+    font-size: 9pt;
+    line-height: 12pt;
+}
 
- img {
+aside > h1 { 
+    font-size: 9pt;
+    line-height: @line-height;
+    font-weight: normal; 
+} 
+
+.flow-encadre {
+    border: 6pt double @color-B2;
+    box-sizing: border-box;
+    padding: @line-height / 2 9pt;
+}
+
+/*div.border-double {*/
+    /*border-right: solid 2px black;*/
+    /*margin-right: 11pt;*/
+/*}*/
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure:nth-of-type(1), 
+figure:nth-of-type(2) { 
      width: 100%;
-     height: auto;
- }
-
- .flow-fig1 figure,  .flow-fig2 figure  {
-     width: 200%;
-     height: auto;
- }
-.flow-fig2 figure{
-  margin-left: -481pt;
+     height: 100%;
 }
+
+figure:nth-of-type(1), 
+figure:nth-of-type(2) { 
+     width: 100%;
+     height: 100%;
+}
+
+figure:nth-of-type(1) img, 
+figure:nth-of-type(2) img { width: 200%; }
+
+figure:nth-of-type(2) { margin-left: -481pt; }
+
 .flow-fig3 figure{
-  margin-left: -21pt;
-  margin-top: -29pt;
-  width: 108%;
-
+    margin-left: -21pt;
+    margin-top: -29pt;
+    width: 108%;
 }
-.flow-fig4 figure,  .flow-fig5 figure  {
+
+.flow-fig4 figure,
+.flow-fig5 figure  {
     width: 147%;
     height: auto;
     margin-top: -33pt;
     margin-left: 6pt;
 }
-.flow-fig5 figure{
- margin-left: -481pt;
+
+.flow-fig5 figure { margin-left: -481pt; }
+
+#img4, 
+#img4-right {
+    height: auto;
+    width: 200%;
 }
 
- #img4, #img4-right {
-      height: auto;
-      width: 200%;
-  }
-#img4-right {
-     margin-left: -481pt;
- }
+#img4-right { margin-left: -481pt; }
 
- #img3, #img3-right {
-     width: 157%;
-      height: auto;
-  }
-  #img3-right > img  {
-       margin-left: -481pt;
-   }
+#img3, 
+#img3-right {
+    width: 157%;
+    height: auto;
+}
+
+#img3-right > img  { margin-left: -481pt; }
