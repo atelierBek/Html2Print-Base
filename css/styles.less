@@ -105,8 +105,8 @@ figcaption {
     margin-bottom: 20pt;
 }
 
-p.auteur { 
-    text-indent: 0!important; 
+p.auteur {
+    text-indent: 0!important;
     margin-top: @line-height;
     font-weight: normal;
 }
@@ -163,10 +163,10 @@ figcaption,
 }
 
 .enquete > .chapeau {
-    font-family: "Erbar condensed";
-    font-weight: bold;
-    font-size: 18pt;
-    line-height: 18pt;
+    font-family: "Bagnard";
+    line-height:  @line-height * 1.5;
+    font-weight: normal;
+    font-size: 15pt;
     padding: 0;
     margin: 0;
     margin-bottom: @line-height;
@@ -240,8 +240,8 @@ figcaption,
 .enquete > aside.exergue > blockquote + h2 { margin-top: @line-height; }
 .enquete > aside.exergue > blockquote p + p { margin: 0; }
 .enquete > aside.exergue > blockquote em { font-style: normal; }
-.enquete > aside.exergue > blockquote footer { 
-    font-size: 12pt; 
+.enquete > aside.exergue > blockquote footer {
+    font-size: 12pt;
     line-height: @line-height;
     font-weight: normal;
     /*margin-left: @col-gutter-width * 2;*/
@@ -611,6 +611,7 @@ figcaption,
     font-weight: bold;
 }
 
+
 figcaption,
 figure {
     position: relative;
@@ -645,3 +646,15 @@ figcaption footer {
     -webkit-transform-origin: right bottom;
             transform-origin: right bottom;
 }
+
+/*
+ * Styles making-off article
+ * -----------------
+ */
+
+ .making-off{
+   font-family: "Erbar condensed";
+   text-transform: uppercase;
+   color:red;
+   text-align: center;
+ }
