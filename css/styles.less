@@ -104,14 +104,18 @@ figcaption {
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
-.auteur::before{
-  content: ' M ';
-  font-family: 'Medor';
- font-weight: normal;
-}
-strong{
-  display: inline;
 
+p.auteur {
+    text-indent: 0!important;
+    margin-top: @line-height;
+    font-weight: normal;
+}
+
+p.fin::after {
+    content: " M";
+    font-size: 6.5pt;
+    font-family: "Medor";
+    color: #FAB547;
 }
 
 
@@ -119,6 +123,8 @@ strong{
 // https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
 h1,
 h2,
+li,
+figcaption,
 .exergue,
 .chapeau {
     -webkit-hyphens: none;
@@ -150,9 +156,10 @@ h2,
 
 .enquete > header > .authors {
     font-family: "Erbar condensed";
-    font-weight: normal;
+    font-weight: bold;
     padding: 0;
-    font-size: 12pt;
+    font-size: 18pt;
+    line-height: 18pt;
 }
 
 .enquete > .chapeau {
@@ -163,6 +170,7 @@ h2,
     padding: 0;
     margin: 0;
     margin-bottom: @line-height;
+    .w5();
 }
 
 .enquete > h2,
@@ -173,7 +181,6 @@ h2,
 
     font-family: "Erbar condensed";
     font-weight: normal; ;
-    font-size: 15pt;
     line-height:  @line-height;
     text-transform: uppercase;
     margin-top: @line-height;
@@ -196,15 +203,28 @@ h2,
 }
 
 .enquete > .footnotes {
-    font-family: "Erbar condensed";
+    /*font-family: "Erbar condensed";*/
+    font-family: 'Alfphabet-Condensed';
     margin: 0;
     font-size: 7.5pt;
     line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+}
+
+.enquete > .footnotes {
+    font-style: normal;
+    color: lighten(#2A85A4, 20%);
+}
+.enquete > .footnotes em {
+    font-style: normal;
+    color: #2A85A4;
 }
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
-.enquete > .footnotes a[name^="sdfootnote"] { display: none; }
-.enquete > .footnotes li { text-indent: -0.25em; }
+/*.enquete > .footnotes a[name^="sdfootnote"] { font-weight: bold; }*/
+.enquete > .footnotes a[name^="sdfootnote"]:after { content: "." }
+/*.enquete > .footnotes li { text-indent: -0.25em; }*/
+.enquete > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
 
 .enquete > aside.exergue > blockquote {
     -webkit-region-break-inside: avoid;
@@ -220,6 +240,15 @@ h2,
 .enquete > aside.exergue > blockquote + h2 { margin-top: @line-height; }
 .enquete > aside.exergue > blockquote p + p { margin: 0; }
 .enquete > aside.exergue > blockquote em { font-style: normal; }
+.enquete > aside.exergue > blockquote footer {
+    font-size: 12pt;
+    line-height: @line-height;
+    font-weight: normal;
+    /*margin-left: @col-gutter-width * 2;*/
+}
+.enquete > aside.exergue > blockquote footer:before {
+    content: "— ";
+}
 
 
 .enquete > .chapeau + p:first-letter,
@@ -253,14 +282,6 @@ h2,
 }
 
 .enquete--short > header > .authors { display: none; }
-
-//TODO
-.enquete--short > p:last-of-type:after {
-    content: " M";
-    font-size: 6.5pt;
-    font-family: "Medor";
-    color: #FAB547;
-}
 
 /*
  * Styles interview
@@ -588,6 +609,44 @@ h2,
 
 .inline-fn a[name]{
     font-weight: bold;
+}
+
+
+figcaption,
+figure {
+    position: relative;
+}
+
+figcaption {
+    /*font-family: 'Univers else';*/
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 7pt;
+    line-height: 9pt;
+}
+
+figcaption p {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6pt 1em;
+    .w4;
+}
+
+.figcaption-allover {
+    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+figcaption footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
 }
 
 /*
