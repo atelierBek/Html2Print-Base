@@ -39,7 +39,7 @@ body { counter-reset: folio 8 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "enquête — SNCB : quand l’intégrité déraille"; }
+.paper:nth-child(odd) .body:before { content: "Enquête — SNCB : quand l’intégrité déraille"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 .enquete > header h1 {
@@ -66,36 +66,29 @@ body { counter-reset: folio 8 - 1; }
     line-height: @line-height !important;
 }
 
-aside h1 {
-    margin-top: 0 !important;
-    line-height: @line-height * 3.5 !important;
+aside {
+    font-family: 'Univers else';
+    font-weight: 200;
+    font-size: 9pt;
+    line-height: 12pt;
+}
+
+aside > h1 { 
+    font-size: 9pt;
+    line-height: @line-height;
+    font-weight: normal; 
 } 
 
-div.flow-encadre h2 {
-    font-family: 'Bagnard' !important;
-    margin-bottom: @line-height /2;
-    line-height: (@line-height /2 ) * 3;
-    font-size: 15pt;
+.flow-encadre {
+    border: 6pt double @color-B2;
+    box-sizing: border-box;
+    padding: @line-height / 2 9pt;
 }
 
-div.flow-encadre p {
-    font-family: 'Erbar condensed' !important;
-    font-size: 11pt;
-}
-
-div.flow-encadre {
-    background-color: #e1f17a;
-    border-right: solid 2px black;
-    padding-left: 24pt;
-    padding-right: 37pt;
-    padding-top: 24pt;
-    margin-right: 5pt;
-}
-
-div.border-double {
-    border-right: solid 2px black;
-    margin-right: 11pt;
-}
+/*div.border-double {*/
+    /*border-right: solid 2px black;*/
+    /*margin-right: 11pt;*/
+/*}*/
 
 img {
     width: 100%;

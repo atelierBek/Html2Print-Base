@@ -104,7 +104,7 @@ figcaption {
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
-strong::before{
+.auteur::before{
   content: ' M ';
   font-family: 'Medor';
  font-weight: normal;
@@ -114,27 +114,33 @@ strong{
 
 }
 
+
+// no hyphens there
+// https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+h1,
+h2,
+.exergue,
+.chapeau {
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+            hyphens: none;
+}
+
 /*
  * Styles enquêtes
  * -----------------
  */
 
-.enquete > header h1,
-.enquete > header h2 {
+.enquete > header > h1,
+.enquete > header > h2 {
     font-family: "Erbar condensed";
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.enquete > header h1 {
-    margin-top: @line-height * .5;
+.enquete > header > h1 { margin-top: @line-height * .5; }
 
-    font-size:  @line-height * 6;
-    line-height:  @line-height * 5;
-    -webkit-text-stroke: 1pt @color-A2;
-}
-
-.enquete > header h2 {
+.enquete > header > h2 {
     margin-top: @line-height / 2;
     margin-bottom: @line-height / 2;
 
@@ -142,86 +148,50 @@ strong{
     line-height:  @line-height * 2;
 }
 
-.enquete > header .authors {
-    margin-bottom: @line-height * 2;
-
-    font-family: "Belgika8th";
-    font-size: 8pt;
-    line-height: @line-height;
+.enquete > header > .authors {
+    font-family: "Erbar condensed";
+    font-weight: normal;
+    padding: 0;
+    font-size: 12pt;
 }
 
-.enquete > p + p { text-indent: @line-height; }
+.enquete > .chapeau {
+    font-family: "Erbar condensed";
+    font-weight: normal;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+    margin-bottom: @line-height;
+}
+
+.enquete > h2,
+.enquete > h3 {
+    -webkit-region-break-after: avoid;
+            region-break-after: avoid;
+                   break-after: avoid-region;
+
+    font-family: "Erbar condensed";
+    font-weight: normal; ;
+    font-size: 15pt;
+    line-height:  @line-height;
+    text-transform: uppercase;
+    margin-top: @line-height;
+}
+.enquete > h2 { font-size: 15pt; }
+.enquete > h3 { font-size: 10.5pt; }
 
 .enquete > p + h2 {
     margin-top: @line-height;
     margin-bottom: @line-height;
 }
 
-.enquete > h2 {
-    font-family: "Erbarre" !important;
-    font-weight: normal; ;
-    font-size: 15pt;
-    line-height:  @line-height;
-    text-transform: uppercase;
-    margin-bottom: @line-height;
-}
+.enquete > p:not(.chapeau) + p { text-indent: @line-height; }
 
-// .enquete > h2,
-// .enquete > h3 {
-//     -webkit-region-break-after: avoid;
-//             region-break-after: avoid;
-//                    break-after: avoid-region;
-// }
-
-/*.enquete >  .chapeau + blockquote + h2 + p,*/
-/*.enquete >  .chapeau + h2 + p,*/
-/*.enquete >  .chapeau + p {*/
-    /*.w5;*/
-    /*float: right;*/
-    /*margin-bottom: @line-height;*/
-/*}*/
-
-.enquete > h2:first-of-type + p + p { text-indent: 0; }
-
-.enquete > h2 + p:first-letter {
-    padding-top: @line-height;
-    padding-right: 3px;
-    padding-bottom: 2px;
-    float: left;
-    font-family: "Erbarre";
-    font-weight: bold;
-    font-size: 43pt;
-    text-transform: uppercase;
-}
-
-.enquete > h3 {
-    font-family: "Erbar condensed" !important;
-    font-weight: normal; ;
-    font-size: 10.5pt;
-    line-height:  @line-height;
-    text-transform: uppercase;
-    margin-top:  @line-height;
-}
-
-.enquete > .chapeau {
-    color: #39914F;
-    font-family: "Bagnard";
-    font-size: 10pt;
-    padding: 0;
-    margin: 0;
-    margin-top: 0;
-    margin-bottom: @line-height * 2;
-}
-
-
-.enquete > header .authors,
-.enquete > header .authors::first-letter {
-    font-family: "Belgika8th";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 8pt;
-    padding: 0;
-
+.enquete sup {
+    font-size: 7pt;
+    top: 0;
+    vertical-align: super;
+    padding-left: 0.125em;
 }
 
 .enquete > .footnotes {
@@ -245,176 +215,51 @@ strong{
     line-height: @line-height * 1.5;
 }
 
-.enquete > aside.exergue > blockquote + h2 {
-    margin-top:  @line-height;
+.enquete > aside.exergue > blockquote:first-of-type { margin: 0; }
+.enquete > aside.exergue > blockquote + h2 { margin-top: @line-height; }
+.enquete > aside.exergue > blockquote p + p { margin: 0; }
+.enquete > aside.exergue > blockquote em { font-style: normal; }
+
+
+.enquete > .chapeau + p:first-letter,
+.enquete > h2 + p:first-letter,
+.enquete > blockquote + p:first-letter {
+    padding-right: 0.125em;
+    height: @line-height * 3;
+    float: left;
+    font-family: "Erbar condensed";
+    font-weight: bold;
+    font-size: @line-height * 3.325;
+    line-height: @line-height * 3.325;
 }
 
-.enquete > aside.exergue > blockquote p + p {
-    margin: 0;
+.enquete--long > header h1 {
+    font-size:  @line-height * 6;
+    line-height:  @line-height * 5;
+    -webkit-text-stroke: 1pt @color-A2;
 }
-
-.enquete > aside.exergue > blockquote em {
-    font-style: normal;
-}
-
-/*.enquete > aside.exergue > blockquote p:last-of-type {*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-    /*font-size: 12pt;*/
-/*}*/
-
-.enquete > aside.exergue > blockquote:first-of-type{
-      margin: 0;
-}
-
-.enquete sup {
-    font-size: 7pt;
-    top: 0;
-    vertical-align: super;
-    padding-left: 0.125em;
-}
-
 
 /*
- * Styles enquêteke
- * -----------------
+ * Styles petites enquêtes
+ * -----------------------
  */
 
-/*.rubrique-title { background-color: #FAB547 !important; }*/
+.enquete--short > header { color: #FAB547; }
 
-.enqueteke > header { color: #FAB547; }
-
-.enqueteke > header > h1,
-.enqueteke > header > h2 {
-    font-family: "Erbarre";
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.enqueteke > header > h1 {
-    margin-top: @line-height * .5;
-
+.enquete--short > header > h1 {
     font-size:  @line-height * 4.3;
     line-height:  @line-height * 4;
 }
 
-.enqueteke > header > h2 {
-    margin-top: @line-height / 2;
-    margin-bottom: @line-height / 2;
+.enquete--short > header > .authors { display: none; }
 
-    font-size: 18pt;
-    line-height:  @line-height * 2;
-}
-
-.enqueteke > header > .authors {
-    display: none;
-    margin-bottom: @line-height * 1;
-
-    font-family: "Erbar condensed";
-    font-size: 12pt;
-    line-height: @line-height;
-}
-
-.enqueteke > .chapeau {
-    font-family: "Erbar condensed";
-    font-weight: normal;
-    font-size: 12pt;
-    padding: 0;
-    margin: 0;
-    margin-bottom: @line-height;
-}
-
-.enqueteke > p:not(.chapeau) + p { text-indent: @line-height; }
-
-.enqueteke > p:last-of-type:after {
+//TODO
+.enquete--short > p:last-of-type:after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
     color: #FAB547;
 }
-
-.enqueteke > p + h2 {
-    margin-top: @line-height;
-    margin-bottom: @line-height;
-}
-
-.enqueteke > h2 {
-    font-family: "Erbarre" !important;
-    font-weight: normal; ;
-    font-size: 15pt;
-    line-height:  @line-height;
-    text-transform: uppercase;
-    margin-bottom: @line-height;
-}
-
-.enqueteke > h2,
-.enqueteke > h3 {
-    -webkit-region-break-after: avoid;
-            region-break-after: avoid;
-                   break-after: avoid-region;
-}
-
-.enqueteke > h2 + p + p { text-indent: 0; }
-
-.enqueteke > h2 + p:first-letter {
-    padding-top: @line-height;
-    padding-right: 3px;
-    padding-bottom: 2px;
-    float: left;
-    font-family: "Erbarre";
-    font-weight: bold;
-    font-size: 43pt;
-    text-transform: uppercase;
-}
-
-.enqueteke > h3 {
-    font-family: "Erbar condensed" !important;
-    font-weight: normal; ;
-    font-size: 10.5pt;
-    line-height:  @line-height;
-    text-transform: uppercase;
-    margin-top:  @line-height;
-}
-
-.enqueteke > .footnotes {
-    font-family: "Erbar condensed";
-    margin: 0;
-    font-size: 8pt;
-    line-height: (@line-height / 8) * 7;
-}
-
-// hides the numbers in the HTML since it is redundant with the css numbered bullets.
-.enqueteke > .footnotes a[name^="sdfootnote"] { display: none; }
-.enqueteke > .footnotes li { text-indent: -0.25em; }
-
-.enqueteke > blockquote {
-    -webkit-region-break-inside: avoid;
-                   break-inside: avoid;
-
-    font-family: "Erbarre";
-    font-size: 12pt;
-    font-weight: bold;
-    text-align: left;
-    padding-left: @col-gutter-width / 2;
-}
-
-.enqueteke > blockquote + h2 {
-    margin-top:  @line-height;
-}
-
-.enqueteke > blockquote p + p {
-    margin-top: 0;
-    margin-bottom: 0;
-
-}
-
-.enqueteke > blockquote p:last-of-type {
-    font-weight: normal;
-    font-style: normal;
-}
-
-.enqueteke > blockquote:first-of-type{ margin: 0; }
-
 
 /*
  * Styles interview
@@ -469,7 +314,6 @@ strong{
 }
 
 .interview .chapeau {
-
     color: #39914F;
     font-family: "Bagnard";
     font-size: 10pt;
@@ -479,7 +323,6 @@ strong{
     margin-bottom: @line-height * 2;
 }
 
-
 /*
  * Styles rubriques
  * -----------------
@@ -488,7 +331,7 @@ strong{
 .rubrique h1 {
     margin-top: 0;
     margin-bottom: @line-height;
-    font-family: "Career";
+    font-family: "career";
     font-size: 42pt !important;
     line-height: 32pt !important;
     font-weight: normal;
@@ -506,7 +349,7 @@ strong{
 }
 
 .rubrique h2 {
-    font-family: "Career";
+    font-family: "career";
     font-weight: normal;
     font-size: 11pt;
     line-height:  @line-height;
@@ -529,7 +372,6 @@ strong{
 
 .rubrique > h3 {
     margin-top:  @line-height;
-
     font-family: "Erbar condensed" !important;
     font-weight: normal; ;
     font-size: 12pt;
@@ -559,9 +401,6 @@ strong{
   font-weight: bold;
   color: #39914F;
 }
-
-
-
 
 
 /*
