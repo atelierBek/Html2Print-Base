@@ -8,6 +8,7 @@
 .flow-main {
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
+
 }
 #flow-main header {
     -webkit-flow-into: flow-title;
@@ -21,14 +22,15 @@
 /* reset folio */
 body { counter-reset: folio 41 - 1;
 // color: #39914f;
-color: black;
+color: #e1f17a;
 
 }
 
 .rubrique h1 {
   // padding: 5px 0;
   text-shadow: 0 0 0 ;
-  color: #fffe35;
+  font-weight: normal;
+  color:#e1f17a !important;
 }
 
 /*footer,*/
@@ -36,7 +38,14 @@ color: black;
 .paper:nth-child(odd) .body:before { content: "rubrique — Enquêteke"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-
+.rubrique > p{
+  font-weight: normal !important;
+  color: black;
+}
+.filet {
+    border-left:  2pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
+}
 img {
     //display: block;
     position: absolute;
@@ -44,24 +53,45 @@ img {
     left: 0;
     width: 100%;
     margin: 0 !important;
+    border: 1pt solid black;
+
 }
 
 .fig1 figure{
-width: 200%;
-opacity: 0.4;
-margin-left: -328pt;
+width: 100%;
+// margin-left: -328pt;
 margin-top: -50pt;
 }
 .fig2 figure, .fig3 figure{
-border: 1pt solid #fffe35;
-background-color: #fffe35;
+border: 1pt solid black;
+background-color:#2a85a4;
+color: black;
 }
+figcaption{
+  padding-left: @line-height / 2;
 
+}
 
 .chapeau{
     -webkit-region-break-after: always;
              region-break-after: always;
                     break-after: always-region;
+  background-color:#2a85a4;
+  color: #e1f17a !important;
+  border-top: 2pt solid black;
+  border-bottom: 2pt solid black;
+
+  padding: @line-height / 2;
+  margin-bottom: @line-height * 2;
+
+}
+
+.rubrique-title, .rubrique-subtitle{
+  margin-left: -140pt;
+
+}
+.rubrique-title{
+  border-bottom: 2pt solid #e1f17a;
 }
 // #page-1 .y5 .flow-main {
 //   margin-top: @line-height 5;
