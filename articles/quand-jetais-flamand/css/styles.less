@@ -9,13 +9,25 @@ body { counter-reset: folio 23 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Enquête — Quand j’étais Flamand"; }
+.paper:nth-child(odd) .body:before { content: "Enquête — Quand j’étais Flamande"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 
 /* FLOWS */
+#flow-main .footnotes li:nth-of-type(1),
+#flow-main .footnotes li:nth-of-type(2) { .flow-into(flow-fn1-2); }
+.flow-fn1-2 { .flow-from(flow-fn1-2); }
+
+#flow-main .footnotes li:nth-of-type(3) { .flow-into(flow-fn3); }
+.flow-fn3 { .flow-from(flow-fn3); }
+
+#flow-main .footnotes li:nth-of-type(4) { .flow-into(flow-fn4); }
+.flow-fn4 { .flow-from(flow-fn4); }
+
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(1) figcaption p { .figcaption-allover(); }
 
 #flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
@@ -47,30 +59,14 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
 .flow-fig11 { .flow-from(flow-fig11); }
 
-#flow-main aside.exergue:nth-of-type(1) { .flow-into(flow-ex1); }
-.flow-ex1 { .flow-from(flow-ex1); }
+/*#flow-main aside.exergue:nth-of-type(1) { .flow-into(flow-ex1); }*/
+/*.flow-ex1 { .flow-from(flow-ex1); }*/
 
-#flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-ex2); }
-.flow-ex2 { .flow-from(flow-ex2); }
+/*#flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-ex2); }*/
+/*.flow-ex2 { .flow-from(flow-ex2); }*/
 
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
-
-#flow-main figure figcaption {
-    -webkit-transform: rotate(-90deg);
-    -webkit-transform-origin: left top;
-    height: @col-width;
-    width: (@row-height * 3) + (@row-gutter * (3 - 1));
-}
-
-#flow-main figure:nth-of-type(2) img { object-fit: contain; }
-#flow-main figure:nth-of-type(2) figcaption {
-    position: relative;
-    top: (@row-height * 5) + (@row-gutter * (5 - 1)) + @row-gutter;
-    width: (@row-height * 5) + (@row-gutter * (5 - 1)) ;
-    text-align: right;
-}
-
 /* end of FLOWS */
 
 .contexte {
@@ -80,15 +76,6 @@ body { counter-reset: folio 23 - 1; }
 figure {
     height: 100%;
     width: 100%;
-}
-
-figcaption {
-    /*font-family: inherit;*/
-    font-family: 'Univers else';
-    font-size: 7pt;
-    line-height: 12pt;
-    color: @color-A1;
-    /*font-style: italic;*/
 }
 
 img {
@@ -123,13 +110,12 @@ article > blockquote:nth-of-type(4) p:last-child:before {
 
 h2 { display: none; }
 
-.enquete >  .chapeau + blockquote + h2 + p,
-.enquete >  .chapeau + h2 + p,
-.enquete >  .chapeau + p {
+.enquete > p:nth-of-type(3) {
     .w5;
     float: right;
     margin-bottom: @line-height;
 }
+.enquete > p:nth-of-type(3) + p { text-indent: 0; }
 
 .inline-fn {
     .w2;
@@ -146,7 +132,13 @@ h2 { display: none; }
     line-height: 9pt;
 }
 
+blockquote { margin-left: 0; }
 
-.flow-fig9 figure {
-
+.exergue {
+    .w5();
+    margin-top: @line-height * 2;
+    margin-bottom: @line-height * 2;
+    margin-left: -@col-gutter-width;
 }
+
+.enquete > h3 { font-size: 15pt; }
