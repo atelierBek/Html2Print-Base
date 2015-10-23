@@ -4,6 +4,7 @@ venv
 stories
 stories2
 *~
+articles/*/css/styles.css
 
 
 ## Python ignores
