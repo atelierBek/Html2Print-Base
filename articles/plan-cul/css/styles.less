@@ -20,9 +20,9 @@
         flow-from: flow-title;
 }
 
-
-#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
-.flow-fig1 { .flow-from(flow-fig1); }
+//
+// #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+// .flow-fig1 { .flow-from(flow-fig1); }
 
 /* reset folio */
 body { counter-reset: folio 21 - 1; }
@@ -46,7 +46,9 @@ body { counter-reset: folio 21 - 1; }
     border: 1pt solid #fffe35;
     background-color: #fffe35;
   }
-
+  .fig4 figure {
+  width: 150%;
+  }
 img {
     position: absolute;
     top: 0;
@@ -72,8 +74,9 @@ figcaption {
 }
 
 .rubrique h1 {
-  padding: 5px 0;
-  margin-top: 20pt !important;
+  color: #f1d0c8;
+  text-shadow: 0px 0px 0 #ffff00 ;
+  font-weight: normal;
  }
 
 .exergue p + p {
@@ -101,10 +104,7 @@ blockquote > footer {
     color: black;
     text-decoration: none;
 }
-.rubrique-title {
-//background-color: yellow;
-color: black;
-}
+
 ul {
   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
   -ms-transform: rotate(-90deg); /* IE 9 */
@@ -131,6 +131,7 @@ h2:nth-of-type(3){
 p > em{
   font-family: 'Century Schoolbook' !important;
   font-style: italic !important;
+
 }
 strong{
   font-family: "Belgika8th";
@@ -151,12 +152,40 @@ strong::after{
   margin-top: 12pt;
 }
 #page-1 {
-background-image:linear-gradient(#fffe35 50%, #de7162 50%);
-background: -webkit-linear-gradient(#fffe35 , #de7162); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#fffe35 , #de7162); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#fffe35 , #de7162); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#fffe35 , #de7162); /* Standard syntax */
+// background-image:linear-gradient(#fffe35 50%, #de7162 50%);
+// background: -webkit-linear-gradient(#fffe35 , #de7162); /* For Safari 5.1 to 6.0 */
+//   background: -o-linear-gradient(#fffe35 , #de7162); /* For Opera 11.1 to 12.0 */
+//   background: -moz-linear-gradient(#fffe35 , #de7162); /* For Firefox 3.6 to 15 */
+//   background: linear-gradient(#fffe35 , #de7162); /* Standard syntax */
 }
-body {
-background-color: white;
-e}
+
+.inline-fn {
+  color:#f1d0c8 !important;
+}
+
+.chapeau{
+    // -webkit-region-break-after: always;
+    //          region-break-after: always;
+    //                 break-after: always-region;
+  background-color:#f1d0c8;
+  color: #1e60e1 !important;
+  border-top: 2pt solid black;
+  border-bottom: 2pt solid black;
+
+  padding: @line-height / 2;
+  //margin-bottom: @line-height * 2;
+
+}
+
+.rubrique-title, .rubrique-subtitle{
+  margin-left: -140pt;
+
+}
+.rubrique-title{
+  border-bottom: 2pt solid #f1d0c8;
+}
+
+.filet {
+    border-left:  2pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
+}

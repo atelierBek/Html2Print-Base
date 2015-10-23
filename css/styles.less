@@ -1,3 +1,4 @@
+
 /*
  * Typographie
  * ===========
@@ -418,20 +419,28 @@ figcaption,
 }
 
 .rubrique > .chapeau {
-    font-family: 'Univers else';
-    font-weight: normal;
-    margin-bottom: @line-height * 1;
+  font-family: 'Work Sans', 'Univers else';
+    font-weight: 600;
+  //  margin-bottom: @line-height ;
 }
 
 .rubrique > p {
-  font-family: "Univers else";
-  font-weight: 200;
+  font-family: 'Work Sans', 'Univers else';
+  font-weight: 500;
   font-size: 9pt;
   letter-spacing: -0.1pt;
+  line-height: @line-height;
+
+}
+.rubrique > p > em {
+  line-height: @line-height;
+  font-size: 8pt;
+
+
 }
 #page-1 .rubrique > p {
-  font-family: "Univers else";
-  font-weight: normal;
+  font-family: 'Work Sans', 'Univers else';
+  font-weight: 600;
   font-size: 9pt;
   letter-spacing: -0.1pt;
 }
