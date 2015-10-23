@@ -1,9 +1,12 @@
 /* reset folio */
+
+@import "/css/main.less";
+
 body { counter-reset: folio 106 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "rubrique — Quand Adolf (re)vient gâcher la fête"; }
+.paper:nth-child(odd) .body:before { content: "Libre comme l’ère"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 /* flows */
@@ -24,4 +27,68 @@ body { counter-reset: folio 106 - 1; }
 .flow-title {
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
+}
+
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    border: 1pt solid black;
+
+}
+
+.fig1 figure {
+
+// -webkit-transform: rotate(90deg);// [> Chrome, Safari, Opera <]
+// -ms-transform: rotate(90deg); //[> IE 9 <]
+// transform: rotate(90deg);
+// -webkit-transform-origin: left top 0;//[> Chrome, Safari, Opera <]
+// -ms-transform-origin: left top 0; //[> IE 9 <]
+// transform-origin: left top 0;
+
+width: 100%;
+margin-left: 0pt;
+margin-top: 0pt;
+text-align: left;
+}
+
+.rubrique h1 {
+  // padding: 5px 0;
+  text-shadow: 3px 3px 0 #ffff00 ;
+  font-weight: normal;
+  color:#a05a2c !important;
+}
+
+.rubrique-title, .rubrique-subtitle{
+  margin-left: -140pt;
+
+}
+.rubrique-title{
+  border-bottom: 2pt solid #d38d5f;
+}
+.filet {
+    border-left:  2pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
+}
+
+.chapeau{
+    // -webkit-region-break-after: always;
+    //          region-break-after: always;
+    //                 break-after: always-region;
+  background-color:#ffff00;
+  color: #a05a2c !important;
+  border-top: 2pt solid black;
+  border-bottom: 2pt solid black;
+
+  padding: @line-height / 2;
+  margin-bottom: @line-height * 2;
+
+}
+
+#page-1 .rubrique > p{
+  font-weight: normal !important;
+  color: black;
 }
