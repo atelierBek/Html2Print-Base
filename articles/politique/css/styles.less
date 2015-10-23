@@ -1,64 +1,79 @@
 @import "/css/main.less";
 @color-aside: #330066;
 
-.trans(@rotate, @skew){
+.trans(@rotate, @skew, @originY, @originX){
   -ms-transform: skewY(@skew) rotate(@rotate);
   -webkit-transform: skewY(@skew) rotate(@rotate);
   transform: skewY(@skew) rotate(@rotate);
-  -webkit-transform-origin: top left;
-  transform-origin: top right;
+  -webkit-transform-origin: @originY @originX;
+  transform-origin: @originY @originX;
 }
 
-aside.exergue:nth-of-type(1) {.flow-into(flow-cit1);}
-
-.flow-cit1 { .flow-from(flow-cit1);
+aside.exergue:nth-of-type(1) {
   padding: -10pt;
   width: 100pt;
   float: left;
-  height:50pt;
+  height:@line-height*11.5;
   display: inline;
+  margin-top: @line-height*1;
+  margin-bottom: -@line-height*1;
   margin-left: -30pt;
-  padding: @line-height/2;
-  .trans(0deg, -15deg);
+  //padding: @line-height/2;
+  .trans(0deg, -15deg, top, left);
+  position: relative;
+  z-index: 10;
 }
-
 
 aside.exergue:nth-of-type(2) {
-.flow-into(flow-cit2);
-
-}
-.flow-cit2 { .flow-from(flow-cit2);
-  width: 70pt;
-  height:@line-height*13;
+  width: 130pt;
+  height:@line-height*12;
   float: left;
-  display: inline;
-  .trans(10deg, 0deg);
-  //display: none;
+  .trans(10deg, -10deg, top, right);
+  margin-left: -(@line-height/2);
+  margin-top:@line-height*0;
+  margin-bottom:-@line-height*0;
+  margin-left:@line-height*0;
+  margin-right:-@line-height*0;
 }
-
 
 aside.exergue:nth-of-type(3) {
-.flow-into(flow-cit3);
-
-}
-.flow-cit3 { .flow-from(flow-cit3);
-  .trans(110deg, 20deg);
-  width: 130pt;
-  margin-top:50pt;
-  float: left;
-  display: inline;
-  margin-left: 50pt;
-  height: @line-height/10;
-
+  .trans(-70deg, -20deg, top, left);
+  width: 120pt;
+  height: auto;
+  margin-top:@line-height*11;
+  margin-bottom:-@line-height*10;
+  margin-left:-@line-height*1;
+  //margin-right:@line-height*0;
+  //float: left;
+  //display: inline;
+  // height: @line-height/10;
 }
 
 aside.exergue:nth-of-type(4) {
-.flow-into(flow-cit4);
+  .trans(25deg, -20deg, bottom, right);
+  width: @line-height*12;
+  margin-top:@line-height*2;
+  margin-bottom:-@line-height*0;
+  margin-left:-@line-height*3;
+  //height: @line-height*10;
+  //position: relative;
+  //border: 1px solid red;
+}
 
+aside.exergue:nth-of-type(5) {
+  .trans(-5deg, -10deg, top, left);
+  width: 210pt;
+  //height: 150pt;
+  margin-top:@line-height*2;
+  margin-bottom:-@line-height*1;
+  margin-left:-@line-height*1.8;
+  //margin-right:@line-height*0;
+  float: left;
+  //display: inline;
+  //height: @line-height/10;
 }
-.flow-cit4 { .flow-from(flow-cit4);
-width: 200pt;
-}
+
+
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -81,15 +96,17 @@ width: 200pt;
 
 aside.exergue > blockquote {
     font-family: "Erbar condensed";
-    font-size: 14pt;
+    font-size: 18pt;
     font-weight: normal;
-    line-height: 16pt;
+    line-height: 17pt;
     text-align: center;
     background: white;
     color:@color-aside;
     margin: 0px;
-    padding: 0px;
-}
+    padding: 5pt;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
 aside.exergue > blockquote + h2 {
 }
 
@@ -97,9 +114,6 @@ aside.exergue > blockquote p + p {
 }
 aside.exergue > blockquote em {
 }
-
-
-
 
 /* reset folio */
 body { counter-reset: folio 121 - 1; }
