@@ -419,13 +419,13 @@ figcaption,
 }
 
 .rubrique > .chapeau {
-  font-family: 'Work Sans', 'Univers else';
+  font-family: 'Work Sans';
     font-weight: 600;
   //  margin-bottom: @line-height ;
 }
 
 .rubrique > p {
-  font-family: 'Work Sans', 'Univers else';
+  font-family: 'Work Sans';
   font-weight: 500;
   font-size: 9pt;
   letter-spacing: -0.1pt;
@@ -455,7 +455,34 @@ figcaption,
   color: #39914F;
 }
 
+.rubrique > .footnotes {
+    /*font-family: "Erbar condensed";*/
+    font-family: 'Alfphabet-Condensed';
+    margin: 0;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+}
 
+.rubrique > .footnotes {
+    font-style: normal;
+    color: lighten(#2A85A4, 20%);
+}
+.rubrique > .footnotes em {
+    font-style: normal;
+    color: #2A85A4;
+}
+
+// hides the numbers in the HTML since it is redundant with the css numbered bullets.
+/*.enquete > .footnotes a[name^="sdfootnote"] { font-weight: bold; }*/
+.rubrique > .footnotes a[name^="sdfootnote"]:after { content: "." }
+.rubrique > .footnotes li { text-indent: -0.25em; }
+.rubrique > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+.rubrique > .footnotes li:first-of-type{
+  border-top: 2pt double black;
+  margin-top: (@line-height /4) * 3;
+  padding-top: @line-height;
+}
 /*
  * Styles bd
  * -----------------

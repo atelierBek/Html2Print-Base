@@ -41,11 +41,9 @@ margin-top: 0pt;
 text-align: left;
 }
 .fig1 figure {
-width: 107%;
 margin-left: 0pt;
 margin-top: 0pt;
 text-align: left;
-margin-left: -18pt;
 
 }
 
@@ -61,6 +59,7 @@ margin-left: -18pt;
   font-family: "Career-salle13";
   // font-family: 'Career-turning';
   //font-family: 'Career-point';
+  margin-top: 40pt !important;
 }
 
 .rubrique-title, .rubrique-subtitle{
@@ -86,9 +85,23 @@ margin-left: -18pt;
   background-color:#b14542;
   color: #f3fdcf !important;
   border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
+  border-bottom: 2pt double black;
 
   padding: @line-height / 2;
-  margin-bottom: @line-height * 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+  margin-bottom: (@line-height /4) * 3;
 
+}
+
+.rubrique > .footnotes {
+    color: #b14542;
+    list-style-type: none;
+}
+.rubrique > .footnotes em {
+    color: #db2823;
+}
+
+h2:first-of-type{
+  margin-top: 0pt;
 }
