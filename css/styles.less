@@ -388,12 +388,13 @@ figcaption,
 }
 
 .rubrique h2 {
+  letter-spacing: 0pt;
     font-family: "career";
     font-weight: normal;
     font-size: 11pt;
     line-height:  @line-height;
-    margin-top:  @line-height;
-    margin-bottom: 0;;
+    margin-top:  (@line-height/4) * 3;
+    margin-bottom: @line-height/4;
 }
 
 //Style lettrine pour les rubriques.
@@ -433,10 +434,8 @@ figcaption,
 
 }
 .rubrique > p > em {
-  line-height: @line-height;
-  font-size: 8pt;
-
-
+  line-height: (@line-height/4) *3;
+  font-size: 9pt;
 }
 #page-1 .rubrique > p {
   font-family: 'Work Sans', 'Univers else';
