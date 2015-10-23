@@ -124,6 +124,7 @@ p.fin::after {
 h1,
 h2,
 li,
+/*aside.making-of,*/
 figcaption,
 .exergue,
 .chapeau {
@@ -162,6 +163,10 @@ figcaption,
     line-height: 18pt;
 }
 
+.enquete > header > .authors:before {
+    content: "Par ";
+}
+
 .enquete > .chapeau {
     font-family: "Bagnard";
     line-height:  @line-height * 1.5;
@@ -170,7 +175,6 @@ figcaption,
     padding: 0;
     margin: 0;
     margin-bottom: @line-height;
-    .w5();
 }
 
 .enquete > h2,
@@ -185,7 +189,11 @@ figcaption,
     text-transform: uppercase;
     margin-top: @line-height;
 }
-.enquete > h2 { font-size: 15pt; }
+.enquete > h2 { 
+    font-size: 15pt; 
+    line-height: 15pt;
+    margin-bottom: (@line-height * 2) - 15pt;
+}
 .enquete > h3 { font-size: 10.5pt; }
 
 .enquete > p + h2 {
@@ -251,9 +259,8 @@ figcaption,
 }
 
 
-.enquete > .chapeau + p:first-letter,
-.enquete > h2 + p:first-letter,
-.enquete > blockquote + p:first-letter {
+.enquete p.debut:first-letter,
+.enquete > h2 + p:first-letter {
     padding-right: 0.125em;
     height: @line-height * 3;
     float: left;
@@ -261,6 +268,15 @@ figcaption,
     font-weight: bold;
     font-size: @line-height * 3.325;
     line-height: @line-height * 3.325;
+}
+
+.enquete .making-of {
+    border-top: 4pt double #2A85A4;
+    padding-top: 3pt;
+    margin-top: 2 * @line-height;
+    font-family: "Alfphabet";
+    /*font-family: "Alfphabet-Condensed";*/
+    color: #2A85A4;
 }
 
 .enquete--long > header h1 {
@@ -651,10 +667,3 @@ figcaption footer {
  * Styles making-off article
  * -----------------
  */
-
- .making-off{
-   font-family: "Erbar condensed";
-   text-transform: uppercase;
-   color:red;
-   text-align: center;
- }

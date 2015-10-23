@@ -59,11 +59,9 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
 .flow-fig11 { .flow-from(flow-fig11); }
 
-/*#flow-main aside.exergue:nth-of-type(1) { .flow-into(flow-ex1); }*/
-/*.flow-ex1 { .flow-from(flow-ex1); }*/
-
-/*#flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-ex2); }*/
-/*.flow-ex2 { .flow-from(flow-ex2); }*/
+/*#flow-main aside.exergue:nth-of-type(2) { */
+    /*padding-bottom: @line-height / 2;*/
+/*}*/
 
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
@@ -132,7 +130,9 @@ h2 { display: none; }
     line-height: 9pt;
 }
 
-blockquote { margin-left: 0; }
+blockquote { 
+    margin: @line-height 0;
+}
 
 .exergue {
     .w5();
@@ -141,4 +141,18 @@ blockquote { margin-left: 0; }
     margin-left: -@col-gutter-width;
 }
 
-.enquete > h3 { font-size: 15pt; }
+.enquete > h3 { 
+    font-size: 12pt; 
+    line-height: @line-height;
+    font-weight: bold;
+}
+
+.chapeau {
+   -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always;
+}
+
+.chapeau + p {
+    color: #2A85A4;
+}
