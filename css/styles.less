@@ -650,18 +650,22 @@ figcaption,
   font-weight: normal;
   font-style: normal;
 }
-.photo > p {
-   font-family: 'Work Sans';
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: -0.05em;
+
+.photo > .chapeau {
   font-size: 9pt;
-  line-height: @line-height*0.95;
-  em{
-    font-size: 9.2pt;
-    font-family: "Century Schoolbook";
-  }
+  font-family: 'Belgika5th';
 }
+
+.photo > .footnotes {
+    /*font-family: "Erbar condensed";*/
+    font-family: 'Alfphabet-Condensed';
+    margin: 0;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+}
+
+
 
 /* hides the numbers in the HTML since it is redundant with the css numbered bullets.
 .portrait > .footnotes a[name^="sdfootnote"] { display: none; }

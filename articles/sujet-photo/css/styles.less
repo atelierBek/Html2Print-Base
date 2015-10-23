@@ -16,7 +16,7 @@ figure{
   font-weight: 300;
   font-style: normal;
   font-size: 7pt;
-  line-height: @line-height/2 !important;
+  line-height: @line-height/2;
   display: inline;
 }
 
@@ -25,9 +25,8 @@ figure{
   font-weight: 600;
   font-style: normal;
   font-size: 7pt;
-  text-transform: uppercase;
   display: inline;
-  line-height: @line-height/2 !important;
+  line-height: @line-height/2;
 
 
 }
@@ -40,6 +39,33 @@ figure{
           region-break-after: always;
                  break-after: always;
 }
+
+.footnotes {
+    font-style: normal;
+    color: lighten(#2A85A4, 20%);
+}
+.footnotes em {
+    font-style: normal;
+    color: #2A85A4;
+}
+
+.footnotes a[name^="sdfootnote"]:after { content: "." }
+/*.enquete > .footnotes li { text-indent: -0.25em; }*/
+.footnotes li { margin-bottom: (@line-height / 8) * 6; }
+
+.photo > p {
+   font-family: 'Work Sans';
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: -0.05em;
+  font-size: 9pt;
+  line-height: @line-height*0.95;
+  em{
+    font-size: 9.2pt;
+    font-family: "Century Schoolbook";
+  }
+}
+
 
 .s_titre {
   font-size: 7pt;
