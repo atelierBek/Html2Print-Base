@@ -34,17 +34,17 @@ body { counter-reset: folio 21 - 1; }
 
 
 .flow-fig1 figure, .fig1 figure {
-    width: 176%;
+  //  width: 156%;
     height: auto;
 }
 .flow-fig2 figure, .fig2 figure {
-  width: 138%;
+    width: 139%;
     height: auto;
-  margin-left: -354pt;
+//  margin-left: -354pt;
 }
 .flow-fig1 img, .fig1 img , .flow-fig2 img, .fig2 img  {
-    border: 1pt solid #fffe35;
-    background-color: #fffe35;
+    // border: 1pt solid #fffe35;
+    // background-color: #fffe35;
   }
   .fig4 figure {
   width: 150%;
@@ -148,9 +148,7 @@ strong::after{
 .authors{
   display: none;
 }
-#page-1 .y1 {
-  margin-top: 12pt;
-}
+
 #page-1 {
 // background-image:linear-gradient(#fffe35 50%, #de7162 50%);
 // background: -webkit-linear-gradient(#fffe35 , #de7162); /* For Safari 5.1 to 6.0 */
@@ -171,9 +169,10 @@ strong::after{
   color: #1e60e1 !important;
   border-top: 2pt solid black;
   border-bottom: 2pt solid black;
-
   padding: @line-height / 2;
-  //margin-bottom: @line-height * 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+  margin-bottom: (@line-height /4) * 3;
 
 }
 
@@ -188,4 +187,15 @@ strong::after{
 .filet {
     border-left:  2pt solid black;
     padding-left: 4.5pt + (0.75 / 2);
+}
+#page-1 .filet {
+//margin-top: 24pt;
+
+}
+.rubrique > .footnotes {
+    color: #1e60e1;
+    list-style-type: none;
+}
+.rubrique > .footnotes em {
+    color: #3acbe1;
 }
