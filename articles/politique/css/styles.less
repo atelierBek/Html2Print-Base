@@ -16,7 +16,7 @@ aside.exergue:nth-of-type(1) {
   height:@line-height*11.5;
   display: inline;
   margin-top: @line-height*1;
-  margin-bottom: -@line-height*1;
+  margin-bottom: -@line-height*0;
   margin-left: -30pt;
   //padding: @line-height/2;
   .trans(0deg, -15deg, top, left);
@@ -27,46 +27,39 @@ aside.exergue:nth-of-type(1) {
 aside.exergue:nth-of-type(2) {
   width: 130pt;
   height:@line-height*12;
-  float: left;
+  //float: left;
   .trans(10deg, -10deg, top, right);
-  margin-left: -(@line-height/2);
   margin-top:@line-height*0;
-  margin-bottom:-@line-height*0;
+  margin-bottom:@line-height*1;
   margin-left:@line-height*0;
   margin-right:-@line-height*0;
 }
 
 aside.exergue:nth-of-type(3) {
-  .trans(-70deg, -20deg, top, left);
-  width: 120pt;
-  height: auto;
-  margin-top:@line-height*11;
-  margin-bottom:-@line-height*10;
+  .trans(-5deg, -10deg, top, left);
+  width: 130pt;
+  margin-top:@line-height*2;
+  margin-bottom:-@line-height*1;
   margin-left:-@line-height*1;
-  //margin-right:@line-height*0;
-  //float: left;
-  //display: inline;
-  // height: @line-height/10;
+  margin-right:@line-height*2;
+
 }
 
 aside.exergue:nth-of-type(4) {
   .trans(25deg, -20deg, bottom, right);
   width: @line-height*12;
   margin-top:@line-height*2;
-  margin-bottom:-@line-height*0;
+  margin-bottom:-@line-height*12;
   margin-left:-@line-height*3;
-  //height: @line-height*10;
-  //position: relative;
-  //border: 1px solid red;
 }
 
 aside.exergue:nth-of-type(5) {
   .trans(-5deg, -10deg, top, left);
-  width: 210pt;
+  width: 160pt;
   //height: 150pt;
-  margin-top:@line-height*2;
-  margin-bottom:-@line-height*1;
-  margin-left:-@line-height*1.8;
+  margin-top:@line-height*3;
+  margin-bottom:@line-height*1;
+  margin-left:-@line-height*1;
   //margin-right:@line-height*0;
   float: left;
   //display: inline;
@@ -96,9 +89,9 @@ aside.exergue:nth-of-type(5) {
 
 aside.exergue > blockquote {
     font-family: "Erbar condensed";
-    font-size: 18pt;
+    font-size: 20pt;
     font-weight: normal;
-    line-height: 17pt;
+    line-height: 18pt;
     text-align: center;
     background: white;
     color:@color-aside;
@@ -113,6 +106,10 @@ aside.exergue > blockquote + h2 {
 aside.exergue > blockquote p + p {
 }
 aside.exergue > blockquote em {
+}
+
+aside.exergue > blockquote footer {
+  font-size: 15pt;
 }
 
 /* reset folio */
