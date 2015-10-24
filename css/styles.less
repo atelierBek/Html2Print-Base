@@ -56,23 +56,6 @@ figure img {
     text-align: center;
 }
 
-figcaption {
-
-    /*position: relative;*/
-    /*margin-left: 97%;*/
-
-    /*-webkit-transform: rotate(-90deg); [> Chrome, Safari, Opera <]*/
-        /*-ms-transform: rotate(-90deg); [> IE 9 <]*/
-            /*transform: rotate(-90deg);*/
-    /*-webkit-transform-origin: left top 0; [> Chrome, Safari, Opera <]*/
-        /*-ms-transform-origin: left top 0; [> IE 9 <]*/
-            /*transform-origin: left bottom 0;*/
-
-    font-family: "Erbar condensed";
-    font-size: 8pt;
-}
-
-
 /**
  * À classer
  */
@@ -116,7 +99,7 @@ p.fin::after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
-    color: #FAB547;
+    color: black;
 }
 
 
@@ -283,7 +266,6 @@ figcaption,
 .enquete--long > header h1 {
     font-size:  @line-height * 6;
     line-height:  @line-height * 5;
-    -webkit-text-stroke: 1pt @color-A2;
 }
 
 /*
@@ -299,6 +281,12 @@ figcaption,
 }
 
 .enquete--short > header > .authors { display: none; }
+
+.enquete--short > .chapeau {
+  font-size: 12pt;
+  line-height:  @line-height * 1.25;
+
+ }
 
 /*
  * Styles interview
@@ -463,6 +451,7 @@ figcaption,
   color: #39914F;
 }
 
+.photo > .footnotes,
 .rubrique > .footnotes {
     /*font-family: "Erbar condensed";*/
     font-family: 'Alfphabet-Condensed';
@@ -470,12 +459,11 @@ figcaption,
     font-size: 7.5pt;
     line-height: (@line-height / 8) * 6;
     list-style-type: none;
-}
-
-.rubrique > .footnotes {
     font-style: normal;
     color: lighten(#2A85A4, 20%);
 }
+
+.photo > .footnotes em,
 .rubrique > .footnotes em {
     font-style: normal;
     color: #2A85A4;
@@ -685,18 +673,32 @@ figcaption,
   font-weight: normal;
   font-style: normal;
 }
-.photo > p {
-   font-family: 'Work Sans';
+
+.photo > .chapeau {
+  font-size: 9pt;
+  font-family: 'Belgika5th';
+}
+
+.photo figcaption > p {
+  font-family: 'Work Sans';
   font-weight: 300;
   font-style: normal;
-  letter-spacing: -0.05em;
-  font-size: 9pt;
-  line-height: @line-height*0.95;
-  em{
-    font-size: 9.2pt;
-    font-family: "Century Schoolbook";
-  }
+  font-size: 7pt;
+  line-height: @line-height/4;
+  display: inline;
 }
+
+.photo figcaption > h2 {
+  font-family: 'Work Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 7pt;
+  display: inline;
+  line-height: @line-height/2;
+
+}
+
+
 
 /* hides the numbers in the HTML since it is redundant with the css numbered bullets.
 .portrait > .footnotes a[name^="sdfootnote"] { display: none; }
@@ -739,18 +741,22 @@ figcaption,
 }
 
 
-figcaption,
-figure {
+.rubrique figcaption,
+.rubrique figure,
+.enquete figcaption,
+.enquete figure {
     position: relative;
 }
 
-figcaption {
+.rubrique figcaption,
+.enquete figcaption {
     font-family: "Alfphabet", sans-serif;
     font-size: 7pt;
     line-height: 9pt;
 }
 
-figcaption p {
+.rubrique figcaption p,
+.enquete figcaption p {
     background-color: white;
     position: absolute;
     bottom: 0;
@@ -763,16 +769,18 @@ figcaption p {
     padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
 }
 
-figcaption footer {
+.rubrique figcaption footer,
+.enquete figcaption footer {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     margin: 0;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-transform-origin: right bottom;
-            transform-origin: right bottom;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
 }
+
 
 /*
  * Styles making-off article

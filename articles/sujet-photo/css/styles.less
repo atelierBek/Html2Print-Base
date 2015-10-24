@@ -3,51 +3,48 @@
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
+#flow-main figure:nth-of-type(1) figcaption { .flow-into(flow-figcaption1); }
+.flow-figcaption1 { .flow-from(flow-figcaption1); }
 
-// FLOW IMAGES
+#flow-main figure:nth-of-type(2) figcaption { .flow-into(flow-figcaption2); }
+.flow-figcaption2 { .flow-from(flow-figcaption2); }
 
-figure{
-  display:none;
-}
+#flow-main figure:nth-of-type(3) figcaption { .flow-into(flow-figcaption3); }
+.flow-figcaption3 { .flow-from(flow-figcaption3); }
+
+#flow-main figure:nth-of-type(4) figcaption { .flow-into(flow-figcaption4); }
+.flow-figcaption4 { .flow-from(flow-figcaption4); }
+
+#flow-main figure:nth-of-type(5) figcaption { .flow-into(flow-figcaption5); }
+.flow-figcaption5 { .flow-from(flow-figcaption5); }
+
+#flow-main figure:nth-of-type(6) figcaption,
+#flow-main figure:nth-of-type(7) figcaption,
+#flow-main figure:nth-of-type(8) figcaption { .flow-into(flow-figcaption6-7-8); }
+.flow-figcaption6-7-8 { .flow-from(flow-figcaption6-7-8); }
+
+#flow-main figure:nth-of-type(9) figcaption { .flow-into(flow-figcaption9); }
+.flow-figcaption9 { .flow-from(flow-figcaption9); }
+
+#flow-main figure:nth-of-type(10) figcaption { .flow-into(flow-figcaption10); }
+.flow-figcaption10 { .flow-from(flow-figcaption10); }
+
+#flow-main figure:nth-of-type(11) figcaption { .flow-into(flow-figcaption11); }
+.flow-figcaption11 { .flow-from(flow-figcaption11); }
+
+#flow-main figure:nth-of-type(12) figcaption { .flow-into(flow-figcaption12); }
+.flow-figcaption12 { .flow-from(flow-figcaption12); }
+
+#flow-main figure:nth-of-type(13) figcaption { .flow-into(flow-figcaption13); }
+.flow-figcaption13 { .flow-from(flow-figcaption13); }
 
 
-.legende_photo > p {
-  font-family: 'Work Sans';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 7pt;
-  line-height: @line-height/2 !important;
-  display: inline;
-}
+//////////
 
-.legende_photo > h2 {
-  font-family: 'Work Sans';
-  font-weight: 600;
-  font-style: normal;
-  font-size: 7pt;
-  text-transform: uppercase;
-  display: inline;
-  line-height: @line-height/2 !important;
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
 
-
-}
-.legende_photo { .flow-into(flow-text-photo); }
-.flow-text-photo{ .flow-from(flow-text-photo); }
-
-
-.legende_photo  .break {
-  -webkit-region-break-after: always;
-          region-break-after: always;
-                 break-after: always;
-}
-
-.s_titre {
-  font-size: 7pt;
-  font-family: 'Belgika8th';
-  line-height: @line-height*1.1
-}
-
-/*#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
 
 #flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
@@ -57,7 +54,31 @@ figure{
 .flow-fig4 { .flow-from(flow-fig4); }
 
 #flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
-.flow-fig5 { .flow-from(flow-fig5); }*/
+.flow-fig5 { .flow-from(flow-fig5); }
+
+#flow-main figure:nth-of-type(6) { .flow-into(flow-fig6); }
+.flow-fig6 { .flow-from(flow-fig6); }
+
+#flow-main figure:nth-of-type(7) { .flow-into(flow-fig7); }
+.flow-fig7 { .flow-from(flow-fig7); }
+
+#flow-main figure:nth-of-type(8) { .flow-into(flow-fig8); }
+.flow-fig8 { .flow-from(flow-fig8); }
+
+#flow-main figure:nth-of-type(9) { .flow-into(flow-fig9); }
+.flow-fig9 { .flow-from(flow-fig9); }
+
+#flow-main figure:nth-of-type(10) { .flow-into(flow-fig10); }
+.flow-fig10 { .flow-from(flow-fig10); }
+
+#flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
+.flow-fig11 { .flow-from(flow-fig11); }
+
+#flow-main figure:nth-of-type(12) { .flow-into(flow-fig12); }
+.flow-fig12 { .flow-from(flow-fig12); }
+
+#flow-main figure:nth-of-type(13) { .flow-into(flow-fig13); }
+.flow-fig13 { .flow-from(flow-fig13); }
 
 #flow-main header {
     -webkit-flow-into: flow-title;
@@ -67,6 +88,127 @@ figure{
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+
+
+// .legende_photo  .break {
+//   -webkit-region-break-after: always;
+//           region-break-after: always;
+//                  break-after: always;
+// }
+
+.footnotes a[name^="sdfootnote"]:after { content: "." }
+/*.enquete > .footnotes li { text-indent: -0.25em; }*/
+.footnotes li { margin-bottom: (@line-height / 8) * 6; }
+
+
+.photo > p {
+   font-family: 'Work Sans';
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: -0.05em;
+  font-size: 9pt;
+  line-height: @line-height*0.95;
+  em{
+    font-size: 9.2pt;
+    font-family: "Century Schoolbook";
+  }
+}
+
+
+.s_titre {
+  font-size: 7pt;
+  font-family: 'Belgika8th';
+  line-height: @line-height*1.1
+}
+
+
+figure {
+  height: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+figure:nth-of-type(1),
+figure:nth-of-type(2) {
+     overflow: hidden;
+}
+
+figure:nth-of-type(1) img,
+figure:nth-of-type(2) img {
+     width: auto;
+     height: 103%;
+}
+
+figure:nth-of-type(1) img,
+figure:nth-of-type(2) img {
+}
+
+figure:nth-of-type(1) img {
+  object-position: 0 0;
+}
+figure:nth-of-type(2) img {
+  object-position: (@page-width + 14pt) * -(1 / (103 / 100)) 0;
+}
+
+figure:nth-of-type(3) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure:nth-of-type(4) {
+  overflow: hidden;
+}
+
+figure:nth-of-type(4) img {
+  width: 115%;
+  height: 115%;
+  object-fit: cover;
+  object-position: -82pt -27pt;
+}
+
+figure:nth-of-type(5) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure:nth-of-type(6) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -40pt;
+}
+
+figure:nth-of-type(8) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure:nth-of-type(9) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+figure:nth-of-type(10) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+figure:nth-of-type(11) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+figure:nth-of-type(12) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* reset folio */
 body { counter-reset: folio 43 - 1; }
