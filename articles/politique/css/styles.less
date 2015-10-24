@@ -1,116 +1,10 @@
 @import "../../../css/main.less";
-@color-aside: #330066;
 
-.trans(@rotate, @skew, @originY, @originX){
-  -ms-transform: skewY(@skew) rotate(@rotate);
-  -webkit-transform: skewY(@skew) rotate(@rotate);
-  transform: skewY(@skew) rotate(@rotate);
-  -webkit-transform-origin: @originY @originX;
-  transform-origin: @originY @originX;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
-aside.exergue:nth-of-type(1) {
-  padding: -10pt;
-  width: 100pt;
-  float: left;
-  height:@line-height*11.5;
-  display: inline;
-  margin-top: @line-height*1;
-  margin-bottom: -@line-height*0;
-  margin-left: -30pt;
-  //padding: @line-height/2;
-  .trans(0deg, -15deg, top, left);
-  position: relative;
-  z-index: 10;
-}
-
-aside.exergue:nth-of-type(2) {
-  width: 130pt;
-  height:@line-height*12;
-  //float: left;
-  .trans(10deg, -10deg, top, right);
-  margin-top:@line-height*0;
-  margin-bottom:@line-height*1;
-  margin-left:@line-height*0;
-  margin-right:-@line-height*0;
-}
-
-aside.exergue:nth-of-type(3) {
-  .trans(-5deg, -10deg, top, left);
-  width: 130pt;
-  margin-top:@line-height*2;
-  margin-bottom:-@line-height*1;
-  margin-left:-@line-height*1;
-  margin-right:@line-height*2;
-
-}
-
-aside.exergue:nth-of-type(4) {
-  .trans(25deg, -20deg, bottom, right);
-  width: @line-height*12;
-  margin-top:@line-height*2;
-  margin-bottom:-@line-height*12;
-  margin-left:-@line-height*3;
-}
-
-aside.exergue:nth-of-type(5) {
-  .trans(-5deg, -10deg, top, left);
-  width: 160pt;
-  //height: 150pt;
-  margin-top:@line-height*3;
-  margin-bottom:@line-height*1;
-  margin-left:-@line-height*1;
-  //margin-right:@line-height*0;
-  float: left;
-  //display: inline;
-  //height: @line-height/10;
-}
-
-
-
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
-
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
-
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
-
-aside.exergue > blockquote {
-    font-family: "Erbar condensed";
-    font-size: 20pt;
-    font-weight: normal;
-    line-height: 18pt;
-    text-align: center;
-    background: white;
-    color:@color-aside;
-    margin: 0px;
-    padding: 5pt;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
-aside.exergue > blockquote + h2 {
-}
-
-aside.exergue > blockquote p + p {
-}
-aside.exergue > blockquote em {
-}
-
-aside.exergue > blockquote footer {
-  font-size: 15pt;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
 /* reset folio */
 body { counter-reset: folio 121 - 1; }
@@ -119,3 +13,84 @@ body { counter-reset: folio 121 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Politique"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+@color-aside: rgb(154, 3, 124);
+
+
+.trans(@rotate, @skew, @originY, @originX) {
+  -webkit-transform: skewY(@skew) rotate(@rotate);
+          transform: skewY(@skew) rotate(@rotate);
+  -webkit-transform-origin: @originY @originX;
+          transform-origin: @originY @originX;
+}
+
+#flow-main header h1 {
+    padding-left: 0.5em;
+    text-indent: -1em;
+}
+#flow-main > p { z-index: 999; position: relative; }
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    font-family: "Erbar condensed";
+    font-size: 20pt;
+    line-height: 18pt;
+    font-weight: normal;
+    text-align: center;
+    background: white;
+    color: @color-aside;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+}
+blockquote footer { font-size: 15pt; }
+
+.exergue { padding: 12pt 0; position: relative; }
+
+#flow-main .exergue:nth-of-type(1) {
+    .trans(0deg, -15deg, center, center);
+    float: left;
+    width: 100pt;
+    margin-left: -12pt;
+    position: relative;
+    left: -12pt;
+}
+
+#flow-main .exergue:nth-of-type(2) {
+    /*.flow-into(flow-ex2);*/
+    height: 0;
+    box-sizing: border-box;
+    position: relative;
+    top: 4pt;
+    .trans(10deg, -15deg, top, left);
+    -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always;
+}
+.flow-ex2 {
+    .flow-from(flow-ex2);
+}
+
+#flow-main .exergue:nth-of-type(3) {
+    .trans(-5deg, 15deg, top, left);
+    position: relative;
+    top: -12pt;
+}
+
+#flow-main .exergue:nth-of-type(4) {
+    .trans(5deg, -20deg, bottom, left);
+    height: 0;
+    position: relative;
+    top: 24pt;
+    -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always;
+}
+
+#flow-main .exergue:nth-of-type(5) {
+    .trans(0deg, 25deg, top, left);
+    margin-bottom: 24pt;
+    position: relative;
+    top: -12pt;
+    margin-bottom: 76pt;
+}
