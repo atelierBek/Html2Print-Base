@@ -446,9 +446,16 @@ figcaption,
   letter-spacing: -0.1pt;
 }
 
-.filet {
-    border-left:  0.75pt solid black;
-    padding-left: 4.5pt + (0.75 / 2);
+@filet: 0.75pt;
+@padding-filet: (@col-gutter - @filet) / 2;
+
+.filet:before {
+    content: "  ";
+    width: @filet;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: (@padding-filet + @filet) * -1;
 }
 
 .rubrique .inline-fn{
