@@ -145,6 +145,7 @@ figcaption,
     padding: 0;
     font-size: 18pt;
     line-height: 18pt;
+    margin: @line-height 0;
 }
 
 .enquete > header > .authors:before {
@@ -163,9 +164,9 @@ figcaption,
 
 .enquete > h2,
 .enquete > h3 {
-    -webkit-region-break-after: avoid;
-            region-break-after: avoid;
-                   break-after: avoid-region;
+    /*-webkit-region-break-after: avoid;*/
+            /*region-break-after: avoid;*/
+                   /*break-after: avoid-region;*/
 
     font-family: "Erbar condensed";
     font-weight: normal; ;
@@ -250,8 +251,11 @@ figcaption,
     float: left;
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: @line-height * 3.325;
-    line-height: @line-height * 3.325;
+    font-size: @line-height * 3.5;
+    line-height: @line-height * 3;
+    position: relative;
+    top: 0.325em;
+
 }
 
 .enquete .making-of {
@@ -757,12 +761,17 @@ figcaption,
 
 .rubrique figcaption p,
 .enquete figcaption p {
-    background-color: white;
+    /*background-color: white;*/
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 6pt 1em;
     .w4;
+}
+
+.figcaption-over {
+    background-color: white;
+    padding: 6pt 1em;
 }
 
 .figcaption-allover {

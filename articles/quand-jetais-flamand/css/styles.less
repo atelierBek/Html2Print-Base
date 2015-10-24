@@ -27,8 +27,6 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
-#flow-main figure:nth-of-type(1) figcaption p { .figcaption-allover(); }
-
 #flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
 
@@ -56,9 +54,6 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(10) { .flow-into(flow-fig10); }
 .flow-fig10 { .flow-from(flow-fig10); }
 
-#flow-main figure:nth-of-type(11) { .flow-into(flow-fig11); }
-.flow-fig11 { .flow-from(flow-fig11); }
-
 /*#flow-main aside.exergue:nth-of-type(2) { */
     /*padding-bottom: @line-height / 2;*/
 /*}*/
@@ -66,6 +61,122 @@ body { counter-reset: folio 23 - 1; }
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 /* end of FLOWS */
+
+
+// WARNING: the only way to apply padding and margin in chromium
+/*.paper:nth-of-type(1) figure:nth-of-type(1) figcaption p { .figcaption-allover(); }*/
+
+/*.paper:nth-of-type(3) figure:nth-of-type(1) figcaption p,*/
+/*.paper:nth-of-type(4) figure:nth-of-type(1) figcaption p,*/
+/*.paper:nth-of-type(6) figure:nth-of-type(1) figcaption p,*/
+/*.paper:nth-of-type(10) figure:nth-of-type(2) figcaption p { background-color: none; }*/
+
+.flow-fig1 figcaption p,
+.flow-fig10 figcaption p { 
+    .figcaption-over(); 
+    .figcaption-allover(); 
+}
+
+.flow-fig1 figcaption footer,
+.flow-fig10 figcaption footer { 
+    left: calc(100% - 14pt - 12pt) !important;
+    bottom: calc(14pt + 12pt);
+}
+
+.flow-fig4 figcaption p,
+.flow-fig9 figcaption p { 
+    .figcaption-over(); 
+}
+
+.flow-fig2 figcaption p,
+.flow-fig5 figcaption p,
+.flow-fig7 figcaption p { background-color: none; }
+
+
+#flow-main > blockquote:nth-of-type(3) {
+    //FIXME: Does not work!
+    /*-webkit-region-break-before: always;*/
+            /*region-break-before: always;*/
+                   /*break-before: always;*/
+}
+
+
+
+// Pas de footer sur ces pages
+.no-footer(@page) {
+    .paper:nth-of-type(@{page}) .body:before,
+    .paper:nth-of-type(@{page}) .body:after { content: "" }
+}
+
+.no-footer(1);
+.no-footer(16);
+
+
+
+#flow-main figure:nth-of-type(1) img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+#flow-main figure:nth-of-type(2) img { 
+    height: 100%;
+    width: 100%;
+    object-fit: contain; 
+}
+#flow-main figure:nth-of-type(3) img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+#flow-main figure:nth-of-type(4) img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+#flow-main figure:nth-of-type(5) img { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+
+#flow-main figure:nth-of-type(6) {
+    overflow: hidden;
+}
+#flow-main figure:nth-of-type(6) img {
+    /*height: 100%;*/
+    /*width: auto;*/
+}
+.fig6-bis {
+    /*height: 100%;*/
+    /*width: auto;*/
+}
+.fig6-bis img {
+    object-position: -425pt;
+}
+
+#flow-main figure:nth-of-type(7) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#flow-main figure:nth-of-type(8) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#flow-main figure:nth-of-type(9) img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+#flow-main figure:nth-of-type(10) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .contexte {
     margin-bottom: 13px;
@@ -77,10 +188,10 @@ figure {
 }
 
 img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    /*display: block;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*object-fit: cover;*/
 }
 
 article > header {
@@ -108,11 +219,16 @@ article > blockquote:nth-of-type(4) p:last-child:before {
 
 h2 { display: none; }
 
-.enquete > p:nth-of-type(3) {
+.debut {
     .w5;
     float: right;
     margin-bottom: @line-height;
 }
+
+p.debut + p {
+    text-indent: 0!important;
+}
+
 .enquete > p:nth-of-type(3) + p { text-indent: 0; }
 
 .inline-fn {
@@ -130,8 +246,9 @@ h2 { display: none; }
     line-height: 9pt;
 }
 
-blockquote { 
+article > blockquote { 
     margin: @line-height 0;
+    margin-top: @line-height * 3;
 }
 
 .exergue {
@@ -145,6 +262,7 @@ blockquote {
     font-size: 12pt; 
     line-height: @line-height;
     font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
 .chapeau {
