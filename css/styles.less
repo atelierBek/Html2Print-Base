@@ -365,14 +365,14 @@ figcaption,
     letter-spacing: -1pt;
     padding-top: 6pt * 1;
     text-align: center;
-    text-shadow:
-    3px 3px 0 white,
+    // text-shadow:
+    // 3px 3px 0 white,
     /* Simulated effect for Firefox and Opera
        and nice enhancement for WebKit */
-   -1px -1px 0 white,
-    1px -1px 0 white,
-   -1px  1px 0 white,
-    1px  1px 0 white;
+  //  -1px -1px 0 white,
+  //   1px -1px 0 white,
+  //  -1px  1px 0 white,
+  //   1px  1px 0 white;
 }
 
 .rubrique h2 {
@@ -434,8 +434,8 @@ figcaption,
   letter-spacing: -0.1pt;
 }
 
-.filet {
-    border-left:  0.75pt solid black;
+rubrique .filet {
+    border-left:  2pt solid black;
     padding-left: 4.5pt + (0.75 / 2);
 }
 
@@ -453,13 +453,16 @@ figcaption,
     line-height: (@line-height / 8) * 6;
     list-style-type: none;
     font-style: normal;
-    color: lighten(#2A85A4, 20%);
+    // color: lighten(#2A85A4, 20%);
 }
 
 .photo > .footnotes em,
 .rubrique > .footnotes em {
     font-style: normal;
-    color: #2A85A4;
+    // color: #2A85A4;
+}
+.rubrique p.auteur {
+    font-weight: 600;
 }
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
