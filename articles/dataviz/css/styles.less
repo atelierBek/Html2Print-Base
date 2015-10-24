@@ -33,14 +33,16 @@ body { counter-reset: folio 125 - 1; }
   // padding: 5px 0;
   text-shadow: 0 0 0 ;
   font-weight: normal;
-  color:#1e60e1 !important;
+  color:#39914f !important;
+  margin-top: 56pt;
 }
+
 .chapeau{
-    -webkit-region-break-after: always;
-             region-break-after: always;
-                    break-after: always-region;
-  background-color:#1e60e1;
-  color: #fab547 !important;
+    // -webkit-region-break-after: always;
+    //          region-break-after: always;
+    //                 break-after: always-region;
+  background-color:#39914f;
+  color: #fffe35 !important;
   border-top: 2pt solid black;
   border-bottom: 2pt solid black;
 
@@ -53,7 +55,7 @@ body { counter-reset: folio 125 - 1; }
 
 }
 .rubrique-title{
-  border-bottom: 2pt solid #1e60e1;
+  border-bottom: 2pt solid #39914f;
 }
 img {
     //display: block;
@@ -68,11 +70,12 @@ img {
 .fig4  figure{
 //margin-left: -200pt;
 width: 373%;
-margin-left: -485pt;
-
-
-
+margin-left: -265pt;
 }
+.fig5 {
+margin-top: 12pt;
+}
+
 .fig3  figure{
 width:205%;
 
@@ -82,6 +85,68 @@ h2:nth-of-type(4){
              region-break-before: always;
                     break-before: always-region;
 }
+.rubrique-title, .rubrique-subtitle{
+  margin-left: -140pt;
+}
+
+#page-1 .rubrique > p {
+  font-weight: 500;
+}
+#page-2 .rubrique > p {
+  font-weight: 600;
+}
+.filet {
+    border-left:  2pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
+}
+ p:last-of-type {
+   font-family: 'Alfphabet-Condensed';
+   margin: @line-height;
+   font-size: 7.5pt;
+   line-height: (@line-height / 8) * 6;
+   list-style-type: none;
+   font-style: normal;
+   color: #fffe35;
+     -webkit-region-break-after: always;
+              region-break-after: always;
+                    break-after: always-region;
+ }
+ .auteur{
+    //  -webkit-region-break-after: always;
+    //           region-break-after: always;
+    //                   break-after: always-region;
+
+ }
+
+ .footnotes {
+   color: #39914f;
+     list-style-type: none;
+     font-family: 'Alfphabet-Condensed';
+//     font-family: 'Alfphabet';
+     margin: 0;
+     font-size: 7.5pt;
+     line-height: (@line-height / 8) * 6;
+     list-style-type: none;
+     font-style: normal;
+     padding: 0 !important;
+ }
+  .footnotes:first-of-type{
+    -webkit-region-break-after: always;
+             region-break-after: always;
+                     break-after: always-region;
+  }
+ .footnotes em {
+     color: #db2823;
+ }
+ a > sup {
+    font-weight: 800;
+    color: #fffe35;
+ }
+ .rubrique > .footnotes li:first-of-type{
+   border-top: 0pt double black;
+   margin-top:0 !important;
+   padding-top:0 !important;
+ }
 
 // .chapeau {
 //   -webkit-region-break-after: always;
