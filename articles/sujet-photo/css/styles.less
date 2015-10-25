@@ -38,6 +38,11 @@
 #flow-main figure:nth-of-type(13) figcaption { .flow-into(flow-figcaption13); }
 .flow-figcaption13 { .flow-from(flow-figcaption13); }
 
+#flow-main figure:nth-of-type(14) figcaption { .flow-into(flow-figcaption14); }
+.flow-figcaption14 { .flow-from(flow-figcaption14); }
+.flow-figcaption14:before { content: "\E010"; font-family: "Medor"; font-size: 0.75em; line-height: @line-height; margin-bottom: @line-height; }
+
+
 
 //////////
 
@@ -80,6 +85,10 @@
 #flow-main figure:nth-of-type(13) { .flow-into(flow-fig13); }
 .flow-fig13 { .flow-from(flow-fig13); }
 
+#flow-main figure:nth-of-type(14) { .flow-into(flow-fig14); }
+.flow-fig14 { .flow-from(flow-fig14); }
+
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -101,18 +110,7 @@
 .footnotes li { margin-bottom: (@line-height / 8) * 6; }
 
 
-.photo > p {
-   font-family: 'Work Sans';
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: -0.05em;
-  font-size: 9pt;
-  line-height: @line-height*0.95;
-  em{
-    font-size: 9.2pt;
-    font-family: "Century Schoolbook";
-  }
-}
+
 
 
 .s_titre {
@@ -130,11 +128,13 @@ img {
     width: 100%;
 }
 
+// FIXME: Seem to cause troubles: when printing the image does not show up
 figure:nth-of-type(1),
 figure:nth-of-type(2) {
      overflow: hidden;
 }
 
+// FIXME: Seem to cause troubles: when printing the image does not show up
 figure:nth-of-type(1) img,
 figure:nth-of-type(2) img {
      width: auto;
@@ -182,6 +182,7 @@ figure:nth-of-type(6) img {
   object-position: 0 -40pt;
 }
 
+
 figure:nth-of-type(8) img {
   width: 100%;
   height: 100%;
@@ -208,6 +209,18 @@ figure:nth-of-type(12) img {
   height: 100%;
   object-fit: cover;
 }
+figure:nth-of-type(13) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -63px -52px;
+}
+figure:nth-of-type(14) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
 /* reset folio */
