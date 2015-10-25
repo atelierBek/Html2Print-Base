@@ -20,6 +20,33 @@
         flow-from: flow-title;
 }
 
+
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
+
+img {
+
+}
+
+figure:nth-of-type(1),
+figure:nth-of-type(2) {
+     width: 140%;
+}
+
+figure:nth-of-type(1) img,
+figure:nth-of-type(2) img {
+}
+
+figure:nth-of-type(2) {
+  margin-left: -510pt;
+  margin-top: -21pt;
+}
+
+
 /* reset folio */
 body { counter-reset: folio 60 - 1; }
 

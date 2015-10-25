@@ -145,7 +145,6 @@ figcaption,
     padding: 0;
     font-size: 18pt;
     line-height: 18pt;
-    margin: @line-height 0;
 }
 
 .enquete > header > .authors:before {
@@ -164,9 +163,9 @@ figcaption,
 
 .enquete > h2,
 .enquete > h3 {
-    /*-webkit-region-break-after: avoid;*/
-            /*region-break-after: avoid;*/
-                   /*break-after: avoid-region;*/
+    -webkit-region-break-after: avoid;
+            region-break-after: avoid;
+                   break-after: avoid-region;
 
     font-family: "Erbar condensed";
     font-weight: normal; ;
@@ -251,11 +250,8 @@ figcaption,
     float: left;
     font-family: "Erbar condensed";
     font-weight: bold;
-    font-size: @line-height * 3.5;
-    line-height: @line-height * 3;
-    position: relative;
-    top: 0.325em;
-
+    font-size: @line-height * 3.325;
+    line-height: @line-height * 3.325;
 }
 
 .enquete .making-of {
@@ -438,16 +434,9 @@ figcaption,
   letter-spacing: -0.1pt;
 }
 
-@filet: 0.75pt;
-@padding-filet: (@col-gutter - @filet) / 2;
-
-.filet:before {
-    content: "  ";
-    width: @filet;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    left: (@padding-filet + @filet) * -1;
+rubrique .filet {
+    border-left:  2pt solid black;
+    padding-left: 4.5pt + (0.75 / 2);
 }
 
 .rubrique .inline-fn{
@@ -666,44 +655,100 @@ figcaption,
  * -----------------
  */
 
-.photo header > h1{
-  font-family: "Belgika8th";
-  text-transform: uppercase;
-  font-size: 60pt;
-  line-height: @line-height*4.5;
-  text-align: center;
-}
-.photo h2 {
+ .photo > header > h1{
+     font-family: "Erbar condensed";
+     font-weight: bold;
+     font-size: 50pt;
+     line-height: 45pt;
+     text-transform: uppercase;
+     text-align: center;
+ }
+
+ .photo > header > .authors {
+     font-family: "Erbar condensed";
+     font-weight: bold;
+     padding: 0;
+     font-size: 18pt;
+     line-height: 18pt;
+     text-align: center;
+ }
+
+ .photo > header > .authors:before {
+     content: "Par ";
+ }
+ .photo .chapeau {
+   font-size: 14pt;
+   line-height: 21pt;
+   font-family: 'Belgika8th';
+   margin-bottom: @line-height *2;
+   text-align: left;
+
+ }
+
+
+.photo > h2 {
   margin-top: @line-height;
   text-transform: uppercase;
-  font-size: 10pt;
+  font-size: 8pt;
   font-family: 'Belgika5th';
   font-weight: normal;
   font-style: normal;
 }
 
-.photo > .chapeau {
-  font-size: 9pt;
-  font-family: 'Belgika5th';
-}
-
-.photo figcaption > p {
-  font-family: 'Work Sans';
+.photo > p {
+   font-family: 'Work Sans';
   font-weight: 300;
   font-style: normal;
-  font-size: 7pt;
-  line-height: @line-height/4;
-  display: inline;
+  letter-spacing: -0.03em;
+  font-size: 9pt;
+  line-height: @line-height*0.95;
+  text-align: justify;
+  em{
+    font-size: 9.2pt;
+    letter-spacing: 0em;
+    font-family: "Century Schoolbook";
+  }
 }
-
+.photo > p:not(.chapeau) + p {
+  text-indent: @line-height;
+}
+.photo > p.auteur {
+  margin-top: @line-height;
+  text-indent: 0;
+}
+.photo figcaption {
+  font-family: 'Work Sans';
+  font-weight: 300;
+  font-size: 7pt;
+  line-height: @line-height;
+  margin-bottom: @line-height;
+}
 .photo figcaption > h2 {
   font-family: 'Work Sans';
   font-weight: 600;
-  font-style: normal;
-  font-size: 7pt;
-  display: inline;
-  line-height: @line-height/2;
+  font-size: inherit;
+  float: left;
+  margin-right: 1em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.photo figcaption > h2:last-child {
+  float: none;
+}
 
+.photo .exergue {
+  display: none;
+}
+
+.photo ol {
+  margin: 0;
+  padding: 0;
+  .w3;
+  margin-top: @line-height * 2;
+}
+
+.photo #page-8 figcaption > p {
+  margin-bottom: 28pt;
 }
 
 
@@ -765,17 +810,12 @@ figcaption,
 
 .rubrique figcaption p,
 .enquete figcaption p {
-    /*background-color: white;*/
+    background-color: white;
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 6pt 1em;
     .w4;
-}
-
-.figcaption-over {
-    background-color: white;
-    padding: 6pt 1em;
 }
 
 .figcaption-allover {
