@@ -1,6 +1,7 @@
 /* reset folio */
 
 @import "../../../css/main.less";
+@line-height: 11.5pt;
 
 body { counter-reset: folio 106 - 1; }
 
@@ -36,59 +37,116 @@ img {
     left: 0;
     width: 100%;
     margin: 0 !important;
-    border: 1pt solid black;
 
 }
 
 .fig1 figure {
-
-// -webkit-transform: rotate(90deg);// [> Chrome, Safari, Opera <]
-// -ms-transform: rotate(90deg); //[> IE 9 <]
-// transform: rotate(90deg);
-// -webkit-transform-origin: left top 0;//[> Chrome, Safari, Opera <]
-// -ms-transform-origin: left top 0; //[> IE 9 <]
-// transform-origin: left top 0;
-
-width: 100%;
-margin-left: 0pt;
-margin-top: 0pt;
-text-align: left;
+  width: 106%;
+  text-align: left;
+  margin-left: -31pt;
+  margin-top: -29pt;
 }
 
 .rubrique h1 {
   // padding: 5px 0;
   text-shadow: 0px 0px 0 #ffff00 ;
   font-weight: normal;
-  color:#a05a2c !important;
+  color:#FE02FC !important;
   // font-family: "Career";
   //font-family: "Career-salle13";
   // font-family: 'Career-turning';
   font-family: 'Career-point';
+  margin-top: 223pt;
 
 }
 
 .rubrique-title, .rubrique-subtitle{
-  margin-left: -140pt;
+ margin-left: -140pt;
 
 }
 .rubrique-title{
-  border-bottom: 2pt solid #d38d5f;
+  border-bottom: 2pt solid #FE02FC;
 }
+
+
 .chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
-  background-color:#ffff00;
-  color: #a05a2c  !important;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
-
+    -webkit-region-break-after: always;
+             region-break-after: always;
+                    break-after: always-region;
+  background-color:#e1f17a;
+  color: #FE02FC !important;
   padding: @line-height / 2;
-  margin-bottom: @line-height * 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+  margin-bottom: (@line-height) * 2;
 
 }
 
-#page-1 .rubrique > p{
-  font-weight: normal !important;
-  color: black;
+.rubrique > .footnotes {
+    color: #FE02FC;
+    list-style-type: none;
+    margin-top: @line-height;
+}
+.rubrique > .footnotes em {
+
+   font-style: italic;
+
+}
+.rubrique h2 {
+  margin-top: 11pt ;
+  margin-bottom: 0;
+  line-height: @line-height;
+}
+.rubrique h2:first-of-type {
+  margin-top: 0pt ;
+
+}
+  figcaption{
+    font-family: "Alfphabet", sans-serif;
+    font-size: 7pt;
+    line-height: 9pt;
+    margin-top: @line-height *2;
+
+
+}
+
+figcaption p {
+   background-color: white;
+  //  position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 6pt 1em;
+   .w3 !important;
+   border: 1px solid black;
+   position: relative !important;
+
+}
+
+.figcaption-allover {
+    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+ figcaption footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            margin-left: 103%;
+margin-bottom: 0pt;
+margin-right: -43%;
+}
+
+.auteur{
+  -webkit-region-break-after: always;
+           region-break-after: always;
+                  break-after: always-region;
+}
+
+a > sup {
+   font-weight: 900;
+   color: #FE02FC;
 }

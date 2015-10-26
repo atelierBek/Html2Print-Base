@@ -1,4 +1,5 @@
 @import "../../../css/main.less";
+@line-height: 11.5pt;
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -19,16 +20,44 @@
         flow-from: flow-title;
 }
 
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
 /* reset folio */
 body {
   counter-reset: folio 42 - 1;
  }
+ .rubrique > p {
+   line-height: @line-height;
 
+ }
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Alphabet"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+.rubrique h1 {
+  // padding: 5px 0;
+  text-shadow: 0 0 0 ;
+  font-weight: normal;
+  color:#f3e1e2 !important;
+  margin-top: 48pt;
+}
+.chapeau{
 
+  background-color:#b14542;
+  color: #f3e1e2 !important;
+
+  padding: @line-height / 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+  margin-bottom: (@line-height) * 2;
+
+}
+
+
+.rubrique-title{
+  border-bottom: 2pt solid #f3e1e2;
+}
 img {
     //display: block;
     position: absolute;
@@ -36,7 +65,92 @@ img {
     left: 0;
     width: 100%;
     margin: 0 !important;
-    border: 1pt solid #1e60e1;
 }
-.fig1{
+.fig1 figure{
+  width: 219%;
 }
+.fig5 figure{
+  width: 52%;
+    margin-top: 4pt;
+margin-left: 0pt;
+}
+.fig6 figure{
+  width: 45%;
+  margin-left: 9pt;
+  margin-top: 17pt;
+}
+.fig7 figure{
+  width: 54%;
+    margin-left: 7pt;
+}
+
+.fin  + p {
+-webkit-region-break-after: always;
+         region-break-after: always;
+                 break-after: always-region;
+                 margin-bottom: @line-height *20;
+
+}
+figcaption{
+  font-family: "Alfphabet", sans-serif;
+  font-size: 7pt;
+  line-height: 9pt;
+}
+
+figcaption p {
+   background-color: white;
+   position: relative !important;
+   bottom: 0;
+   left: 0;
+   padding: 6pt 1em;
+   .w3 !important;
+   border: 1px solid black;
+
+}
+
+.figcaption-allover {
+  padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+figcaption footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+          margin-left: 103%;
+margin-bottom: 0pt;
+margin-right: -43%;
+}
+
+.footnotes {
+    color: #f3e1e2;
+    list-style-type: none;
+    margin-top: 0pt;
+
+    -webkit-region-break-before: always;
+             region-break-before: always;
+                    break-before: always-region;
+}
+.footnotes em {
+
+   font-style: italic;
+
+}
+
+.auteur{
+-webkit-region-break-after: always;
+         region-break-after: always;
+                break-after: always-region;
+}
+
+.y7 {
+margin-top: -9.5pt;
+height: (@line-height) *5
+
+}
+
+.rubrique > .footnotes li { text-indent: 0em !important; }

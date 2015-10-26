@@ -1,4 +1,5 @@
 @import "../../../css/main.less";
+@line-height: 11.5pt;
 
 
 #flow-main {
@@ -59,19 +60,7 @@ img {
 
 }
 
-figcaption {
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
-    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
-    -ms-transform-origin: left top 0; /* IE 9 */
-    transform-origin: left top 0;
-    position: relative;
-    margin-left: 100%;
-    width:100%;
-    background-color: #fffe35;
 
-}
 
 .rubrique h1 {
   color: #f1d0c8;
@@ -93,33 +82,7 @@ blockquote > footer {
     font-size: 1rem;
     text-align: right;
 }
-.rubrique .footnotes > li{
-    font-family: "Erbar condensed";
-    font-weight: normal;
-    font-style: normal;
-    margin: 0;
-    font-size: 8pt;
-}
-.rubrique .footnotes > li > a {
-    color: black;
-    text-decoration: none;
-}
 
-ul {
-  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-  -ms-transform: rotate(-90deg); /* IE 9 */
-  transform: rotate(-90deg);
-  -webkit-transform-origin: left bottom 0; /* Chrome, Safari, Opera */
-  -ms-transform-origin: left bottom 0; /* IE 9 */
-  transform-origin: left bottom 0;
-  position: relative;
-  margin-left: 133pt;
-  margin-top: 140pt;
-  width:100%;
-  list-style-type: none;
-    font-family: "Erbar condensed";
-    line-height: @line-height;
-}
 
 h2:last-of-type{
   display: none;
@@ -131,20 +94,9 @@ h2:nth-of-type(3){
 p > em{
   font-family: 'Century Schoolbook' !important;
   font-style: italic !important;
+}
 
-}
-strong{
-  font-family: "Belgika8th";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 8pt;
-  display: inline;
-}
-strong::after{
-  content: ' M';
-  font-family: 'Medor';
-  color:yellow;
-}
+
 .authors{
   display: none;
 }
@@ -162,17 +114,12 @@ strong::after{
 }
 
 .chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
   background-color:#f1d0c8;
   color: #1e60e1 !important;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
   padding: @line-height / 2;
   padding-top: @line-height  !important;
   padding-bottom: @line-height  !important;
-  margin-bottom: (@line-height /4) * 3;
+  margin-bottom: (@line-height)  ;
 
 }
 
@@ -189,5 +136,53 @@ strong::after{
     list-style-type: none;
 }
 .rubrique > .footnotes em {
-    color: #3acbe1;
+  font-style: italic;
+  line-height: (@line-height/4)*3;
+}
+
+.rubrique h2 {
+  margin-top: @line-height;
+  line-height: @line-height;
+}
+  figcaption{
+    font-family: "Alfphabet", sans-serif;
+    font-size: 7pt;
+    line-height: 9pt;
+    margin-top: 11.5pt !important;
+
+}
+
+ figcaption p {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6pt 1em;
+    .w3;
+}
+
+.figcaption-allover {
+    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+ figcaption footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            margin-left: 103%;
+margin-bottom: 0pt;
+margin-right: -43%;
+}
+
+.footnotes{
+margin-top: @line-height *25;
+}
+a > sup {
+   font-weight: 900;
+   color: #1e60e1;
 }

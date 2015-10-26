@@ -375,20 +375,21 @@ figcaption,
   //   1px  1px 0 white;
 }
 
+
 .rubrique h2 {
-  letter-spacing: 0pt;
-    font-family: "career";
-    font-weight: normal;
-    font-size: 11pt;
-    line-height:  @line-height;
-    margin-top:  (@line-height/4) * 3;
-    margin-bottom: @line-height/4;
+  font-family: "work sans";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+  text-align: center;
+
 }
 
 //Style lettrine pour les rubriques.
 
 .rubrique > header > h2{
-  font-size: 18pt;
+  font-size: 1pt;
   margin-top: 0;
   margin-bottom: 0px;
   font-weight: normal;
@@ -409,46 +410,50 @@ figcaption,
 
 .rubrique > .chapeau {
   font-family: 'Work Sans';
-    font-weight: 600;
-  //  margin-bottom: @line-height ;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
-  padding: @line-height / 2;
-  padding-top: @line-height  !important;
-  padding-bottom: @line-height  !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .rubrique > p {
   font-family: 'Work Sans';
   font-weight: 500;
-  font-size: 9pt;
-  letter-spacing: -0.1pt;
-  line-height: @line-height;
+  font-size: 8.5pt;
+  letter-spacing: -0.03em;
+
 }
 
 .rubrique > p > em {
-  line-height: (@line-height/4) *3;
+  // line-height: (@line-height/4) *3;
+  font-family: 'Century Schoolbook';
+  font-style: italic;
   font-size: 9pt;
 
+}
+.rubrique p.auteur{
+  margin-top: 0pt !important
 }
 
 #page-1 .rubrique > p {
   font-family: 'Work Sans', 'Univers else';
   font-weight: 600;
   font-size: 9pt;
-  letter-spacing: -0.1pt;
 }
 
-@filet: 2pt;
+@filet: 1pt;
 @padding-filet: (@col-gutter - @filet) / 2;
 
 .filet:before {
-    content: "  ";
-    width: @filet;
+    content: " ";
+    border-left: 3pt double black;
+    // border-right: @filet solid black;
+
+    width: 0;
     height: 100%;
-    background-color: black;
+    // background-color: black;
     position: absolute;
-    left: (@padding-filet + @filet) * -1;
+    // left: (@padding-filet + @filet) * -1;
+    left: -7pt;
+
 
 }
 
@@ -485,9 +490,9 @@ figcaption,
 .rubrique > .footnotes li { text-indent: -0.25em; }
 .rubrique > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
 .rubrique > .footnotes li:first-of-type{
-  border-top: 2pt double black;
-  margin-top: (@line-height /4) * 3;
-  padding-top: @line-height;
+  text-indent: -0.25em !important;
+  margin-top: 0pt;
+  padding-top:0pt;
 }
 
 .rubrique-title, .rubrique-subtitle{
