@@ -22,7 +22,7 @@
  * with the .page class (or it's children, like .header, .body and .footer)
  */
 @page {
-    size: @paper-width @paper-height+2pt; 
+    size: @paper-width @paper-height+2pt;
     margin: 0;
 }
 
@@ -140,7 +140,8 @@
     .paper {
         /* centrer la page à l'écran */
         /* UI */
-        background-color: white;
+        // background-color: white;
+        background: transparent;
         /* UI */
         margin-top: 1em;
         /* UI */
@@ -154,7 +155,6 @@
     .preview .page {
         outline: 1px solid lightgray;
         background-color: white;
-        overflow: hidden;
     }
 }
 
