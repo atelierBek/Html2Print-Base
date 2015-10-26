@@ -8,6 +8,7 @@
         , $spreadBtn = $('[name="spread"]')[0]
         , $zoomBtn = $('[name="zoom"]')[0]
         , $pageBtn = $('[name="page"]')[0]
+        , $displayBtn = $('[name="display"]')[0]
         , $reloadBtn = $('#reload')[0]
         , $printBtn = $('#print')[0]
     ;
@@ -42,6 +43,10 @@
             }
         }
 
+        function switchPreview(event) {
+            console.log(this.value);
+        }
+
         function switchSpread(event) {
             if(this.checked) {
                 $doc.classList.add("spread");
@@ -67,6 +72,31 @@
             $doc.querySelector('body').scrollTop = offsetTop;
         }
 
+        function changeDisplay(event) {
+            var htmlelt = $doc.querySelectorAll('html')[0];
+            var elts = $doc.querySelectorAll('img');
+
+            $doc.classList.remove("low");
+            $doc.classList.remove("bw");
+            $doc.classList.remove("color");
+            $doc.classList.add(this.value);
+
+            for (var i = 0, l = elts.length; i < l; i ++) {
+                var elt = elts[i];
+
+                if (!elt.dataset.low) { elt.dataset.low = elt.src; }
+
+                elt.style.visibility = 'visible';
+
+                if (elt.dataset[this.value]) {
+                    elt.src = elt.dataset[this.value];
+                } else {
+                    elt.src = "";
+                    elt.style.visibility = 'hidden'
+                }
+            }
+        }
+
         function reload(event) {
            $viewport.contentWindow.location.reload();
         }
@@ -84,6 +114,7 @@
         $pageBtn.addEventListener("change", changePage);
         $reloadBtn.addEventListener("click", reload);
         $printBtn.addEventListener("click", print);
+        $displayBtn.addEventListener("change", changeDisplay);
 
 
         switchPreview.bind($previewBtn)();

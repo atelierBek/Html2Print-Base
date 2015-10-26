@@ -1,4 +1,8 @@
 @color-black: black;
+
+html.bw .paper,
+html.color .paper { background-color: transparent!important; }
+
 /*@color-black: transparent;*/
 
 /*h1,*/
@@ -107,7 +111,7 @@ p.fin::after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
-    color: @color-black;
+    color: inherit!important;
 }
 
 
@@ -158,6 +162,7 @@ figcaption,
 
 .enquete > header > .authors:before {
     content: "Par ";
+    color: inherit;
 }
 
 .enquete > .chapeau {
@@ -250,6 +255,7 @@ figcaption,
 }
 .enquete > aside.exergue > blockquote footer:before {
     content: "— ";
+    color: inherit!important;
 }
 
 .lettrine-enquete {

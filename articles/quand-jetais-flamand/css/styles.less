@@ -4,6 +4,10 @@
 @flamand-bleu: #4F53A2;
 @flamand-or: #DE7503;
 
+html.color body {
+    color: transparent;
+}
+
 
 /* Styles for 02_quand-jetais-flamand */
 /*GENERATED*/
@@ -87,6 +91,10 @@ body { counter-reset: folio 23 - 1; }
     bottom: calc(~"14pt + 12pt") !important;
 }
 
+.flow-fig6 figcaption footer {
+    left: calc(~"100% - 9pt") !important;
+}
+
 .flow-fig4 figcaption p,
 .flow-fig9 figcaption p { 
     .figcaption-over(); 
@@ -106,10 +114,6 @@ body { counter-reset: folio 23 - 1; }
 
 #flow-main aside.exergue:nth-of-type(5) blockquote {
     padding-bottom: @line-height / 2;
-    //FIXME: Does not work!
-    /*-webkit-region-break-before: always;*/
-            /*region-break-before: always;*/
-                   /*break-before: always;*/
 }
 
 
@@ -158,13 +162,13 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(6) img {
     /*height: 100%;*/
     /*width: auto;*/
+    object-position: -425pt;
 }
 .fig6-bis {
     /*height: 100%;*/
     /*width: auto;*/
 }
 .fig6-bis img {
-    object-position: -425pt;
 }
 
 #flow-main figure:nth-of-type(7) img {
@@ -217,6 +221,7 @@ article > blockquote:nth-of-type(2) p:last-child:before,
 article > blockquote:nth-of-type(3) p:last-child:before,
 article > blockquote:nth-of-type(4) p:last-child:before {
     content: "— ";
+    color: inherit!important;
 }
 
 .contained {
@@ -280,6 +285,10 @@ article > blockquote:before {
     color: @flamand-or;
 }
 
+html.bw article > blockquote:before {
+    visibility: hidden!important;
+}
+
 
 
 .exergue {
@@ -300,7 +309,16 @@ article > blockquote:before {
     color: @flamand-bleu;
 }
 
+html.bw #page-2 article:first-of-type > p:first-of-type,
+html.bw .chapeau + p {
+    visibility: hidden!important;
+}
+
 .enquete .making-of {
     border-top: 4pt double @flamand-bleu;
     color: @flamand-bleu;
+}
+
+html.bw .enquete .making-of {
+    visibility: hidden!important;
 }
