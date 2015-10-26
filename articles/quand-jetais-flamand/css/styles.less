@@ -79,8 +79,8 @@ body { counter-reset: folio 23 - 1; }
 
 .flow-fig1 figcaption footer,
 .flow-fig10 figcaption footer { 
-    left: calc(100% - 14pt - 12pt) !important;
-    bottom: calc(14pt + 12pt);
+    left: calc(~"100% - 14pt - 12pt") !important;
+    bottom: calc(~"14pt + 12pt") !important;
 }
 
 .flow-fig4 figcaption p,
@@ -93,7 +93,15 @@ body { counter-reset: folio 23 - 1; }
 .flow-fig7 figcaption p { background-color: none; }
 
 
-#flow-main > blockquote:nth-of-type(3) {
+#flow-main > blockquote:nth-of-type(5) {
+    //FIXME: Does not work!
+    /*-webkit-region-break-before: always;*/
+            /*region-break-before: always;*/
+                   /*break-before: always;*/
+}
+
+#flow-main aside.exergue:nth-of-type(5) blockquote {
+    padding-bottom: @line-height / 2;
     //FIXME: Does not work!
     /*-webkit-region-break-before: always;*/
             /*region-break-before: always;*/
@@ -157,7 +165,8 @@ body { counter-reset: folio 23 - 1; }
 #flow-main figure:nth-of-type(7) img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: 0 0;
 }
 
 #flow-main figure:nth-of-type(8) img {
@@ -248,21 +257,30 @@ p.debut + p {
 
 article > blockquote { 
     margin: @line-height 0;
-    margin-top: @line-height * 3;
+    margin-top: @line-height * 2;
 }
+
+article > blockquote + p::first-letter { 
+    .lettrine-enquete;
+}
+
+article > blockquote:before {
+    content: "\e004";
+    font-size: 16pt;
+    line-height: 24pt;
+    .w4;
+    font-family: "Medor";
+    display: block;
+    text-align: center;
+}
+
+
 
 .exergue {
     .w5();
     margin-top: @line-height * 2;
     margin-bottom: @line-height * 2;
     margin-left: -@col-gutter-width;
-}
-
-.enquete > h3 { 
-    font-size: 12pt; 
-    line-height: @line-height;
-    font-weight: bold;
-    letter-spacing: 0.02em;
 }
 
 .chapeau {

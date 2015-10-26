@@ -163,26 +163,24 @@ figcaption,
 
 .enquete > h2,
 .enquete > h3 {
-    -webkit-region-break-after: avoid;
-            region-break-after: avoid;
-                   break-after: avoid-region;
+    /*-webkit-region-break-after: avoid;*/
+            /*region-break-after: avoid;*/
+                   /*break-after: avoid-region;*/
 
     font-family: "Erbar condensed";
-    font-weight: normal; ;
+    font-weight: bold;
     line-height:  @line-height;
     text-transform: uppercase;
-    margin-top: @line-height;
+    font-size: @line-height;
+    position: relative;
+    top: @line-height * .5 * -1;
+    margin-bottom: 0;
+    letter-spacing: 0.02em;
 }
-.enquete > h2 {
-    font-size: 15pt;
-    line-height: 15pt;
-    margin-bottom: (@line-height * 2) - 15pt;
-}
-.enquete > h3 { font-size: 10.5pt; }
 
-.enquete > p + h2 {
-    margin-top: @line-height;
-    margin-bottom: @line-height;
+.enquete > p + h2,
+.enquete > p + h3 {
+    margin-top: @line-height * 2;
 }
 
 .enquete > p:not(.chapeau) + p { text-indent: @line-height; }
@@ -242,26 +240,33 @@ figcaption,
     content: "— ";
 }
 
-
-.enquete p.debut:first-letter,
-.enquete > h2 + p:first-letter {
+.lettrine-enquete {
     padding-right: 0.125em;
     height: @line-height * 3;
     float: left;
     font-family: "Erbar condensed";
     font-weight: bold;
     font-size: @line-height * 3.325;
-    line-height: @line-height * 3.325;
+    line-height: @line-height * 3;
+    position: relative;
+    top: 0.325em;
+}
+
+
+.enquete p.debut:first-letter,
+.enquete > h2 + p:first-letter {
+    .lettrine-enquete;
 }
 
 .enquete .making-of {
-    border-top: 4pt double #2A85A4;
-    padding-top: 3pt;
+    border-top: (@line-height / 3pt) double #2A85A4;
+    padding-top: (@line-height / 3) * 2pt;
     margin-top: 2 * @line-height;
     font-family: "Alfphabet";
-    /*font-family: "Alfphabet-Condensed";*/
     color: #2A85A4;
 }
+
+.enquete .making-of h1 { font-size: @line-height; }
 
 .enquete--long > header h1 {
     font-size:  @line-height * 6;
@@ -811,44 +816,50 @@ figcaption,
 }
 
 
-.rubrique figcaption,
 .rubrique figure,
-.enquete figcaption,
 .enquete figure {
     position: relative;
+    width: 100%;
 }
 
 .rubrique figcaption,
 .enquete figcaption {
+    position: absolute;
     font-family: "Alfphabet", sans-serif;
     font-size: 7pt;
     line-height: 9pt;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .rubrique figcaption p,
 .enquete figcaption p {
     background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 6pt 1em;
     .w4;
 }
 
-.figcaption-allover {
-    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
-}
+.figcaption-over { padding: 6pt; }
+.figcaption-allover { padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt); }
 
 .rubrique figcaption footer,
 .enquete figcaption footer {
     position: absolute;
+    width: 100%;
     bottom: 0;
-    left: 0;
+    left: calc(~"100% + 9pt");
     margin: 0;
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
+}
+
+.rubrique figcaption footer small,
+.enquete figcaption footer small {
+    font-size: 6pt;
+    line-height: 6pt
 }
 
 
