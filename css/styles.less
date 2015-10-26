@@ -1,3 +1,11 @@
+@color-black: black;
+/*@color-black: transparent;*/
+
+/*h1,*/
+/*img { visibility: hidden; }*/
+
+/*body { color: @color-black; }*/
+
 
 /*
  * Typographie
@@ -99,7 +107,7 @@ p.fin::after {
     content: " M";
     font-size: 6.5pt;
     font-family: "Medor";
-    color: black;
+    color: @color-black;
 }
 
 
@@ -129,7 +137,7 @@ figcaption,
     text-transform: uppercase;
 }
 
-.enquete > header > h1 { margin-top: @line-height * .5; }
+.enquete > header > h1 { margin-top: @line-height * .5; margin-bottom: @line-height; }
 
 .enquete > header > h2 {
     margin-top: @line-height / 2;
@@ -145,6 +153,7 @@ figcaption,
     padding: 0;
     font-size: 18pt;
     line-height: 18pt;
+    margin-bottom: @line-height;
 }
 
 .enquete > header > .authors:before {
@@ -178,11 +187,14 @@ figcaption,
     letter-spacing: 0.02em;
 }
 
+.enquete > figure + h2,
+.enquete > figure + h3,
 .enquete > p + h2,
 .enquete > p + h3 {
     margin-top: @line-height * 2;
 }
 
+.enquete > figure + p:not(.chapeau),
 .enquete > p:not(.chapeau) + p { text-indent: @line-height; }
 
 .enquete sup {
@@ -201,14 +213,14 @@ figcaption,
     list-style-type: none;
 }
 
-.enquete > .footnotes {
-    font-style: normal;
-    color: lighten(#2A85A4, 20%);
-}
-.enquete > .footnotes em {
-    font-style: normal;
-    color: #2A85A4;
-}
+/*.enquete > .footnotes {*/
+    /*font-style: normal;*/
+    /*color: lighten(#2A85A4, 20%);*/
+/*}*/
+/*.enquete > .footnotes em {*/
+    /*font-style: normal;*/
+    /*color: #2A85A4;*/
+/*}*/
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 /*.enquete > .footnotes a[name^="sdfootnote"] { font-weight: bold; }*/
@@ -259,14 +271,22 @@ figcaption,
 }
 
 .enquete .making-of {
-    border-top: (@line-height / 3pt) double #2A85A4;
-    padding-top: (@line-height / 3) * 2pt;
+    border-top: 4pt double;
+    padding-top: @line-height - 4pt;
     margin-top: 2 * @line-height;
     font-family: "Alfphabet";
-    color: #2A85A4;
 }
 
-.enquete .making-of h1 { font-size: @line-height; }
+.enquete .making-of h1 {
+    font-size: @line-height; 
+    font-weight: normal
+}
+.enquete .making-of h1 em { 
+    text-transform: uppercase;
+    font-family: "Medor"; 
+    font-size: 9.5pt;
+    font-style: normal;
+}
 
 .enquete--long > header h1 {
     font-size:  @line-height * 6;
@@ -416,8 +436,8 @@ figcaption,
   font-family: 'Work Sans';
     font-weight: 600;
   //  margin-bottom: @line-height ;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
+  border-top: 2pt solid @color-black;
+  border-bottom: 2pt solid @color-black;
   padding: @line-height / 2;
   padding-top: @line-height  !important;
   padding-bottom: @line-height  !important;
@@ -451,7 +471,7 @@ figcaption,
     content: "  ";
     width: @filet;
     height: 100%;
-    background-color: black;
+    background-color: @color-black;
     position: absolute;
     left: (@padding-filet + @filet) * -1;
 
@@ -490,7 +510,7 @@ figcaption,
 .rubrique > .footnotes li { text-indent: -0.25em; }
 .rubrique > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
 .rubrique > .footnotes li:first-of-type{
-  border-top: 2pt double black;
+  border-top: 2pt double @color-black;
   margin-top: (@line-height /4) * 3;
   padding-top: @line-height;
 }
@@ -504,7 +524,7 @@ figcaption,
  */
 .bd {
 
-    color:white;
+    color: white;
 }
 
 .bd p {
@@ -837,6 +857,9 @@ figcaption,
 .enquete figcaption p {
     background-color: white;
     padding: 6pt 1em;
+    position: absolute;
+    left: 0;
+    bottom: -2pt;
     .w4;
 }
 
