@@ -1,4 +1,5 @@
 @import "../../../css/main.less";
+@line-height: 11.5pt;
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -21,7 +22,7 @@
 }
 /* reset folio */
 body { counter-reset: folio 41 - 1;
-// color: #39914f;
+ color: white;
 
 }
 
@@ -31,7 +32,10 @@ body { counter-reset: folio 41 - 1;
   font-weight: normal;
   color:#fffd73 !important;
 }
+.rubrique > p {
+  line-height: @line-height;
 
+}
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Enquêteke"; }
@@ -45,7 +49,7 @@ img {
     left: 0;
     width: 100%;
     margin: 0 !important;
-    border: 1pt solid black;
+    object-fit: cover;
 
 }
 
@@ -54,27 +58,38 @@ width: 100%;
 // margin-left: -328pt;
 margin-top: -50pt;
 }
-.fig2 figure, .fig3 figure{
-border: 1pt solid black;
-background-color:#2a85a4;
-color: black;
-}
-figcaption{
-  padding-left: @line-height / 2;
-
+.fig3 figure{
+margin-top: 12pt;
 }
 
 .chapeau{
-    -webkit-region-break-after: always;
-             region-break-after: always;
-                    break-after: always-region;
-  background-color:#2a85a4;
-  color: #fffd73 !important;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
+    // -webkit-region-break-after: always;
+    //          region-break-after: always;
+    //                 break-after: always-region;
+  background-color:#fffd73;
+  color: #2a85a4!important;
 
   padding: @line-height / 2;
-  margin-bottom: @line-height * 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+  margin-bottom: (@line-height) * 2;
+
+}
+
+ .footnotes {
+    color: #fffd73;
+    list-style-type: none;
+    margin-top: 0pt;
+    font-family: 'Alfphabet-Condensed';
+    margin: 0;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+    font-style: normal;
+}
+ .footnotes em {
+
+   font-style: italic;
 
 }
 
@@ -85,6 +100,63 @@ figcaption{
 .rubrique-title{
   border-bottom: 2pt solid #fffd73;
 }
-// #page-1 .y5 .flow-main {
-//   margin-top: @line-height 5;
-// }
+.rubrique h2 {
+  margin-top: 11pt ;
+  margin-bottom: 0;
+
+  line-height: @line-height;
+}
+  figcaption{
+    font-family: "Alfphabet", sans-serif;
+    font-size: 7pt;
+    line-height: 9pt;
+    top: 0;
+    margin-top: 72pt;
+    color: black;
+
+}
+
+ figcaption p {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6pt 1em;
+    .w3 !important;
+    border: 1px solid black;
+
+}
+
+.figcaption-allover {
+    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+ figcaption footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            margin-left: 103%;
+margin-bottom: 0pt;
+margin-right: -43%;
+}
+
+.auteur{
+  -webkit-region-break-after: always;
+           region-break-after: always;
+                  break-after: always-region;
+}
+
+a > sup {
+   font-weight: 900;
+   color: #2a85a4;
+}
+
+.filet:before{
+
+  border-left: 3pt double white;
+}

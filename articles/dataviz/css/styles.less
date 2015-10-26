@@ -1,4 +1,6 @@
 @import "../../../css/main.less";
+@line-height: 11.5pt;
+
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -34,26 +36,28 @@ body { counter-reset: folio 125 - 1; }
   text-shadow: 0 0 0 ;
   font-weight: normal;
   color:#39914f !important;
-  margin-top: 56pt;
+  margin-top: 121pt;
 }
+.rubrique > p {
+  line-height: @line-height;
 
+}
 .chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
+
   background-color:#39914f;
   color: #fffe35 !important;
-  border-top: 2pt solid black;
-  border-bottom: 2pt solid black;
+  margin-bottom: @line-height;
 
   padding: @line-height / 2;
-  margin-bottom: @line-height * 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
 
+  -webkit-region-break-after: always;
+           region-break-after: always;
+                  break-after: always-region;
 }
 
-.rubrique-title, .rubrique-subtitle{
 
-}
 .rubrique-title{
   border-bottom: 2pt solid #39914f;
 }
@@ -72,8 +76,9 @@ img {
 width: 373%;
 margin-left: -265pt;
 }
+
 .fig5 {
-margin-top: 12pt;
+margin-top: 17pt;
 }
 
 .fig3  figure{
@@ -89,17 +94,8 @@ h2:nth-of-type(4){
   margin-left: -140pt;
 }
 
-#page-1 .rubrique > p {
-  font-weight: 500;
-}
-#page-2 .rubrique > p {
-  font-weight: 600;
-}
-.filet {
-    border-left:  2pt solid black;
-    padding-left: 4.5pt + (0.75 / 2);
-}
- p:last-of-type {
+
+ .auteur + p {
    font-family: 'Alfphabet-Condensed';
    margin: @line-height;
    font-size: 7.5pt;
@@ -111,45 +107,91 @@ h2:nth-of-type(4){
               region-break-after: always;
                     break-after: always-region;
  }
- .auteur{
-    //  -webkit-region-break-after: always;
-    //           region-break-after: always;
-    //                   break-after: always-region;
+
+
+ .rubrique > .footnotes {
+     color: #39914f;
+     list-style-type: none;
+     margin-top: 0pt;
+ }
+ .rubrique > .footnotes em {
+
+    font-style: italic;
 
  }
 
- .footnotes {
-   color: #39914f;
-     list-style-type: none;
-     font-family: 'Alfphabet-Condensed';
-//     font-family: 'Alfphabet';
-     margin: 0;
-     font-size: 7.5pt;
-     line-height: (@line-height / 8) * 6;
-     list-style-type: none;
-     font-style: normal;
-     padding: 0 !important;
- }
+
   .footnotes:first-of-type{
     -webkit-region-break-after: always;
              region-break-after: always;
                      break-after: always-region;
   }
- .footnotes em {
-     color: #db2823;
- }
+
  a > sup {
-    font-weight: 800;
+    font-weight: 900;
     color: #fffe35;
  }
  .rubrique > .footnotes li:first-of-type{
-   border-top: 0pt double black;
    margin-top:0 !important;
    padding-top:0 !important;
- }
+   }
 
-// .chapeau {
-//   -webkit-region-break-after: always;
-//            region-break-after: always;
-//                   break-after: always-region;
-// }
+  .rubrique  > .l2  > .footnotes  > li{
+font-size: 10pt;
+     }
+
+     figcaption{
+       font-family: "Alfphabet", sans-serif;
+       font-size: 7pt;
+       line-height: 9pt;
+     }
+
+     .oiseau figcaption p {
+       background-color: white;
+      //  position: absolute;
+       bottom: 0;
+       left: 0;
+       padding: 6pt 1em;
+       .w6;
+       text-indent: -1em;
+
+     }
+      .oiseau figcaption p::before {
+        content: "\E00B  ";
+        font-family: "Medor";
+        font-size: 0.75em;
+      }
+
+  .source  figcaption p {
+      //  position: absolute;
+       bottom: 0;
+       left: 0;
+       padding: 6pt 1em;
+       .w6;
+       margin-top: -31pt;
+
+     }
+
+     .figcaption-allover {
+       padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+     }
+
+     figcaption footer {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       margin: 0;
+       -webkit-transform: rotate(270deg);
+               transform: rotate(270deg);
+       -webkit-transform-origin: left bottom;
+               transform-origin: left bottom;
+               margin-left: 103%;
+     margin-bottom: 0pt;
+     margin-right: -43%;
+     }
+
+     .auteur{
+     -webkit-region-break-after: always;
+              region-break-after: always;
+                     break-after: always-region;
+     }
