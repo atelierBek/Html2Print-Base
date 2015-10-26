@@ -43,10 +43,6 @@
             }
         }
 
-        function switchPreview(event) {
-            console.log(this.value);
-        }
-
         function switchSpread(event) {
             if(this.checked) {
                 $doc.classList.add("spread");

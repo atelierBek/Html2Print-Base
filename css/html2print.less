@@ -22,7 +22,7 @@
  * with the .page class (or it's children, like .header, .body and .footer)
  */
 @page {
-    size: @paper-width @paper-height+2pt;
+    size: @paper-width @paper-height+2pt; 
     margin: 0;
 }
 
@@ -140,8 +140,7 @@
     .paper {
         /* centrer la page à l'écran */
         /* UI */
-        // background-color: white;
-        background: transparent;
+        background-color: white;
         /* UI */
         margin-top: 1em;
         /* UI */
@@ -150,11 +149,12 @@
     /* UI */
     .normal .page { outline: 1px dotted lightsalmon; }
     /* UI */
-    .preview .paper { background: none; }
+    .preview .paper { background: white; }
     /* UI */
     .preview .page {
         outline: 1px solid lightgray;
         background-color: white;
+        overflow: hidden;
     }
 }
 
@@ -163,7 +163,7 @@
     html { width: @paper-width; }
     body {
         /* Allows for background colors printing */
-        background-color: white;
+        background-color: transparent;
         -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
     }
