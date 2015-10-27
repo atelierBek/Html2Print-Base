@@ -28,6 +28,7 @@
 .flow-fig2 { .flow-from(flow-fig2); }
 
 
+
 /* reset folio */
 body { counter-reset: folio 92 - 1; }
 
@@ -40,22 +41,44 @@ body { counter-reset: folio 92 - 1; }
 
 
 figcaption {
-  font-family: 'Tsukuri';
+  font-family: 'Tsukuri' !important;
   position:relative;
+  top: 110px;
+  height: 120px;
+  margin-top: 54pt;
+  margin-left: 718pt;
 }
 
+figcaption p{
+  font-family:'Tsukuri';
+  font-size:10pt !important;
+  text-align: center;
+  width: 25% !important;
+  padding-top: 12pt;
+
+}
+
+figcaption footer {
+  font-family: "Alfphabet", sans-serif;
+   position: relative;
+   bottom: 9px;
+   left: 0;
+   margin: 0;
+   margin-top: 109pt;
+   margin-left: 12pt;
+}
 
 img {
-  width: 100%;
-    object-fit: cover;
 }
 
 
 .flow-fig1 figure,
 .flow-fig2 figure {
-    width: 180%;
-    height: auto;
+  width: 200%;
+  margin-top:-50px;
+
 }
+
 .flow-fig2 figure {
-margin-left: -640px;
+margin-left: -645px;
 }

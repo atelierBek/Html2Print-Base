@@ -139,7 +139,7 @@ figcaption,
 
 .enquete > header > h1,
 .enquete > header > h2 {
-    font-family: "Erbar condensed";
+    font-family: "Erbarre, Erbar condensed";
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -567,12 +567,12 @@ line-height: 12pt;
     font-weight: 600;
 
   //  margin-bottom: @line-height ;
-  border-top: 2pt solid @color-black;
-  border-bottom: 2pt solid @color-black;
-  padding: @line-height / 2;
-  padding-top: @line-height  !important;
-  padding-bottom: @line-height  !important;
-    font-weight: 700;
+  border-top: 1pt solid @color-black;
+  border-bottom: 1pt solid @color-black;
+  // padding: @line-height / 2;
+  // padding-top: @line-height  !important;
+  // padding-bottom: @line-height  !important;
+    font-weight: 600;
     letter-spacing: 0.02em;
 }
 
@@ -593,7 +593,14 @@ line-height: 12pt;
 }
 
 .rubrique p.auteur{
-  margin-top: 0pt !important
+  margin-top: 0pt !important;
+  font-weight: 600;
+}
+.rubrique p.auteur strong{
+  font-weight: 500;
+  font-size: 6.5pt;
+  vertical-align: text-top;
+
 }
 
 #page-1 .rubrique > p {
@@ -853,7 +860,7 @@ Alfphabet
  */
 
  .photo > header > h1{
-     font-family: "Erbar condensed";
+     font-family: "Erbarre, Erbar condensed";
      font-weight: bold;
      font-size: 50pt;
      line-height: 45pt;
@@ -935,6 +942,8 @@ Alfphabet
   margin-right: 1em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
 }
 .photo figcaption > h2:last-child {
   float: none;

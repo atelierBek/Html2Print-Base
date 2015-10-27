@@ -2,6 +2,7 @@
     'use strict';
 
     var src =         {
+        "08_verviers-epicentre-de-la-prochaine-revolution-musicale": "articles/08_verviers-epicentre-de-la-prochaine-revolution-musicale/article.html", 
         "abonnements": "articles/abonnements/article.html", 
         "alphabet": "articles/alphabet/article.html", 
         "aventure-medor": "articles/aventure-medor/article.html", 
@@ -27,6 +28,8 @@
         "pub": "articles/pub/article.html", 
         "pub-2": "articles/pub-2/article.html", 
         "pub-3": "articles/pub-3/article.html", 
+        "pub-4": "articles/pub-4/article.html", 
+        "pub-5": "articles/pub-5/article.html", 
         "quand-jetais-flamand": "articles/quand-jetais-flamand/article.html", 
         "sommaire": "articles/sommaire/article.html", 
         "sujet-photo": "articles/sujet-photo/article.html", 
