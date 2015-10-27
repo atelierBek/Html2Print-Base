@@ -131,14 +131,17 @@ img {
 // FIXME: Seem to cause troubles: when printing the image does not show up
 figure:nth-of-type(1),
 figure:nth-of-type(2) {
-     overflow: hidden;
+     /*overflow: hidden;*/
 }
 
 // FIXME: Seem to cause troubles: when printing the image does not show up
 figure:nth-of-type(1) img,
 figure:nth-of-type(2) img {
-     width: auto;
-     height: 103%;
+     /*width: auto;*/
+     /*height: 103%;*/
+    /*width: 100%;*/
+    width: auto;
+    height: 100%;
 }
 
 figure:nth-of-type(1) img,
@@ -146,7 +149,7 @@ figure:nth-of-type(2) img {
 }
 
 figure:nth-of-type(1) img {
-  object-position: 0 0;
+  /*object-position: 0 0;*/
 }
 figure:nth-of-type(2) img {
   object-position: (@page-width + 14pt) * -(1 / (103 / 100)) 0;
