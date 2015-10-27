@@ -1,4 +1,5 @@
 @import "../../../css/main.less";
+@color: #0AB1AF;
 
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
@@ -25,12 +26,18 @@
 #flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
 .flow-fig3 { .flow-from(flow-fig3); }
 
+#flow-main blockquote:nth-of-type(2) { .flow-into(flow-blockquote2); }
+.flow-blockquote2 { .flow-from(flow-blockquote2); margin-top: 1pt;}
+.flow-blockquote2 blockquote {
+  margin-top: 0pt !important;
+
+}
 /* reset folio */
 body { counter-reset: folio 111 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Moment flamand — « Ce monstre en moi qui ne cesse de grandir »"; }
+.paper:nth-child(odd) .body:before { content: "Moment flamand — « Ce monstre en moi »"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 
@@ -38,23 +45,24 @@ h1{
   font-family: 'Bagnard' !important ;
   font-weight: normal !important;
   font-style: normal;
-  line-height: @line-height * 3.5 !important;
+  line-height: @line-height * 3 !important;
   margin-top: 0 !important;
   text-align: left ;
+  font-size: 32pt !important;
+  top:@line-height !important;
+    padding-top: 30pt;
 }
 
-.traduction-nl .authors, strong{
+.traduction-nl .authors{
   line-height: @line-height !important;
-  text-align: right;
-}
-strong{
-  display: inline;
-}
+
+  }
+
 .question {
 font-style: italic ;
 font-size: 9pt;
  text-indent: 0pt !important;
-  margin-top: @line-height  !important;
+  margin-top: @line-height  ;
  // padding-top: @line-height;
   //text-align: center;
   font-style: italic;
@@ -65,7 +73,25 @@ font-size: 9pt;
 }
 
 .question::before{
-  content: "♦ ";
+  //content: "\E00A     ";
+  content: "\E010";
+  font-family: "Medor";
+  font-style: normal;
+  font-size: 1.4em;
+color: @color;
+line-height: 1pt !important;
+padding-right: 11pt !important;
+vertical-align:middle;
+
+}
+#page-2 .question{
+  margin-top: @line-height *2 !important;
+}
+#page-4 p.question:nth-of-type(1){
+  margin-top:0pt !important;
+}
+#page-7 p.question:nth-of-type(1){
+  margin-top:0pt !important;
 }
 .question + p:first-of-type em:first-of-type {
   //text-indent: 0pt !important;
@@ -73,7 +99,7 @@ font-size: 9pt;
 }
 .traduction-nl .chapeau, .chapeau > em{
   font-family: 'Century Schoolbook' !important;
-  line-height: @line-height * 1.5;
+  line-height: (@line-height /3) * 4;
   font-size: 13pt !important;
   display: inline;
   padding: 0 !important;
@@ -83,9 +109,16 @@ font-size: 9pt;
           region-break-after: always;
                  break-after: always-region;
                  color: black;
+top:9pt;
+}
+.y9 {
+  // margin-top: -21pt;
+  // height: 100%;
 
 }
-
+p.auteur{
+  margin-top: 0pt;
+}
 
 img {
     width: 100%;
@@ -93,18 +126,24 @@ img {
 }
 
 .flow-fig1 figure {
-    width: 60%;
-    height: auto;
+  width: 70%;
+  height: auto;
+  margin-left: 108pt;
+  margin-top: 144pt;
 }
 
 .flow-fig2 figure,
 .flow-fig3 figure {
-    width: 290%;
+    width: 300%;
     height: auto;
 }
+.flow-fig2 figure{
+  margin-left: -12pt;
+
+}
 .flow-fig3 figure {
-margin-left: -660px;
-margin-top: -0pt;
+  margin-left: -508pt;
+  margin-top: -0pt;
 }
 sup {
   top: 0.1em;
@@ -114,8 +153,8 @@ blockquote {
   //text-align: center;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: (@line-height/4) * 3;
-  margin-top: (@line-height /4)*3;
+  margin-bottom: @line-height ;
+  margin-top: @line-height ;
   font-style: italic;
   font-weight: normal;
   font-size: 16.5pt;
@@ -130,30 +169,62 @@ abbr{
   display: none;
 
 }
-.rubrique-title {
-    font-family: "Alfphabet-Condensed" !important;
+.rubrique-title{
+  border-bottom: 2pt solid @color;
 }
 dd, aside p{
-  font-family: 'Work Sans' ;
-  font-weight: normal ;
-  display: block;
+  // font-family: 'Work Sans' ;
+  // font-size: 9pt;
+
+  display: inline;
   margin-left: 0;
-  font-size: 9pt;
+line-height: 11.5pt;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 8.5pt;
+    letter-spacing: -0.03em;
 }
 aside h2{
-  font-family: 'Worksans' ;
+  font-family: 'Work sans' ;
   font-weight: bold; ;
   display: block;
   margin-left: 0;
   font-size: 10pt;
 }
 dt{
-  margin-left: @line-height / 3;
-  font-family: 'Century Schoolbook' ;
-  font-size: 9pt;
-  display: block;
-  text-transform: uppercase;
+//  margin-left: @line-height / 3;
+ font-family: 'Bagnard' ;
+  //font-family: 'Work sans' ;
+  font-size: 8pt;
+  display: inline;
+   text-transform: uppercase;
+   //font-weight: 700;
+   letter-spacing: 0.03em;
+   vertical-align:baseline;
 }
+dt::before{
+content: "◆ ";
+font-family: 'Work sans';
+color: white;
+font-weight: 400;
+font-size: 0.9em;
+padding-bottom: 1pt;
+vertical-align:text-bottom;
+}
+dd{
+  vertical-align:baseline;
+
+}
+
+// ============ASIDES ENCADRES===============
+.filet2:after {
+    right:-3pt;
+}
+.filet:before {
+  left: -3pt;
+  top: 0pt;
+}
+
 aside:last-of-type{
   margin-top: 10px;
 }
@@ -165,53 +236,62 @@ aside h1{
   font-style: normal;
   line-height: @line-height *1.5  !important;
   margin-top: 0 !important;
-  text-align: left;
+  text-align: center;
 }
 
 div.flow-encadre aside h1 {
-  font-family: 'Erbar condensed' !important ;
-
-        font-weight: bold !important;
-        font-size: 13pt;
+  // font-family: 'Erbar condensed' !important ;
+        font-family: 'work sans' !important;
+        font-size: 9.5pt !important;
         display: inline;
         text-transform: uppercase;
         padding-left: 0;
         text-align: center  !important;
         line-height: @line-height / 1.5 !important ;
+        font-weight: 400 !important;
+
           }
-    #page-7 div.flow-encadre aside h1{
+
+#page-6 div.flow-encadre aside h1{
       margin-bottom:@line-height * 2 !important ;
       padding-bottom:@line-height * 2 !important ;
-
     }
-  #page-7 div.flow-encadre aside h1, #page-8  aside h1  {
-font-family: 'Belgika5th' !important;
-font-size: 10pt;
+#page-6 div.flow-encadre aside h1, #page-8  aside h1  {
+// font-family: 'Belgika5th' !important;
+// font-size: 10pt;
+// text-align: left;
+font-family: 'Work sans' !important ;
+font-size: 9pt !important;
+display: inline;
+ text-transform: uppercase;
+ font-weight: 700 !important;
+ letter-spacing: 0.08em;
   }
-  #page-7 aside em, #page-8  aside em  {
-    font-size: 9pt;
+  #page-6 aside , #page-8  aside   {
+    padding-top: 5pt !important;
+
   }
 
 
-#page-3 div.flow-encadre, #page-7 div.flow-encadre, #page-8 div.flow-encadre {
-  background-color: #f3fdcf;
-  border-right: solid 2px black;
+#page-3 div.flow-encadre, #page-6 div.flow-encadre, #page-8 div.flow-encadre {
+  background-color: @color;
   padding-left: 24pt;
   padding-right: 24pt;
   padding-top: 24pt;
   margin-right: 5pt;
   padding-bottom: 12pt;
+  color: white;
 }
  div.flow-encadre {
-  background-color: #f3fdcf;
-  border-right: solid 2px black;
+  background-color: @color;
+  // border-right: solid 1px black;
   padding-left: 12pt;
   padding-right: 12pt;
   padding-top: 24pt;
   margin-right: 5pt;
 }
 div.border-double{
-  border-right: solid 2px black;
+  border-right: solid 1px black;
 //  border-left: solid 2px black;
 //  border-bottom: solid 2px black;
 //  border-top: solid 2px black;
@@ -219,19 +299,95 @@ div.border-double{
   margin-right: 11pt;
 
 }
-div.flow-encadre aside:first-of-type{
+div.flow-encadre aside{
   -webkit-region-break-after: always;
            region-break-after: always;
                   break-after: always-region;
-
-}
-div.flow-encadre aside:last-of-type{
-  -webkit-region-break-before: always;
-           region-break-before: always;
-                  break-before: always-region;
+                    padding-top: 12pt !important;
 
 }
 
+div.flow-encadre aside p.auteur {
+font-weight: 600;
+
+}
+// div.flow-encadre aside:last-of-type{
+//   -webkit-region-break-before: always;
+//            region-break-before: always;
+//                   break-before: always-region;
+//
+// }
+
+
+// ============footnotes et figcaption===============
+
+
+ .footnotes {
+    color: @color;
+    list-style-type: none;
+    font-family: 'Alfphabet-Condensed';
+    margin: 0;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+    font-style: normal;
+}
+ .footnotes em {
+  font-style: italic;
+  line-height: (@line-height/4)*3;
+}
+ .footnotes a[name^="sdfootnote"]:after { content: "." }
+ .footnotes li { text-indent: -0.25em; }
+ .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+ .footnotes li:first-of-type{
+  text-indent: -0.25em !important;
+  margin-top: 0pt;
+  padding-top:0pt;
+}
+  figcaption{
+    font-family: "Alfphabet", sans-serif;
+    font-size: 7pt;
+    line-height: 9pt;
+    margin-top: 11.5pt !important;
+
+}
+
+ figcaption p {
+    //background-color: white;
+    position: relative !important;
+    bottom: 34px;
+    left: 0;
+    padding: 6pt 1em;
+    .w3;
+}
+
+.figcaption-allover {
+    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+ figcaption footer {
+    position: relative;
+    bottom: 9px;
+    left: 0;
+    margin: 0;
+    // -webkit-transform: rotate(270deg);
+    //         transform: rotate(270deg);
+    // -webkit-transform-origin: left bottom;
+    //         transform-origin: left bottom;
+    //         margin-left: 102%;
+    //         margin-bottom: 0pt;
+    //         margin-right: -103%;
+  margin-top: 229pt;
+        margin-left: 12pt;
+}
+
+.footnotes{
+margin-top: @line-height *2;
+}
+a > sup {
+   font-weight: 900;
+   color: @color;
+}
 /*h2:nth-of-type(1) + p,*/
 /*h2:nth-of-type(4) + p {*/
     /*-webkit-region-break-inside: avoid;*/

@@ -306,10 +306,14 @@ figcaption,
 }
 
 .interview > header h1 {
-    margin-top: @line-height * 5;
-
-    font-size: 40pt;
-    line-height:  @line-height * 4;
+  //  font-family: 'Univers else';
+  text-transform: uppercase;
+  //  font-family: 'Century Schoolbook';
+  font-size: 37pt;
+  font-family: Alfphabet;
+  margin-top: 17pt;
+  font-weight: normal;
+  text-align: center;
 }
 
 .interview > header h2 {
@@ -319,7 +323,16 @@ figcaption,
     line-height:  @line-height * 1;
 }
 
-.interview > header .authors { display: none; }
+.interview > header .authors {
+font-family: 'alfphabet';
+text-align: center;
+}
+.interview > header > .authors:before {
+    content: "Par ";
+    line-height: @line-height !important;
+    line-height: 12pt;
+
+}
 
 /* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
 .interview > h2 {
@@ -330,13 +343,119 @@ figcaption,
 }
 
 .interview > p + h2 { margin-top: @line-height * 2; }
-.interview > p + p { text-indent: 9pt * 2; }
+.interview > p + p { text-indent: 9pt; }
 
 .interview > h2,
-.interview > p { position: relative; }
+.interview > p {
+  position: relative;
+  //font-family: 'Univers else';
+  // text-indent: @line-height;
+  font-family: 'Century Schoolbook';
+  //  font-weight: bold;
 
-.interview > h2 > abbr:first-child,
-.interview > p > abbr:first-child {
+ }
+
+.interview > h2 > abbr,
+.interview > p > abbr {
+    // font-family: "Erbarre, Erbar condensed";
+    // font-weight: bold;
+    // padding-right: @line-height;
+    // padding-bottom: @line-height;
+    // float: left;
+    // color: blue;
+    font-family: 'Alfphabet';
+    font-weight: normal;
+    padding: 8pt 8pt 8pt 0pt;
+    font-size: 7.5pt;
+    //color:gold;
+}
+.interview > p.question > abbr {
+  padding: 8pt 13pt 8pt 0pt;
+
+}
+.interview .chapeau {
+    font-family: "bagnard";
+    font-weight: normal;
+    font-size: 11pt;
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: @line-height * 2;
+    text-align: center;
+}
+.interview .question{
+//  font-family: 'Erbarre';
+font-family: 'bagnard';
+font-weight: normal;
+font-size: 10pt;
+//  font-family: 'Century Schoolbook';
+//font-style: italic;
+//font-size: 10pt;
+// line-height: @line-height;
+// margin-top:0pt;
+line-height: @line-height !important;
+// line-height: @line-height;
+  //text-decoration: underline;
+}
+
+/*
+ * Styles traduction-nl
+ * -----------------
+ */
+.traduction-nl > header .authors {
+text-align: left;
+line-height: 12pt;
+  font-family: "work sans" ;
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-right: 147pt;
+ }
+.traduction-nl > header > .authors:before {
+    content: "Par ";
+    line-height: @line-height !important;
+    line-height: 12pt;
+      font-family: "work sans";
+      font-size: 10pt;
+      text-transform: uppercase;
+      font-weight: 400;
+}
+
+.traduction-nl > header h1,
+.traduction-nl > header h2 {
+    font-family: "Erbarre, Erbar condensed";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.traduction-nl > header h1 {
+    margin-top: @line-height * 5;
+
+    font-size: 40pt;
+    line-height:  @line-height * 4;
+}
+
+.traduction-nl > header h2 {
+    margin-top: @line-height;
+
+    font-size: 18pt;
+    line-height:  @line-height * 1;
+}
+.interview > h2 {
+    font-size: inherit;
+    font-weight: normal;
+    line-height:  inherit;
+    margin-bottom: @line-height;
+}
+
+.traduction-nl > p + h2 { margin-top: @line-height * 2; }
+.traduction-nl > p + p { text-indent: 9pt * 2; }
+
+.traduction-nl > h2,
+.traduction-nl > p { position: relative; }
+
+.traduction-nl > h2 > abbr:first-child,
+.traduction-nl > p > abbr:first-child {
     font-family: "Erbarre, Erbar condensed";
     font-weight: bold;
     padding-right: @line-height;
@@ -345,7 +464,7 @@ figcaption,
     color: blue;
 }
 
-.interview .chapeau {
+.traduction-nl .chapeau {
     color: #39914F;
     font-family: "Bagnard";
     font-size: 10pt;
@@ -354,7 +473,6 @@ figcaption,
     margin-top: 0;
     margin-bottom: @line-height * 2;
 }
-
 /*
  * Styles rubriques
  * -----------------
@@ -415,7 +533,7 @@ figcaption,
 
 .rubrique > .chapeau {
   font-family: 'Work Sans';
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.02em;
 }
 
@@ -432,8 +550,8 @@ figcaption,
   font-family: 'Century Schoolbook';
   font-style: italic;
   font-size: 9pt;
-
 }
+
 .rubrique p.auteur{
   margin-top: 0pt !important
 }
@@ -460,6 +578,18 @@ figcaption,
     left: -7pt;
 
 
+}
+.filet2:after {
+    content: " ";
+    border-left: 3pt double black;
+    // border-right: @filet solid black;
+    width: 0;
+    height: 100%;
+    // background-color: black;
+    position: absolute;
+    // left: (@padding-filet + @filet) * -1;
+    right:-5pt;
+    top: 0;
 }
 
 .rubrique .inline-fn{
@@ -500,7 +630,7 @@ figcaption,
   padding-top:0pt;
 }
 
-.rubrique-title, .rubrique-subtitle{
+.rubrique .rubrique-title, .rubrique .rubrique-subtitle{
   margin-left: -140pt;
 }
 /*
