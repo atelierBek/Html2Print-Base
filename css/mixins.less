@@ -13,9 +13,15 @@
             flow-from: @flow;
 }
 
-
 // Pas de footer sur ces pages
 .no-footer(@page) {
     .paper:nth-of-type(@{page}) .body:before,
     .paper:nth-of-type(@{page}) .body:after { content: "" }
+}
+
+.trans(@rotate, @skew, @originY, @originX) {
+  -webkit-transform: skewY(@skew) rotate(@rotate);
+          transform: skewY(@skew) rotate(@rotate);
+  -webkit-transform-origin: @originY @originX;
+          transform-origin: @originY @originX;
 }
