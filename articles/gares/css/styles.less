@@ -5,8 +5,15 @@
 #flow-main header { .flow-into(flow-title); }
 .flow-title { .flow-from(flow-title); }
 
-#flow-main aside:nth-of-type(1) { .flow-into(flow-encadre); }
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
+// encadré
+#flow-main aside:nth-of-type(3) { .flow-into(flow-encadre); }
 .flow-encadre { .flow-from(flow-encadre); }
+
+#flow-main .footnotes li:nth-of-type(1) { .flow-into(flow-fn1); }
+.flow-fn1 { .flow-from(flow-fn1); }
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
@@ -20,6 +27,7 @@
 #flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
 .flow-fig4 { .flow-from(flow-fig4); }
 
+// Pas utilisée
 #flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
 .flow-fig5 { .flow-from(flow-fig5); }
 
@@ -43,8 +51,8 @@ body { counter-reset: folio 8 - 1; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 .enquete > header h1 {
-  color:#fffbc4;
-  -webkit-text-stroke: 1pt black;
+  color: #fffbc4;
+  -webkit-text-stroke: 1pt @color-black;
 }
 
 /*specific styles*/
@@ -56,9 +64,9 @@ body { counter-reset: folio 8 - 1; }
 }
 
 .enquete > .chapeau + p {
-     .w5;
-     float: right;
-     margin-bottom: @line-height;
+     /*.w5;*/
+     /*float: right;*/
+     /*margin-bottom: @line-height;*/
 }
 
 .authors {
@@ -85,66 +93,56 @@ aside > h1 {
     padding: @line-height / 2 9pt;
 }
 
-/*div.border-double {*/
-    /*border-right: solid 2px black;*/
-    /*margin-right: 11pt;*/
-/*}*/
-
-img {
+figure {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
-
-figure:nth-of-type(1),
-figure:nth-of-type(2) {
-     width: 104%;
-     height: 104%;
+.fig1-bis img {
+    /*height: 100%;*/
+    /*width: 200%;*/
 }
 
-figure:nth-of-type(1) {
-margin-left: 20pt;
+#flow-main figure:nth-of-type(1) img {
+    /*height: 100%;*/
+    /*width: 200%;*/
+    object-position: -444pt 0;
 }
 
-
-figure:nth-of-type(1) img,
-figure:nth-of-type(2) img {
-  width: 200%;
-  height: auto;
+#flow-main figure:nth-of-type(2) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
-figure:nth-of-type(2) { margin-left: -510pt; }
-
-
-figure:nth-of-type(3){
-    margin-left: -21pt;
-    margin-top: -29pt;
-    width: 108%;
+#flow-main figure:nth-of-type(3) img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-figure:nth-of-type(4),
-figure:nth-of-type(5){
-    width: 147%;
-    height: auto;
-    margin-top: -33pt;
-    margin-left: 6pt;
+#flow-main figure:nth-of-type(4) img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
-.flow-fig5 figure { margin-left: -481pt; }
-
-#img4,
-#img4-right {
-    height: auto;
-    width: 200%;
+#flow-main figure:nth-of-type(6) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
-#img4-right { margin-left: -481pt; }
-
-#img3,
-#img3-right {
-    width: 157%;
-    height: auto;
+#flow-main figure:nth-of-type(7) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
-
-#img3-right > img  { margin-left: -481pt; }
+.exergue {
+    .w5();
+    margin-top: @line-height * 2;
+    margin-bottom: @line-height * 2;
+    margin-left: -@col-gutter-width;
+}

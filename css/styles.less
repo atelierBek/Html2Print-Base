@@ -79,8 +79,6 @@ figure img {
     //font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
-     padding-left:  @line-height / 4;
-     padding-right:  @line-height / 4;
      padding-top:  @line-height / 5;
     line-height: @line-height;
     margin-top: 0;
@@ -95,8 +93,6 @@ figure img {
 //  font-family: "Erbarre", "Erbar condensed";
   font-family: "Alfphabet-Condensed";
     //text-transform: uppercase;
-    padding-left:  @line-height / 4;
-    padding-right:  @line-height / 4;
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
@@ -314,8 +310,8 @@ figcaption,
 .enquete--short > header > .authors { display: none; }
 
 .enquete--short > .chapeau {
-  font-size: 12pt;
-  line-height:  @line-height * 1.25;
+  font-size: 10.5pt;
+  /*line-height:  @line-height * 1.25;*/
 
  }
 
@@ -532,7 +528,7 @@ figcaption,
   padding-top:0pt;
 }
 
-.rubrique-title, .rubrique-subtitle{
+.rubrique .rubrique-title, .rubrique-subtitle{
   margin-left: -140pt;
 }
 /*
@@ -737,11 +733,12 @@ figcaption,
  }
  .photo .chapeau {
    font-size: 14pt;
-   line-height: 21pt;
+   line-height: 19pt;
    font-family: 'Belgika8th';
-   margin-bottom: @line-height *2;
+   /*margin-bottom: @line-height * 2;*/
+   /*margin-bottom: 71pt;*/
+   margin-bottom: 119pt;
    text-align: left;
-
  }
 
 
@@ -758,18 +755,21 @@ figcaption,
    font-family: 'Work Sans';
   font-weight: 300;
   font-style: normal;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   font-size: 9pt;
-  line-height: @line-height*0.95;
+  line-height: @line-height;
   text-align: justify;
-  em{
-    font-size: 9.2pt;
-    letter-spacing: 0em;
-    font-family: "Century Schoolbook";
-  }
+}
+.photo > p > em {
+    /*font-size: 9.2pt;*/
+    /*letter-spacing: 0em;*/
+    /*font-family: "Century Schoolbook";*/
+    font-weight: 500;
+    font-style: normal;
 }
 .photo > p:not(.chapeau) + p {
-  text-indent: @line-height;
+  /*text-indent: @line-height;*/
+    margin-top: @line-height;
 }
 .photo > p.auteur {
   margin-top: @line-height;
@@ -802,8 +802,8 @@ figcaption,
 .photo ol {
   margin: 0;
   padding: 0;
-  .w3;
-  margin-top: @line-height * 2;
+  /*.w3;*/
+  margin-top: @line-height * 1;
 }
 
 .photo #page-8 figcaption > p {
