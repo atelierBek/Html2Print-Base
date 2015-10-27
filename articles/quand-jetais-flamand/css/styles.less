@@ -80,13 +80,13 @@ body { counter-reset: folio 23 - 1; }
 /*.paper:nth-of-type(10) figure:nth-of-type(2) figcaption p { background-color: none; }*/
 
 .flow-fig1 figcaption p,
-.flow-fig10 figcaption p { 
-    .figcaption-over(); 
-    .figcaption-allover(); 
+.flow-fig10 figcaption p {
+    .figcaption-over();
+    .figcaption-allover();
 }
 
 .flow-fig1 figcaption footer,
-.flow-fig10 figcaption footer { 
+.flow-fig10 figcaption footer {
     left: calc(~"100% - 14pt - 12pt") !important;
     bottom: calc(~"14pt + 12pt") !important;
 }
@@ -96,8 +96,8 @@ body { counter-reset: folio 23 - 1; }
 }
 
 .flow-fig4 figcaption p,
-.flow-fig9 figcaption p { 
-    .figcaption-over(); 
+.flow-fig9 figcaption p {
+    .figcaption-over();
 }
 
 .flow-fig2 figcaption p,
@@ -116,43 +116,34 @@ body { counter-reset: folio 23 - 1; }
     padding-bottom: @line-height / 2;
 }
 
-
-
-// Pas de footer sur ces pages
-.no-footer(@page) {
-    .paper:nth-of-type(@{page}) .body:before,
-    .paper:nth-of-type(@{page}) .body:after { content: "" }
-}
-
 .no-footer(1);
 .no-footer(16);
 
 
-
-#flow-main figure:nth-of-type(1) img { 
+#flow-main figure:nth-of-type(1) img {
     height: 100%;
     width: 100%;
-    object-fit: contain; 
+    object-fit: contain;
 }
-#flow-main figure:nth-of-type(2) img { 
+#flow-main figure:nth-of-type(2) img {
     height: 100%;
     width: 100%;
-    object-fit: contain; 
+    object-fit: contain;
 }
-#flow-main figure:nth-of-type(3) img { 
+#flow-main figure:nth-of-type(3) img {
     height: 100%;
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
-#flow-main figure:nth-of-type(4) img { 
+#flow-main figure:nth-of-type(4) img {
     height: 100%;
     width: 100%;
-    object-fit: contain; 
+    object-fit: contain;
 }
-#flow-main figure:nth-of-type(5) img { 
+#flow-main figure:nth-of-type(5) img {
     height: 100%;
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: 0 center;
 }
 
@@ -265,12 +256,12 @@ p.debut + p {
     line-height: 9pt;
 }
 
-article > blockquote { 
+article > blockquote {
     margin: @line-height 0;
     margin-top: @line-height * 2;
 }
 
-article > blockquote + p::first-letter { 
+article > blockquote + p::first-letter {
     .lettrine-enquete;
 }
 
@@ -299,7 +290,7 @@ html.bw article > blockquote:before {
 }
 
 .chapeau {
-   color: white; 
+   color: white;
    -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;

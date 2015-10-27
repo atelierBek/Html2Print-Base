@@ -12,3 +12,10 @@
     -webkit-flow-from: @flow;
             flow-from: @flow;
 }
+
+
+// Pas de footer sur ces pages
+.no-footer(@page) {
+    .paper:nth-of-type(@{page}) .body:before,
+    .paper:nth-of-type(@{page}) .body:after { content: "" }
+}

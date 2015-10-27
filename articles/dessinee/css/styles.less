@@ -27,6 +27,8 @@
 #flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
 
+.no-footer(1);
+.no-footer(2);
 
 
 /* reset folio */
@@ -34,8 +36,8 @@ body { counter-reset: folio 92 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Médor à colorier"; }
-.paper:nth-child(even) .body:before { content: "Médor #1"; }
+.paper:nth-child(odd) .body:before { content: ""; }
+.paper:nth-child(even) .body:before { content: ""; }
 
 
 
@@ -52,9 +54,11 @@ figcaption {
 figcaption p{
   font-family:'Tsukuri';
   font-size:10pt !important;
+  line-height: 13pt !important;
   text-align: center;
-  width: 25% !important;
+  width: 14% !important;
   padding-top: 12pt;
+  padding-bottom: 8pt;
 
 }
 
@@ -69,16 +73,52 @@ figcaption footer {
 }
 
 img {
-}
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   margin: 0 !important;
+ }
 
 
 .flow-fig1 figure,
 .flow-fig2 figure {
-  width: 200%;
-  margin-top:-50px;
-
+  width: 194% !important;
+  margin-top:-18px;
 }
 
 .flow-fig2 figure {
-margin-left: -645px;
+ margin-left: -645px;
+}
+
+.flow-title {
+ background-color: white;
+ z-index:2;
+}
+
+header {
+  background-color:white;
+  margin-bottom: 0px
+}
+
+h1 {
+height: 0px;
+width: 0px;
+
+}
+
+.rubrique-subtitle {
+      margin-bottom: 0pt;
+      width: 90px;
+      margin-left: -20px;
+      padding-left: 20px;
+      background-color: white;
+}
+
+.rubrique-title {
+      margin-bottom: 0pt;
+      width: 90px;
+      margin-left: -20px;
+      padding-left: 20px;
+      background-color: white;
 }
