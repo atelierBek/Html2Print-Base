@@ -1,4 +1,6 @@
 @import "../../../css/main.less";
+
+@color-aside: rgb(154, 3, 124);
 @line-height: 11.5pt;
 
 #flow-main { .flow-into(flow-main); }
@@ -15,23 +17,19 @@ body { counter-reset: folio 121 - 1; }
 .paper:nth-child(odd) .body:before { content: "Politique"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-@color-aside: rgb(154, 3, 124);
-
-
-.trans(@rotate, @skew, @originY, @originX) {
-  -webkit-transform: skewY(@skew) rotate(@rotate);
-          transform: skewY(@skew) rotate(@rotate);
-  -webkit-transform-origin: @originY @originX;
-          transform-origin: @originY @originX;
-}
 
 #flow-main header h1 {
+    /* centrer optiquement le titre (à cause des guillemets) */
     padding-left: 0.5em;
     text-indent: -1em;
-    color: #f93134 ;
 
+    color: #f93134 ;
 }
-#flow-main > p { z-index: 999; position: relative; }
+
+#flow-main > p { 
+    position: relative; 
+    z-index: 999; 
+}
 
 blockquote {
     margin: 0;
@@ -43,12 +41,17 @@ blockquote {
     text-align: center;
     background: white;
     color: @color-aside;
-    -webkit-hyphens: auto;
-            hyphens: auto;
 }
-blockquote footer { font-size: 15pt; }
 
-.exergue { padding: 12pt 0; position: relative; }
+blockquote footer { 
+    font-size: 12pt; 
+    line-height: 14pt;
+}
+
+.exergue { 
+    padding: 12pt 0; 
+    position: relative; 
+}
 
 #flow-main .exergue:nth-of-type(1) {
     .trans(0deg, -15deg, center, center);
@@ -60,7 +63,6 @@ blockquote footer { font-size: 15pt; }
 }
 
 #flow-main .exergue:nth-of-type(2) {
-    /*.flow-into(flow-ex2);*/
     height: 0;
     box-sizing: border-box;
     position: relative;
@@ -69,9 +71,6 @@ blockquote footer { font-size: 15pt; }
     -webkit-region-break-after: always;
             region-break-after: always;
                    break-after: always;
-}
-.flow-ex2 {
-    .flow-from(flow-ex2);
 }
 
 #flow-main .exergue:nth-of-type(3) {
@@ -99,24 +98,17 @@ blockquote footer { font-size: 15pt; }
 }
 
 
-.rubrique-title, .rubrique-subtitle{
-  margin-left: 0pt;
-}
-.rubrique-title{
-  border-bottom: 2pt solid #f93134;
-}
-.chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
-  background-color:#f93134;
+.rubrique-title { border-color: #f93134; }
+
+
+.chapeau {
+  background-color: #f93134;
   color: #f3fdcf !important;
 
   padding: @line-height / 2;
   padding-top: @line-height  !important;
   padding-bottom: @line-height  !important;
   margin-bottom: (@line-height) * 2;
-
 }
 
 .rubrique > .footnotes {
@@ -124,51 +116,16 @@ blockquote footer { font-size: 15pt; }
     list-style-type: none;
     margin-top: 0pt;
 }
-.rubrique > .footnotes em {
 
-   font-style: italic;
-
-}
+.rubrique > .footnotes em { font-style: italic; }
 
 .rubrique h2 {
-  margin-top: 11pt ;
+  margin-top: 11pt;
   margin-bottom: 0;
   line-height: @line-height;
 }
-  figcaption{
-    font-family: "Alfphabet", sans-serif;
-    font-size: 7pt;
-    line-height: 9pt;
-}
 
- figcaption p {
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 6pt 1em;
-    .w6;
-}
-
-.figcaption-allover {
-    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
-}
-
- figcaption footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    -webkit-transform-origin: left bottom;
-            transform-origin: left bottom;
-            margin-left: 103%;
-margin-bottom: 0pt;
-margin-right: -43%;
-}
-
-.auteur{
+.auteur {
   -webkit-region-break-after: always;
            region-break-after: always;
                   break-after: always-region;
