@@ -19,6 +19,17 @@
         flow-from: flow-title;
 }
 
+#flow-main ul {
+    -webkit-flow-into: flow-liste;
+            flow-into: flow-liste;
+}
+
+.flow-liste {
+    -webkit-flow-from: flow-liste;
+        flow-from: flow-liste;
+}
+
+
 /* reset folio */
 body { counter-reset: folio  - 1; }
 
@@ -36,4 +47,8 @@ img {
 .flow-fig1 figure {
     width: 70%;
     height: auto;
+    position: relative;
+    -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+
 }
