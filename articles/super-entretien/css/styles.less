@@ -1,4 +1,6 @@
 @import "../../../css/main.less";
+@color:blue;
+
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -18,6 +20,8 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
 
 /* reset folio */
 body { counter-reset: folio 84 - 1; }
@@ -29,32 +33,21 @@ body { counter-reset: folio 84 - 1; }
 
 
 abbr{
-font-family: 'Erbar condensed';
-font-weight: 200;
-padding: 8pt 8pt 8pt 0pt;
-font-size: 8pt;
-//color:gold;
-text-decoration: underline;
+  color: @color;
+  // text-decoration: underline;
 
 }
-p {
-font-family: 'Univers else';
-text-indent: @line-height;
-//  font-family: 'Century Schoolbook';
-//  font-weight: bold;
-
+.rubrique-title{
+  border-bottom: 2pt solid @color;
 }
 p + p {
 //  text-indent: @line-height;
 }
 .question{
 //  font-family: 'Erbarre';
-font-family: 'Univers else';
-font-weight: bold;
 //  font-family: 'Century Schoolbook';
 //font-style: italic;
 //font-size: 10pt;
-margin-top: @line-height;
   //text-decoration: underline;
 }
 h1{
@@ -66,4 +59,84 @@ text-transform: uppercase;
   //font-style: italic;
   font-weight: normal;
 font-size: 30pt;
+}
+
+
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+
+}
+
+.footnotes {
+   color: @color;
+   list-style-type: none;
+   font-family: 'Alfphabet-Condensed';
+   margin: 0;
+   font-size: 7.5pt;
+   line-height: (@line-height / 8) * 6;
+   list-style-type: none;
+   font-style: normal;
+}
+.footnotes em {
+ font-style: italic;
+ line-height: (@line-height/4)*3;
+}
+.footnotes a[name^="sdfootnote"]:after { content: "." }
+.footnotes li { text-indent: -0.25em; }
+.footnotes li { margin-bottom: (@line-height / 8) * 6; }
+.footnotes li:first-of-type{
+ text-indent: -0.25em !important;
+ margin-top: 0pt;
+ padding-top:0pt;
+}
+ figcaption{
+   font-family: "Alfphabet", sans-serif;
+   font-size: 7pt;
+   line-height: 9pt;
+   margin-top: 11.5pt !important;
+
+}
+
+figcaption p {
+   //background-color: white;
+   position: relative !important;
+   bottom: 34px;
+   left: 0;
+   padding: 6pt 1em;
+   .w3;
+}
+
+.figcaption-allover {
+   padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+}
+
+figcaption footer {
+   position: relative;
+   bottom: 34px;
+   left: 0;
+   margin: 0;
+   -webkit-transform: rotate(270deg);
+           transform: rotate(270deg);
+   -webkit-transform-origin: left bottom;
+           transform-origin: left bottom;
+           margin-left: 102%;
+           margin-bottom: 0pt;
+           margin-right: -103%;
+
+}
+
+.footnotes{
+margin-top: @line-height *2;
+}
+a > sup {
+  font-weight: 900;
+  color: @color;
+}
+#page-1 p.question{
+  margin-top:@line-height !important;
 }

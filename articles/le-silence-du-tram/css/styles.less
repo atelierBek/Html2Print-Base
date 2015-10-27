@@ -21,8 +21,8 @@ body { counter-reset: folio 82 - 1; }
 .flow-fig4 { .flow-from(flow-fig4); }
 #flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
 .flow-fig5 { .flow-from(flow-fig5); }
-#flow-main figure:nth-of-type(5) figcaption { .flow-into(flow-fig5-caption); }
-.flow-fig5-caption { .flow-from(flow-fig5-caption); }
+/*#flow-main figure:nth-of-type(5) figcaption { .flow-into(flow-fig5-caption); }*/
+/*.flow-fig5-caption { .flow-from(flow-fig5-caption); }*/
 
 figure,
 figure img {
@@ -31,6 +31,25 @@ figure img {
 }
 
 figure img {
-    display: block;
+    /*display: block;*/
     object-fit: contain;
+}
+
+#page-3 img {
+    object-fit: fill;
+    object-position: 0 center;
+}
+
+figcaption footer {
+    -webkit-transform: rotate(270deg)!important;
+            transform: rotate(270deg)!important;
+    -webkit-transform-origin: left bottom!important;
+            transform-origin: left bottom!important;
+}
+
+
+//////////////////////
+h1 {
+    -webkit-text-stroke: 0.25pt white;
+    text-shadow: 0pt 2pt white;
 }
