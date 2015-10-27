@@ -1,3 +1,15 @@
+@color-black: black;
+
+html.bw .paper,
+html.color .paper { background-color: transparent!important; }
+
+/*@color-black: transparent;*/
+
+/*h1,*/
+/*img { visibility: hidden; }*/
+
+/*body { color: @color-black; }*/
+
 
 /*
  * Typographie
@@ -67,8 +79,6 @@ figure img {
     //font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
-     padding-left:  @line-height / 4;
-     padding-right:  @line-height / 4;
      padding-top:  @line-height / 5;
     line-height: @line-height;
     margin-top: 0;
@@ -83,8 +93,6 @@ figure img {
 //  font-family: "Erbarre", "Erbar condensed";
   font-family: "Alfphabet-Condensed";
     //text-transform: uppercase;
-    padding-left:  @line-height / 4;
-    padding-right:  @line-height / 4;
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
@@ -99,7 +107,7 @@ p.fin::after {
     content: " \E011";
     font-size: 6.5pt;
     font-family: "Medor";
-    color: black;
+    color: inherit!important;
 }
 
 
@@ -129,7 +137,7 @@ figcaption,
     text-transform: uppercase;
 }
 
-.enquete > header > h1 { margin-top: @line-height * .5; }
+.enquete > header > h1 { margin-top: @line-height * .5; margin-bottom: @line-height; }
 
 .enquete > header > h2 {
     margin-top: @line-height / 2;
@@ -145,10 +153,12 @@ figcaption,
     padding: 0;
     font-size: 18pt;
     line-height: 18pt;
+    margin-bottom: @line-height;
 }
 
 .enquete > header > .authors:before {
     content: "Par ";
+    color: inherit;
 }
 
 .enquete > .chapeau {
@@ -178,11 +188,14 @@ figcaption,
     letter-spacing: 0.02em;
 }
 
+.enquete > figure + h2,
+.enquete > figure + h3,
 .enquete > p + h2,
 .enquete > p + h3 {
     margin-top: @line-height * 2;
 }
 
+.enquete > figure + p:not(.chapeau),
 .enquete > p:not(.chapeau) + p { text-indent: @line-height; }
 
 .enquete sup {
@@ -201,14 +214,14 @@ figcaption,
     list-style-type: none;
 }
 
-.enquete > .footnotes {
-    font-style: normal;
-    color: lighten(#2A85A4, 20%);
-}
-.enquete > .footnotes em {
-    font-style: normal;
-    color: #2A85A4;
-}
+/*.enquete > .footnotes {*/
+    /*font-style: normal;*/
+    /*color: lighten(#2A85A4, 20%);*/
+/*}*/
+/*.enquete > .footnotes em {*/
+    /*font-style: normal;*/
+    /*color: #2A85A4;*/
+/*}*/
 
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 /*.enquete > .footnotes a[name^="sdfootnote"] { font-weight: bold; }*/
@@ -238,6 +251,7 @@ figcaption,
 }
 .enquete > aside.exergue > blockquote footer:before {
     content: "— ";
+    color: inherit!important;
 }
 
 .lettrine-enquete {
@@ -259,14 +273,22 @@ figcaption,
 }
 
 .enquete .making-of {
-    border-top: (@line-height / 3pt) double #2A85A4;
-    padding-top: (@line-height / 3) * 2pt;
+    border-top: 4pt double;
+    padding-top: @line-height - 4pt;
     margin-top: 2 * @line-height;
     font-family: "Alfphabet";
-    color: #2A85A4;
 }
 
-.enquete .making-of h1 { font-size: @line-height; }
+.enquete .making-of h1 {
+    font-size: @line-height;
+    font-weight: normal
+}
+.enquete .making-of h1 em {
+    text-transform: uppercase;
+    font-family: "Medor";
+    font-size: 9.5pt;
+    font-style: normal;
+}
 
 .enquete--long > header h1 {
     font-size:  @line-height * 6;
@@ -288,8 +310,8 @@ figcaption,
 .enquete--short > header > .authors { display: none; }
 
 .enquete--short > .chapeau {
-  font-size: 12pt;
-  line-height:  @line-height * 1.25;
+  font-size: 10.5pt;
+  /*line-height:  @line-height * 1.25;*/
 
  }
 
@@ -534,6 +556,14 @@ line-height: 12pt;
 .rubrique > .chapeau {
   font-family: 'Work Sans';
     font-weight: 600;
+
+  //  margin-bottom: @line-height ;
+  border-top: 2pt solid @color-black;
+  border-bottom: 2pt solid @color-black;
+  padding: @line-height / 2;
+  padding-top: @line-height  !important;
+  padding-bottom: @line-height  !important;
+    font-weight: 700;
     letter-spacing: 0.02em;
 }
 
@@ -567,12 +597,11 @@ line-height: 12pt;
 
 .filet:before {
     content: " ";
-    border-left: 3pt double black;
+    border-left: 3pt double @color-black;
     // border-right: @filet solid black;
 
     width: 0;
     height: 100%;
-    // background-color: black;
     position: absolute;
     // left: (@padding-filet + @filet) * -1;
     left: -7pt;
@@ -630,8 +659,9 @@ line-height: 12pt;
   padding-top:0pt;
 }
 
-.rubrique .rubrique-title, .rubrique .rubrique-subtitle{
-  margin-left: -140pt;
+
+.rubrique .rubrique-title, .rubrique-subtitle{
+  // margin-left: -140pt;
 }
 /*
  * Styles bd
@@ -639,7 +669,7 @@ line-height: 12pt;
  */
 .bd {
 
-    color:white;
+    color: white;
 }
 
 .bd p {
@@ -835,11 +865,12 @@ line-height: 12pt;
  }
  .photo .chapeau {
    font-size: 14pt;
-   line-height: 21pt;
+   line-height: 19pt;
    font-family: 'Belgika8th';
-   margin-bottom: @line-height *2;
+   /*margin-bottom: @line-height * 2;*/
+   /*margin-bottom: 71pt;*/
+   margin-bottom: 119pt;
    text-align: left;
-
  }
 
 
@@ -856,18 +887,21 @@ line-height: 12pt;
    font-family: 'Work Sans';
   font-weight: 300;
   font-style: normal;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   font-size: 9pt;
-  line-height: @line-height*0.95;
+  line-height: @line-height;
   text-align: justify;
-  em{
-    font-size: 9.2pt;
-    letter-spacing: 0em;
-    font-family: "Century Schoolbook";
-  }
+}
+.photo > p > em {
+    /*font-size: 9.2pt;*/
+    /*letter-spacing: 0em;*/
+    /*font-family: "Century Schoolbook";*/
+    font-weight: 500;
+    font-style: normal;
 }
 .photo > p:not(.chapeau) + p {
-  text-indent: @line-height;
+  /*text-indent: @line-height;*/
+    margin-top: @line-height;
 }
 .photo > p.auteur {
   margin-top: @line-height;
@@ -900,8 +934,8 @@ line-height: 12pt;
 .photo ol {
   margin: 0;
   padding: 0;
-  .w3;
-  margin-top: @line-height * 2;
+  /*.w3;*/
+  margin-top: @line-height * 1;
 }
 
 .photo #page-8 figcaption > p {
@@ -972,6 +1006,9 @@ line-height: 12pt;
 .enquete figcaption p {
     background-color: white;
     padding: 6pt 1em;
+    position: absolute;
+    left: 0;
+    bottom: -2pt;
     .w4;
 }
 
