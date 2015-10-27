@@ -555,6 +555,8 @@ line-height: 12pt;
 
 .rubrique > .chapeau {
   font-family: 'Work Sans';
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
     font-weight: 600;
 
   //  margin-bottom: @line-height ;
@@ -568,11 +570,12 @@ line-height: 12pt;
 }
 
 .rubrique > p {
-  font-family: 'Work Sans';
+  font-family: 'WorkMedor';
   font-weight: 500;
   font-size: 8.5pt;
   letter-spacing: -0.03em;
-
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
 }
 
 .rubrique > p > em {
@@ -885,19 +888,21 @@ Alfphabet
 
 .photo > p {
    font-family: 'Work Sans';
-  font-weight: 300;
+  font-weight: 500;
   font-style: normal;
   letter-spacing: -0.025em;
   font-size: 9pt;
   line-height: @line-height;
   text-align: justify;
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
 }
 .photo > p > em {
-    /*font-size: 9.2pt;*/
-    /*letter-spacing: 0em;*/
-    /*font-family: "Century Schoolbook";*/
-    font-weight: 500;
-    font-style: normal;
+    font-size: 9.2pt;
+    letter-spacing: 0em;
+    font-family: "Century Schoolbook";
+    // font-weight: 500;
+    // font-style: normal;
 }
 .photo > p:not(.chapeau) + p {
   /*text-indent: @line-height;*/
