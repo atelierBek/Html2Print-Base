@@ -3,6 +3,9 @@
 @color-aside: rgb(154, 3, 124);
 @line-height: 11.5pt;
 
+@color-fushia:#FE02FC;
+
+
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
@@ -23,12 +26,12 @@ body { counter-reset: folio 121 - 1; }
     padding-left: 0.5em;
     text-indent: -1em;
 
-    color: #f93134 ;
+    color: @color-fushia ;
 }
 
-#flow-main > p { 
-    position: relative; 
-    z-index: 999; 
+#flow-main > p {
+    position: relative;
+    z-index: 999;
 }
 
 blockquote {
@@ -40,17 +43,17 @@ blockquote {
     font-weight: normal;
     text-align: center;
     background: white;
-    color: @color-aside;
+    color: @color-fushia;
 }
 
-blockquote footer { 
-    font-size: 12pt; 
+blockquote footer {
+    font-size: 12pt;
     line-height: 14pt;
 }
 
-.exergue { 
-    padding: 12pt 0; 
-    position: relative; 
+.exergue {
+    padding: 12pt 0;
+    position: relative;
 }
 
 #flow-main .exergue:nth-of-type(1) {
@@ -98,12 +101,11 @@ blockquote footer {
 }
 
 
-.rubrique-title { border-color: #f93134; }
+.rubrique-title { border-color: @color-fushia; }
 
 
 .chapeau {
-  background-color: #f93134;
-  color: #f3fdcf !important;
+  //background-color: @color-fushia;
 
   padding: @line-height / 2;
   padding-top: @line-height  !important;
@@ -112,7 +114,7 @@ blockquote footer {
 }
 
 .rubrique > .footnotes {
-    color: #f93134;
+    color: @color-fushia;
     list-style-type: none;
     margin-top: 0pt;
 }
@@ -133,5 +135,5 @@ blockquote footer {
 
 a > sup {
    font-weight: 900;
-   color: #b14542;
+   color: @color-fushia;
 }
