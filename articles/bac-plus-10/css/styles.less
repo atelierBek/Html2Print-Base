@@ -6,11 +6,7 @@
 }
 
 .paper {
-color:#2a85a4;
-}
-
-.portrait p  {
-  //text-align: justify;
+  color:#1e6076;
 }
 
 html.facing .paper:nth-child(even) .cadre{
@@ -48,45 +44,45 @@ html.facing .paper:nth-child(odd) .sans{
   text-align: left;
   line-height: (@line-height * 4) / 4.5;
 
+  em{
+    line-height:0pt;
+  }
 }
- body {
- }
 
-h2 {
-  margin-top:@line-height;
+.end h2{
+  font-size: 10pt;
+  line-height: (@line-height*4) / 4.5;
+  margin-top: 6pt;
 }
 
 .portrait aside{
   -webkit-flow-into: aside;
   flow-into: aside;
-  //border: solid 3px #2a85a4;
-  font-family: 'Erbar condensed';
-  font-weight: normal;
-  font-size: 8pt;
   color: white;
-  line-height: @line-height;
-
-
+  font-family: 'Work Sans';
+  font-weight: 300;
+  font-size: 7pt;
+  line-height: (@line-height*4) / 4.7;
   p:first-of-type{
     display:none;
   }
-
   h1{
     font-family: 'Erbar condensed';
     font-weight: bold;
-    font-size:12pt
-
+    font-size:12pt;
+    position:absolute;
+    top:0px;
   }
-
 }
 
 .aside{
+  padding-top: @line-height;
   -webkit-flow-from: aside;
   flow-from: aside;
   margin-top: @line-height;
-  text-align: left;
-  background:#2a85a4;
+  //background: red;
 }
+
 
 /*ol > li:nth-of-type(1){
   -webkit-flow-into: ftn-1;
@@ -105,9 +101,6 @@ ol > li:nth-of-type(2){
   flow-from: ftn-2;
 }*/
 
-.portrait .rubrique-title{
-  background: #2a85a4;
-}
 
 img {
     display: block;
@@ -148,11 +141,32 @@ blockquote > footer {
         flow-from: flow-main;
 }
 
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
+
+.legende {
+  margin-top:9pt;
+  position: absolute;
+  font-family: "Alfphabet", sans-serif;
+  font-size: 7pt;
+  line-height: 9pt;
+  //width: 100%;
+  color: white;
+  p{
+    margin-top:9pt;
+  }
+}
+
+
+.body:after{
+  color:white
+}
 /*#flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
 #flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }*/
 
 /* reset folio */
-body { counter-reset: folio 74 - 1; }
+body {counter-reset: folio 74 - 1;}
 
 /*footer,*/
 /*header content*/
