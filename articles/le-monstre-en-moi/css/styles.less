@@ -33,7 +33,7 @@
 
 }
 /* reset folio */
-body { counter-reset: folio 111 - 1; }
+body { counter-reset: folio 84 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -84,7 +84,7 @@ vertical-align:middle;
 
 }
 #page-2 .question{
-  margin-top: @line-height *2 !important;
+  margin-top: 48pt !important;
 }
 #page-4 p.question:nth-of-type(1){
   margin-top:0pt !important;
@@ -92,6 +92,9 @@ vertical-align:middle;
 #page-7 p.question:nth-of-type(1){
   margin-top:0pt !important;
 }
+
+
+
 .question + p:first-of-type em:first-of-type {
   //text-indent: 0pt !important;
   color: red;
@@ -233,9 +236,9 @@ aside:first-of-type{
 aside h1{
   font-weight: normal ;
   font-style: normal;
-  line-height: @line-height *1.5  !important;
+  line-height: @line-height  !important;
   margin-top: 0 !important;
-  text-align: center;
+  text-align: left;
 }
 
 div.flow-encadre aside h1 {
@@ -245,15 +248,15 @@ div.flow-encadre aside h1 {
         display: inline;
         text-transform: uppercase;
         padding-left: 0;
-        text-align: center  !important;
-        line-height: @line-height / 1.5 !important ;
+        text-align: left  !important;
+        line-height: @line-height;
         font-weight: 400 !important;
 
           }
 
 #page-6 div.flow-encadre aside h1{
-      margin-bottom:@line-height * 2 !important ;
-      padding-bottom:@line-height * 2 !important ;
+      // margin-bottom:@line-height * 2 !important ;
+      //padding-bottom:@line-height * 2 !important ;
     }
 #page-6 div.flow-encadre aside h1, #page-8  aside h1  {
 // font-family: 'Belgika5th' !important;
@@ -261,18 +264,19 @@ div.flow-encadre aside h1 {
 // text-align: left;
 font-family: 'Work sans' !important ;
 font-size: 9pt !important;
-display: inline;
+display: block;
  text-transform: uppercase;
  font-weight: 700 !important;
  letter-spacing: 0.08em;
+ text-align:left;
   }
   #page-6 aside , #page-8  aside   {
-    padding-top: 5pt !important;
+    padding-top: 0pt !important;
 
   }
 
 
-#page-3 div.flow-encadre, #page-6 div.flow-encadre, #page-8 div.flow-encadre {
+#page-3 div.flow-encadre {
   background-color: @color;
   padding-left: 24pt;
   padding-right: 24pt;
@@ -281,6 +285,20 @@ display: inline;
   padding-bottom: 12pt;
   color: white;
 }
+
+
+#page-6 div.flow-encadre, #page-8 div.flow-encadre {
+  background-color: @color;
+  padding-left: 24pt;
+  padding-right: 24pt;
+  padding-top: 0pt;
+  margin-right: 5pt;
+  padding-bottom: 12pt;
+  color: white;
+  text-align:left;
+  line-height: 12pt;
+}
+
  div.flow-encadre {
   background-color: @color;
   // border-right: solid 1px black;
@@ -303,6 +321,11 @@ div.flow-encadre aside{
            region-break-after: always;
                   break-after: always-region;
                     padding-top: 12pt !important;
+
+}
+
+#page-6 div.flow-encadre aside{
+   padding-top: 0pt !important;
 
 }
 
