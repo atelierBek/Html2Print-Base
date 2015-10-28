@@ -22,6 +22,9 @@ body { counter-reset: folio 106 - 1; }
 #flow-main header { .flow-into(flow-title); }
 .flow-title { .flow-from(flow-title); }
 
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
@@ -57,11 +60,10 @@ img {
   // font-family: "Career";
   //font-family: "Career-salle13";
   // font-family: 'Career-turning';
-  font-family: 'Career-point';
+  font-family: 'Career-turning';
   margin-top: 232pt;
 
 }
-
 
 .chapeau{
     // -webkit-region-break-after: always;
@@ -74,7 +76,8 @@ img {
       // padding-bottom: @line-height  !important;
       margin-bottom: (@line-height)  !important;
        margin-top: -1pt;
-
+       font-feature-settings: "liga" 0;
+       -webkit-font-feature-settings: "liga" 0;
 
 }
 
