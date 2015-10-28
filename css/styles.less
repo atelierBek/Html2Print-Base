@@ -100,7 +100,6 @@ html.bw .rubrique-title { border-color: transparent!important; }
 
 p.auteur {
     text-indent: 0!important;
-    margin-top: @line-height;
     font-weight: normal;
 }
 
@@ -335,7 +334,6 @@ figcaption,
   //  font-family: 'Century Schoolbook';
   font-size: 37pt;
   font-family: Alfphabet;
-  margin-top: 17pt;
   font-weight: normal;
   text-align: center;
 }
@@ -351,6 +349,11 @@ figcaption,
 font-family: 'alfphabet';
 text-align: center;
 }
+.interview .auteur {
+  font-family: 'Bagnard';
+  margin-top: -1pt;
+  font-size: 8.5pt;
+}
 
 /* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
 .interview > h2 {
@@ -361,7 +364,7 @@ text-align: center;
 }
 
 .interview > p + h2 { margin-top: @line-height * 2; }
-.interview > p + p { text-indent: 9pt; }
+.interview > p + p,  .interview > aside + p { text-indent: 9pt; }
 
 .interview > h2,
 .interview > p {
@@ -383,18 +386,21 @@ text-align: center;
     // color: blue;
     font-family: 'Alfphabet';
     font-weight: normal;
-    padding: 8pt 8pt 8pt 0pt;
+    padding: 0pt 8pt 0pt 0pt;
     font-size: 7.5pt;
     //color:gold;
+    line-height: 0pt;
+
 }
 .interview > p.question > abbr {
-  padding: 8pt 13pt 8pt 0pt;
+  padding: 0pt 13pt 0pt 0pt;
+  line-height: 0pt;
 
 }
 .interview .chapeau {
     font-family: "bagnard";
     font-weight: normal;
-    font-size: 11pt;
+    font-size: 10.5pt;
     padding: 0;
     margin: 0;
     margin-top: 0;
@@ -405,7 +411,7 @@ text-align: center;
 //  font-family: 'Erbarre';
 font-family: 'bagnard';
 font-weight: normal;
-font-size: 10pt;
+// font-size: 10pt;
 //  font-family: 'Century Schoolbook';
 //font-style: italic;
 //font-size: 10pt;
@@ -416,6 +422,23 @@ line-height: @line-height !important;
   //text-decoration: underline;
 }
 
+.interview .making-of {
+    border-top: 4pt double;
+    padding-top: @line-height - 4pt;
+    margin-top: 2 * @line-height;
+    font-family: "Alfphabet";
+}
+
+.interview .making-of h1 {
+    font-size: @line-height;
+    font-weight: normal
+}
+.interview .making-of h1 em {
+    text-transform: uppercase;
+    font-family: "Medor";
+    font-size: 9.5pt;
+    font-style: normal;
+}
 /*
  * Styles traduction-nl
  * -----------------
@@ -1042,6 +1065,10 @@ Alfphabet
  * Styles making-off article
  * -----------------
  */
+ /*
+  * Styles meta article
+  * -----------------
+  */
 
  .meta p {
   font-family: 'Work Sans';

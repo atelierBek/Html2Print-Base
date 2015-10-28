@@ -1,6 +1,8 @@
 @import "../../../css/main.less";
-@color:blue;
-
+@color-bleu-elec-medor:#1e60e1;
+@color-bleu-vieux-medor:#2a85a4;
+@color-orange-bug:#d38d5f;
+@color-rouge-brique:#d94527;
 
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -11,6 +13,10 @@
     -webkit-flow-from: flow-main;
         flow-from: flow-main;
 }
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
+
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -20,24 +26,63 @@
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
+#flow-main ol.footnotes { .flow-into(flow-footnotes); }
+.flow-footnotes { .flow-from(flow-footnotes); }
+
+// #flow-main .exergue:nth-of-type(1) { .flow-into(flow-exergue1); }
+// .flow-exergue1 { .flow-from(flow-exergue1); }
+// #flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-exergue2); }
+// .flow-exergue2 { .flow-from(flow-exergue2); }
+// #flow-main aside.exergue:nth-of-type(3) { .flow-into(flow-exergue3); }
+// .flow-exergue3 { .flow-from(flow-exergue3); }
+// #flow-main aside.exergue:nth-of-type(4) { .flow-into(flow-exergue4); }
+// .flow-exergue4 { .flow-from(flow-exergue4); }
+// #flow-main aside.exergue:nth-of-type(5) { .flow-into(flow-exergue5); }
+// .flow-exergue5 { .flow-from(flow-exergue5); }
+
+
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
-
 /* reset folio */
 body { counter-reset: folio 84 - 1; }
 
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Super entretien — Carine Russo"; }
+// ============essais col 50 50===================//
+// .col50left{
+//   float: left;
+//   width: 50%;
+//   box-sizing: border-box;
+//   padding-right: 4.5pt;
+// }
+// .col50right{
+//   float: left;
+//   width: 50%;
+//   box-sizing: border-box;
+//   padding-left: 4.5pt;
+// }
+//  p{
+// padding-left: 22pt;
+// }
+// p::first-line{
+// padding-left: -22pt
+// }
 
+// ============fin essais col 50 50===================//
 
 abbr{
-  color: @color;
+  color: @color-bleu-vieux-medor;
+  // text-decoration: underline;
+
+}
+.interview > p.question > abbr {
+  color: @color-bleu-vieux-medor;
   // text-decoration: underline;
 
 }
 .rubrique-title{
-  border-bottom: 2pt solid @color;
+  border-bottom: 2pt solid @color-bleu-vieux-medor;
 }
 p + p {
 //  text-indent: @line-height;
@@ -54,12 +99,15 @@ h1{
 text-transform: uppercase;
 //  font-family: 'Century Schoolbook';
   font-family: 'Alfphabet-Condensed';
-
+margin-top: 0px;
   //font-style: italic;
   font-weight: normal;
 font-size: 30pt;
 }
 
+.interview .chapeau{
+  margin-top: @line-height *1 !important;
+}
 
 img {
     //display: block;
@@ -72,7 +120,7 @@ img {
 }
 
 .footnotes {
-   color: @color;
+   color: @color-bleu-vieux-medor;
    list-style-type: none;
    font-family: 'Alfphabet-Condensed';
    margin: 0;
@@ -80,6 +128,11 @@ img {
    line-height: (@line-height / 8) * 6;
    list-style-type: none;
    font-style: normal;
+     padding-left: 0pt;
+     margin-top: 0pt !important;
+}
+.footnote-backref{
+  display: none;
 }
 .footnotes em {
  font-style: italic;
@@ -134,8 +187,46 @@ margin-top: @line-height *2;
 }
 a > sup {
   font-weight: 900;
-  color: @color;
+  color: @color-bleu-vieux-medor;
 }
-#page-1 p.question{
-  margin-top:@line-height !important;
+// .question:nth-of-type(1){
+//    margin-top:@line-height *3 !important;
+//   -webkit-region-break-before: always;
+//         region-break-before: always;
+//                 break-before: always-region;
+// }
+#page-2 .question{
+ margin-top:@line-height *3 !important;
+  // -webkit-region-break-before: always;
+  //       region-break-before: always;
+  //               break-before: always-region;
+}
+
+.interview .making-of {
+    border-top: 4pt double @color-rouge-brique;
+    color: @color-rouge-brique;
+}
+
+html.bw .interview .making-of {
+    visibility: hidden!important;
+}
+ blockquote{
+   font-family: 'Alfphabet-Condensed';
+   font-family: 'Alfphabet';
+
+  // font-family: 'Bagnard';
+
+  font-size: 19pt;
+  // font-size: 15pt;
+
+  width: 101%;
+  // text-transform: uppercase;
+  line-height: 19pt;
+  color: @color-orange-bug;
+}
+.colright blockquote{
+margin-left: -32pt;
+}
+.colright blockquote{
+margin-left: -32pt;
 }
