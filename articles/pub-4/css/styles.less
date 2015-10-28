@@ -1,0 +1,46 @@
+@import "../../../css/main.less";
+
+
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+/* reset folio */
+body { counter-reset: folio 126 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "pub — Pub 4"; }
+.paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+
+
+figure:nth-of-type(1) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+figure {
+  height: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+// FIXME: Seem to cause troubles: when printing the image does not show up
+figure:nth-of-type(1),
+figure:nth-of-type(2) {
+     overflow: hidden;
+}
