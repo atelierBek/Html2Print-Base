@@ -78,23 +78,22 @@ figure img {
 
 .rubrique-title {
     margin-top: 0;
-    margin-bottom: -1.4pt;
-    border-bottom: 1.4pt solid;
+    margin-bottom: -2pt;
+    border-bottom: 2pt solid;
+    display: inline-block;
 
-    font-family: "Erbarre", serif;
+    font-family: "Erbarre";
     font-weight: bold;
     font-size: 9pt;
-    text-transform: uppercase;
-    display: inline-block;
     line-height: @line-height;
+    text-transform: uppercase;
 }
 
-html.bw .rubrique-title { border-bottom: 2pt solid transparent!important; }
+html.bw .rubrique-title { border-color: transparent!important; }
 
 .rubrique-subtitle {
-//  font-family: "Erbarre", "Erbar condensed";
-  font-family: "Alfphabet-Condensed";
-    //text-transform: uppercase;
+    font-size: 9pt;
+    font-family: "Alfphabet-Condensed";
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
@@ -671,9 +670,6 @@ text-align: center;
 }
 
 
-.rubrique .rubrique-title, .rubrique-subtitle{
-  // margin-left: -140pt;
-}
 /*
  * Styles bd
  * -----------------

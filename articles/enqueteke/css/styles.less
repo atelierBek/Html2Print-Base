@@ -1,29 +1,26 @@
 @import "../../../css/main.less";
 @line-height: 11.5pt;
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
 /* reset folio */
-body { counter-reset: folio 41 - 1;
+body { counter-reset: folio 41 - 1; }
 
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/fd/4c/fd4ce3f9-36ad-42bf-9c45-ae222f297598/zone-neutre-2003-6.png");
+    background-size: cover;
 }
+
+.rubrique-title { border-color: #1e60e1; }
 
 .rubrique h1 {
   // padding: 5px 0;
@@ -92,13 +89,6 @@ margin-top: 12pt;
 
 }
 
-.rubrique-title, .rubrique-subtitle{
-  margin-left: -140pt;
-
-}
-.rubrique-title{
-  border-bottom: 2pt solid #1e60e1;
-}
 .rubrique h2 {
   margin-top: 11pt ;
   margin-bottom: 0;

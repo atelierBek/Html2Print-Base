@@ -2,14 +2,20 @@
 @line-height: 11.5pt;
 
 
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
+
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
+
 article > figure:nth-of-type(2) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
-#flow-main > header { .flow-into(flow-title); }
-.flow-title{ .flow-from(flow-title); }
-
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
+
+
 /* reset folio */
 body { counter-reset: folio 108 - 1; }
 
@@ -17,6 +23,14 @@ body { counter-reset: folio 108 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Lobbycratie"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/8e/d5/8ed52cfd-b82c-4231-972a-10b42554d44e/degrade-granite7low.png");
+    background-size: cover;
+}
+
+.rubrique-title { border-color: #3AAB0D; }
 
 
 article > figure:nth-of-type(1),
@@ -65,14 +79,6 @@ text-align: left;
   // font-family: 'Career-turning';
   //font-family: 'Career-point';
   margin-top: 40pt !important;
-}
-
-.rubrique-title, .rubrique-subtitle{
-  margin-left: -140pt;
-
-}
-.rubrique-title{
-  border-bottom: 2pt solid #3AAB0D;
 }
 
 .inline-fn {
