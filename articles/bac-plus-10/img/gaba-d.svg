@@ -54,14 +54,14 @@
      id="layer1"
      transform="translate(0,-184.25198)">
     <rect
-       style="fill:#2a85a4;fill-opacity:1;stroke:none"
+       style="fill:#1e6076;fill-opacity:1;stroke:none"
        id="rect2985"
        width="72.652313"
        height="918.77563"
        x="-41.123951"
        y="167.54039" />
     <rect
-       style="fill:#2a85a4;fill-opacity:1;stroke:none"
+       style="fill:#1e6076;fill-opacity:1;stroke:none"
        id="rect3006"
        width="648.97302"
        height="33.58456"
@@ -73,6 +73,6 @@
        height="116.34931"
        width="653.08545"
        id="rect3026"
-       style="fill:#2a85a4;fill-opacity:1;stroke:none" />
+       style="fill:#1e6076;fill-opacity:1;stroke:none" />
   </g>
 </svg>

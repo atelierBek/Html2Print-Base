@@ -118,7 +118,7 @@ figure {
 #flow-main figure:nth-of-type(3) img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #flow-main figure:nth-of-type(4) img {
@@ -144,4 +144,23 @@ figure {
     margin-top: @line-height * 2;
     margin-bottom: @line-height * 2;
     margin-left: -@col-gutter-width;
+}
+
+
+/* EXPORT */
+.bw {
+    .fond {
+        background-image: none !important;
+    }
+    header h1,
+    figure {
+        visibility: hidden !important;
+    }
+}
+
+.color {
+    .fin:after {
+        visibility: hidden !important;
+    }
+
 }
