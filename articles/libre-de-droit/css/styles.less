@@ -32,6 +32,10 @@ body { counter-reset: folio 106 - 1; }
         flow-from: flow-title;
 }
 
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
+
 img {
     //display: block;
     position: absolute;
@@ -56,13 +60,13 @@ img {
   // font-family: "Career";
   //font-family: "Career-salle13";
   // font-family: 'Career-turning';
-  font-family: 'Career-point';
+  font-family: 'Career-turning';
   margin-top: 232pt;
 
 }
 
 .rubrique-title, .rubrique-subtitle{
- margin-left: -140pt;
+ //margin-left: -140pt;
 
 }
 .rubrique-title{
@@ -81,7 +85,8 @@ img {
       // padding-bottom: @line-height  !important;
       margin-bottom: (@line-height)  !important;
        margin-top: -1pt;
-
+       font-feature-settings: "liga" 0;
+       -webkit-font-feature-settings: "liga" 0;
 
 }
 
