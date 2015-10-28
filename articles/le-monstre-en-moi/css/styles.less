@@ -32,6 +32,38 @@
   margin-top: 0pt !important;
 
 }
+
+.bw header h1 { color: transparent!important; }
+.bw .footnotes * { color: transparent!important; }
+.bw .exergue * { color: transparent!important; }
+.bw .question:before { visibility: hidden!important; }
+
+.bw div.flow-encadre * { background-color: transparent !important; }
+.bw #page-3 div.flow-encadre * { background-color: transparent !important; }
+.bw #page-6 div.flow-encadre * { background-color: transparent !important; }
+.bw #page-8 div.flow-encadre * { background-color: transparent !important; }
+.bw div.flow-encadre aside * { background-color: transparent !important; }
+.bw #page-3 div.flow-encadre aside * { background-color: transparent !important; }
+.bw #page-6 div.flow-encadre aside * { background-color: transparent !important; }
+.bw #page-8 div.flow-encadre aside * { background-color: transparent !important; }
+ .bw aside * { background-color: transparent!important; }
+.bw a > sup { visibility: hidden!important; }
+
+
+.rubrique-title { border-color: @color; }
+.bw .rubrique-title { border-color: transparent; }
+
+.color .chapeau { visibility: hidden; }
+.color .fin:after,
+.color figcaption p,
+.color .filet:before,
+.color .filet2:after { visibility: hidden!important; }
+.color .fond { background-image: none; }
+
+
+
+
+
 /* reset folio */
 body { counter-reset: page-counter 84 - 1; }
 
@@ -277,7 +309,7 @@ display: block;
 
 
 #page-3 div.flow-encadre {
-  background-color: @color;
+  // background-color: @color;
   padding-left: 24pt;
   padding-right: 24pt;
   padding-top: 24pt;
@@ -288,7 +320,7 @@ display: block;
 
 
 #page-6 div.flow-encadre, #page-8 div.flow-encadre {
-  background-color: @color;
+  // background-color: @color;
   padding-left: 24pt;
   padding-right: 24pt;
   padding-top: 0pt;
