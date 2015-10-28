@@ -2,26 +2,15 @@
 @line-height: 11.5pt;
 
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
-
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
 /* reset folio */
 body { counter-reset: folio 125 - 1; }
@@ -29,7 +18,15 @@ body { counter-reset: folio 125 - 1; }
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Datavizz"; }
-.paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/14/2d/142d0638-52e9-4303-b8a4-96255f523e07/guepier-mid4.png");
+    background-position: -300pt 0;
+    background-size: cover;
+}
+
+.rubrique-title { border-color: #39914f; }
+
 
 .rubrique h1 {
   // padding: 5px 0;
@@ -42,69 +39,36 @@ body { counter-reset: folio 125 - 1; }
   line-height: @line-height;
 
 }
-// .chapeau{
-//   // background-color:#39914f;
-//   color: #fffe35 !important;
-//   margin-bottom: @line-height;
-//   padding: @line-height / 2;
-//   padding-top: @line-height  !important;
-//   padding-bottom: @line-height  !important;
-//
-//   -webkit-region-break-after: always;
-//            region-break-after: always;
-//                   break-after: always-region;
-// }
 
-.chapeau{
-//  background-color:#f1d0c8;
-  // color: #1e60e1 !important;
-
-  // padding: @line-height / 2;
-  // padding-top: @line-height  !important;
-  // padding-bottom: @line-height  !important;
-  // margin-bottom: (@line-height)*3  ;
+.chapeau {
   margin-bottom: 30.5pt;
   border-top: 1pt solid black;
   border-bottom: 1pt solid black;
-
-
 }
 
-
-.rubrique-title{
-  border-bottom: 2pt solid #39914f;
-}
 img {
-    //display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     margin: 0 !important;
-
-
 }
 .fig4  figure{
-//margin-left: -200pt;
-width: 373%;
-margin-left: -265pt;
+    width: 373%;
+    margin-left: -265pt;
 }
 
 .fig5 {
-margin-top: 17pt;
+    margin-top: 17pt;
 }
 
 .fig3  figure{
-width:205%;
-
+    width:205%;
 }
 h2:nth-of-type(4){
     -webkit-region-break-before: always;
              region-break-before: always;
                     break-before: always-region;
-}
-.rubrique-title, .rubrique-subtitle{
-  margin-left: -140pt;
 }
 
 

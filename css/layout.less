@@ -7,6 +7,9 @@
 .body:before,
 .body:after { position: absolute; }
 
+.body:before,
+.body:after { z-index: 999; }
+
 
 /**
  * Zone de composition principale
@@ -45,6 +48,8 @@
 /*.header:before { content: "Type d'article — Titre de l'article"; } */
 /*.footer:before { content: "Médor n°1 —  printemps 2015"; }*/
 .body:after  { content: counter(page-counter); }
+
+.paper:nth-child(even) .body:before { content: "Médor — hiver 2015-2016"; }
 
 
 /**

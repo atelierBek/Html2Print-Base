@@ -78,23 +78,22 @@ figure img {
 
 .rubrique-title {
     margin-top: 0;
-    margin-bottom: -1.4pt;
-    border-bottom: 1.4pt solid;
+    margin-bottom: -2pt;
+    border-bottom: 2pt solid;
+    display: inline-block;
 
-    font-family: "Erbarre", serif;
+    font-family: "Erbarre";
     font-weight: bold;
     font-size: 9pt;
-    text-transform: uppercase;
-    display: inline-block;
     line-height: @line-height;
+    text-transform: uppercase;
 }
 
-html.bw .rubrique-title { border-bottom: 2pt solid transparent!important; }
+html.bw .rubrique-title { border-color: transparent!important; }
 
 .rubrique-subtitle {
-//  font-family: "Erbarre", "Erbar condensed";
-  font-family: "Alfphabet-Condensed";
-    //text-transform: uppercase;
+    font-size: 9pt;
+    font-family: "Alfphabet-Condensed";
     padding-top:  @line-height / 5;
     margin-bottom: 20pt;
 }
@@ -156,11 +155,6 @@ figcaption,
     font-size: 18pt;
     line-height: 18pt;
     margin-bottom: @line-height;
-}
-
-.enquete > header > .authors:before {
-    content: "Par ";
-    color: inherit;
 }
 
 .enquete > .chapeau {
@@ -351,12 +345,6 @@ figcaption,
 font-family: 'alfphabet';
 text-align: center;
 }
-.interview > header > .authors:before {
-    content: "Par ";
-    line-height: @line-height !important;
-    line-height: 12pt;
-
-}
 
 /* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
 .interview > h2 {
@@ -435,15 +423,6 @@ line-height: 12pt;
   font-weight: 400;
   padding-right: 147pt;
  }
-.traduction-nl > header > .authors:before {
-    content: "Par ";
-    line-height: @line-height !important;
-    line-height: 12pt;
-      font-family: "work sans";
-      font-size: 10pt;
-      text-transform: uppercase;
-      font-weight: 400;
-}
 
 .traduction-nl > header h1,
 .traduction-nl > header h2 {
@@ -647,14 +626,11 @@ text-align: center;
     line-height: (@line-height / 8) * 6;
     list-style-type: none;
     font-style: normal;
-    // color: lighten(#2A85A4, 20%);
 }
 
 .photo > .footnotes em,
-.rubrique > .footnotes em {
-    font-style: normal;
-    // color: #2A85A4;
-}
+.rubrique > .footnotes em { font-style: italic; }
+
 .rubrique p.auteur {
     font-weight: 600;
 }
@@ -671,9 +647,6 @@ text-align: center;
 }
 
 
-.rubrique .rubrique-title, .rubrique-subtitle{
-  // margin-left: -140pt;
-}
 /*
  * Styles bd
  * -----------------
@@ -871,9 +844,6 @@ Alfphabet
      text-align: center;
  }
 
- .photo > header > .authors:before {
-     content: "Par ";
- }
  .photo .chapeau {
    font-size: 14pt;
    line-height: 19pt;

@@ -27,6 +27,8 @@
         "pub": "articles/pub/article.html", 
         "pub-2": "articles/pub-2/article.html", 
         "pub-3": "articles/pub-3/article.html", 
+        "pub-4": "articles/pub-4/article.html", 
+        "pub-5": "articles/pub-5/article.html", 
         "quand-jetais-flamand": "articles/quand-jetais-flamand/article.html", 
         "sommaire": "articles/sommaire/article.html", 
         "sujet-photo": "articles/sujet-photo/article.html", 
