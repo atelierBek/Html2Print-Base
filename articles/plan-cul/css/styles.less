@@ -2,24 +2,15 @@
 @line-height: 11.5pt;
 
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
 //
 // #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
@@ -34,6 +25,10 @@ body { counter-reset: folio 21 - 1; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/d1/71/d1713000-aaf5-49ff-953d-8667de8a8e95/degrade-granite1low.png");
+    background-size: cover;
+}
 .rubrique-title { border-color: #2a85a4; }
 
 .flow-fig1 figure, .fig1 figure {

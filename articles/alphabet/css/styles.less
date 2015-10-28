@@ -1,14 +1,19 @@
 @import "../../../css/main.less";
 @line-height: 11.5pt;
 
-#flow-main { .flow-into(flow-main); }
-.flow-main { .flow-from(flow-main); }
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
 #flow-main header { .flow-into(flow-title); }
 .flow-title { .flow-from(flow-title); }
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
 
 /* reset folio */
 body { counter-reset: folio 42 - 1; }
@@ -17,6 +22,13 @@ body { counter-reset: folio 42 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Alphabet"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c431b0-5977-4e77-a669-bbfc7e469422/gare-du-nord-gratine-court.png");
+    background-size: cover;
+}
+
+.rubrique-title { border-color: #f3e1e2; }
 
 .rubrique h1 {
   text-shadow: 0 0 0 ;
@@ -36,8 +48,6 @@ body { counter-reset: folio 42 - 1; }
   background-color:#b14542;
 }
 
-.rubrique-title { border-color: #f3e1e2; }
-
 img {
     position: absolute;
     top: 0;
@@ -45,7 +55,7 @@ img {
     width: 100%;
     margin: 0 !important;
 }
-.fig1 figure { width: 219%; }
+
 .fig5 figure {
     width: 52%;
     margin-top: 4pt;
@@ -126,8 +136,8 @@ figcaption footer {
 .rubrique > .footnotes li { text-indent: 0em !important; }
 
 
-.paper:first-of-type {
-    background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c431b0-5977-4e77-a669-bbfc7e469422/gare-du-nord-gratine-court.png") !important;
-    background-position: 0 0!important;
-    background-size: cover!important;
-}
+/*.paper:first-of-type {*/
+    /*background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c431b0-5977-4e77-a669-bbfc7e469422/gare-du-nord-gratine-court.png") !important;*/
+    /*background-position: 0 0!important;*/
+    /*background-size: cover!important;*/
+/*}*/

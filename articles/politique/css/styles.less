@@ -6,6 +6,10 @@
 @color-fushia:#FE02FC;
 
 
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
+
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
@@ -19,6 +23,13 @@ body { counter-reset: folio 121 - 1; }
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Politique"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/37/50/375099b7-87a5-4338-93dd-7e978abb84a8/grain-gris.png");
+    background-size: cover;
+}
+
+.rubrique-title { border-color: @color-fushia; }
 
 
 #flow-main header h1 {
@@ -101,7 +112,6 @@ blockquote footer {
 }
 
 
-.rubrique-title { border-color: @color-fushia; }
 
 
 .chapeau {

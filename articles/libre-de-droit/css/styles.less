@@ -15,23 +15,20 @@ body { counter-reset: folio 106 - 1; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
 /* flows */
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/d1/75/d175ed5a-5cd8-40d9-9f67-07c834cae8ce/ok2-colore2.png");
+    background-size: cover;
 }
 
 .rubrique-title { border-color: @color-fushia; }

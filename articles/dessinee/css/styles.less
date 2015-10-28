@@ -1,31 +1,21 @@
 @import "../../../css/main.less";
 
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
-
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
-
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
-
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
 .flow-fig1 { .flow-from(flow-fig1); }
 
 #flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
 .flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
 
 .no-footer(1);
 .no-footer(2);
@@ -39,8 +29,12 @@ body { counter-reset: folio 92 - 1; }
 .paper:nth-child(odd) .body:before { content: ""; }
 .paper:nth-child(even) .body:before { content: ""; }
 
-
-
+.flow-slug {
+    padding-left: 14pt + 24pt;
+    padding-right: 2pt;
+    background-color: white;
+}
+.rubrique-subtitle { margin-bottom: 0; }
 
 figcaption {
   font-family: 'Tsukuri' !important;
@@ -102,23 +96,7 @@ header {
 }
 
 h1 {
-height: 0px;
-width: 0px;
-
+    height: 0;
+    width: 0;
 }
 
-.rubrique-subtitle {
-      margin-bottom: 0pt;
-      width: 90px;
-      margin-left: -20px;
-      padding-left: 20px;
-      background-color: white;
-}
-
-.rubrique-title {
-      margin-bottom: 0pt;
-      width: 90px;
-      margin-left: -20px;
-      padding-left: 20px;
-      background-color: white;
-}

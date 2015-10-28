@@ -2,26 +2,15 @@
 @line-height: 11.5pt;
 
 
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
-}
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
-}
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
 
-
-#flow-main header {
-    -webkit-flow-into: flow-title;
-            flow-into: flow-title;
-}
-
-.flow-title {
-    -webkit-flow-from: flow-title;
-        flow-from: flow-title;
-}
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
 
 /* reset folio */
 body { counter-reset: folio 125 - 1; }
@@ -31,15 +20,13 @@ body { counter-reset: folio 125 - 1; }
 .paper:nth-child(odd) .body:before { content: "Datavizz"; }
 .paper:nth-child(even) .body:before { content: "Médor #1"; }
 
-.paper:first-of-type {
-    background-image: url("https://medor.coop/media/filer_public/14/2d/142d0638-52e9-4303-b8a4-96255f523e07/guepier-mid4.png") !important;
-    background-position: -300pt 0!important;
-    background-size: cover!important;
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/14/2d/142d0638-52e9-4303-b8a4-96255f523e07/guepier-mid4.png");
+    background-position: -300pt 0;
+    background-size: cover;
 }
 
 .rubrique-title { border-color: #39914f; }
-.rubrique-title,
-.rubrique-subtitle { margin-left: -140pt; }
 
 
 .rubrique h1 {
