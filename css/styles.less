@@ -166,7 +166,11 @@ figcaption,
     margin: 0;
     margin-bottom: @line-height;
 }
-
+.enquete > .auteur {
+  font-family: 'Bagnard';
+  margin-top: -1pt;
+  font-size: 8.5pt;
+}
 .enquete > h2,
 .enquete > h3 {
     /*-webkit-region-break-after: avoid;*/
@@ -297,17 +301,19 @@ figcaption,
  */
 
 .enquete--short > header { color: #FAB547; }
-
+.enquete--short > header > .rubrique-title { color: @color-black; border-color: #FAB547;}
 .enquete--short > header > h1 {
-    font-size:  @line-height * 4.3;
-    line-height:  @line-height * 4;
+    font-size:  @line-height * 4;
+    line-height:  @line-height * 3;
+    margin-top: 18pt;
+
 }
 
 .enquete--short > header > .authors { display: none; }
 
 .enquete--short > .chapeau {
-  font-size: 10.5pt;
-  /*line-height:  @line-height * 1.25;*/
+  line-height: 14.5pt;
+  font-size: 11.5pt ;  /*line-height:  @line-height * 1.25;*/
 
  }
 
@@ -539,7 +545,7 @@ line-height: 12pt;
   font-feature-settings: "liga" 0;
   -webkit-font-feature-settings: "liga" 0;
     font-weight: 600;
-text-align: center;
+text-align: left;
   //  margin-bottom: @line-height ;
   border-top: 2pt double @color-black;
   // border-bottom: 1pt solid @color-black;
@@ -556,6 +562,12 @@ text-align: center;
   letter-spacing: -0.03em;
   font-feature-settings: "liga" 0;
   -webkit-font-feature-settings: "liga" 0;
+}
+.rubrique > p + p {
+  text-indent: 9pt;
+}
+.rubrique > .chapeau + p {
+  text-indent: 0pt;
 }
 
 .rubrique > p > em {
@@ -642,10 +654,11 @@ text-align: center;
 // hides the numbers in the HTML since it is redundant with the css numbered bullets.
 /*.enquete > .footnotes a[name^="sdfootnote"] { font-weight: bold; }*/
 .rubrique > .footnotes a[name^="sdfootnote"]:after { content: "." }
-.rubrique > .footnotes li { text-indent: -0.25em; }
+.rubrique > .footnotes a[name^="sdfootnote"]{font-family: 'Alfphabet';}
+.rubrique > .footnotes li { text-indent: 0em;}
 .rubrique > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
 .rubrique > .footnotes li:first-of-type{
-  text-indent: -0.25em !important;
+  text-indent: 0em !important;
   margin-top: 0pt;
   padding-top:0pt;
 }

@@ -1,7 +1,7 @@
 @import "../../../css/main.less";
 
 /* reset folio */
-body { counter-reset: folio 94 - 1; }
+body { counter-reset: page-counter 94 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -45,6 +45,26 @@ figcaption footer {
     -webkit-transform-origin: left bottom!important;
             transform-origin: left bottom!important;
     margin-top:12pt;
+}
+figcaption{
+  font-family: "Alfphabet", sans-serif;
+  font-size: 7pt;
+  line-height: 9pt;
+}
+
+figcaption p {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  // padding: 6pt 1em;
+    padding: 3pt 1em;
+  width: 380pt !important;
+  top: -19pt;
+}
+
+.figcaption-allover {
+  padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
 }
 
 

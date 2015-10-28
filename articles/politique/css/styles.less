@@ -20,7 +20,7 @@
 .flow-chapeau { .flow-from(flow-chapeau); }
 
 /* reset folio */
-body { counter-reset: folio 92 - 1; }
+body { counter-reset: page-counter 92 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -30,6 +30,26 @@ body { counter-reset: folio 92 - 1; }
     background-image: url("https://medor.coop/media/filer_public/37/50/375099b7-87a5-4338-93dd-7e978abb84a8/grain-gris.png");
     background-size: cover;
 }
+
+.bw h1 { color: transparent!important; }
+.bw .footnotes * { color: transparent!important; }
+.bw .exergue * { color: transparent!important; }
+
+
+.rubrique-title { border-color: @color-fushia; }
+.bw .rubrique-title { border-color: transparent; }
+
+.color .flow-chapeau { visibility: hidden; }
+.color .fin:after,
+.color figcaption p,
+.color .filet:before,
+.color .filet2:after { visibility: hidden!important; }
+.color .fond { background-image: none; }
+
+
+
+
+
 
 .rubrique-title { border-color: @color-fushia; }
 
@@ -57,7 +77,6 @@ blockquote {
     line-height: 18pt;
     font-weight: normal;
     text-align: center;
-    background: white;
     color: @color-fushia;
 }
 
@@ -80,9 +99,7 @@ blockquote footer {
     left: -12pt;
     margin-bottom: 2pt;
     top: 1pt;
-    blockquote{
-      background-color: rgba(255, 255, 255, 0);
-    }
+
 }
 
 #flow-main .exergue:nth-of-type(2) {
@@ -92,7 +109,7 @@ blockquote footer {
     top: 6pt;
     .trans(10deg, -15deg, top, left);
 margin-bottom: 100pt;
-  margin-left: 3pt;
+  margin-left: 14pt;
 }
 
 #flow-main .exergue:nth-of-type(3) {
@@ -116,7 +133,6 @@ margin-bottom: 100pt;
     position: relative;
     top: -19pt;
     margin-bottom: 76pt;
-    background-color: white;
 
 }
 .fond{

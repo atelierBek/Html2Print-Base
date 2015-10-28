@@ -228,8 +228,20 @@ figure:nth-of-type(14) img {
 
 
 /* reset folio */
-body { counter-reset: folio 43 - 1; }
+body { counter-reset: page-counter 68 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Portofolio"; }
+.paper:nth-child(odd) .body:before { content: "Portfolio — Tueries du Brabant"; }
+
+
+.no-footer(1);
+.no-footer(2);
+.no-footer(4);
+.no-footer(6);
+.no-footer(7);
+.no-footer(9);
+.no-footer(11);
+
+html.bw .rubrique-title { border-color: black!important; }
+html.color .rubrique-title { border-color: transparent!important; }
