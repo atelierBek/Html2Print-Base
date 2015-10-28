@@ -31,9 +31,22 @@ body { counter-reset: page-counter 82 - 1; }
 .fond {
     background-image: url("https://medor.coop/media/filer_public/89/8b/898b0547-516f-4e73-a01c-1ca379f06d84/medorss-bubble.png");
     background-size: cover;
+    background-size: 110%;
+    background-position: -40pt -33pt;
 }
 
+.bw .fond { background-image: none; }
+.bw h1 { color: transparent!important; }
+.bw .footnotes * { color: transparent!important; }
+
 .rubrique-title { border-color: @color-fushia; }
+.bw .rubrique-title { border-color: transparent; }
+
+.color .flow-chapeau { visibility: hidden; }
+.color .fin:after,
+.color figcaption p,
+.color .filet:before,
+.color .filet2:before { visibility: hidden!important; }
 
 img {
     //display: block;
@@ -50,11 +63,6 @@ img {
   text-align: left;
   margin-left: -31pt;
   margin-top: -29pt;
-}
-.fond{
-  width: 132%;
-margin-left: -33pt;
-margin-top: -30pt;
 }
 .rubrique h1 {
   // padding: 5px 0;
