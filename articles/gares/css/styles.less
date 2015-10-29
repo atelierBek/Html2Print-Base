@@ -69,8 +69,8 @@ body { counter-reset: folio 8 - 1; }
 }
 
 .authors {
-    margin-top: 0 !important;
-    line-height: @line-height !important;
+  margin-top: -6px !important;
+      line-height: @line-height !important;
 }
 
 .enquete > aside:nth-of-type(3) {
@@ -111,15 +111,16 @@ figure {
 }
 
 .fig1-bis img {
-    height: 100%;
     width: auto;
-    object-position: 0 0;
-}
+    height: 102%;
+    margin-top: -10pt;
+  }
 
 #flow-main figure:nth-of-type(1) img {
-    height: 100%;
+  height: 102%;
     width: auto;
-    object-position: -421pt 0;
+    object-position: -591px 0px;
+    margin-top: -10pt;
 }
 
 #flow-main figure:nth-of-type(2) img {
@@ -153,18 +154,22 @@ figure {
 }
 
 .fig1-bis .caption{
-    display: none;
+    // display: none;
 }
 .fig1-bis figcaption p {
     background-color: transparent!important;
     .w5;
+}
+.fig1-bis figcaption footer {
+  top: 24pt !important;
+
 }
 
 .flow-fig1 figcaption p {
     /*display: none;*/
 }
 .flow-fig1 figcaption, .flow-fig figcaption {
-  bottom: 5px !important;
+  bottom: -6px !important;
 }
 .flow-fig1 figcaption p,
 .flow-fig2 figcaption p,
@@ -220,6 +225,10 @@ font-feature-settings: "liga" 0;
 }
 #page-10 .x7 .flow-encadre aside p {
   border-bottom: 4pt double #FFF !important;
+}
+
+h2 + p, .auteur + p  {
+      text-indent:0pt !important;
 }
 
 /* EXPORT */
