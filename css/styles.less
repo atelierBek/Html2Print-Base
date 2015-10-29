@@ -110,7 +110,6 @@ p.fin::after {
     color: inherit!important;
 }
 
-
 // no hyphens there
 // https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
 h1,
@@ -654,6 +653,7 @@ text-align: left;
   vertical-align: 0pt;
 }
 
+.edito > .footnotes,
 .portrait > .footnotes,
 .photo > .footnotes,
 .rubrique > .footnotes {
@@ -665,6 +665,7 @@ text-align: left;
     list-style-type: none;
     font-style: normal;
 }
+.edito > .footnotes em,
 .portrait > .footnotes em,
 .photo > .footnotes em,
 .rubrique > .footnotes em { font-style: italic; }
@@ -1117,4 +1118,47 @@ text-align: left;
   font-size: 10pt;
   line-height: @line-height;
 
+}
+
+/*
+ * Styles EDITO
+ * ------------
+ */
+.edito h1 {
+  font-family: "Alfphabet-Condensed";
+  font-weight: normal;
+  font-size: 48pt;
+  line-height: 24pt;
+  margin-bottom: 18pt;
+}
+
+.edito p {
+  font-family: 'Bagnard';
+  font-weight: normal;
+  font-size: 10.5pt;
+  line-height: 12.5pt;
+  margin-top: 6pt;
+  em{
+    font-family: "Century Schoolbook";
+  }
+
+}
+
+.edito   strong {
+    font-family: "Alfphabet";
+    font-weight: normal;
+    font-size: 10.5pt;
+    line-height: 16pt;
+    margin-top: 12pt;
+
+  }
+
+.edito > .footnotes a[name^="sdfootnote"]:after { content: "." }
+.edito > .footnotes a[name^="sdfootnote"]{font-family: 'Alfphabet';}
+.edito > .footnotes li { text-indent: 0em;}
+.edito > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+.edito > .footnotes li:first-of-type{
+  text-indent: 0em !important;
+  margin-top: 0pt;
+  padding-top:0pt;
 }
