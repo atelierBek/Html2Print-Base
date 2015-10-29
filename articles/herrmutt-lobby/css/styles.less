@@ -54,34 +54,48 @@ body { counter-reset: folio 119 - 1; }
 .rubrique-title { border-color: #fffe35; }
 
 
+/* begin caption */
 
-
-.flow-fig1 figure, .fig1 figure {
-    //width: 107%;
-    height: auto;
-  //  margin-left: -25pt;
-  margin-top: -26pt;
+// s'assurer que l'element figure prend bien 100% du bloc qui le contient
+#flow-main figure:nth-of-type(1) {
+    height: 100%;
 }
 
-
-
-img {
-    //display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+// meme chose pour les images
+#flow-main figure:nth-of-type(1) img {
+    height: 100%;
     width: 100%;
-    margin: 0 !important;
+    object-fit: cover; // type de remplissage de l'image dans son bloc
+}
+
+// applique le style the légende par dessu l'image
+.flow-fig1 figcaption p {
+    .figcaption-over();
+    /*outline: 1px solid blue;*/
+    width: auto!important; // la légende sur une ligne et le bloc s'ajuste à la taille
+    height: auto; // sert à ce que le bloc s'agrandisse vertiaclement automatiquement
 }
 
 
+// apliquer la classe caption sur les blocs qui contiennet les figures de fond de page
+.caption figcaption p {
+  .figcaption-over();
+  .figcaption-allover();
+  width: auto;
+  padding-right: 6pt; // corrige le padding de droite
+}
 
+// placement des crédits sur les images en fond/bord perdu
+.caption figcaption footer {
+    left: calc(~"100% - 14pt - 12pt") !important;
+    bottom: calc(~"14pt + 12pt") !important;
+}
 
+/* end caption */
 
 
 .rubrique h1 {
-  // padding: 5px 0;
-  text-shadow: 0 0 0 ;
+  text-shadow: 0 0 0;
   color: #fffe35;
   margin-top: -39pt;
 }
@@ -185,55 +199,7 @@ p > em{
   line-height: @line-height;
 }
 
-.flow-fig1 figcaption p {
-    .figcaption-over();
-    .w3;
-}
-
-.foo {
-  .figcaption-over();
-  .figcaption-allover();
-
-}
-//   figcaption{
-//     font-family: "Alfphabet", sans-serif;
-//     font-size: 7pt;
-//     line-height: 9pt;
-// }
-
-//  figcaption p {
-//     background-color: white;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     padding: 6pt 1em;
-//     width:124pt !important;
-// }
-// .fond figcaption p {
-//   bottom: 12pt;
-//   left: 18px;
-//   padding: 6pt 1em 13pt 1em;
-//   width: 179pt !important;
-// }
-// .figcaption-allover {
-//     padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
-// }
-//
-//  figcaption footer {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     margin: 0;
-//     -webkit-transform: rotate(270deg);
-//             transform: rotate(270deg);
-//     -webkit-transform-origin: left bottom;
-//             transform-origin: left bottom;
-//             margin-left: 1%;
-//             margin-bottom: 0pt;
-//             margin-right: -43%;
-// }
-
-.auteur{
+.auteur {
   -webkit-region-break-after: always;
            region-break-after: always;
                   break-after: always-region;
