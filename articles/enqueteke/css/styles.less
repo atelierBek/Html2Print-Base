@@ -1,5 +1,6 @@
 @import "../../../css/main.less";
 @line-height: 11.5pt;
+@color-bleu-elec:#1e60e1;
 
 #flow-main header .rubrique-title,
 #flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
@@ -11,22 +12,30 @@
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
+#flow-main .footnotes { .flow-into(flow-footnotes); }
+.flow-footnotes { .flow-from(flow-footnotes); }
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
 /* reset folio */
 body { counter-reset: folio 41 - 1; }
 
 
 .fond {
-    background-image: url("https://medor.coop/media/filer_public/fd/4c/fd4ce3f9-36ad-42bf-9c45-ae222f297598/zone-neutre-2003-6.png");
+    background-image: url("https://medor.coop/media/filer_public/ac/cb/accbf7e9-a033-4215-914e-81e5e1bd7aee/zone-neutre-toner-jaune-vert-high.png");
     background-size: cover;
 }
 
-.rubrique-title { border-color: #1e60e1; }
+.rubrique-title { border-color: @color-bleu-elec; }
 
 .rubrique h1 {
-  // padding: 5px 0;
-  text-shadow: 0 0 0 ;
-  font-weight: normal;
-  color:#1e60e1 !important;
+  color:@color-bleu-elec !important;
+    margin-top: 24pt;
 }
 .rubrique > p {
   line-height: @line-height;
@@ -35,6 +44,7 @@ body { counter-reset: folio 41 - 1; }
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: "Enquêteke"; }
+.paper:nth-of-type(1) .body:before  { display: none; }
 
 
 img {
@@ -58,24 +68,16 @@ margin-top: 12pt;
 }
 
 .chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
-  background-color:#1e60e1;
-  color: #fffe35!important;
-
-  padding: @line-height / 2;
-  padding-top: @line-height  !important;
-  padding-bottom: @line-height  !important;
-  margin-bottom: (@line-height) * 2;
-
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
+    margin-top: 24pt;
 }
 
  .footnotes {
-    color: #1e60e1;
+    color: @color-bleu-elec;
     list-style-type: none;
-    margin-top: 0pt;
-    font-family: 'Alfphabet-Condensed';
+  margin-top: -24pt;
+      font-family: 'Alfphabet-Condensed';
     margin: 0;
     font-size: 7.5pt;
     line-height: (@line-height / 8) * 6;
@@ -94,14 +96,23 @@ margin-top: 12pt;
 
   line-height: @line-height;
 }
+
+
   figcaption{
     font-family: "Alfphabet", sans-serif;
     font-size: 7pt;
     line-height: 9pt;
-    top: 0;
-    margin-top: 72pt;
+    top: 45px;
     color: black;
 
+}
+.fin + figcaption {
+  position: relative !important;
+
+}
+.fin + figcaption > p > strong {
+  font-family: 'Alfphabet';
+  font-weight: normal;
 }
 
  figcaption p {
@@ -110,8 +121,9 @@ margin-top: 12pt;
     bottom: 0;
     left: 0;
     padding: 6pt 1em;
-    .w3 !important;
-    border: 1px solid black;
+  width: 118pt !important;
+      border: 1px solid black;
+
 
 }
 
@@ -128,7 +140,7 @@ margin-top: 12pt;
             transform: rotate(270deg);
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
-            margin-left: 103%;
+            margin-left: 1%;
 margin-bottom: 0pt;
 margin-right: -43%;
 }
@@ -139,9 +151,10 @@ margin-right: -43%;
                   break-after: always-region;
 }
 
-a > sup {
+a > sup, em > a > sup  {
    font-weight: 900;
-   color: #2a85a4;
+   color: @color-bleu-elec;
+   font-family: 'Work sans';
 }
 
 /* EXPORT */
