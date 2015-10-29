@@ -100,7 +100,6 @@ html.bw .rubrique-title { border-color: transparent!important; }
 
 p.auteur {
     text-indent: 0!important;
-    margin-top: @line-height;
     font-weight: normal;
 }
 
@@ -334,7 +333,6 @@ figcaption,
   //  font-family: 'Century Schoolbook';
   font-size: 37pt;
   font-family: Alfphabet;
-  margin-top: 17pt;
   font-weight: normal;
   text-align: center;
 }
@@ -350,6 +348,11 @@ figcaption,
 font-family: 'alfphabet';
 text-align: center;
 }
+.interview .auteur {
+  font-family: 'Bagnard';
+  margin-top: -1pt;
+  font-size: 8.5pt;
+}
 
 /* FIXME: ça ne restera sans doute pas des H2 quadn Eddy aura corrigé */
 .interview > h2 {
@@ -360,7 +363,7 @@ text-align: center;
 }
 
 .interview > p + h2 { margin-top: @line-height * 2; }
-.interview > p + p { text-indent: 9pt; }
+.interview > p + p,  .interview > aside + p { text-indent: 9pt; }
 
 .interview > h2,
 .interview > p {
@@ -382,18 +385,21 @@ text-align: center;
     // color: blue;
     font-family: 'Alfphabet';
     font-weight: normal;
-    padding: 8pt 8pt 8pt 0pt;
+    padding: 0pt 8pt 0pt 0pt;
     font-size: 7.5pt;
     //color:gold;
+    line-height: 0pt;
+
 }
 .interview > p.question > abbr {
-  padding: 8pt 13pt 8pt 0pt;
+  padding: 0pt 13pt 0pt 0pt;
+  line-height: 0pt;
 
 }
 .interview .chapeau {
     font-family: "bagnard";
     font-weight: normal;
-    font-size: 11pt;
+    font-size: 10.5pt;
     padding: 0;
     margin: 0;
     margin-top: 0;
@@ -404,7 +410,7 @@ text-align: center;
 //  font-family: 'Erbarre';
 font-family: 'bagnard';
 font-weight: normal;
-font-size: 10pt;
+// font-size: 10pt;
 //  font-family: 'Century Schoolbook';
 //font-style: italic;
 //font-size: 10pt;
@@ -415,6 +421,23 @@ line-height: @line-height !important;
   //text-decoration: underline;
 }
 
+.interview .making-of {
+    border-top: 4pt double;
+    padding-top: @line-height - 4pt;
+    margin-top: 2 * @line-height;
+    font-family: "Alfphabet";
+}
+
+.interview .making-of h1 {
+    font-size: @line-height;
+    font-weight: normal
+}
+.interview .making-of h1 em {
+    text-transform: uppercase;
+    font-family: "Medor";
+    font-size: 9.5pt;
+    font-style: normal;
+}
 /*
  * Styles traduction-nl
  * -----------------
@@ -632,6 +655,7 @@ text-align: left;
   vertical-align: 0pt;
 }
 
+.portrait > .footnotes,
 .photo > .footnotes,
 .rubrique > .footnotes {
     /*font-family: "Erbar condensed";*/
@@ -642,7 +666,7 @@ text-align: left;
     list-style-type: none;
     font-style: normal;
 }
-
+.portrait > .footnotes em,
 .photo > .footnotes em,
 .rubrique > .footnotes em { font-style: italic; }
 
@@ -799,16 +823,15 @@ text-align: left;
 .portrait h2 {
     font-family: "Erbar condensed";
     font-weight: normal;
-    font-size: 11pt;
-    line-height:  @line-height;
     text-transform: uppercase;
+    line-height:  (@line-height * 4) / 3.2  ;
 }
 
 .portrait > header > .author { display: none; }
 
 .portrait .chapeau {
     font-family: "Erbar condensed";
-    font-size: 15pt;
+    font-size: 14pt;
     text-align: left;
     line-height:  (@line-height / 2) * 3;
     -webkit-region-break-after: always;
@@ -826,17 +849,22 @@ text-align: left;
     font-family: "Erbar condensed" !important;
     font-weight: normal;
     font-size: 12pt;
-    line-height:  @line-height;
+    line-height: @line-height;
     text-transform: uppercase;
-    margin-top:  @line-height;
+    margin-top: @line-height;
 }
-Alfphabet
+
 .portrait > .footnotes {
     font-family: "Erbar condensed";
     margin: 0;
     font-size: 8pt;
     line-height: (@line-height / 8) * 7;
 }
+
+.portrait > header > .rubrique-title { color: white; border-color: #1e6076;
+}
+
+
 /*
  * Styles photo
  * -----------------
@@ -986,7 +1014,7 @@ Alfphabet
     font-weight: bold;
 }
 
-
+.foo figure,
 .rubrique figure,
 .enquete figure {
     position: relative;
@@ -994,6 +1022,7 @@ Alfphabet
 }
 
 .figcaption,
+.foo figcaption,
 .rubrique figcaption,
 .enquete figcaption {
     position: absolute;
@@ -1006,6 +1035,7 @@ Alfphabet
 }
 
 .figcaption,
+.foo figcaption p,
 .rubrique figcaption p,
 .enquete figcaption p {
     background-color: white;
@@ -1019,6 +1049,7 @@ Alfphabet
 .figcaption-over { padding: 6pt; }
 .figcaption-allover { padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt); }
 
+.foo figcaption footer,
 .rubrique figcaption footer,
 .enquete figcaption footer {
     position: absolute;
@@ -1032,6 +1063,7 @@ Alfphabet
             transform-origin: left bottom;
 }
 
+.foo figcaption footer small,
 .rubrique figcaption footer small,
 .enquete figcaption footer small {
     font-size: 6pt;
@@ -1043,6 +1075,10 @@ Alfphabet
  * Styles making-off article
  * -----------------
  */
+ /*
+  * Styles meta article
+  * -----------------
+  */
 
  .meta p {
   font-family: 'Work Sans';

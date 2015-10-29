@@ -294,16 +294,37 @@ html.bw article > blockquote:before {
     color: @flamand-bleu;
 }
 
-html.bw #page-2 article:first-of-type > p:first-of-type,
-html.bw .chapeau + p {
-    visibility: hidden!important;
-}
 
 .enquete .making-of {
     border-top: 4pt double @flamand-bleu;
     color: @flamand-bleu;
 }
 
-html.bw .enquete .making-of {
-    visibility: hidden!important;
+
+/* EXPORT */
+.bw {
+    img[data-color] {
+        visibility: hidden !important;
+    }
+    figcaption p {
+        //background-color: transparent !important; 
+    }
+    #page-2 article:first-of-type > p:first-of-type,
+    header,
+    .chapeau,
+    .chapeau + p,
+    .enquete .making-of {
+        visibility: hidden!important;
+    }
+}
+.color {
+    img[data-bw],
+    aside.exergue > blockquote footer:before,
+    article > blockquote:nth-of-type(1) p:last-child:before,
+    article > blockquote:nth-of-type(2) p:last-child:before,
+    article > blockquote:nth-of-type(3) p:last-child:before,
+    article > blockquote:nth-of-type(4) p:last-child:before,
+    .fin:after {
+        visibility: hidden !important;
+    }
 }

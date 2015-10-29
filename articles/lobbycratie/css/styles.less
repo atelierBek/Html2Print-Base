@@ -161,3 +161,34 @@ a > sup {
    font-weight: 900;
    color: #3AAB0D;
 }
+
+
+/* EXPORT */
+.bw {
+    .fond {
+        background-image: none !important;
+    }
+    header,
+    a > sup,
+    .footnotes,
+    img {
+        visibility: hidden !important;
+    }
+    .chapeau {
+        color: transparent !important;
+        background-color: transparent !important;
+    }
+    figcaption p {
+        background-color: transparent !important;
+    }
+}
+
+.color {
+    .filet:before,
+    .chapeau {
+        border-color: transparent !important;
+    }
+    .fin:after {
+        visibility: hidden !important;
+    }
+}
