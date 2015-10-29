@@ -92,11 +92,17 @@ body { counter-reset: folio 8 - 1; }
     font-weight: 500;
     line-height: @line-height;
 }
+.fond-vert{
+  background-color: #01BA04;
 
-.encadre {
-    border-top: 4pt double @color-B2;
-    background-color: #01BA04;
 }
+.encadre {
+    // border-top: 4pt double @color-B2;
+
+  }
+.fond-vert .flow-encadre  > aside  > p{
+
+  }
 
 figure {
     width: 100%;
@@ -146,8 +152,7 @@ figure {
     object-fit: fill;
 }
 
-.fig1-bis { 
-    .caption; 
+.fig1-bis .caption{
     display: none;
 }
 .fig1-bis figcaption p {
@@ -158,7 +163,9 @@ figure {
 .flow-fig1 figcaption p {
     /*display: none;*/
 }
-
+.flow-fig1 figcaption, .flow-fig figcaption {
+  bottom: 5px !important;
+}
 .flow-fig1 figcaption p,
 .flow-fig2 figcaption p,
 .flow-fig6 figcaption p,
@@ -188,9 +195,31 @@ figure {
     margin-left: -@col-gutter-width;
 }
 
-.enquete .lettrine { 
-    .lettrine-enquete; 
+.enquete .lettrine {
+    .lettrine-enquete;
     top: 0!important;
+}
+#page-10 .y0 {
+  height: @line-height * 25;
+}
+#page-10 .flow-encadre aside p {
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
+  font-size: 7pt;
+  line-height: 10.5pt;
+}
+#page-10 .flow-encadre aside h1 {
+  font-family: 'Bagnard' !important;
+font-feature-settings: "liga" 0;
+-webkit-font-feature-settings: "liga" 0;
+  margin-bottom: 4pt !important;
+  border-top: 4pt double #FFF !important;
+  padding-top: 7pt;
+  margin-top: -11.5pt;
+  font-size: 11.5pt !important;
+}
+#page-10 .x7 .flow-encadre aside p {
+  border-bottom: 4pt double #FFF !important;
 }
 
 /* EXPORT */
