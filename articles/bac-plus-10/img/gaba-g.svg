@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="666.14172"
-   height="868.11023"
+   width="637.5"
+   height="850"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -24,17 +24,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.54807548"
-     inkscape:cx="84.412162"
-     inkscape:cy="370.04345"
+     inkscape:zoom="0.73471556"
+     inkscape:cx="116.40699"
+     inkscape:cy="541.52251"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     units="mm"
-     inkscape:window-width="1272"
-     inkscape:window-height="724"
-     inkscape:window-x="0"
-     inkscape:window-y="20"
+     units="pt"
+     inkscape:window-width="1252"
+     inkscape:window-height="782"
+     inkscape:window-x="28"
+     inkscape:window-y="18"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,30 +52,27 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-184.25198)">
+     transform="translate(0,-234.25197)">
     <rect
        style="fill:#1e6076;fill-opacity:1;stroke:none"
        id="rect2985"
-       width="72.652313"
-       height="918.77563"
-       x="-684.97302"
-       y="167.54039"
-       transform="scale(-1,1)" />
+       width="47.5"
+       height="850"
+       x="590"
+       y="234.25197" />
     <rect
-       style="fill:#1e6076;fill-opacity:1;stroke:none"
-       id="rect3006"
-       width="648.97302"
-       height="33.58456"
-       x="-621.84906"
-       y="182.64688"
-       transform="scale(-1,1)" />
-    <rect
-       y="969.14136"
-       x="-628.08557"
-       height="115.27604"
-       width="653.08545"
+       y="234.07971"
+       x="0"
+       height="45.744183"
+       width="637.5"
        id="rect3026"
-       style="fill:#1e6076;fill-opacity:1;stroke:none"
-       transform="scale(-1,1)" />
+       style="fill:#1e6076;fill-opacity:1;stroke:none" />
+    <rect
+       y="989.44592"
+       x="0"
+       height="94.806076"
+       width="637.5"
+       id="rect3026-0"
+       style="fill:#1e6076;fill-opacity:1;stroke:none" />
   </g>
 </svg>

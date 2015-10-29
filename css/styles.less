@@ -232,7 +232,6 @@ figcaption,
 .enquete > aside.exergue > blockquote {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
-
     font-family: "Erbar condensed";
     font-size: 18pt;
     font-weight: bold;
@@ -832,6 +831,9 @@ text-align: left;
     margin-top: @line-height;
 }
 
+.portrait > p + p { text-indent: 9pt; }
+
+
 .portrait > .footnotes {
     font-family: "Erbar condensed";
     margin: 0;
@@ -840,6 +842,18 @@ text-align: left;
 }
 
 .portrait > header > .rubrique-title { color: white; border-color: #1e6076;
+}
+
+.portrait > .footnotes li:nth-of-type(1) a[name^="sdfootnote"]:after { content: "."; color:#1e6076; }
+.portrait > .footnotes li:nth-of-type(2) a[name^="sdfootnote"]:after { content: "."; color:white; }
+
+.portrait > .footnotes a[name^="sdfootnote"]{font-family: 'Alfphabet';}
+.portrait > .footnotes li { text-indent: 0em;}
+.portrait > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+.portrait > .footnotes li:first-of-type{
+  text-indent: 0em !important;
+  margin-top: 0pt;
+  padding-top:0pt;
 }
 
 
