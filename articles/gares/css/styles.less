@@ -43,7 +43,7 @@
 
 
 /* reset folio */
-body { counter-reset: folio 8 - 1; }
+body { counter-reset: page-counter 10 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -231,13 +231,37 @@ h2 + p, .auteur + p  {
       text-indent:0pt !important;
 }
 
+figcaption footer {
+    transform: rotate(-90deg);
+}
+figcaption > small {
+    transform: rotate(-90deg) !important;
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -20px;
+}
+
 /* EXPORT */
 .bw {
+    .fond-vert {
+        background-color: transparent !important;
+
+        aside,
+        h1,
+        p {
+            color: transparent !important;
+            border-color: transparent !important;
+        }
+
+    }
+    #page-10 .flow-encadre aside h1{
+        border-top-color: transparent !important;
+    }
     .fond {
         background-image: none !important;
     }
-    header h1,
-    figure {
+    img {
         visibility: hidden !important;
     }
 }
