@@ -5,7 +5,7 @@
 
 
 
-body { counter-reset: folio 119 - 1; }
+body { counter-reset: page-counter 22 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -211,20 +211,24 @@ a > sup {
 }
 
 
+figcaption footer {
+    transform: rotate(-90deg);
+}
+
 /* EXPORT */
 .bw {
     .fond {
         background-image: none !important;
     }
-    .chapeau,
     header,
-    figure,
+    img,
     .footnotes {
         visibility: hidden !important;
     }
 }
 
 .color {
+    .chapeau,
     .fin:after {
         visibility: hidden !important;
     }

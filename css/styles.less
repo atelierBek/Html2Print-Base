@@ -39,6 +39,8 @@ h2,
 h3 {
     margin: 0;
     padding: 0;
+    /* For the HTML2print layout, which uses CSS regions,
+     * do not break line if it means continuing in the next region */
     -webkit-break-inside: avoid-region;
             break-inside: avoid-region;
 }
@@ -104,6 +106,8 @@ p.auteur {
 }
 
 p.fin::after {
+    /** The last paragraph of the article finisheds with a Medor icon
+    */
     content: " \E011";
     font-size: 6.5pt;
     font-family: "Medor";

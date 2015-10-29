@@ -23,7 +23,8 @@
 .flow-fig2 { .flow-from(flow-fig2); }
 
 /* reset folio */
-body { counter-reset: folio 41 - 1; }
+//body { counter-reset: folio 41 - 1; }
+body { counter-reset: page-counter 32 - 1; }
 
 
 .fond {
@@ -154,7 +155,7 @@ margin-right: -43%;
 a > sup, em > a > sup  {
    font-weight: 900;
    color: @color-bleu-elec;
-   font-family: 'Work sans';
+   font-family: 'WorkMedor';
 }
 
 /* EXPORT */
@@ -163,8 +164,10 @@ a > sup, em > a > sup  {
         background-image: none !important;
     }
     header,
-    figure,
-    a > sup {
+    img,
+    a > sup,
+    .footnotes,
+    .footnotes a[name^="sdfootnote"]:after {
         visibility: hidden !important;
     }
     .chapeau {
@@ -182,5 +185,10 @@ a > sup, em > a > sup  {
     .filet:before {
         border-color: transparent !important;
     }
-
+    figcaption footer,
+    figcaption p {
+        color: transparent !important; 
+        border-color: transparent !important;
+    }
+    
 }
