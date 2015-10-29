@@ -13,38 +13,66 @@
 .flow-main { .flow-from(flow-main); }
 
 /* reset folio */
-body { counter-reset: folio 125 - 1; }
+body {counter-reset: page-counter 98 - 1;}
+
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Datavizz"; }
+.paper:nth-child(odd) .body:before { content: "C'est pas données"; }
 
 .fond {
-    background-image: url("https://medor.coop/media/filer_public/14/2d/142d0638-52e9-4303-b8a4-96255f523e07/guepier-mid4.png");
-    background-position: -300pt 0;
+    background-image: url("https://medor.coop/media/filer_public/01/aa/01aa4df8-4477-460e-bcc6-cdc3f5052b3d/guepier-hi.png");
+    background-position: 0pt 0;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-size:   193%;
+}
+#page-2 .fond {
+    background-position: -481pt 0pt !important;
 }
 
-.rubrique-title { border-color: #39914f; }
 
-
-.rubrique h1 {
-  // padding: 5px 0;
-  text-shadow: 0 0 0 ;
-  font-weight: normal;
-  color:#39914f !important;
-  margin-top: 121pt;
-}
-.rubrique > p {
-  line-height: @line-height;
+.fond2 {
+    background-image: url("https://medor.coop/media/filer_public/6a/20/6a204b68-06a3-4ce8-9aea-15eb7c03dd7a/guepier-outlined-couleur-blanc.svg");
+    background-position: 0pt 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
-
-.chapeau {
-  margin-bottom: 30.5pt;
-  border-top: 1pt solid black;
-  border-bottom: 1pt solid black;
+#page-2 .fond2 {
+    background-position: -481pt 0pt;
 }
+
+.fond3 {
+    background-image: url("https://medor.coop/media/filer_public/51/07/510756cb-8baa-4fee-8e5d-ef70165506af/guepier-outlined-black.svg");
+    background-repeat: no-repeat;
+    background-position: 1pt 15pt;
+      background-size: 184%;
+}
+#page-2 .fond3 {
+    background-position: -480pt 15pt;
+}
+
+.rubrique-title { border-color: #3acbe1; }
+
+//
+// .rubrique h1 {
+//   // padding: 5px 0;
+//   text-shadow: 0 0 0 ;
+//   font-weight: normal;
+//   color:#39914f !important;
+//   margin-top: 121pt;
+// }
+// .rubrique > p {
+//   line-height: @line-height;
+//
+// }
+//
+// .chapeau {
+//   margin-bottom: 30.5pt;
+//   border-top: 1pt solid black;
+//   border-bottom: 1pt solid black;
+// }
 
 img {
     position: absolute;
@@ -65,118 +93,11 @@ img {
 .fig3  figure{
     width:205%;
 }
-h2:nth-of-type(4){
-    -webkit-region-break-before: always;
-             region-break-before: always;
-                    break-before: always-region;
-}
-
-
- .auteur + p {
-   font-family: 'Alfphabet-Condensed';
-   margin: @line-height;
-   font-size: 7.5pt;
-   line-height: (@line-height / 8) * 6;
-   list-style-type: none;
-   font-style: normal;
-   color: #fffe35;
-     -webkit-region-break-after: always;
-              region-break-after: always;
-                    break-after: always-region;
- }
-
-
- .rubrique > .footnotes {
-     color: #39914f;
-     list-style-type: none;
-     margin-top: 0pt;
- }
- .rubrique > .footnotes em {
-
-    font-style: italic;
-
- }
-
-
-  .footnotes:first-of-type{
-    -webkit-region-break-after: always;
-             region-break-after: always;
-                     break-after: always-region;
-  }
-
- a > sup {
-    font-weight: 900;
-    color: #fffe35;
- }
- .rubrique > .footnotes li:first-of-type{
-   margin-top:0 !important;
-   padding-top:0 !important;
-   }
-
-  .rubrique  > .l2  > .footnotes  > li{
-font-size: 10pt;
-     }
-
-     figcaption{
-       font-family: "Alfphabet", sans-serif;
-       font-size: 7pt;
-       line-height: 9pt;
-     }
-
-     .oiseau figcaption p {
-       background-color: white;
-      //  position: absolute;
-       bottom: 0;
-       left: 0;
-       padding: 6pt 1em;
-       .w6;
-       text-indent: -1em;
-
-     }
-      .oiseau figcaption p::before {
-        content: "\E00B  ";
-        font-family: "Medor";
-        font-size: 0.75em;
-      }
-
-  .source  figcaption p {
-      //  position: absolute;
-       bottom: 0;
-       left: 0;
-       padding: 6pt 1em;
-       .w6;
-       margin-top: -31pt;
-
-     }
-
-     .figcaption-allover {
-       padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
-     }
-
-     figcaption footer {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       margin: 0;
-       -webkit-transform: rotate(270deg);
-               transform: rotate(270deg);
-       -webkit-transform-origin: left bottom;
-               transform-origin: left bottom;
-               margin-left: 103%;
-     margin-bottom: 0pt;
-     margin-right: -43%;
-     }
-
-     .auteur{
-     -webkit-region-break-after: always;
-              region-break-after: always;
-                     break-after: always-region;
-     }
 
 
 /* EXPORT */
 .bw {
-    .fond { 
+    .fond {
         background-image: none !important;
     }
     header,
