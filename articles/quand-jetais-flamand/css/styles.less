@@ -8,7 +8,7 @@
 /*GENERATED*/
 
 /* reset folio */
-body { counter-reset: folio 23 - 1; }
+body { counter-reset: page-counter 48 - 1; }
 
 /*footer,*/
 /*header content*/
@@ -95,8 +95,11 @@ body { counter-reset: folio 23 - 1; }
 }
 
 .flow-fig2 figcaption p,
-.flow-fig5 figcaption p,
 .flow-fig7 figcaption p { background-color: none; }
+
+.flow-fig5 figcaption p {
+    .figcaption-over();
+}
 
 
 #flow-main > blockquote:nth-of-type(5) {
@@ -201,6 +204,11 @@ article > header {
     color: white;
 }
 
+article > header,
+article > .chapeau {
+    /*-webkit-text-stroke: 0.05pt black;*/
+}
+
 article > blockquote:nth-of-type(1) p:last-child:before,
 article > blockquote:nth-of-type(2) p:last-child:before,
 article > blockquote:nth-of-type(3) p:last-child:before,
@@ -303,9 +311,9 @@ html.bw article > blockquote:before {
 
 /* EXPORT */
 .bw {
-    img[data-color] {
-        visibility: hidden !important;
-    }
+    /*img[data-color] {*/
+        /*visibility: hidden !important;*/
+    /*}*/
     figcaption p {
         //background-color: transparent !important; 
     }
@@ -318,13 +326,31 @@ html.bw article > blockquote:before {
     }
 }
 .color {
-    img[data-bw],
+    /*img[data-bw],*/
     aside.exergue > blockquote footer:before,
     article > blockquote:nth-of-type(1) p:last-child:before,
     article > blockquote:nth-of-type(2) p:last-child:before,
     article > blockquote:nth-of-type(3) p:last-child:before,
     article > blockquote:nth-of-type(4) p:last-child:before,
+    article > header,
+    article > .chapeau,
     .fin:after {
         visibility: hidden !important;
     }
+
+    article > header,
+    article > .chapeau {
+        -webkit-text-stroke: 0pt transparent!important;
+    }
 }
+
+
+
+
+
+    figcaption footer {
+        -webkit-transform: rotate(270deg)!important;
+                transform: rotate(270deg)!important;
+        -webkit-transform-origin: left bottom!important;
+                transform-origin: left bottom!important;
+    }
