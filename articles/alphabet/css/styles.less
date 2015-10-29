@@ -150,13 +150,24 @@ figcaption footer {
 //.rubrique-title { border-color: @color-fushia; }
 .bw .rubrique-title { border-color: transparent; }
 .bw header { visibility: hidden; }
-.bw .chapeau { visibility: hidden; }
+.bw .chapeau { 
+    color: transparent !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
 .bw img { visibility: hidden !important; }
 
 .color .flow-chapeau { visibility: hidden; }
 .color .fin:after,
-.color figcaption p,
 .color .filet:before,
 .color .filet2:before { visibility: hidden!important; }
-.color figure { background-color: white; }
 .color img { visibility: visible !important; }
+
+.color figure,
+.color figcaption p { 
+    background-color: white !important; 
+    border-color: white;
+}
+.color .chapeau {
+    border-top-color: transparent !important;
+}
