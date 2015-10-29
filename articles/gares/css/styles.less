@@ -50,8 +50,8 @@ body { counter-reset: folio 8 - 1; }
 .paper:nth-child(odd) .body:before { content: "Enquête — SNCB : quand l’intégrité déraille"; }
 
 .enquete > header h1 {
-  color: #fffbc4;
-  -webkit-text-stroke: 1pt @color-black;
+  color: black;
+  /*-webkit-text-stroke: 1pt @color-black;*/
 }
 
 /*specific styles*/
@@ -73,28 +73,35 @@ body { counter-reset: folio 8 - 1; }
     line-height: @line-height !important;
 }
 
-aside {
+.enquete > aside:nth-of-type(3) {
     font-family: 'WorkMedor';
     font-weight: 500;
     font-size: 9pt;
     line-height: 12pt;
     font-feature-settings: "liga" 0;
+    color: white;
 }
 
-aside > h1 {
+.enquete > aside:nth-of-type(3) > p {
+    font-feature-settings: "liga" 0;
+}
+
+
+.enquete > aside:nth-of-type(3) > h1 {
     font-size: 9pt;
     font-weight: 500;
     line-height: @line-height;
 }
 
 .encadre {
-    border: 6pt double @color-B2;
+    border-top: 4pt double @color-B2;
+    background-color: #01BA04;
 }
 
 figure {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/ /// NON: masque les crédits!!!
 }
 
 .fig1-bis img {
@@ -139,21 +146,39 @@ figure {
     object-fit: fill;
 }
 
+.fig1-bis { 
+    .caption; 
+    display: none;
+}
 .fig1-bis figcaption p {
-    .figcaption;
-/*.flow-fig1 figcaption p {*/
-    /*.figcaption-over();*/
-    /*.figcaption-allover();*/
-    /*padding-bottom: 6pt!important;*/
     background-color: transparent!important;
     .w5;
 }
 
 .flow-fig1 figcaption p {
     /*display: none;*/
-    left: auto;
-    right: 0;
-    .w4;
+}
+
+.flow-fig1 figcaption p,
+.flow-fig2 figcaption p,
+.flow-fig6 figcaption p,
+.flow-fig7 figcaption p {
+    bottom: -22pt!important;
+    background-color: transparent!important;
+    width: 100%!important;
+}
+.flow-fig1 figcaption p {
+    margin-left: 51pt;
+    width: calc(~"100% - 51pt")!important;
+}
+
+
+.flow-fig3 figcaption p,
+.flow-fig4 figcaption p,
+.flow-fig6 figcaption p,
+.flow-fig7 figcaption p {
+    .figcaption-over;
+    width: auto!important;
 }
 
 .exergue {
@@ -184,4 +209,8 @@ figure {
         visibility: hidden !important;
     }
 
+}
+
+#flow-main aside.exergue:nth-of-type(1) blockquote {
+    padding-bottom: @line-height / 2;
 }
