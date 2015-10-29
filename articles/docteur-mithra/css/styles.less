@@ -1,5 +1,9 @@
 @import "../../../css/main.less";
 
+#page-1 div.body::after, #page-1 div.body::before, {
+  //display: none;
+}
+
 #flow-main {
     -webkit-flow-into: flow-main;
             flow-into: flow-main;
@@ -20,30 +24,27 @@
         flow-from: flow-title;
 }
 
-
-#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
-.flow-fig1 { .flow-from(flow-fig1); }
-
-#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
-.flow-fig2 { .flow-from(flow-fig2); }
-
-#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
-.flow-fig3 { .flow-from(flow-fig3); }
-
-#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
-.flow-fig4 { .flow-from(flow-fig4); }
-
-#flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
-.flow-fig5 { .flow-from(flow-fig5); }
-
-#flow-main figure:nth-of-type(6) { .flow-into(flow-fig6); }
-.flow-fig6 { .flow-from(flow-fig6); }
+#flow-main header .rubrique-title,
+#flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
+.flow-slug { .flow-from(flow-slug); }
 
 
+#flow-main li:nth-of-type(1) { .flow-into(flow-fn1); }
+.flow-fn1 { .flow-from(flow-fn1); }
+
+#flow-main .footnotes li:nth-of-type(2),
+#flow-main .footnotes li:nth-of-type(3) { .flow-into(flow-fn2-3); }
+.flow-fn2-3 { .flow-from(flow-fn2-3); }
 
 
-img {
+#flow-main .footnotes li:nth-of-type(4),
+#flow-main .footnotes li:nth-of-type(5) { .flow-into(flow-fn4-5); }
+.flow-fn4-5 { .flow-from(flow-fn4-5); }
 
+
+p.authors {
+  position: absolute;
+  margin-top:250pt;
 }
 
 figure:nth-of-type(1),
@@ -66,8 +67,14 @@ body { counter-reset: folio 60 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Enquête — Docteur Mithra et Mister Bling-bling"; }
+.paper:nth-child(odd) .body:before { content: "Enquête — LE GOÛT AMER DES PILULES MITHRA"; }
 
+
+.chapeau{
+  -webkit-region-break-after: always;
+          region-break-after: always;
+                 break-after: always-region;
+}
 
 /* EXPORT */
 .bw {
@@ -86,4 +93,3 @@ body { counter-reset: folio 60 - 1; }
         visibility: hidden !important;
     }
 }
-
