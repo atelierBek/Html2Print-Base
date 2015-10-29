@@ -9,7 +9,7 @@ body { counter-reset: folio 119 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd)  .body:before { content: "rubrique — À Verviers, elle germe, elle germe, la prochaine révolution musicale"; }
+.paper:nth-child(odd)  .body:before { content: "Fulguro-Point"; }
 
 /*FLOWS*/
 
@@ -45,9 +45,10 @@ body { counter-reset: folio 119 - 1; }
 
 .fond {
     background-image: url("https://medor.coop/media/filer_public/3a/a5/3aa52930-ad64-49f6-9770-03ac9a53f4db/img_0050-5.png");
-    background-size: 159%;
-    background-position: -10pt 0pt;
-    background-repeat: no-repeat;}
+    background-size: 201%;
+    background-position: 0pt 0pt;
+    background-repeat: no-repeat;
+  }
 
 
 .rubrique-title { border-color: #fffe35; }
@@ -62,24 +63,8 @@ body { counter-reset: folio 119 - 1; }
   margin-top: -26pt;
 }
 
-.flow-fig3 figure, .flow-fig4 figure, .fig3 figure {
-  //  width: 247%;
-  width:210%;
-    height: auto;
-  margin-left: -108pt;
-  margin-top: 10pt;
-//    margin-left: -192pt;
-  //opacity:  0.3;
-
-}
 
 
-p{
-  font-family: "Bagnard";
-  font-size: 8.5pt;
-  letter-spacing: -0.5pt;
-  //color: white;
-}
 img {
     //display: block;
     position: absolute;
@@ -93,25 +78,12 @@ img {
 
 
 
-figcaption {
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    transform: rotate(-90deg);
-    -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
-    -ms-transform-origin: left top 0; /* IE 9 */
-    transform-origin: left top 0;
-    position: relative;
-    margin-left: 100%;
-    width:100%;
-    background-color: #fffe35;
-}
 
 .rubrique h1 {
   // padding: 5px 0;
   text-shadow: 0 0 0 ;
   color: #fffe35;
-  margin-top: -10pt !important;
-
+  margin-top: -39pt;
 }
 
 .exergue p + p {
@@ -134,29 +106,30 @@ blockquote > footer {
     font-style: normal;
     margin: 0;
     font-size: 8pt;
+    margin-bottom: 0;
 }
 .rubrique .footnotes > li > a {
     color: black;
     text-decoration: none;
 }
-ul {
-  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-  -ms-transform: rotate(-90deg); /* IE 9 */
-  transform: rotate(-90deg);
-  -webkit-transform-origin: left bottom 0; /* Chrome, Safari, Opera */
-  -ms-transform-origin: left bottom 0; /* IE 9 */
-  transform-origin: left bottom 0;
-  position: relative;
-  margin-left: 133pt;
-  margin-top: 140pt;
-  width:100%;
-  list-style-type: none;
-    font-family: "Erbar condensed";
-    line-height: @line-height;
-}
+// ul {
+//   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+//   -ms-transform: rotate(-90deg); /* IE 9 */
+//   transform: rotate(-90deg);
+//   -webkit-transform-origin: left bottom 0; /* Chrome, Safari, Opera */
+//   -ms-transform-origin: left bottom 0; /* IE 9 */
+//   transform-origin: left bottom 0;
+//   position: relative;
+//   margin-left: 133pt;
+//   margin-top: 140pt;
+//   width:100%;
+//   list-style-type: none;
+//     font-family: "Erbar condensed";
+//     line-height: @line-height;
+// }
 
-h2:last-of-type{
-  display: none;
+.auteur + h2{
+display: none;
 }
 h2:nth-of-type(3){
 //margin-top: 0px !important;
@@ -171,10 +144,7 @@ p > em{
 .authors{
   display: none;
 }
-#page-1 .y2 {
-  margin-top: @line-height ;
-  margin-bottom: -12pt;
-}
+
 
 
 .chapeau{
@@ -190,6 +160,7 @@ p > em{
        font-feature-settings: "liga" 0;
        -webkit-font-feature-settings: "liga" 0;
          padding-top: 5.5pt !important;
+         margin-top: -19pt;
 
 }
 
@@ -197,6 +168,7 @@ p > em{
     color: #39914f;
     list-style-type: none;
     margin-top: 0pt;
+    padding-left: 0pt;
 }
 .rubrique > .footnotes em {
 
@@ -212,38 +184,54 @@ p > em{
 
   line-height: @line-height;
 }
-  figcaption{
-    font-family: "Alfphabet", sans-serif;
-    font-size: 7pt;
-    line-height: 9pt;
+
+.flow-fig1 figcaption p {
+    .figcaption-over();
+    .w3;
 }
 
- figcaption p {
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 6pt 1em;
-    .w6;
-}
+.foo {
+  .figcaption-over();
+  .figcaption-allover();
 
-.figcaption-allover {
-    padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
 }
+//   figcaption{
+//     font-family: "Alfphabet", sans-serif;
+//     font-size: 7pt;
+//     line-height: 9pt;
+// }
 
- figcaption footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    -webkit-transform-origin: left bottom;
-            transform-origin: left bottom;
-            margin-left: 103%;
-margin-bottom: 0pt;
-margin-right: -43%;
-}
+//  figcaption p {
+//     background-color: white;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     padding: 6pt 1em;
+//     width:124pt !important;
+// }
+// .fond figcaption p {
+//   bottom: 12pt;
+//   left: 18px;
+//   padding: 6pt 1em 13pt 1em;
+//   width: 179pt !important;
+// }
+// .figcaption-allover {
+//     padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
+// }
+//
+//  figcaption footer {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     margin: 0;
+//     -webkit-transform: rotate(270deg);
+//             transform: rotate(270deg);
+//     -webkit-transform-origin: left bottom;
+//             transform-origin: left bottom;
+//             margin-left: 1%;
+//             margin-bottom: 0pt;
+//             margin-right: -43%;
+// }
 
 .auteur{
   -webkit-region-break-after: always;
