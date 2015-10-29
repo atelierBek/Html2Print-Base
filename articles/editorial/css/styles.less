@@ -14,14 +14,36 @@
             flow-into: flow-title;
 }
 
+#flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
+#ftn-1{.flow-from(flowfoo); }
+
+
+#flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }
+#ftn-2{.flow-from(flowbar);}
+
+#flow-main > .footnotes > li:nth-child(3) { .flow-into(flowfin); }
+#ftn-3{.flow-from(flowfin);}
+
 .flow-title {
     -webkit-flow-from: flow-title;
         flow-from: flow-title;
 }
 
+a sup {
+  font-size: 5pt;
+  top: 0;
+  vertical-align: super;
+  padding-left: 0.125em;
+}
+
+p:nth-of-type(4){
+  -webkit-region-break-before: always;
+          region-break-before: always;
+                 break-before: always-region;
+}
 /* reset folio */
 body { counter-reset: folio 3 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "editorial — Éditorial"; }
+.paper:nth-child(odd) .body:before { content: "Édito"; }
