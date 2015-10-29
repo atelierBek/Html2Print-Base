@@ -1,0 +1,45 @@
+@import "../../../css/main.less";
+
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
+
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
+#flow-main header {
+    -webkit-flow-into: flow-title;
+            flow-into: flow-title;
+}
+
+.flow-title {
+    -webkit-flow-from: flow-title;
+        flow-from: flow-title;
+}
+
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+
+/* reset folio */
+body { counter-reset: folio 33 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: " "; }
+
+img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   margin: 0 !important;
+ }
+
+
+.flow-fig1 figure{
+  width: 194% !important;
+  margin-top:-18px;
+}
