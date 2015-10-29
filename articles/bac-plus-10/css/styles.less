@@ -1,14 +1,16 @@
 @import "../../../css/main.less";
 
-#page-1 div.body::after, #page-1 div.body::before, #page-4 div.body::after, #page-4 div.body::before, {
+#page-1 div.body::after, #page-1 div.body::before, #page-4 div.body::after, #page-4 div.body::before, #page-5 div.body::after, #page-5 div.body::before, {
   display: none;
+}
+
+.authors{
+  color:white
 }
 
 .paper {
   color:#1e6076;
 }
-
-
 html.facing .paper:nth-child(even) .cadre{
   background: url('../img/gaba-g.svg') no-repeat;
   background-color: white;
@@ -54,6 +56,10 @@ html.facing .paper:nth-child(odd) .sans{
   -webkit-region-break-before: always;
           region-break-before: always;
                  break-before: always-region;
+}
+
+#page-3 h2 {
+  margin-bottom: 6pt;
 }
 
 .end h2{
@@ -154,11 +160,11 @@ blockquote > footer {
 }
 
 #flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
-#ftn-1{.flow-from(flowfoo); }
+#ftn-1{.flow-from(flowfoo); color:white}
 
 
 #flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }
-#ftn-2{.flow-from(flowbar); color:white }
+#ftn-2{.flow-from(flowbar);}
 
 
 .legende p::before {
@@ -186,4 +192,7 @@ body {counter-reset: page-counter 24 - 1;}
 
 .color {
 
+}
+p.fin::after {
+      color:#1e6076!important;
 }
