@@ -14,6 +14,7 @@
         "editorial": "articles/editorial/article.html", 
         "emocracie": "articles/emocracie/article.html", 
         "enqueteke": "articles/enqueteke/article.html", 
+        "entree-cahier-2": "articles/entree-cahier-2/article.html", 
         "gares": "articles/gares/article.html", 
         "herrmutt-lobby": "articles/herrmutt-lobby/article.html", 
         "le-monstre-en-moi": "articles/le-monstre-en-moi/article.html", 

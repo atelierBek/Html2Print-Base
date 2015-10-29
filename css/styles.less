@@ -231,7 +231,6 @@ figcaption,
 .enquete > aside.exergue > blockquote {
     -webkit-region-break-inside: avoid;
                    break-inside: avoid;
-
     font-family: "Erbar condensed";
     font-size: 18pt;
     font-weight: bold;
@@ -266,8 +265,7 @@ figcaption,
 }
 
 
-.enquete p.debut:first-letter,
-.enquete > h2 + p:first-letter {
+.enquete p.debut:first-letter {
     .lettrine-enquete;
 }
 
@@ -855,6 +853,9 @@ text-align: left;
     margin-top: @line-height;
 }
 
+.portrait > p + p { text-indent: 9pt; }
+
+
 .portrait > .footnotes {
     font-family: "Erbar condensed";
     margin: 0;
@@ -863,6 +864,18 @@ text-align: left;
 }
 
 .portrait > header > .rubrique-title { color: white; border-color: #1e6076;
+}
+
+.portrait > .footnotes li:nth-of-type(1) a[name^="sdfootnote"]:after { content: "."; color:#1e6076; }
+.portrait > .footnotes li:nth-of-type(2) a[name^="sdfootnote"]:after { content: "."; color:white; }
+
+.portrait > .footnotes a[name^="sdfootnote"]{font-family: 'Alfphabet';}
+.portrait > .footnotes li { text-indent: 0em;}
+.portrait > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+.portrait > .footnotes li:first-of-type{
+  text-indent: 0em !important;
+  margin-top: 0pt;
+  padding-top:0pt;
 }
 
 
@@ -1015,60 +1028,55 @@ text-align: left;
     font-weight: bold;
 }
 
-.foo figure,
-.rubrique figure,
-.enquete figure {
-    position: relative;
-    width: 100%;
+.caption {
+    figure {
+        position: relative;
+        width: 100%;
+    }
+
+    figcaption {
+        position: absolute;
+        font-family: "Alfphabet", sans-serif;
+        font-size: 7pt;
+        line-height: 9pt;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    figcaption p {
+        background-color: white;
+        padding: 6pt 1em;
+        position: absolute;
+        left: 0;
+        bottom: -2pt;
+        .w8;
+    }
+
+    figcaption footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: calc(~"100% + 9pt");
+        margin: 0;
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom;
+    }
+
+    figcaption footer small {
+        font-size: 6pt;
+        line-height: 6pt
+    }
 }
 
-.foo figcaption,
-.rubrique figcaption,
-.enquete figcaption {
-    position: absolute;
-    font-family: "Alfphabet", sans-serif;
-    font-size: 7pt;
-    line-height: 9pt;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
-.foo figcaption p,
-.rubrique figcaption p,
-.enquete figcaption p {
-    background-color: white;
-    padding: 6pt 1em;
-    position: absolute;
-    left: 0;
-    bottom: -2pt;
-    .w4;
-}
+.rubrique,
+.enquete { .caption }
 
 .figcaption-over { padding: 6pt; }
 .figcaption-allover { padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt); }
-
-.foo figcaption footer,
-.rubrique figcaption footer,
-.enquete figcaption footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: calc(~"100% + 9pt");
-    margin: 0;
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    -webkit-transform-origin: left bottom;
-            transform-origin: left bottom;
-}
-
-.foo figcaption footer small,
-.rubrique figcaption footer small,
-.enquete figcaption footer small {
-    font-size: 6pt;
-    line-height: 6pt
-}
-
 
 /*
  * Styles making-off article
@@ -1080,11 +1088,10 @@ text-align: left;
   */
 
  .meta p {
-  font-family: 'Work Sans';
-  font-weight: 300;
+  font-family: 'Bagnard';
+  font-weight: normal;
   font-style: normal;
-  letter-spacing: -0.03em;
-  font-size: 9pt;
+  font-size: 8pt;
   line-height: @line-height*0.95;
   text-align: justify;
   em{

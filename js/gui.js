@@ -11,9 +11,11 @@
         , $displayBtn = $('[name="display"]')[0]
         , $reloadBtn = $('#reload')[0]
         , $printBtn = $('#print')[0]
+        , $designmodeBtn = $('[name="designmode"]')[0]
     ;
 
     $viewport.addEventListener("load", function(event) {
+        var $contentDoc = this.contentDocument;
         var $doc = this.contentDocument.getElementsByTagName('html')[0]
         
         function switchPreview(event) {
@@ -48,6 +50,14 @@
                 $doc.classList.add("spread");
             } else {
                 $doc.classList.remove("spread");
+            }
+        }
+
+        function switchDesignMode(event) {
+            if(this.checked) {
+                $contentDoc.designMode = "on";
+            } else {
+                $contentDoc.designMode = "off";
             }
         }
 
@@ -111,6 +121,7 @@
         $reloadBtn.addEventListener("click", reload);
         $printBtn.addEventListener("click", print);
         $displayBtn.addEventListener("change", changeDisplay);
+        $designmodeBtn.addEventListener("change", switchDesignMode);
 
 
         switchPreview.bind($previewBtn)();

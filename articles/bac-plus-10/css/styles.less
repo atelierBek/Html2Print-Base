@@ -1,23 +1,24 @@
 @import "../../../css/main.less";
 
-
-.glyph{
-  font-family: 'Medor';
+#page-1 div.body::after, #page-1 div.body::before, #page-4 div.body::after, #page-4 div.body::before, {
+  display: none;
 }
 
 .paper {
   color:#1e6076;
 }
 
+
 html.facing .paper:nth-child(even) .cadre{
   background: url('../img/gaba-g.svg') no-repeat;
   background-color: white;
+  background-size: contain;
 }
 
 html.facing .paper:nth-child(odd) .cadre{
   background: url('../img/gaba-d.svg') no-repeat;
   background-color: white;
-  //background-color: black !important;
+  background-size: contain;
 }
 
 html.facing .paper:nth-child(odd) .sans{
@@ -47,6 +48,12 @@ html.facing .paper:nth-child(odd) .sans{
   em{
     line-height:0pt;
   }
+}
+
+.portrait h2:nth-of-type(1){
+  -webkit-region-break-before: always;
+          region-break-before: always;
+                 break-before: always-region;
 }
 
 .end h2{
@@ -82,25 +89,6 @@ html.facing .paper:nth-child(odd) .sans{
   margin-top: @line-height;
   //background: red;
 }
-
-
-/*ol > li:nth-of-type(1){
-  -webkit-flow-into: ftn-1;
-  flow-into: ftn-1;
-}
-#ftn-1{
-  -webkit-flow-from: ftn-1;
-  flow-from: ftn-1;
-}
-ol > li:nth-of-type(2){
-  -webkit-flow-into: ftn-2;
-  flow-into: ftn-2;
-}
-#ftn-2{
-  -webkit-flow-from: ftn-2;
-  flow-from: ftn-2;
-}*/
-
 
 img {
     display: block;
@@ -146,15 +134,17 @@ blockquote > footer {
 .flow-slug { .flow-from(flow-slug); }
 
 .legende {
-  margin-top:9pt;
-  position: absolute;
+  margin-top:2pt;
   font-family: "Alfphabet", sans-serif;
   font-size: 7pt;
   line-height: 9pt;
   //width: 100%;
-  color: white;
+  color:#1e6076;
   p{
-    margin-top:9pt;
+    margin-top:2pt;
+  }
+  em{
+    margin-top:2pt;
   }
 }
 
@@ -162,15 +152,25 @@ blockquote > footer {
 .body:after{
   color:white
 }
-/*#flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
-#flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }*/
+
+#flow-main > .footnotes > li:nth-child(1) { .flow-into(flowfoo); }
+#ftn-1{.flow-from(flowfoo); }
+
+
+#flow-main > .footnotes > li:nth-child(2) { .flow-into(flowbar); }
+#ftn-2{.flow-from(flowbar); color:white }
+
+
+.legende p::before {
+  content: "ÿ "; font-family: "Medor";
+}
 
 /* reset folio */
-body {counter-reset: folio 74 - 1;}
+body {counter-reset: page-counter 24 - 1;}
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Portrait — Bac + 10 à l’école de la vie"; }
+.paper:nth-child(odd) .body:before { content: "Portrait — Le king du camping"; }
 
 .body:before {
   color:white;

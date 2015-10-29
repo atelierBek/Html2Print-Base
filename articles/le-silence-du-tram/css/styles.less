@@ -23,6 +23,10 @@ body { counter-reset: page-counter 94 - 1; }
 /*#flow-main figure:nth-of-type(5) figcaption { .flow-into(flow-fig5-caption); }*/
 /*.flow-fig5-caption { .flow-from(flow-fig5-caption); }*/
 
+.flow-fig5 figcaption p {
+    .figcaption-over();
+}
+
 figure,
 figure img {
     width: 100%;
@@ -52,16 +56,16 @@ figcaption{
   line-height: 9pt;
 }
 
-figcaption p {
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  // padding: 6pt 1em;
-    padding: 3pt 1em;
-  width: 380pt !important;
-  top: -19pt;
-}
+/*figcaption p {*/
+  /*background-color: white;*/
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*// padding: 6pt 1em;*/
+    /*padding: 3pt 1em;*/
+  /*[>width: 380pt !important;<]*/
+  /*[>top: -19pt;<]*/
+/*}*/
 
 .figcaption-allover {
   padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt);
@@ -73,3 +77,7 @@ h1 {
     -webkit-text-stroke: 0.25pt white;
     text-shadow: 0pt 2pt white;
 }
+.bw h1 { visibility: hidden!important; }
+
+.color .rubrique-title,
+.color .fin:after { visibility: hidden!important; }
