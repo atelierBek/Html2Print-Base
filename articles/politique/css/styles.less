@@ -27,7 +27,7 @@ body { counter-reset: page-counter 92 - 1; }
 .paper:nth-child(odd) .body:before { content: "L’IN­FOR­TUNE DES MOTS"; }
 
 .fond {
-    background-image: url("https://medor.coop/media/filer_public/37/50/375099b7-87a5-4338-93dd-7e978abb84a8/grain-gris.png");
+    background-image: url("https://medor.coop/media/filer_public/9d/1d/9d1d4375-b737-4371-87c7-aecac9a35447/grain-gris-rgb.png");
     background-size: cover;
 }
 
@@ -44,7 +44,7 @@ body { counter-reset: page-counter 92 - 1; }
 .color figcaption p,
 .color .filet:before,
 .color .filet2:after { visibility: hidden!important; }
-.color .fond { background-image: none; }
+.bw .fond { background-image: none; }
 
 
 
@@ -106,7 +106,7 @@ blockquote footer {
     height: 0;
     box-sizing: border-box;
     position: relative;
-    top: 6pt;
+    top: -5pt;
     .trans(10deg, -15deg, top, left);
 margin-bottom: 100pt;
   margin-left: 14pt;
@@ -189,4 +189,8 @@ img {
   text-align: left;
   margin-left: -31pt;
   margin-top: -190pt;
+}
+
+.chapeau{
+       -webkit-font-feature-settings: "liga" 0;
 }

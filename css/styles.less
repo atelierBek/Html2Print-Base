@@ -265,8 +265,7 @@ figcaption,
 }
 
 
-.enquete p.debut:first-letter,
-.enquete > h2 + p:first-letter {
+.enquete p.debut:first-letter {
     .lettrine-enquete;
 }
 
@@ -1029,60 +1028,55 @@ text-align: left;
     font-weight: bold;
 }
 
-.foo figure,
-.rubrique figure,
-.enquete figure {
-    position: relative;
-    width: 100%;
+.caption {
+    figure {
+        position: relative;
+        width: 100%;
+    }
+
+    figcaption {
+        position: absolute;
+        font-family: "Alfphabet", sans-serif;
+        font-size: 7pt;
+        line-height: 9pt;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    figcaption p {
+        background-color: white;
+        padding: 6pt 1em;
+        position: absolute;
+        left: 0;
+        bottom: -2pt;
+        .w8;
+    }
+
+    figcaption footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: calc(~"100% + 9pt");
+        margin: 0;
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+        -webkit-transform-origin: left bottom;
+                transform-origin: left bottom;
+    }
+
+    figcaption footer small {
+        font-size: 6pt;
+        line-height: 6pt
+    }
 }
 
-.foo figcaption,
-.rubrique figcaption,
-.enquete figcaption {
-    position: absolute;
-    font-family: "Alfphabet", sans-serif;
-    font-size: 7pt;
-    line-height: 9pt;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
-.foo figcaption p,
-.rubrique figcaption p,
-.enquete figcaption p {
-    background-color: white;
-    padding: 6pt 1em;
-    position: absolute;
-    left: 0;
-    bottom: -2pt;
-    .w4;
-}
+.rubrique,
+.enquete { .caption }
 
 .figcaption-over { padding: 6pt; }
 .figcaption-allover { padding: 6pt (6pt + 14pt) (6pt + 14pt) (6pt + 14pt); }
-
-.foo figcaption footer,
-.rubrique figcaption footer,
-.enquete figcaption footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: calc(~"100% + 9pt");
-    margin: 0;
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    -webkit-transform-origin: left bottom;
-            transform-origin: left bottom;
-}
-
-.foo figcaption footer small,
-.rubrique figcaption footer small,
-.enquete figcaption footer small {
-    font-size: 6pt;
-    line-height: 6pt
-}
-
 
 /*
  * Styles making-off article

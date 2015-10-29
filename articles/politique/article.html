@@ -6,7 +6,8 @@
     <script src="../../js/modernizr-custom.js"></script>
     <link rel="stylesheet" href="../../vendors/normalize.css/normalize.css">
     <link rel="stylesheet" href="../../vendors/normalize-opentype.css/normalize-opentype.css">
-    <link rel="stylesheet" href="css/styles.less" type="text/less">
+    <!--<link rel="stylesheet" href="css/styles.less" type="text/less">-->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- PAGES -->
@@ -22,9 +23,9 @@
               <div class="bloc x3 y1 w6 h4 flow-title"></div>
               <div class="bloc x0 y1 w3 h11 flow-chapeau"></div>
 
-              <div class="bloc x0 y4 w3 h8 flow-main filet2"></div>
-              <div class="bloc x3 y4 w3 h8 flow-main filet2"></div>
-              <div class="bloc x6 y4 w3 h8 flow-main"></div>
+              <div class="bloc x0 y4 w3 h8 flow-main filet2" style="padding-bottom: 2pt; box-sizing: border-box;"></div>
+              <div class="bloc x3 y4 w3 h8 flow-main filet2" style="padding-bottom: 2pt; box-sizing: border-box;"></div>
+              <div class="bloc x6 y4 w3 h8 flow-main" style="padding-bottom: 2pt; box-sizing: border-box;"></div>
             </div>
           </div>
         </div>
@@ -33,9 +34,13 @@
         <div id="page-2" class="paper">
             <div class="page">
               <div class="body">
-              <div class="bloc x0 y0 w3 h12 flow-main filet2"></div>
-              <div class="bloc x3 y0 w3 h12 flow-main filet2"></div>
-              <div class="bloc x6 y0 w3 h4 flow-main filet"></div>
+              <div class="bloc x0 y0 w3 h12 flow-main filet2" style="padding-bottom: 4pt; box-sizing: border-box;"></div>
+              <div class="bloc x3 y0 w3 h12 flow-main filet2" style="padding-bottom: 0pt; box-sizing: border-box;"></div>
+              <style>
+                .fuckyou p { position: relative; top: -12pt; }
+
+              </style>
+              <div class="bloc x6 y0 w3 h4 flow-main filet fuckyou"></div>
 
               <!-- <div class="bloc t7 l14 b0 r0 flow-main"></div> -->
 
@@ -46,10 +51,10 @@
     </div>
 
     <div id="stories">
-        <article id="flow-main" data-src="../../stories/politique.html" class="rubrique"></article>
+        <article id="flow-main" data-src="../../stories_final/politique.html" class="rubrique"></article>
     </div>
     <!-- JAVASCRIPT -->
-    <script src="../../vendors/less/dist/less.min.js"></script>
+    <!--<script src="../../vendors/less/dist/less.min.js"></script>-->
     <script src="../../js/stories.js"></script>
 </body>
 </html>

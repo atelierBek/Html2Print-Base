@@ -442,6 +442,9 @@ a > sup {
    font-weight: 900;
    color: @color;
 }
+.bw a > sup {
+    visibility: hidden!important;
+}
 /*h2:nth-of-type(1) + p,*/
 /*h2:nth-of-type(4) + p {*/
     /*-webkit-region-break-inside: avoid;*/
@@ -456,3 +459,14 @@ a > sup {
     /*.w5;*/
     /*float: right;*/
     /*padding-bottom: @line-height * 2;*/
+
+.bw .flow-encadre { background-color: transparent!important; color: transparent!important }
+.bw .footnotes,
+.bw .question:before { visibility: hidden!important; }
+.color p.fin::after { visibility: hidden!important;  }
+.color .filet:before,
+.color .filet2:after {
+    border-color: transparent!important;
+}
+
+.color .chapeau { visibility: hidden!important; }
