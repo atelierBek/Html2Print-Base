@@ -74,22 +74,21 @@ body { counter-reset: folio 8 - 1; }
 }
 
 aside {
-    font-family: 'Univers else';
-    font-weight: 200;
+    font-family: 'WorkMedor';
+    font-weight: 500;
     font-size: 9pt;
     line-height: 12pt;
+    font-feature-settings: "liga" 0;
 }
 
 aside > h1 {
     font-size: 9pt;
+    font-weight: 500;
     line-height: @line-height;
-    font-weight: normal;
 }
 
-.flow-encadre {
+.encadre {
     border: 6pt double @color-B2;
-    box-sizing: border-box;
-    padding: @line-height / 2 9pt;
 }
 
 figure {
@@ -99,14 +98,15 @@ figure {
 }
 
 .fig1-bis img {
-    /*height: 100%;*/
-    /*width: 200%;*/
+    height: 100%;
+    width: auto;
+    object-position: 0 0;
 }
 
 #flow-main figure:nth-of-type(1) img {
-    /*height: 100%;*/
-    /*width: 200%;*/
-    object-position: -444pt 0;
+    height: 100%;
+    width: auto;
+    object-position: -421pt 0;
 }
 
 #flow-main figure:nth-of-type(2) img {
@@ -139,9 +139,32 @@ figure {
     object-fit: fill;
 }
 
+.fig1-bis figcaption p {
+    .figcaption;
+/*.flow-fig1 figcaption p {*/
+    /*.figcaption-over();*/
+    /*.figcaption-allover();*/
+    /*padding-bottom: 6pt!important;*/
+    background-color: transparent!important;
+    .w5;
+}
+
+.flow-fig1 figcaption p {
+    /*display: none;*/
+    left: auto;
+    right: 0;
+    .w4;
+}
+
 .exergue {
     .w5();
     margin-top: @line-height * 2;
     margin-bottom: @line-height * 2;
     margin-left: -@col-gutter-width;
 }
+
+.enquete .lettrine { 
+    .lettrine-enquete; 
+    top: 0!important;
+}
+
