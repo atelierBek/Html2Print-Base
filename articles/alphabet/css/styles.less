@@ -19,7 +19,9 @@
 
 
 /* reset folio */
+
 body { counter-reset: page-counter 103 - 1; color:black; }
+
 
 /*footer,*/
 /*header content*/
@@ -30,12 +32,13 @@ body { counter-reset: page-counter 103 - 1; color:black; }
     background-size: cover;
 }
 
+
 .rubrique-title { border-color: #f3e1e2; }
 
 .rubrique h1 {
   font-weight: normal;
   color:white !important;
-  margin-top: 48pt;
+margin-top: 59pt;
 }
 .rubrique > p { line-height: @line-height; }
 
@@ -67,6 +70,7 @@ img {
 }
 .fig7 figure{
     width: 100%;
+margin-top: -41pt;
 }
 
 .fin  + p {
@@ -81,16 +85,17 @@ figcaption{
   font-size: 7pt;
   line-height: 9pt;
   position: relative !important;
-
+top: 12pt;
 }
 
 figcaption p {
-   background-color: white;
+   background-color: black !important;
    position: relative !important;
    bottom: 0;
    left: 0;
    padding: 6pt 1em;
-   .w3 !important;
+  //  .w3 !important;
+   width: 121pt !important;
    border: 1px solid black;
 
 }
