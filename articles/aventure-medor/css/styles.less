@@ -29,11 +29,9 @@
         flow-from: flow-liste;
 }
 
-.flow-footnotes {
-    -webkit-flow-from: flow-footnotes;
-        flow-from: flow-footnotes;
-}
 
+#flow-main .footnotes { .flow-into(flow-footnotes); }
+.flow-footnotes { .flow-from(flow-footnotes); }
 
 li:before{
   color : #DE7162;
