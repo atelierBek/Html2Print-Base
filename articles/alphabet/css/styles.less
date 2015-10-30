@@ -14,37 +14,38 @@
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
 
 /* reset folio */
-body { counter-reset: folio 42 - 1; }
+body { counter-reset: folio 42 - 1; color:black; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: "Alphabet"; }
+.paper:nth-child(odd) .body:before { content: ""; }
 
 .fond {
-    background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c431b0-5977-4e77-a669-bbfc7e469422/gare-du-nord-gratine-court.png");
+    background-image: url("https://medor.coop/media/filer_public/37/51/3751b347-2273-4a37-a67e-44c8c83ba1b6/gare-du-nord-gratine-high.png");
     background-size: cover;
 }
 
 .rubrique-title { border-color: #f3e1e2; }
 
 .rubrique h1 {
-  text-shadow: 0 0 0 ;
   font-weight: normal;
-  color:#f3e1e2 !important;
+  color:white !important;
   margin-top: 48pt;
 }
 .rubrique > p { line-height: @line-height; }
 
-.chapeau {
-  padding: @line-height / 2;
-  padding-top: @line-height  !important;
-  padding-bottom: @line-height  !important;
-  margin-bottom: (@line-height) * 2;
+.chapeau{
+      color: white !important;
+      margin-bottom: (@line-height)  !important;
+       font-feature-settings: "liga" 0;
+       -webkit-font-feature-settings: "liga" 0;
+         padding-top: 5.5pt !important;
 
-  color: #f3e1e2 !important;
-  background-color:#b14542;
 }
 
 img {
@@ -61,13 +62,11 @@ img {
     margin-left: 0pt;
 }
 .fig6 figure{
-    width: 45%;
-    margin-left: 9pt;
-    margin-top: 17pt;
+    width: 100%;
+
 }
 .fig7 figure{
-    width: 54%;
-    margin-left: 7pt;
+    width: 100%;
 }
 
 .fin  + p {
@@ -81,6 +80,8 @@ figcaption{
   font-family: "Alfphabet", sans-serif;
   font-size: 7pt;
   line-height: 9pt;
+  position: relative !important;
+
 }
 
 figcaption p {
@@ -134,7 +135,11 @@ figcaption footer {
 
 .rubrique > .footnotes li { text-indent: 0em !important; }
 
+.filet {
+  border-left-color: white !important;
+  border-right-color: white !important;
 
+}
 /*.paper:first-of-type {*/
     /*background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c431b0-5977-4e77-a669-bbfc7e469422/gare-du-nord-gratine-court.png") !important;*/
     /*background-position: 0 0!important;*/
@@ -150,7 +155,7 @@ figcaption footer {
 //.rubrique-title { border-color: @color-fushia; }
 .bw .rubrique-title { border-color: transparent; }
 .bw header { visibility: hidden; }
-.bw .chapeau { 
+.bw .chapeau {
     color: transparent !important;
     background: transparent !important;
     background-color: transparent !important;
@@ -164,8 +169,8 @@ figcaption footer {
 .color img { visibility: visible !important; }
 
 .color figure,
-.color figcaption p { 
-    background-color: white !important; 
+.color figcaption p {
+    background-color: white !important;
     border-color: white;
 }
 .color .chapeau {
