@@ -1,6 +1,17 @@
 /* Styles for dialogue-interieur */
 
 @import "../../../css/main.less";
+
+.color{
+
+}
+
+.bw{
+  .fond{
+    visibility: hidden !important;
+  }
+}
+
 /* GENERATED */
 #flow-main {
     -webkit-flow-into: flow-main;
@@ -69,6 +80,7 @@ width: 90%;
 
 }
 .figcaption-over { padding: 6pt; }
+
 aside{
   margin-top: 13pt;
     margin-left: 5pt;
@@ -101,9 +113,9 @@ figcaption p {
 
 }
 .auteur{
-  margin-top: -12pt !important;
+  //position: absolute;
+  margin-top: 0pt !important;
   font-weight: 300;
-
 }
 
 /* reset folio */
@@ -111,7 +123,7 @@ body {counter-reset: page-counter 113 - 1;}
 
 /*footer,*/
 /*header content*/
-#page-1 .body:before{ content: ";}
+#page-1 .body:before{ content: "";}
 #page-12 .body:before{ content: "BD — Chamanisme du dimanche";  color: white;}
 #page-13 .body:before { content: "BD — Chamanisme du dimanche"; color: white; }
 #page-1 .body:after{ color: white;}
@@ -140,84 +152,86 @@ body {counter-reset: page-counter 113 - 1;}
 #page-3 .fond, #page-5 .fond, #page-7 .fond, #page-9 .fond{
 background-position: 22pt 15px;
 }
-#page-2 .fond {
+
+#page-3 .fond {
     background-image: url("https://medor.coop/media/filer_public/5b/c1/5bc13aa9-ad0f-4d0d-ad3c-9d47052bc8bd/1.png");
 
 }
-#page-2 .fond2 {
+#page-3 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/77/df/77df71c3-f568-44c3-9663-755730fb333f/1.svg");
 
 }
-#page-3 .fond {
+#page-4 .fond {
     background-image: url("https://medor.coop/media/filer_public/fe/c2/fec24bb9-90c7-4295-95c9-efc31a63e85b/2.png");
 
 }
-#page-3 .fond2 {
+#page-4 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/a1/47/a147fbd0-785d-432b-8d15-81085bbd6bfd/2.svg");
 
 }
-#page-4 .fond {
+#page-5 .fond {
     background-image: url("https://medor.coop/media/filer_public/e3/77/e3777989-0025-4db5-a8c6-481df3af0bf2/3.png");
 
 }
-#page-4 .fond2 {
+#page-5 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/62/80/628071ad-1e5b-47d2-9d1d-88aadfec300a/3.svg");
 
 }
-#page-5 .fond {
+#page-6 .fond {
     background-image: url("https://medor.coop/media/filer_public/04/4f/044f00c2-5c6d-4401-a3ad-86baf1d4d954/4.png");
 
 }
-#page-5 .fond2 {
+#page-6 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/26/91/2691abb8-e3d2-446c-a328-b1a59e1bb3e4/4.svg");
 
 }
-#page-6 .fond {
+#page-7 .fond {
     background-image: url("https://medor.coop/media/filer_public/c6/38/c638cc2b-fec0-4332-af64-b01a15057a5c/5.png");
 
 }
-#page-6 .fond2 {
+#page-7 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/c0/86/c0866c4b-3870-4da2-b84c-fc6220d019b2/5.svg");
 
 }
-#page-7 .fond {
+#page-8 .fond {
     background-image: url("https://medor.coop/media/filer_public/df/de/dfde5c75-3601-49cb-a5c8-440a0d9ddafb/6.png");
 
 }
-#page-7 .fond2 {
+#page-8 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/d4/e3/d4e3960b-7ae0-4264-a639-45b731777fe8/6.svg");
 
 }
-#page-8 .fond {
+#page-9 .fond {
     background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c4a53e-1932-4e92-9c96-38adf21c99d9/7.png");
 
 }
-#page-8 .fond2 {
+#page-9 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/ab/64/ab6407ed-c593-45e0-9917-495dadcd1723/7.svg");
 
 }
-#page-9 .fond {
+#page-10 .fond {
     background-image: url("https://medor.coop/media/filer_public/00/2f/002f8770-7c28-42ae-8b2a-c0ed46162f10/8.png");
 
 }
-#page-9 .fond2 {
+#page-10 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/be/0a/be0a0765-30c3-4158-ac78-da70e3e14431/8.svg");
 
 }
-#page-10 .fond {
+#page-11 .fond {
     background-image: url("https://medor.coop/media/filer_public/c3/08/c3080a60-94e1-44cc-bdc2-ac837eb884c4/9.png");
 
 }
-#page-10 .fond2 {
+#page-11 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/43/a3/43a3e6ba-c5ce-42bd-bd4b-1641450d54e7/9.svg");
 
 }
 
-#page-1 footer{
+#page-2 footer{
   font-family: 'workMedor' !important;
   font-weight: 200;
   padding: 6pt 1em;
-    border: 1px solid black;
+  font-size: 7pt!important;
+    //border: 1px solid black;
     width: 60%;
     bottom: 0;
     margin-top: -34pt;
@@ -225,9 +239,13 @@ background-position: 22pt 15px;
     font-feature-settings: "liga" 0;
     -webkit-font-feature-settings: "liga" 0;
   }
+
+
 #page-11 p:first-of-type {
 margin-top: 0pt !important;
 }
+
+
 /* EXPORT */
 .bw {
 
