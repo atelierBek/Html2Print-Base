@@ -660,7 +660,8 @@ text-align: left;
 .edito > .footnotes,
 .portrait > .footnotes,
 .photo > .footnotes,
-.rubrique > .footnotes {
+.rubrique > .footnotes,
+.meta > .footnotes{
     /*font-family: "Erbar condensed";*/
     font-family: 'Alfphabet-Condensed';
     margin: 0;
@@ -1107,19 +1108,23 @@ text-align: left;
   * -----------------
   */
 
+
  .meta p {
-  font-family: 'Bagnard';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 8pt;
-  line-height: @line-height*0.95;
-  text-align: justify;
-  em{
-    font-size: 9.2pt;
-    letter-spacing: 0em;
-    font-family: "Century Schoolbook";
-  }
+   font-family: "Bagnard";
+   font-size: 7.5pt;
+   line-height: 10.5pt;
+   strong {
+     font-size: 10.5pt;
+     line-height: 12.5pt;
+     font-weight: normal;
+     margin-bottom: 48pt !important;
+   }
  }
+
+ .meta p:first-of-type {
+   margin-bottom: 6pt;
+ }
+
 
  .meta h1 {
    display :none;
@@ -1127,17 +1132,33 @@ text-align: left;
 
 .meta h2 {
   font-family: "Alfphabet-Condensed";
-  font-size: 36pt;
-  line-height: @line-height *4;
-  font-weight:normal;
+  font-weight: normal;
+  font-size: 48pt;
+  line-height: 40pt;
+  margin-bottom: 14pt;
+}
+
+
+.meta ul {
+  text-indent: 0px;
+  padding: 0px !important;
+  margin-left: -20px;
 }
 
 .meta li {
-  font-family: "Alfphabet-Condensed";
-  font-size: 10pt;
-  line-height: @line-height;
+  font-family: 'Alfphabet-Condensed';
+  text-decoration:none;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 16.5pt;
+  display:inline;
+  em{
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-style:normal;
+    }
+  }
 
-}
 
 /*
  * Styles EDITO
