@@ -604,12 +604,14 @@ text-align: left;
   margin-top: 0pt !important;
   font-weight: 600;
 }
-.rubrique p.auteur strong{
+.rubrique p.auteur strong,
+.bd p.auteur strong{
   font-weight: 500;
   font-size: 6pt;
   vertical-align: 1pt;
-
 }
+
+
 
 #page-1 .rubrique > p {
   font-family: 'Work Sans', 'Univers else';
@@ -715,9 +717,9 @@ text-align: left;
     font-weight: 100;
     font-style: normal;
     letter-spacing: -0.05em;
-    font-size: 9pt;
-    line-height: @line-height*1;
-    margin-top: @line-height*1;
+    font-size: 8.5pt;
+    line-height: @line-height*0.95;
+    margin-top: @line-height*0.95;
     font-feature-settings: "liga" 0;
     -webkit-font-feature-settings: "liga" 0;
     em{
@@ -767,6 +769,7 @@ text-align: left;
 
 }
 .bd .chapeau {
+
     font-family: "bagnard";
     font-size: 17pt;
     line-height: (@line-height / 2) * 3;
@@ -791,13 +794,13 @@ text-align: left;
 }
 
 .bd h2{
-    margin-top: @line-height;
     font-family: "bagnard";
     font-weight: 100;
     font-size: 12pt;
+    //position: absolute;
     line-height: @line-height*1;
-    margin-top: @line-height*1;
-    margin-bottom: -@line-height*1;
+    margin-top: @line-height*0.8;
+    margin-bottom: -@line-height*0.8;
     -webkit-region-break-inside: avoid;
           region-break-inside: avoid;
                break-inside: avoid;
@@ -1048,7 +1051,8 @@ text-align: left;
     font-weight: bold;
 }
 
-.caption {
+  .caption {
+
     figure {
         position: relative;
         width: 100%;
@@ -1184,7 +1188,7 @@ text-align: left;
 
 }
 
-.edito   strong {
+.edito strong {
     font-family: "Alfphabet";
     font-weight: normal;
     font-size: 10.5pt;
