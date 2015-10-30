@@ -57,18 +57,16 @@ p.authors {
     margin-bottom: @line-height;
 }
 
-figure:nth-of-type(1),
-figure:nth-of-type(2) {
-     width: 140%;
+
+// applique le style caption aux figures qui ne sont pas dans les articles .enquete
+body {
+    .caption;
 }
 
-figure:nth-of-type(1) img,
-figure:nth-of-type(2) img {
-}
-
-figure:nth-of-type(2) {
-  margin-left: -510pt;
-  margin-top: -21pt;
+// légende par dessus sur fond blanc
+figure:nth-of-type(1) figcaption p,
+figure:nth-of-type(2) figcaption p {
+    .figcaption-over();
 }
 
 
