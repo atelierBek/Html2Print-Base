@@ -405,8 +405,7 @@ text-align: center;
     padding: 0;
     margin: 0;
     margin-top: 0;
-    margin-bottom: @line-height * 2;
-    text-align: center;
+    margin-bottom: @line-height ;
 }
 .interview .question{
 //  font-family: 'Erbarre';
@@ -657,6 +656,7 @@ text-align: left;
   vertical-align: 0pt;
 }
 
+.bd > .footnotes,
 .edito > .footnotes,
 .portrait > .footnotes,
 .photo > .footnotes,
@@ -695,19 +695,30 @@ text-align: left;
  * Styles bd
  * -----------------
  */
+ .bd > .footnotes a[name^="sdfootnote"]:after { content: "." }
+ .bd > .footnotes a[name^="sdfootnote"]{font-family: 'Alfphabet';}
+ .bd > .footnotes li { text-indent: 0em;}
+ .bd > .footnotes li { margin-bottom: (@line-height / 8) * 6; }
+ .bd > .footnotes li:first-of-type{
+   text-indent: 0em !important;
+
+ }
+
 .bd {
 
     color: white;
 }
 
 .bd p {
-     font-family: 'Univers else';
-    font-weight: 200;
+     font-family: 'workMedor';
+    font-weight: 100;
     font-style: normal;
     letter-spacing: -0.05em;
     font-size: 9pt;
     line-height: @line-height*1;
     margin-top: @line-height*1;
+    font-feature-settings: "liga" 0;
+    -webkit-font-feature-settings: "liga" 0;
     em{
       font-size: 9pt;
       line-height: @line-height*0;
@@ -798,13 +809,16 @@ text-align: left;
                    break-after: always;
 }
 
-.bd .authors, .bd .auteur, .bd .authors::first-letter{
+.bd .authors, .bd .authors::first-letter{
   font-family: "Belgika8th";
   font-weight: normal;
   font-style: normal;
   font-size: 8pt;
   padding:0;
-
+}
+.bd .auteur {
+  font-weight: bold;
+  margin-top: @line-height;
 }
 /*
  * Styles portraits

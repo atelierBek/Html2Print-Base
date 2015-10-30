@@ -29,16 +29,6 @@
 #flow-main ol.footnotes { .flow-into(flow-footnotes); }
 .flow-footnotes { .flow-from(flow-footnotes); }
 
-// #flow-main .exergue:nth-of-type(1) { .flow-into(flow-exergue1); }
-// .flow-exergue1 { .flow-from(flow-exergue1); }
-// #flow-main aside.exergue:nth-of-type(2) { .flow-into(flow-exergue2); }
-// .flow-exergue2 { .flow-from(flow-exergue2); }
-// #flow-main aside.exergue:nth-of-type(3) { .flow-into(flow-exergue3); }
-// .flow-exergue3 { .flow-from(flow-exergue3); }
-// #flow-main aside.exergue:nth-of-type(4) { .flow-into(flow-exergue4); }
-// .flow-exergue4 { .flow-from(flow-exergue4); }
-// #flow-main aside.exergue:nth-of-type(5) { .flow-into(flow-exergue5); }
-// .flow-exergue5 { .flow-from(flow-exergue5); }
 
 
 #flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
@@ -103,10 +93,22 @@ margin-top: 0px;
   //font-style: italic;
   font-weight: normal;
 font-size: 30pt;
+line-height: 35pt;
+    margin-top: 3pt;
 }
-
+header{
+      margin-top: 12pt;
+}
+header  >  h2 {
+  text-align: center;
+  margin-top: 5pt !important;
+}
+.authors{
+  margin-top: 12pt;
+}
 .interview .chapeau{
   margin-top: @line-height *1 !important;
+
 }
 
 img {
@@ -129,7 +131,7 @@ img {
    list-style-type: none;
    font-style: normal;
      padding-left: 0pt;
-     margin-top: 0pt !important;
+     margin-top:-11pt !important;
 }
 .footnote-backref{
   display: none;
@@ -201,7 +203,9 @@ a > sup {
   //       region-break-before: always;
   //               break-before: always-region;
 }
-
+#page-2 .x5 {
+margin-top: 12pt;
+}
 .interview .making-of {
     border-top: 4pt double @color-rouge-brique;
     color: @color-rouge-brique;
@@ -213,6 +217,8 @@ html.bw .interview .making-of {
  blockquote{
    font-family: 'Alfphabet-Condensed';
    font-family: 'Alfphabet';
+margin-top: 24pt;
+margin-bottom: 24pt;
 
   // font-family: 'Bagnard';
 

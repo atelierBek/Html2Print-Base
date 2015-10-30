@@ -1,7 +1,16 @@
 /* Styles for dialogue-interieur */
 
 @import "../../../css/main.less";
+/* GENERATED */
+#flow-main {
+    -webkit-flow-into: flow-main;
+            flow-into: flow-main;
+}
 
+.flow-main {
+    -webkit-flow-from: flow-main;
+        flow-from: flow-main;
+}
 #flow-main header {
     -webkit-flow-into: flow-title;
             flow-into: flow-title;
@@ -12,8 +21,10 @@
         flow-from: flow-title;
 }
 
-#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
-.flow-fig1 { .flow-from(flow-fig1); }
+ #flow-main aside { .flow-into(flow-molecule); }
+ .flow-molecule { .flow-from(flow-molecule); }
+
+
 
 .planche {
     display: block;
@@ -44,27 +55,179 @@ blockquote > footer {
     //line-height: @line-height;
     text-align: right;
 }
+img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
 
-/* GENERATED */
-#flow-main {
-    -webkit-flow-into: flow-main;
-            flow-into: flow-main;
+}
+figure {
+width: 90%;
+
+}
+.figcaption-over { padding: 6pt; }
+aside{
+  margin-top: 13pt;
+    margin-left: 5pt;
+}
+aside figcaption {
+    position: absolute;
+    font-family: "Alfphabet" !important;
+    font-size: 7pt;
+    line-height: 9pt;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-.flow-main {
-    -webkit-flow-from: flow-main;
-        flow-from: flow-main;
+figcaption p {
+  font-family: "Alfphabet" !important;
+  top: -50pt;
+      padding: 6pt 1em;
+    position: absolute;
+  left: 103px;
+      bottom: -2pt;
+    .w8;
+    max-width: 71%;
+    font-size: 7pt !important;
+    line-height: 9pt !important;
+
+}
+.footnotes{
+ margin-top: @line-height;
+
+}
+.auteur{
+  margin-top: -12pt !important;
+  font-weight: 300;
+
 }
 
 /* reset folio */
-body { counter-reset: folio 94 - 1; }
+body {counter-reset: page-counter 113 - 1;}
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before{ content: "BD — Chamanisme du dimanche"; }
+#page-1 .body:before{ content: "BD — Chamanisme du dimanche"; color: white;}
+#page-12 .body:before{ content: "BD — Chamanisme du dimanche";  color: white;}
+#page-13 .body:before { content: "BD — Chamanisme du dimanche"; color: white; }
+#page-1 .body:after{ color: white;}
+#page-12 .body:after{  color: white;}
+#page-13 .body:after {  color: white; }
 
+// #page-1 .body:after{counter(page-counter);color: white;}
+// #page-12 .body:after{ counter(page-counter); color: white; }
+// #page-13 .body:after{counter(page-counter); color: white; }
 
+ #page-2 .body:before, #page-2 .body:after,  #page-3 .body:before, #page-3 .body:after,  #page-4 .body:before, #page-4.body:after,  #page-5 .body:before, #page-5 .body:after,  #page-6 .body:before, #page-7 .body:after,  #page-7 .body:before, #page-8 .body:after,  #page-8 .body:before, #page-9 .body:after,  #page-9 .body:before, #page-10 .body:after,  #page-10 .body:before, { content: "" }
 
+.fond{
+  background-position: 11pt 16px;
+  background-size: 93%;
+    background-repeat: no-repeat;
+}
+.fond2{
+  background-position: 19pt 27px;
+  background-size: 90%;
+    background-repeat: no-repeat;
+}
+#page-3 .fond2, #page-5 .fond2, #page-7 .fond2, #page-9 .fond2{
+  background-position: 31pt 27px;
+}
+#page-3 .fond, #page-5 .fond, #page-7 .fond, #page-9 .fond{
+background-position: 22pt 15px;
+}
+#page-2 .fond {
+    background-image: url("https://medor.coop/media/filer_public/5b/c1/5bc13aa9-ad0f-4d0d-ad3c-9d47052bc8bd/1.png");
+
+}
+#page-2 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/77/df/77df71c3-f568-44c3-9663-755730fb333f/1.svg");
+
+}
+#page-3 .fond {
+    background-image: url("https://medor.coop/media/filer_public/fe/c2/fec24bb9-90c7-4295-95c9-efc31a63e85b/2.png");
+
+}
+#page-3 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/a1/47/a147fbd0-785d-432b-8d15-81085bbd6bfd/2.svg");
+
+}
+#page-4 .fond {
+    background-image: url("https://medor.coop/media/filer_public/e3/77/e3777989-0025-4db5-a8c6-481df3af0bf2/3.png");
+
+}
+#page-4 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/62/80/628071ad-1e5b-47d2-9d1d-88aadfec300a/3.svg");
+
+}
+#page-5 .fond {
+    background-image: url("https://medor.coop/media/filer_public/04/4f/044f00c2-5c6d-4401-a3ad-86baf1d4d954/4.png");
+
+}
+#page-5 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/26/91/2691abb8-e3d2-446c-a328-b1a59e1bb3e4/4.svg");
+
+}
+#page-6 .fond {
+    background-image: url("https://medor.coop/media/filer_public/c6/38/c638cc2b-fec0-4332-af64-b01a15057a5c/5.png");
+
+}
+#page-6 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/c0/86/c0866c4b-3870-4da2-b84c-fc6220d019b2/5.svg");
+
+}
+#page-7 .fond {
+    background-image: url("https://medor.coop/media/filer_public/df/de/dfde5c75-3601-49cb-a5c8-440a0d9ddafb/6.png");
+
+}
+#page-7 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/d4/e3/d4e3960b-7ae0-4264-a639-45b731777fe8/6.svg");
+
+}
+#page-8 .fond {
+    background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c4a53e-1932-4e92-9c96-38adf21c99d9/7.png");
+
+}
+#page-8 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/ab/64/ab6407ed-c593-45e0-9917-495dadcd1723/7.svg");
+
+}
+#page-9 .fond {
+    background-image: url("https://medor.coop/media/filer_public/00/2f/002f8770-7c28-42ae-8b2a-c0ed46162f10/8.png");
+
+}
+#page-9 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/be/0a/be0a0765-30c3-4158-ac78-da70e3e14431/8.svg");
+
+}
+#page-10 .fond {
+    background-image: url("https://medor.coop/media/filer_public/c3/08/c3080a60-94e1-44cc-bdc2-ac837eb884c4/9.png");
+
+}
+#page-10 .fond2 {
+    background-image: url("https://medor.coop/media/filer_public/43/a3/43a3e6ba-c5ce-42bd-bd4b-1641450d54e7/9.svg");
+
+}
+
+#page-1 footer{
+  font-family: 'workMedor' !important;
+  font-weight: 200;
+  padding: 6pt 1em;
+    border: 1px solid black;
+    width: 60%;
+    bottom: 0;
+    margin-top: -34pt;
+    margin-left: 138pt;
+    font-feature-settings: "liga" 0;
+    -webkit-font-feature-settings: "liga" 0;
+  }
+#page-11 p:first-of-type {
+margin-top: 0pt !important;
+}
 /* EXPORT */
 .bw {
 
