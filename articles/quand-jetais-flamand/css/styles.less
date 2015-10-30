@@ -79,11 +79,13 @@ body { counter-reset: page-counter 48 - 1; }
     .figcaption-allover();
 }
 
+
 .flow-fig1 figcaption footer,
 .flow-fig10 figcaption footer {
     left: calc(~"100% - 14pt - 12pt") !important;
     bottom: calc(~"14pt + 12pt") !important;
 }
+
 
 .flow-fig6 figcaption footer {
     left: calc(~"100% - 9pt") !important;
@@ -118,10 +120,16 @@ body { counter-reset: page-counter 48 - 1; }
 
 
 #flow-main figure:nth-of-type(1) img {
-    height: 100%;
-    width: 100%;
+    height: 98%;
+    width: 98%;
     object-fit: contain;
+    margin-left:-40px;
+    margin-top:10px;
 }
+
+
+
+
 #flow-main figure:nth-of-type(2) img {
     height: 100%;
     width: 100%;
@@ -315,7 +323,7 @@ html.bw article > blockquote:before {
         /*visibility: hidden !important;*/
     /*}*/
     figcaption p {
-        //background-color: transparent !important; 
+        //background-color: transparent !important;
     }
     #page-2 article:first-of-type > p:first-of-type,
     header,
@@ -343,6 +351,20 @@ html.bw article > blockquote:before {
         -webkit-text-stroke: 0pt transparent!important;
     }
 }
+
+
+#page-4 figcaption p {
+      max-width: 70% !important;
+  }
+
+#page-5 figcaption p {
+        max-width: 60% !important;
+    }
+
+#page-7 h3:first-of-type {
+          color:red;
+          margon-top:7pt;
+        }
 
 
 
