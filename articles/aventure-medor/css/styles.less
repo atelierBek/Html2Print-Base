@@ -29,22 +29,130 @@
         flow-from: flow-liste;
 }
 
+.flow-footnotes {
+    -webkit-flow-from: flow-footnotes;
+        flow-from: flow-footnotes;
+}
+
+
+li:before{
+  color : #DE7162;
+  }
+
+#page-1 li:nth-of-type(1):before{
+  font-family: 'Belogodor';
+  content: "\E921 ";
+  padding-right: 6px;
+  color : #DE7162;
+  }
+
+#page-1 li:nth-of-type(2):before{
+  font-family: 'Belogodor';
+  content: "\E973 ";
+  padding-right: 6px;
+  color : #DE7162;
+  }
+
+#page-1 li:nth-of-type(3):before{
+  font-family: 'Belogodor';
+  content: "\E000 ";
+  padding-right: 6px;
+  }
+
+#page-1 li:nth-of-type(4):before{
+    font-family: 'Belogodor';
+    content: "\E86A ";
+    padding-right: 6px;
+    }
+
+#page-1 li:nth-of-type(5):before{
+    font-family: 'Belogodor';
+    content: "\E999 ";
+    padding-right: 6px;
+    }
+
+
+    #page-1 li:nth-of-type(6):before{
+        font-family: 'Belogodor';
+        content: "\E888 ";
+        padding-right: 6px;
+        }
+
+
+#page-1 li:nth-of-type(7):before{
+        font-family: 'Belogodor';
+            content: "\E89D ";
+            padding-right: 6px;
+            }
+
+
+#page-1 li:nth-of-type(8):before{
+      font-family: 'Belogodor';
+      content: "\E905 ";
+      padding-right: 6px;
+      }
+
+#page-1 li:nth-of-type(9):before{
+      font-family: 'Belogodor';
+      content: "\E880 ";
+      padding-right: 6px;
+    }
+
+#page-1 li:nth-of-type(10):before{
+          font-family: 'Belogodor';
+          content: "\E843 ";
+          padding-right: 6px;
+        }
+
+#page-2 li:nth-of-type(11):before{
+        font-family: 'Belogodor';
+        content: "\E843 ";
+        padding-right: 6px;
+        }
+
+
+#page-2 li:nth-of-type(12):before{
+        font-family: 'Belogodor';
+        content: "\E857 ";
+        padding-right: 6px;
+        }
+
+
+
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+
 
 /* reset folio */
-body { counter-reset: folio  - 1; }
+body { counter-reset: 126 - 1; }
 
 /*footer,*/
 /*header content*/
-.paper:nth-child(odd) .body:before { content: " — L&#39;aventure Médor"; }
+.paper:nth-child(odd) .body:before { content: " — L'aventure Médor"; }
 
 
 img {
-    width: 108%;
+    width: 100%;
     height: auto;
 }
 
 .flow-fig1 figure {
     width: 100%;
     height: auto;
+
+}
+
+meta .footnotes{
+    font-family: 'Alfphabet-Condensed';
+    margin: 0;
+    font-size: 7.5pt;
+    line-height: (@line-height / 8) * 6;
+    list-style-type: none;
+    font-style: normal;
+}
+
+ol .footnotes {
+ font-size: 5pt;
 
 }
