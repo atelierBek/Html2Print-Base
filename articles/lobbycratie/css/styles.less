@@ -1,6 +1,6 @@
 @import "../../../css/main.less";
 @line-height: 11.5pt;
-
+@color-vert:#3AAB0D;
 
 #flow-main header .rubrique-title,
 #flow-main header .rubrique-subtitle { .flow-into(flow-slug); }
@@ -15,9 +15,11 @@ article > figure:nth-of-type(2) { .flow-into(flow-fig1); }
 #flow-main { .flow-into(flow-main); }
 .flow-main { .flow-from(flow-main); }
 
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
 
 /* reset folio */
-body { counter-reset: folio 108 - 1; }
+body {counter-reset: page-counter 100 - 1;}
 
 /*footer,*/
 /*header content*/
@@ -25,11 +27,11 @@ body { counter-reset: folio 108 - 1; }
 
 
 .fond {
-    background-image: url("https://medor.coop/media/filer_public/8e/d5/8ed52cfd-b82c-4231-972a-10b42554d44e/degrade-granite7low.png");
+    background-image: url("https://medor.coop/media/filer_public/7a/aa/7aaa605b-ac0b-4fc4-8e93-eded36bc482e/grain-jaune-fushia-high.png");
     background-size: cover;
 }
 
-.rubrique-title { border-color: #3AAB0D; }
+.rubrique-title { border-color: @color-vert; }
 
 
 article > figure:nth-of-type(1),
@@ -70,14 +72,9 @@ text-align: left;
 
 .rubrique h1 {
   // padding: 5px 0;
-  text-shadow: 0px 0px 0 #ffff00 ;
   font-weight: normal;
-  color:#3AAB0D !important;
-  // font-family: "Career";
-  font-family: "Career-salle13";
-  // font-family: 'Career-turning';
-  //font-family: 'Career-point';
-  margin-top: 40pt !important;
+  color:@color-vert !important;
+  margin-top: 5pt !important;
 }
 
 .inline-fn {
@@ -85,21 +82,16 @@ text-align: left;
 }
 
 .chapeau{
-    // -webkit-region-break-after: always;
-    //          region-break-after: always;
-    //                 break-after: always-region;
-  background-color:#3AAB0D;
-  color: #fffe35 !important;
 
-  padding: @line-height / 2;
-  padding-top: @line-height  !important;
-  padding-bottom: @line-height  !important;
-  margin-bottom: (@line-height) * 2;
+  margin-bottom: (@line-height)  !important;
+   font-feature-settings: "liga" 0;
+   -webkit-font-feature-settings: "liga" 0;
+     padding-top: 5pt !important;
 
 }
 
 .rubrique > .footnotes {
-    color: #3AAB0D;
+    color: @color-vert;
     list-style-type: none;
     margin-top: 0pt;
 }
@@ -108,9 +100,21 @@ text-align: left;
    font-style: italic;
 
 }
-
-h2:first-of-type{
-  margin-top: 0pt;
+#page-2 h2 {
+-webkit-region-break-before: always;
+         region-break-before: always;
+                break-before: always-region;
+}
+#page-2 .filet {
+  height: 224.5pt !important;
+}
+#page-2 .y7 {
+  margin-top: 3pt;
+  height: @line-height * 19 !important;
+}
+#page1 .y5 {
+  margin-top: @line-height  * 3;
+  height: @line-height * 30;
 }
 .rubrique h2 {
   margin-top: 11pt ;
@@ -159,7 +163,7 @@ margin-right: -43%;
 
 a > sup {
    font-weight: 900;
-   color: #3AAB0D;
+   color: @color-vert;
 }
 
 
@@ -184,6 +188,7 @@ a > sup {
 }
 
 .color {
+    .filet2:after,
     .filet:before,
     .chapeau {
         border-color: transparent !important;
