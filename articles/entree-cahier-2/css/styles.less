@@ -23,15 +23,20 @@
 .flow-fig1 { .flow-from(flow-fig1); }
 
 
+
 /* reset folio */
 body { counter-reset: folio 33 - 1; }
 
 /*footer,*/
 /*header content*/
 .paper:nth-child(odd) .body:before { content: " "; }
-
+ .body:after,  .body:before, { content: "" }
 
 .fond {
     background-image: url("https://medor.coop/media/filer_public/f8/43/f843d798-e668-40e5-ad95-7cb057946fbe/entree-retouche-outlined.svg");
     background-size: cover;
+}
+
+figure img {
+  width: 85%;
 }
