@@ -126,12 +126,12 @@ text-align: left;
     font-family: "Alfphabet", sans-serif;
     font-size: 7pt;
     line-height: 9pt;
-}
+  }
 
  figcaption p {
     background-color: white;
     position: absolute;
-    bottom: 0;
+    top: 340pt;
     left: 0;
     padding: 6pt 1em;
     .w6;
@@ -143,7 +143,7 @@ text-align: left;
 
  figcaption footer {
     position: absolute;
-    bottom: 0;
+    top: 340pt;
     left: 0;
     margin: 0;
     -webkit-transform: rotate(270deg);
@@ -154,6 +154,7 @@ text-align: left;
 margin-bottom: 0pt;
 margin-right: -43%;
 }
+
 
 .auteur{
   -webkit-region-break-after: always;
@@ -195,10 +196,22 @@ a > sup {
     }
 
     .chapeau {
-        color: transparent !important;
-        background-color: transparent !important;
+        //color: transparent !important;
+        //background-color: transparent !important;
     }
     figcaption p {
         background-color: transparent !important;
+    }
+}
+
+.color {
+
+    .filet2:after,
+    .filet:before,
+    .chapeau {
+        border-color: transparent !important;
+    }
+    .fin:after {
+        visibility: hidden !important;
     }
 }
