@@ -168,24 +168,6 @@ a > sup {
 
 
 /* EXPORT */
-.bw {
-    .fond {
-        background-image: none !important;
-    }
-    header,
-    a > sup,
-    .footnotes,
-    img {
-        visibility: hidden !important;
-    }
-    .chapeau {
-        color: transparent !important;
-        background-color: transparent !important;
-    }
-    figcaption p {
-        background-color: transparent !important;
-    }
-}
 
 .color {
     .filet2:after,
@@ -195,5 +177,28 @@ a > sup {
     }
     .fin:after {
         visibility: hidden !important;
+    }
+    img {
+        visibility: visible !important;
+    }
+}
+
+.bw {
+  header,
+  a > sup,
+  .footnotes,
+  img {
+      visibility: hidden !important;
+  }
+    .fond {
+        background-image: none !important;
+    }
+
+    .chapeau {
+        color: transparent !important;
+        background-color: transparent !important;
+    }
+    figcaption p {
+        background-color: transparent !important;
     }
 }
