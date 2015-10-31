@@ -19,7 +19,7 @@
 
 
 /* reset folio */
-body { counter-reset: folio 42 - 1; color:white; }
+body { counter-reset: page-counter 103 - 1; color:white; }
 
 /*footer,*/
 /*header content*/
@@ -165,17 +165,18 @@ figcaption footer {
 }
 .bw img { visibility: hidden !important; }
 
-.color .flow-chapeau { visibility: hidden; }
+
+
+
+
 .color .fin:after,
 .color .filet:before,
 .color .filet2:before { visibility: hidden!important; }
+.color div.body::after{color:white}
 .color img { visibility: visible !important; }
 
 .color figure,
 .color figcaption p {
     background-color: white !important;
     border-color: white;
-}
-.color .chapeau {
-    border-top-color: transparent !important;
 }
