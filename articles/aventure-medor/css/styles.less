@@ -29,96 +29,117 @@
         flow-from: flow-liste;
 }
 
+#flow-main aside { .flow-into(flow-aside); }
+.flow-aside { .flow-from(flow-aside); }
 
-#flow-main .footnotes { .flow-into(flow-footnotes); }
-.flow-footnotes { .flow-from(flow-footnotes); }
+#flow-main footer { .flow-into(flow-footer); }
+.flow-footer { .flow-from(flow-footer); 
+-webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+-webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+}
+
+.fond {
+    background-image: url("https://medor.coop/media/filer_public/d4/89/d489d087-55f7-4e0a-906d-c45e6c44510a/dey-tripote-p-ludi-p-rgb.png");
+
+}
+
+.fond2 {
+    background-image: url("https://medor.coop/media/filer_public/2e/7a/2e7adeae-27b7-4e10-be89-b2ab8edc1359/dey-tripote-p-ludi-p-k.svg");
+}
+
+.fond{
+  background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 17pt 3px;
+
+}
+.fond2{
+  background-size: 86%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+// Appel d'une sélection de symbols pour marquer les entrées de la liste
 
 li:before{
   color : #DE7162;
   }
 
-#page-1 li:nth-of-type(1):before{
+li:nth-of-type(1):before{
   font-family: 'Belogodor';
   content: "\E921 ";
   padding-right: 6px;
   color : #DE7162;
   }
 
-#page-1 li:nth-of-type(2):before{
+li:nth-of-type(2):before{
   font-family: 'Belogodor';
   content: "\E973 ";
   padding-right: 6px;
   color : #DE7162;
   }
 
-#page-1 li:nth-of-type(3):before{
+li:nth-of-type(3):before{
   font-family: 'Belogodor';
   content: "\E000 ";
   padding-right: 6px;
   }
 
-#page-1 li:nth-of-type(4):before{
+li:nth-of-type(4):before{
     font-family: 'Belogodor';
     content: "\E86A ";
     padding-right: 6px;
     }
 
-#page-1 li:nth-of-type(5):before{
+li:nth-of-type(5):before{
     font-family: 'Belogodor';
     content: "\E999 ";
     padding-right: 6px;
     }
 
 
-#page-1 li:nth-of-type(6):before{
+li:nth-of-type(6):before{
         font-family: 'Belogodor';
         content: "\E888 ";
         padding-right: 6px;
         }
 
 
-#page-1 li:nth-of-type(7):before{
+li:nth-of-type(7):before{
         font-family: 'Belogodor';
             content: "\E89D ";
             padding-right: 6px;
             }
 
 
-#page-1 li:nth-of-type(8):before{
+li:nth-of-type(8):before{
       font-family: 'Belogodor';
       content: "\E905 ";
       padding-right: 6px;
       }
 
-#page-1 li:nth-of-type(9):before{
+li:nth-of-type(9):before{
       font-family: 'Belogodor';
       content: "\E880 ";
       padding-right: 6px;
     }
 
-#page-1 li:nth-of-type(10):before{
+li:nth-of-type(10):before{
           font-family: 'Belogodor';
-          content: "\E843 ";
+          content: "\E855 ";
           padding-right: 6px;
         }
 
-#page-1 li:nth-of-type(11):before{
+li:nth-of-type(11):before{
         font-family: 'Belogodor';
-        content: "\E007 ";
+        content: "\F837 ";
         padding-right: 6px;
         }
 
-
-#page-2 li:nth-of-type(12):before{
-        font-family: 'Belogodor';
-        content: "\E999";
-        padding-right: 6px;
-        }
-
-
-
-#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
-.flow-fig1 { .flow-from(flow-fig1); }
 
 
 
@@ -131,21 +152,91 @@ body { counter-reset: 126 - 1; }
 
 
 img {
+    //display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    margin: 0 !important;
 }
 
-.flow-fig1 figure {
-    width: 100%;
-    height: auto;
 
+
+.meta h1 {
+  display :none;
 }
 
-meta .footnotes{
-    font-family: 'Alfphabet-Condensed';
+
+.meta h2 {
+  font-family: "Alfphabet-Condensed";
+  font-weight: normal;
+  font-size: 48pt;
+  line-height: 40pt;
+  margin-bottom: 14pt;
+  margin-top: 6pt;
+}
+
+
+
+p {
+  font-family: "Bagnard";
+  font-size: 7.5pt;
+  line-height: 10.5pt;
+  strong {
+    font-size: 10.5pt;
+    line-height: 12.5pt;
+    font-weight: normal;
+    margin-bottom: 48pt !important;
+  }
+}
+
+.meta p:first-of-type {
+  margin-bottom: 6pt;
+}
+
+
+.meta ul {
+  text-indent: 0px;
+  padding: 0px !important;
+  margin-left: -20px;
+}
+
+.meta li {
+  font-family: 'Alfphabet-Condensed';
+  text-decoration:none;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 16.5pt;
+  display:inline;
+  em{
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-style:normal;
+    }
+  }
+
+
+.meta aside p{
+  font-family: 'Alfphabet-Condensed' !important;
     margin: 0;
     font-size: 7.5pt;
     line-height: (@line-height / 8) * 6;
     list-style-type: none;
     font-style: normal;
+    margin-left:15pt;
+}
+
+.making-of {
+  font-family: 'Alfphabet-Condensed' !important;
+
+}
+
+.meta footer {
+    position: absolute;
+    font-family: "Alfphabet", sans-serif;
+    width: 100%;
+    bottom: 0;
+    left: calc(~"100% + 9pt");
+    margin: 0;
+
 }

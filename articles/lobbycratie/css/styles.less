@@ -169,16 +169,32 @@ a > sup {
 
 
 /* EXPORT */
+
+.color {
+    .filet2:after,
+    .filet:before,
+    .chapeau {
+        border-color: transparent !important;
+    }
+    .fin:after {
+        visibility: hidden !important;
+    }
+    img {
+        visibility: visible !important;
+    }
+}
+
 .bw {
+  header,
+  a > sup,
+  .footnotes,
+  img {
+      visibility: hidden !important;
+  }
     .fond {
         background-image: none !important;
     }
-    header,
-    a > sup,
-    .footnotes,
-    img {
-        visibility: hidden !important;
-    }
+
     .chapeau {
         //color: transparent !important;
         //background-color: transparent !important;
