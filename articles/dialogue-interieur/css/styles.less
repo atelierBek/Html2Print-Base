@@ -3,13 +3,25 @@
 @import "../../../css/main.less";
 
 .color{
+  #page-1 .body,
+  #page-2 .body,
+  #page-12 .body,
+  #page-13 .body,
+  .fond2{
+    visibility: hidden !important;
+  }
 
 }
 
 .bw{
+  .fond-defonce,
   .fond{
     visibility: hidden !important;
   }
+  figure img{
+    visibility: visible !important;
+  }
+
 }
 
 /* GENERATED */
@@ -134,23 +146,29 @@ body {counter-reset: page-counter 113 - 1;}
 // #page-12 .body:after{ counter(page-counter); color: white; }
 // #page-13 .body:after{counter(page-counter); color: white; }
 
- #page-2 .body:before, #page-2 .body:after,  #page-3 .body:before, #page-3 .body:after,  #page-4 .body:before, #page-4.body:after,  #page-5 .body:before, #page-5 .body:after,  #page-6 .body:before, #page-7 .body:after,  #page-7 .body:before, #page-8 .body:after,  #page-8 .body:before, #page-9 .body:after,  #page-9 .body:before, #page-10 .body:after,  #page-10 .body:before, { content: "" }
+#page-2 .body:before, #page-2 .body:after,  #page-3 .body:before, #page-3 .body:after,  #page-4 .body:before, #page-4.body:after,  #page-5 .body:before, #page-5 .body:after,  #page-6 .body:before, #page-7 .body:after,  #page-7 .body:before, #page-8 .body:after,  #page-8 .body:before, #page-9 .body:after,  #page-9 .body:before, #page-10 .body:after,  #page-10 .body:before, { content: "" }
 
 .fond{
   background-position: 11pt 16px;
   background-size: 93%;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
-.fond2{
+
+.fond-defonce, .fond2{
   background-position: 19pt 27px;
   background-size: 90%;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
-
-
-
-#page-3 .fond2, #page-5 .fond2, #page-7 .fond2, #page-9 .fond2{
+#page-3 .fond2,
+#page-3 .fond-defonce,
+#page-5 .fond2,
+#page-5 .fond-defonce,
+#page-7 .fond2,
+#page-7 .fond-defonce,
+#page-9 .fond2
+#page-9 .fond-defonce,
+{
   background-position: 31pt 27px;
 }
 #page-3 .fond, #page-5 .fond, #page-7 .fond, #page-9 .fond{
@@ -161,30 +179,60 @@ background-position: 22pt 15px;
     background-image: url("https://medor.coop/media/filer_public/5b/c1/5bc13aa9-ad0f-4d0d-ad3c-9d47052bc8bd/1.png");
 
 }
+
+#page-3 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/c3/c6/c3c61584-48a2-4586-9867-8a85d837c667/1-defonce.svg");
+
+}
+
 #page-3 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/77/df/77df71c3-f568-44c3-9663-755730fb333f/1.svg");
 
 }
+
+
 #page-4 .fond {
     background-image: url("https://medor.coop/media/filer_public/fe/c2/fec24bb9-90c7-4295-95c9-efc31a63e85b/2.png");
 
 }
+
+#page-4 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/a5/79/a579fe55-c072-4001-90fc-603a0616ccd4/2-defonce.svg");
+
+}
+
 #page-4 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/a1/47/a147fbd0-785d-432b-8d15-81085bbd6bfd/2.svg");
 
 }
+
+
 #page-5 .fond {
     background-image: url("https://medor.coop/media/filer_public/e3/77/e3777989-0025-4db5-a8c6-481df3af0bf2/3.png");
 
 }
+
+#page-5 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/ce/69/ce692a7d-76fd-40ba-b88a-791c709fdcce/3-defonce.svg");
+
+}
+
 #page-5 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/62/80/628071ad-1e5b-47d2-9d1d-88aadfec300a/3.svg");
 
 }
+
+
 #page-6 .fond {
     background-image: url("https://medor.coop/media/filer_public/04/4f/044f00c2-5c6d-4401-a3ad-86baf1d4d954/4.png");
 
 }
+
+#page-6 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/69/a4/69a4cba5-318d-4151-84f2-b8a1d7b40973/4-defonce.svg");
+
+}
+
 #page-6 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/26/91/2691abb8-e3d2-446c-a328-b1a59e1bb3e4/4.svg");
 
@@ -193,30 +241,48 @@ background-position: 22pt 15px;
     background-image: url("https://medor.coop/media/filer_public/c6/38/c638cc2b-fec0-4332-af64-b01a15057a5c/5.png");
 
 }
+
+#page-7 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/00/27/00275797-ddf5-4a8d-a8b7-6d85a208116d/5-defonce.svg");
+}
+
 #page-7 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/c0/86/c0866c4b-3870-4da2-b84c-fc6220d019b2/5.svg");
 
 }
 #page-8 .fond {
     background-image: url("https://medor.coop/media/filer_public/df/de/dfde5c75-3601-49cb-a5c8-440a0d9ddafb/6.png");
-
 }
+
+#page-8 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/6f/d2/6fd2d288-6c1d-4ae9-98e9-aa3c48dd52e2/6-defonce.svg");
+}
+
 #page-8 .fond2 {
-    background-image: url("https://medor.coop/media/filer_public/d4/e3/d4e3960b-7ae0-4264-a639-45b731777fe8/6.svg");
-
+    background-image: url("https://medor.coop/media/filer_public/9e/73/9e73da36-94a2-43f7-9a2d-1c4be2859e4d/6.svg");
 }
+
+
 #page-9 .fond {
     background-image: url("https://medor.coop/media/filer_public/f7/c4/f7c4a53e-1932-4e92-9c96-38adf21c99d9/7.png");
 
 }
+#page-9 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/e7/bb/e7bbd822-37a9-4145-8596-12c1c18a5ac3/7-defonce.svg");
+}
 #page-9 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/ab/64/ab6407ed-c593-45e0-9917-495dadcd1723/7.svg");
-
 }
+
+
 #page-10 .fond {
     background-image: url("https://medor.coop/media/filer_public/00/2f/002f8770-7c28-42ae-8b2a-c0ed46162f10/8.png");
-
 }
+
+#page-10 .fond-defonce {
+    background-image: url("https://medor.coop/media/filer_public/9a/5a/9a5a2e69-f7c6-4d70-984b-504f586f2e38/8-defonce.svg");
+}
+
 #page-10 .fond2 {
     background-image: url("https://medor.coop/media/filer_public/be/0a/be0a0765-30c3-4158-ac78-da70e3e14431/8.svg");
 
@@ -252,15 +318,4 @@ margin-top: 0pt !important;
 
 .bd header p {
   margin-top: -9pt;
-}
-
-
-/* EXPORT */
-.bw {
-
-}
-.color {
-    .body {
-        visibility: hidden !important; /* Tout est en noir et blanc ici */
-    }
 }
