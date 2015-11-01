@@ -33,16 +33,35 @@
 .flow-aside { .flow-from(flow-aside); }
 
 #flow-main footer { .flow-into(flow-footer); }
-.flow-footer { .flow-from(flow-footer); 
+.flow-footer { .flow-from(flow-footer);
 -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
 -webkit-transform-origin: left bottom;
         transform-origin: left bottom;
 }
 
+.bw{
+  .fond{
+    display: none;
+  }
+  p.fin::after,
+  li:before{
+    visibility: hidden !important;
+  }
+
+}
+
+.color{
+  p.fin::after{
+    visibility: hidden !important;
+  }
+  .fond2{
+    display: none;
+  }
+}
+
 .fond {
     background-image: url("https://medor.coop/media/filer_public/d4/89/d489d087-55f7-4e0a-906d-c45e6c44510a/dey-tripote-p-ludi-p-rgb.png");
-
 }
 
 .fond2 {
@@ -144,7 +163,7 @@ li:nth-of-type(11):before{
 
 
 /* reset folio */
-body { counter-reset: 126 - 1; }
+body { counter-reset: page-counter 126 - 1;}
 
 /*footer,*/
 /*header content*/
