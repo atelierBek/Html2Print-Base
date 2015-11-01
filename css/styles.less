@@ -741,12 +741,12 @@ text-align: left;
 }
 
 .bd header > h1 {
-    margin-top: 0;
+    margin-top: @line-height*1.5;
     margin-bottom: 0;
     font-family: 'AyahuascaDemi';;
     font-size: 80pt;
     text-align: left;
-    line-height: (@line-height) * 7;
+    line-height: (@line-height) * 6;
     font-weight: normal;
     text-transform: uppercase;
     -ms-transform: rotate(-3deg);
@@ -757,6 +757,7 @@ text-align: left;
 .bd > header > .author { display: none; }
 
 .bd header > h2{
+
   font-size: 12pt;
   margin-top:  (@line-height / 2) * 7;
   line-height: (@line-height / 2) * 3;
@@ -766,7 +767,6 @@ text-align: left;
   -ms-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
-
 }
 .bd .chapeau {
 
@@ -804,7 +804,6 @@ text-align: left;
     -webkit-region-break-inside: avoid;
           region-break-inside: avoid;
                break-inside: avoid;
-
 }
 
 .bd p:nth-of-type(2) {
@@ -814,15 +813,17 @@ text-align: left;
 }
 
 .bd .authors, .bd .authors::first-letter{
-  font-family: "Belgika8th";
+  font-family: 'AyahuascaDemi';
   font-weight: normal;
   font-style: normal;
-  font-size: 8pt;
+  font-size: 14pt;
   padding:0;
+  margin-top:0pt;
+  text-transform: uppercase;
 }
 .bd .auteur {
   font-weight: bold;
-  margin-top: @line-height;
+  margin-top: @line-height*3;
 }
 /*
  * Styles portraits
