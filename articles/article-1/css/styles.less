@@ -1,0 +1,278 @@
+@import "../../../css/main.less";
+
+/*GENERATED */
+
+#flow-main header { .flow-into(flow-title); }
+.flow-title { .flow-from(flow-title); }
+
+#flow-main .chapeau { .flow-into(flow-chapeau); }
+.flow-chapeau { .flow-from(flow-chapeau); }
+
+// encadré
+#flow-main aside:nth-of-type(3) { .flow-into(flow-encadre); }
+.flow-encadre { .flow-from(flow-encadre); }
+
+#flow-main .footnotes li:nth-of-type(1) { .flow-into(flow-fn1); }
+.flow-fn1 { .flow-from(flow-fn1); }
+
+#flow-main figure:nth-of-type(1) { .flow-into(flow-fig1); }
+.flow-fig1 { .flow-from(flow-fig1); }
+
+#flow-main figure:nth-of-type(2) { .flow-into(flow-fig2); }
+.flow-fig2 { .flow-from(flow-fig2); }
+
+#flow-main figure:nth-of-type(3) { .flow-into(flow-fig3); }
+.flow-fig3 { .flow-from(flow-fig3); }
+
+#flow-main figure:nth-of-type(4) { .flow-into(flow-fig4); }
+.flow-fig4 { .flow-from(flow-fig4); }
+
+// Pas utilisée
+#flow-main figure:nth-of-type(5) { .flow-into(flow-fig5); }
+.flow-fig5 { .flow-from(flow-fig5); }
+
+#flow-main figure:nth-of-type(6) { .flow-into(flow-fig6); }
+.flow-fig6 { .flow-from(flow-fig6); }
+
+#flow-main figure:nth-of-type(7) { .flow-into(flow-fig7); }
+.flow-fig7 { .flow-from(flow-fig7); }
+
+#flow-main { .flow-into(flow-main); }
+.flow-main { .flow-from(flow-main); }
+
+
+
+/* reset folio */
+body { counter-reset: page-counter 10 - 1; }
+
+/*footer,*/
+/*header content*/
+.paper:nth-child(odd) .body:before { content: "Enquête — SNCB : quand l’intégrité déraille"; }
+
+.enquete > header h1 {
+  color: black;
+  /*-webkit-text-stroke: 1pt @color-black;*/
+}
+
+/*specific styles*/
+.enquete > .chapeau {
+    -webkit-region-break-after: always;
+            region-break-after: always;
+                   break-after: always-region;
+    /*color: white;*/
+}
+
+.enquete > .chapeau + p {
+     /*.w5;*/
+     /*float: right;*/
+     /*margin-bottom: @line-height;*/
+}
+
+.authors {
+  margin-top: -6px !important;
+      line-height: @line-height !important;
+}
+
+.enquete > aside:nth-of-type(3) {
+    font-family: 'WorkMedor';
+    font-weight: 500;
+    font-size: 9pt;
+    line-height: 12pt;
+    font-feature-settings: "liga" 0;
+    color: white;
+}
+
+.enquete > aside:nth-of-type(3) > p {
+    font-feature-settings: "liga" 0;
+}
+
+
+.enquete > aside:nth-of-type(3) > h1 {
+    font-size: 9pt;
+    font-weight: 500;
+    line-height: @line-height;
+}
+.fond-vert{
+  background-color: #01BA04;
+
+}
+.encadre {
+    // border-top: 4pt double @color-B2;
+
+  }
+.fond-vert .flow-encadre  > aside  > p{
+
+  }
+
+figure {
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/ /// NON: masque les crédits!!!
+}
+
+.fig1-bis img {
+    width: auto;
+    height: 102%;
+    margin-top: -10pt;
+  }
+
+#flow-main figure:nth-of-type(1) img {
+  height: 102%;
+    width: auto;
+    object-position: -591px 0px;
+    margin-top: -10pt;
+}
+
+#flow-main figure:nth-of-type(2) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+#flow-main figure:nth-of-type(3) img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#flow-main figure:nth-of-type(4) img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#flow-main figure:nth-of-type(6) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+#flow-main figure:nth-of-type(7) img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.fig1-bis .caption{
+    // display: none;
+}
+.fig1-bis figcaption p {
+    background-color: transparent!important;
+    .w5;
+}
+.fig1-bis figcaption footer {
+  top: 24pt !important;
+
+}
+
+.flow-fig1 figcaption p {
+    /*display: none;*/
+}
+.flow-fig1 figcaption, .flow-fig figcaption {
+  bottom: -6px !important;
+}
+.flow-fig1 figcaption p,
+.flow-fig2 figcaption p,
+.flow-fig6 figcaption p,
+.flow-fig7 figcaption p {
+    bottom: -22pt!important;
+    background-color: transparent!important;
+    width: 100%!important;
+}
+.flow-fig1 figcaption p {
+    margin-left: 51pt;
+    width: calc(~"100% - 51pt")!important;
+}
+
+
+.flow-fig3 figcaption p,
+.flow-fig4 figcaption p,
+.flow-fig6 figcaption p,
+.flow-fig7 figcaption p {
+    .figcaption-over;
+    width: auto!important;
+}
+
+.exergue {
+    .w5();
+    margin-top: @line-height * 2;
+    margin-bottom: @line-height * 2;
+    margin-left: -@col-gutter-width;
+}
+
+.enquete .lettrine {
+    .lettrine-enquete;
+    top: 0!important;
+}
+#page-10 .y0 {
+  height: @line-height * 25;
+}
+#page-10 .flow-encadre aside p {
+  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: "liga" 0;
+  font-size: 7pt;
+  line-height: 10.5pt;
+}
+#page-10 .flow-encadre aside h1 {
+  font-family: 'Bagnard' !important;
+font-feature-settings: "liga" 0;
+-webkit-font-feature-settings: "liga" 0;
+  margin-bottom: 4pt !important;
+  border-top: 4pt double #FFF !important;
+  padding-top: 7pt;
+  margin-top: -11.5pt;
+  font-size: 11.5pt !important;
+}
+#page-10 .x7 .flow-encadre aside p {
+  border-bottom: 4pt double #FFF !important;
+}
+
+h2 + p, .auteur + p  {
+      text-indent:0pt !important;
+}
+
+figcaption footer {
+    transform: rotate(-90deg);
+}
+figcaption > small {
+    transform: rotate(-90deg) !important;
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -20px;
+}
+
+/* EXPORT */
+.bw {
+    .fond-vert {
+        background-color: transparent !important;
+
+        aside,
+        h1,
+        p {
+            color: transparent !important;
+            border-color: transparent !important;
+        }
+
+    }
+    #page-10 .flow-encadre aside h1{
+        border-top-color: transparent !important;
+    }
+    .fond {
+        background-image: none !important;
+    }
+    img {
+        visibility: hidden !important;
+    }
+}
+
+.color {
+    .fin:after {
+        visibility: hidden !important;
+    }
+
+}
+
+#flow-main aside.exergue:nth-of-type(1) blockquote {
+    padding-bottom: @line-height / 2;
+}

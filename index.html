@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en" class="normal">
+<head>
+    <meta charset="utf-8">
+    <title>HTML2print</title>
+
+    <link rel="stylesheet" href="css/gui.css" media="screen">
+</head>
+<body>
+    <iframe id="viewport" src=""></iframe>
+
+    <div id="toolbar">
+        <label for="preview">preview</label>
+        <input name="preview" value="true" type="checkbox">
+
+        <label for="debug">debug</label>
+        <input name="debug" value="true" type="checkbox">
+
+        <label for="grid">grid</label>
+        <input name="grid" value="true" type="checkbox">
+
+        <label for="spread">spread</label>
+        <input name="spread" value="true" type="checkbox">
+
+        <!--<label for="hi-res">hi-res</label>-->
+        <!--<input name="hi-res" value="true" type="checkbox">-->
+
+        <label for="display">display</label>
+        <select name="display">
+            <option value="low" selected>low</option>
+            <option value="bw">black</option>
+            <option value="color">color</option>
+        </select>
+
+        <label for="zoom">zoom</label>
+        <input name="zoom" value="100" type="number" min="25" max="1600" step="25">
+
+        <label for="page">page</label>
+        <input name="page" value="1" type="number" min="1" max="100" step="1">
+
+        <label for="designmode">design mode</label>
+        <input name="designmode" value="false" type="checkbox">
+
+        <div class="separator"></div>
+
+        <button id="reload">reload</button>
+        <button id="print">print</button>
+    </div>
+
+    <script src="js/gui.js"></script>
+    <script src="js/docs.js"></script>
+    <script src="js/src.js"></script>
+</body>
+</html>
