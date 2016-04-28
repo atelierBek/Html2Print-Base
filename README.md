@@ -1,13 +1,9 @@
 Quick start
 ===========
+Html2Print is a method created by [Open Source Publishing](http://osp.kitchen/tools/html2print/)
 
 Pre-requisites
 --------------
-
-Clone and enter the repository
-
-    git clone git@git.constantvzw.org:medor.numero1.git
-    cd medor.numero1
 
 Make sure you have all the system-wide dependencies
 
@@ -56,62 +52,3 @@ Visit the URL:
 
     http://localhost:8000
 
-Using the layout generator
---------------------------
-
-Starts the serveur if it isn't running already
-
-    python2 -m SimpleHTTPServer
-
-Visit the URL:
-
-    http://localhost:8000/grid.html
-
-
-keeping everything up-to-date
-=============================
-
-Updating the stories
---------------------
-
-Enter the virtualenv if it is not yet the case
-
-    source venv/bin/activate
-
-Pull the stories in the stories directory
-
-    make stories
-
-Updating the table of contents
-------------------------------
-
-Enter the virtualenv if it is not yet the case
-
-    source venv/bin/activate
-
-Generate the table of contents for HTML2print to work
-
-    make js/src.js
-
-
-Cookbook
-========
-
-Convertir les textes pour un premier coulage (avant l'étape de corrections)
---------------------------------------------------------------------------
-
-1_ convertir le docx en html
-pandoc -f docx -t html origin.docx > result.html
-2_ convertir cet html en markdown
-html2text article.html > article.md 
-3_convertir le markdown en html
-markdown_py -x extra article.md > article.html
-4_ importer cet html dans l'administration Django
-
-
-Converting from HTML to .docx
------------------------------
-
-    pandoc -f html -t docx -o destination.docx source.html
-
-Adapt it to your needs if you need to work with other formats
